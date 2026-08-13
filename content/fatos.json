@@ -1,0 +1,53 @@
+[
+  {
+    "id": "aereo",
+    "titulo": {
+      "pt": "Voo internacional direto",
+      "en": "Direct international flights",
+      "es": "Vuelo internacional directo"
+    },
+    "numero": "2026",
+    "texto": {
+      "pt": "Os voos internacionais regulares entre Cabo Frio e a Argentina foram retomados em 2026, depois de cinco anos de interrupção.",
+      "en": "Regular international flights between Cabo Frio and Argentina resumed in 2026, after a five-year gap.",
+      "es": "Los vuelos internacionales regulares entre Cabo Frio y Argentina se reanudaron en 2026, tras cinco años de interrupción."
+    },
+    "fonte_url": "https://noticias.cabofrio.rj.gov.br/primeiros-turistas-argentinos-desembarcam-em-cabo-frio-e-marcam-retomada-dos-voos-internacionais-em-2026/",
+    "fonte_nome": "Prefeitura de Cabo Frio",
+    "confianca": "alta"
+  },
+  {
+    "id": "wsl",
+    "titulo": {
+      "pt": "As três divisões do circuito mundial",
+      "en": "All three world tour divisions",
+      "es": "Las tres divisiones del circuito mundial"
+    },
+    "numero": "3",
+    "texto": {
+      "pt": "Saquarema é a única cidade do mundo a receber as três divisões do circuito mundial de surfe, com a etapa principal renovada até 2028.",
+      "en": "Saquarema is the only city in the world to host all three divisions of the world surfing tour, with the main stop renewed through 2028.",
+      "es": "Saquarema es la única ciudad del mundo que recibe las tres divisiones del circuito mundial de surf, con la etapa principal renovada hasta 2028."
+    },
+    "fonte_url": "https://www.saquarema.rj.gov.br/saquarema-garante-etapa-do-mundial-de-surfe-ate-2028/",
+    "fonte_nome": "Prefeitura de Saquarema",
+    "confianca": "alta"
+  },
+  {
+    "id": "natureza",
+    "titulo": {
+      "pt": "Um parque estadual com o nome da região",
+      "en": "A state park named after the region",
+      "es": "Un parque estatal con el nombre de la región"
+    },
+    "numero": "9.790 ha",
+    "texto": {
+      "pt": "O Parque Estadual da Costa do Sol foi criado em 2011 e protege 9.790 hectares distribuídos por seis municípios da região.",
+      "en": "Costa do Sol State Park was created in 2011 and protects 9,790 hectares across six municipalities in the region.",
+      "es": "El Parque Estadual da Costa do Sol fue creado en 2011 y protege 9.790 hectáreas en seis municipios de la región."
+    },
+    "fonte_url": "https://www.saquarema.rj.gov.br/wp-content/uploads/2020/07/DECRETO-N%C2%B0-42.929-11-PCSOL.pdf",
+    "fonte_nome": "Decreto Estadual 42.929/2011",
+    "confianca": "alta"
+  }
+]

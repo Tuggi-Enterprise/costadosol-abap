@@ -1,0 +1,28 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Ambiente — nenhuma chave entra no repositorio (CS-OURO-009)
+.env
+.env.*
+!.env.exemplo
+
+# Gerado por scripts/gen-redirects.ts (CS-NAV-002)
+public/araruama/
+public/arraial-do-cabo/
+public/cabo-frio/
+public/casimiro-de-abreu/
+public/iguaba-grande/
+public/rio-das-ostras/
+public/sao-pedro-da-aldeia/
+public/saquarema/
+public/silva-jardim/
+
+.DS_Store
+
+# Banco local (P-27) — dado de marcador, nunca versionado
+.dados-locais/
+
+# Saida de export com dado de exemplo. Só content/ é versionado (CS-ARQ-002)
+content-dev/

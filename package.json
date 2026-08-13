@@ -1,0 +1,43 @@
+{
+  "name": "costadosol-abav",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Costa do Sol — nove municipios do Conderlagos — ABAV Expo 2026",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "validate": "tsx scripts/validate-content.ts",
+    "seed:exemplo": "tsx scripts/gerar-fixtures.ts",
+    "test": "node --import tsx --test testes/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "gen:redirects": "tsx scripts/gen-redirects.ts",
+    "db:local": "tsx scripts/db-local.ts",
+    "db:seed": "tsx scripts/seed-local.ts",
+    "export": "tsx scripts/export-content.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "prebuild": "npm run validate",
+    "start": "next start",
+    "fotos": "tsx scripts/fotos-do-conteudo.ts",
+    "conteudo": "tsx scripts/compor-conteudo.ts"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.4",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.3",
+    "zod": "^4.4.3"
+  },
+  "dependencies": {
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}

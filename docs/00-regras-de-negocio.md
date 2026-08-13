@@ -1,0 +1,670 @@
+# 00 — Regras de negócio · Costa do Sol / ABAV Expo 2026
+
+**Fonte:** briefing de implementação `costadosol-abav` v1.2, de 11/08/2026.
+**Dono deste documento:** Product Owner. Nenhum outro agente escreve aqui.
+**Status:** consolidado em 12/08/2026. As lacunas estão em [01-pendencias.md](01-pendencias.md).
+
+Este documento é a única fonte de verdade do projeto. Onde ele divergir do briefing colado
+na conversa, ele vence — e a divergência precisa ser reportada, porque significa que alguém
+consolidou errado.
+
+Cada regra tem um ID. **Teste que prova uma regra cita o ID dela na descrição.** Regra sem
+teste correspondente é promessa sem prova; a lista do §11 diz quais são obrigatórias.
+
+---
+
+## 1. Missão e escopo
+
+**CS-ESCOPO-001** — O produto é uma experiência web mobile-first que apresenta a Costa do Sol
+— os nove municípios do consórcio Conderlagos — ao público profissional da ABAV Expo 2026
+(30/09 a 02/10/2026, com congelamento de conteúdo em 19/09/2026).
+
+**CS-ESCOPO-002** — O material é institucional, do destino. **Não é demonstração de produto.**
+Nenhuma tela pública explica como a experiência funciona por dentro.
+
+**CS-ESCOPO-003** — O projeto entrega duas coisas: o site público e um painel de dados
+consolidado, usado pela presidência do consórcio e por cada uma das nove prefeituras.
+
+**CS-ESCOPO-004** — Repositório novo e isolado (`costadosol-abav`). Nada é importado de, nem
+escrito em, `tuggi-cms`, `tuggi-drive-v2` ou `tuggi-enterprise`.
+
+---
+
+## 2. Glossário canônico — nomes que não têm sinônimo
+
+A v1.2 fundiu três nomes num só. Usar qualquer dos nomes revogados em código, arquivo, copy
+ou conversa é defeito, porque reabre a confusão que a fusão resolveu.
+
+| Termo canônico | O que é | Nomes **revogados** |
+| :-- | :-- | :-- |
+| **rota** | um dos quatro percursos entre municípios | "modo viagem", "roteiro", "viagem" |
+| **ponto** | um dos 36 lugares | "POI" em copy (`poi_id` permanece só como nome de campo de evento) |
+| **município** | uma das nove cidades | "cidade" em nome de campo de dado (em copy, "cidade" é permitido) |
+| **mesa** | ponto de entrada físico no estande, um por município | — |
+| **cruzamento** | sessão que entrou por um município e abriu outro | — |
+
+**CS-NOME-001** — As strings `viagem`, `modo viagem` e `roteiro` não aparecem como nome de
+rota de URL, de componente, de arquivo, de evento, de propriedade de evento ou em copy
+publicada. Verificado por script sobre o código-fonte e sobre o HTML gerado.
+
+**CS-NOME-002** — Correções que a v1.2 exige e que o briefing ainda carrega no texto antigo:
+o evento `roteiro_download` passa a ser **`rota_download`** (prop `rota_id`); a propriedade
+`origem: "viagem"` de `audio_play` passa a ser **`origem: "rota"`**; a etapa `viagem_complete`
+do funil do painel passa a ser **`rota_ouvir_complete`**; a página `/[lang]/para-quem-vende`
+oferece **as quatro rotas**, não "os três roteiros". **Confirmado pelo operador em 12/08/2026** —
+as quatro correções valem, e o critério de aceite A-11 fica como está.
+
+---
+
+## 3. Regras de ouro — invioláveis
+
+Precedem qualquer decisão técnica ou estética. Desvio só com aprovação registrada do Product
+Owner neste documento.
+
+**CS-OURO-001 · Nenhuma explicação de tecnologia em tela pública.** Proibido em copy:
+"IA", "inteligência artificial", "pipeline", "geolocalização", "algoritmo", "plataforma",
+"app", "demo", "modo", "recurso", "funcionalidade", "powered by". A mecânica fala por si; se
+precisa de legenda explicando, está mal feita.
+*Escopo:* texto exibido ao usuário. Nome interno de campo de dado (`modo` em `lang_select`)
+não é copy e não viola esta regra.
+
+**CS-OURO-002 · A marca Tuggi só aparece no rodapé**, na forma exata `Conteúdo e tecnologia:
+Tuggi`. Em nenhum outro lugar, em nenhum tamanho. Única exceção: o texto de consentimento do
+formulário (CS-LEAD-003), que é texto jurídico e precisa nomear o controlador dos dados.
+
+**CS-OURO-003 · Nove municípios.** Araruama, Arraial do Cabo, Cabo Frio, Casimiro de Abreu,
+Iguaba Grande, Rio das Ostras, São Pedro da Aldeia, Saquarema, Silva Jardim.
+
+> **Conflito aberto com a realidade — ver [P-29](01-pendencias.md).** Apurado em fonte
+> oficial em 12/08/2026: o Conderlagos tem **dez** municípios, e a região turística Costa
+> do Sol da Setur-RJ tem **treze** e não inclui Silva Jardim. As duas expressões que esta
+> regra autoriza são, hoje, factualmente falsas, e publicá-las viola CS-OURO-006. Até o
+> cliente decidir, **nenhum texto publicado conta municípios** — as páginas usam o nome de
+> cada cidade, e "Costa do Sol" aparece só como nome do site.
+
+**Búzios não existe neste projeto** — não aparece em copy, dado, rota, foto, traçado de mapa,
+rótulo de mapa, nem em "próximo a". Proibido escrever "os 10 municípios" ou "Região dos Lagos";
+a expressão correta é **"os nove municípios do Conderlagos"** ou **"Costa do Sol"**.
+*Consequência não óbvia:* o basemap do mapa (§7.2-A do briefing) rotula Búzios por padrão. Ver
+[P-11](01-pendencias.md).
+
+**CS-OURO-004 · Paridade absoluta entre municípios.** Exatamente 4 pontos cada, 36 no total.
+Nenhum ranking, contador, badge de "mais visto" ou destaque visual em nenhuma tela pública.
+
+**CS-OURO-005 · Ordem sorteada** em toda listagem clicável de municípios (grade da home, módulo
+das outras oito). **Ordem alfabética** em toda listagem não clicável: rodapé, créditos, PDF,
+relatório, tabela de secretarias, blocos por município do painel.
+
+**CS-OURO-006 · Nenhum dado inventado.** Nenhum número de leitos, ocupação, receita, fluxo
+turístico ou superlativo do tipo "melhor praia do Brasil". Toda afirmação factual precisa de
+`fonte_verificacao` preenchida. Sem fonte, a frase não vai ao ar.
+
+**CS-OURO-007 · Só o agente DBA fala com o banco.** Nenhum outro agente executa query, migration
+ou script contra o Supabase.
+
+**CS-OURO-008 · Nenhum agente supõe.** Diante de ambiguidade: este documento, depois fonte
+oficial, depois **perguntar ao humano**. Nunca decidir sozinho e seguir. Ação destrutiva
+(`DROP`, `TRUNCATE`, reset, remoção de bucket, revogação de chave) é documentada pelo agente e
+**executada pelo operador humano**.
+
+**CS-OURO-009 · Nenhuma chave secreta no cliente.** O site é estático e não conversa com o banco
+em tempo de execução.
+
+**CS-OURO-010 · Sem cookies e sem identificação individual no site público.** Nenhum pixel de
+terceiro, nenhum Google Analytics, nenhum Meta Pixel, nenhum banner de consentimento — porque
+não haverá cookie. O formulário de leads (§8) é a única coleta de dado pessoal, é explícita e
+consentida.
+
+---
+
+## 4. Arquitetura de conteúdo
+
+**CS-ARQ-001** — O site nunca consulta o banco de produção em tempo de execução. O fluxo é:
+Supabase → `scripts/export-content.ts` (rodado pelo DBA na máquina do dev) → `content/*.json`
+→ commit → build Next.js estático (`output: 'export'`).
+
+**CS-ARQ-002** — Os arquivos de `content/` são versionados no git. O que estava no ar em 30/09
+fica congelado no commit e é auditável.
+
+**CS-ARQ-003** — Atualizar conteúdo exige rebuild (2–4 min). Custo aceito para uma feira de três
+dias.
+
+**CS-ARQ-004** — Stack fixada: Next.js 14+ App Router com `output: 'export'`; TypeScript strict;
+MapLibre GL JS + PMTiles auto-hospedado; analytics cookieless auto-hospedado (Umami ou Plausible
+— ver [P-10](01-pendencias.md)); Cloudflare Pages; Supabase apenas no build e para gravar leads.
+**Proibido:** Google Maps JS API, qualquer analytics de terceiro com cookie, biblioteca de UI
+pesada. Tailwind vs. CSS Modules é decisão do UX/UI, documentada em `docs/02-arquitetura.md`.
+
+**CS-ARQ-005** — Domínio de construção: `costadosol.tuggi.app`. O deploy **não** espera o domínio
+do consórcio; o CNAME é cortesia com prazo-limite de 19/09.
+
+---
+
+## 5. Entrada e navegação
+
+### 5.1 Nove pontos de entrada — uma mesa por município
+
+**CS-NAV-001** — O estande tem uma mesa por município, cada uma com seu QR, apontando para uma
+URL curta digitável: `costadosol.tuggi.app/<slug>` (ex.: `/saquarema`).
+
+**CS-NAV-002** — Cada `/[slug]/index.html` é uma página estática de redirecionamento (~2 KB, sem
+framework, sem CSS externo) que: lê `navigator.language` e resolve o idioma (fallback `pt`);
+grava `entry_municipio=<slug>` e `qr_id=mesa-<slug>` em `sessionStorage`; e faz
+`location.replace('/<lang>/<slug>')`.
+
+**CS-NAV-003** — `location.replace`, **nunca** `href`: o botão voltar não pode devolver a pessoa
+para a página de redirect.
+
+**CS-NAV-004** — QRs gerais apontam para `/` com `?p=cartao | totem | tela`.
+
+**CS-NAV-005** — `qr_id` e `entry_municipio` são lidos uma vez, guardados em `sessionStorage` e
+**removidos da URL** com `history.replaceState`. `entry_municipio` é **imutável dentro da
+sessão**: não muda quando a pessoa navega para outro município.
+
+| Peça | URL | `qr_id` | `entry_municipio` |
+| :-- | :-- | :-- | :-- |
+| Mesa de cada município (×9) | `/saquarema` | `mesa-saquarema` | `saquarema` |
+| Cartão A6 de mão | `/?p=cartao` | `cartao` | `null` |
+| Totem central | `/?p=totem` | `totem` | `null` |
+| Tela vertical | `/?p=tela` | `tela` | `null` |
+
+### 5.2 Idioma
+
+**CS-NAV-006** — `lang ∈ { pt, en, es, fr, it, de, zh, ko }`. Oito idiomas, sempre os oito
+visíveis: ver as oito opções é o argumento para o comprador internacional. A **interface** existe
+nos oito; o **conteúdo** não — ver CS-CONT-007.
+
+**CS-NAV-007 · Entrada pela home (`/`)** — **o idioma é resolvido, não perguntado.**
+`navigator.language` decide, com fallback `pt`, e a pessoa cai direto em `/<lang>/`. Não há tela
+de escolha, e **nenhum `lang_select` é emitido** — ninguém selecionou nada; o sinal de idioma da
+entrada é `locale_navegador`, em `session_start`.
+
+*Revisão de 13/08/2026, decidida pelo operador, que revoga a tela cheia de oito bandeiras do §7.1
+do briefing.* O motivo é o mesmo que já valia para a entrada por mesa (CS-NAV-008): o aparelho já
+sabe o idioma, e uma tela a mais entre o QR e o conteúdo perde gente em pé, num corredor de feira.
+O argumento de alcance internacional (CS-NAV-006) não dependia daquela tela — a barra fixa mostra
+as oito opções em toda página, e é lá que a troca deliberada acontece.
+
+**CS-NAV-008 · Entrada por mesa (`/[slug]`)** — **sem tela intermediária**. Renderiza a página do
+município já no idioma detectado, com as oito opções numa barra fixa no topo, visível e não
+bloqueante. Troca emite `lang_select` com `modo: "barra"`. O sinal de idioma aqui é
+`locale_navegador`, e para o argumento de demanda internacional vale tanto quanto a escolha
+explícita.
+
+**CS-NAV-009** — A escolha de idioma vai para `sessionStorage`.
+
+**CS-NAV-010** — Em ambos os modos, num iPhone SE (375 px), qualquer opção de idioma é alcançável
+de dedo, sem rolar.
+
+### 5.3 Mapa de rotas do site
+
+```
+/[municipio]                   redirect curto do QR de mesa (CS-NAV-002)
+/                              entrada: escolha de idioma
+/[lang]                        home
+/[lang]/[municipio]            página do município (com os 4 pontos inline)
+/[lang]/[municipio]/[ponto]    página do ponto (link direto e compartilhamento)
+/[lang]/rotas                  as quatro rotas
+/[lang]/rotas/[rota]           uma rota
+/[lang]/lugares                os 36 lugares, agrupados por município em ordem alfabética
+/[lang]/para-quem-vende        rotas, fatos de acesso, contatos das secretarias
+/[lang]/imprensa               release, 8 fotos em alta, texto de 300 palavras (fora do menu)
+/painel                        painel de dados, protegido por senha, sem idioma
+```
+
+---
+
+## 6. Telas
+
+### 6.1 Home
+
+**CS-NAV-011 · Navegação** — barra fixa no rodapé com quatro destinos (Cidades · Rotas ·
+Lugares · Profissional), visível em toda página, alvos de 54 px. **Não existe menu hambúrguer
+em lugar nenhum** — CS-HOME-001 já o proíbe na primeira dobra, e a razão vale para o site
+inteiro: quem entra por QR tem cerca de 60 segundos em pé, com uma mão no telefone, e não
+procura navegação escondida atrás de um ícone. O rodapé é a única faixa que o polegar alcança
+sem trocar a mão de posição. No desktop a mesma lista vira uma linha no topo.
+*Decidido pelo operador em 13/08/2026.*
+
+**CS-HOME-001 · Hero** — foto full-bleed, "Costa do Sol", uma linha, botão de play (45 s)
+ocupando ≥30% da largura da tela. Sem menu hambúrguer na primeira dobra, sem carrossel.
+
+**CS-HOME-002 · Palavra da presidência** — card discreto, 20 s, na voz do presidente do
+consórcio.
+
+**CS-HOME-003 · Mapa da região**, logo abaixo do hero. Nove marcadores **idênticos** (mesmo raio,
+cor, peso de rótulo), nenhum destaque, nenhum contador. As quatro rotas traçadas por cima, cada
+uma na sua cor, ativáveis por toque. Tocar município → `/[lang]/[municipio]`; tocar rota →
+`/[lang]/rotas/[rota]`. Emite `mapa_interacao` com `alvo` e `id`.
+
+**CS-HOME-004** — Se o peso do mapa ameaçar o orçamento de 500 KB da primeira carga, cair para
+SVG estilizado com a mesma geometria. Decisão do Fullstack, tomada **medindo**, com a medição
+registrada em `docs/`.
+
+**CS-HOME-005 · Três fatos** (`content/fatos.json`): número grande, uma frase, nome da fonte em
+texto pequeno. **Fato, nunca adjetivo.** Proibido "paradisíaco", "deslumbrante", "imperdível".
+Emite `home_fato_view`.
+
+**CS-HOME-006 · Seção "Lugares"** — nove cards, **um ponto por município**, sempre. Qual dos
+quatro pontos aparece é sorteado por sessão, com a mesma semente da ordem dos cards. Link ao
+final: "Os 36 lugares da Costa do Sol" → `/[lang]/lugares`.
+
+**CS-HOME-007 · Grade dos nove municípios** — cards fotográficos verticais: foto, nome, nada
+mais. Rodapé da seção, em texto pequeno: *"A ordem das cidades é sorteada a cada acesso."*
+
+### 6.2 Sorteio
+
+**CS-SORT-001** — A ordem dos municípios é sorteada **uma vez por sessão** e é **estável dentro
+da sessão**: voltar para a home reproduz a mesma ordem.
+
+**CS-SORT-002** — Implementação: semente gerada na primeira visita e guardada em `sessionStorage`
+(`crypto.randomUUID()`), embaralhamento determinístico Fisher–Yates com PRNG semeado.
+**`Math.random()` direto é proibido** — a ordem tem de ser reproduzível dentro da sessão.
+
+**CS-SORT-003** — A mesma semente rege a grade da home, o módulo das outras oito e o ponto
+sorteado da seção "Lugares".
+
+**CS-SORT-004** — Duas sessões distintas produzem ordens diferentes; recarregar dentro da mesma
+sessão mantém a ordem.
+
+**CS-SORT-005** — Cada card emite `municipio_open` com `posicao_no_sorteio` (1..9). O campo existe
+para **verificar depois** se o sorteio de fato eliminou o viés de posição.
+
+### 6.3 Página do município — a porta de entrada principal
+
+**CS-MUN-001** — Esta página é a porta de entrada principal do projeto, não um segundo nível: a
+maior parte das sessões começa aqui, vinda do QR de uma mesa. Ela se identifica sozinha e
+funciona sem ninguém para explicar, porque metade das mesas estará vazia em algum momento.
+
+**CS-MUN-002** — Os quatro pontos ficam **abertos na própria página**. Três níveis de navegação
+são demais para quem tem 60 segundos no balcão.
+
+```
+barra de idioma fixa no topo (8 opções, não bloqueia)
+hero fotográfico + nome do município + UMA linha
+► ouvir a cidade (45 s)
+4 pontos: foto 4:5 · nome · teaser ≤180 car. · ► ouvir · "ler mais" (expande o texto)
+CTA: "Receber o material de [cidade]"
+selo + link da secretaria de turismo
+★ as outras oito cidades
+compartilhar
+```
+
+**CS-MUN-003** — `og:image` própria por município, com o nome do município renderizado. É o que o
+gabinete municipal vai postar.
+
+**CS-MUN-004** — Do scan ao primeiro áudio de um ponto: no máximo **2 toques** e **menos de 5 s**
+quando a entrada for por mesa.
+
+### 6.4 Módulo "as outras oito cidades"
+
+É o mecanismo que transforma nove mesas separadas em uma região. Sem ele, o estande é uma feira
+de nove municípios dividindo aluguel. Recebe o mesmo cuidado de implementação que o hero.
+
+**CS-OITO-001** — Grade fotográfica das **outras oito**, nunca do município atual, em nenhuma das
+nove páginas.
+
+**CS-OITO-002** — Ordem sorteada com a mesma semente de sessão (CS-SORT-003).
+
+**CS-OITO-003** — Chamada neutra: *"A Costa do Sol tem mais oito cidades."* Proibido "veja
+também", "você pode gostar", "relacionados".
+
+**CS-OITO-004** — Posicionado **depois** do CTA, para não competir com a conversão do município
+de entrada.
+
+**CS-OITO-005** — Sem contador, sem badge, sem destaque de nenhum município.
+
+**CS-OITO-006** — Cada abertura daqui emite `municipio_open` com `origem: "outras_oito"` e
+`cruzamento: true`. **É aqui que a métrica mais valiosa do projeto é gerada.**
+
+### 6.5 Página da rota
+
+**CS-ROTA-001** — Uma rota, três formas de consumo na mesma página:
+
+```
+mapa da rota (traçado destacado, demais rotas apagadas)
+nome da rota + eixo + municípios que atravessa, na ordem do caminho
+► OUVIR A ROTA
+os pontos ao longo do caminho, em sequência, cada um com ► ouvir
+↓ LEVAR (PDF de uma página)
+os municípios desta rota → links para as páginas de município
+```
+
+**CS-ROTA-002 · Ouvir a rota** — 80 a 100 segundos. Um marcador percorre o traçado; ao cruzar
+cada ponto, um card sobe e o áudio começa sozinho. Barra de progresso no topo, botão "pular"
+sempre visível.
+
+**CS-ROTA-003** — Navegador móvel bloqueia áudio sem gesto do usuário. O botão "ouvir a rota" é o
+gesto; depois dele o encadeamento é livre. **Validar em Safari iOS físico**, o mais restritivo —
+não em emulador.
+
+**CS-ROTA-004** — Emite `rota_open`, `rota_ouvir_start`, `rota_ouvir_complete`.
+
+**CS-ROTA-005** — O texto de encerramento cita a contagem real de pontos daquela rota; não é
+constante. Ver [P-13](01-pendencias.md).
+
+### 6.6 Para quem vende
+
+**CS-VENDE-001** — As quatro rotas, cada uma com PDF de uma página; os três fatos de acesso e
+calendário, com fonte; tabela com o contato das nove secretarias em ordem alfabética; botão para
+o formulário.
+
+---
+
+## 7. Contratos de conteúdo
+
+Os arquivos vivem em `content/`, são emitidos por `scripts/export-content.ts` e validados por
+`scripts/validate-content.ts` no `prebuild`. O schema completo de cada arquivo está no briefing
+§6 e é reproduzido em `docs/03-modelo-de-dados.md` pelo DBA.
+
+**CS-CONT-001** — `municipios.json`: `slug` (kebab-case, sem acento, **imutável**), `nome`
+oficial, `linha` (uma linha de posicionamento por idioma, não parágrafo), `hero` (`src` sem
+extensão — o build gera `.avif` e `.webp` —, `alt`, `credito`), `audio` de 45 s por idioma,
+`secretaria` (`nome`, `url`, `selo`), `pontos` (**exatamente 4**).
+
+**CS-CONT-002** — `pontos.json`: `id`, `municipio`, `tipo` (`essencial | complementar |
+inesperado`), `nome`, `categoria` (`natureza | historia | cultura | gastronomia | esporte`),
+`coords [lat, lon]`, `teaser` (**máximo 180 caracteres**), `texto`, `audio`, `foto` (`v` 4:5 para
+uso principal, `h` 16:9 para `og:image`, `alt`, `credito`), `fonte_verificacao[]`
+(`afirmacao`, `url`, `consultado_em`, `revisor`), `ordem` 1..4 dentro do município.
+
+**CS-CONT-003** — `rotas.json`: quatro rotas, com `id`, `nome`, `eixo`, `cor` do traçado,
+`municipios`, `pontos` em sequência, `geometria` (GeoJSON LineString ou path SVG),
+`duracao_sugerida`, `distancia_km` e `tempo_estimado` (**`null` até serem apurados em fonte de
+roteirização — nunca estimados**), `pdf`.
+
+**CS-CONT-004 · Cobertura das rotas** — cada município aparece em **exatamente 2** rotas:
+
+| Rota | Municípios |
+| :-- | :-- |
+| `rota-da-lagoa` | Saquarema · Araruama · Iguaba Grande · São Pedro da Aldeia |
+| `rota-do-mar` | Cabo Frio · Arraial do Cabo |
+| `rota-da-mata` | Silva Jardim · Casimiro de Abreu · Rio das Ostras |
+| `costa-do-sol-inteira` | as nove |
+
+Rota cria hierarquia entre municípios por construção; a cobertura plana é o que impede isso de
+virar problema político. Por isso é teste, não disciplina.
+
+**CS-CONT-005** — Nome de rota **nunca** começa com nome de município. "A rota da lagoa", não
+"De Cabo Frio a Saquarema".
+
+**CS-CONT-006** — `fatos.json`: os três fatos da home, cada um com `id` (`aereo | wsl |
+natureza`), `titulo`, `numero`, `texto`, `fonte_url`, `fonte_nome`, `confianca`. Todo fato
+exibido carrega fonte.
+
+**CS-CONT-007 · Cobertura de idioma** — decisão do operador em 12/08/2026, com o custo de produção
+como motivo.
+
+| Camada | Idiomas obrigatórios | Comportamento nos demais |
+| :-- | :-- | :-- |
+| Interface — rótulo, botão, navegação, formulário, mensagem de erro | os **oito** | — |
+| Conteúdo — `linha`, `teaser`, `texto`, `nome` de ponto e de rota, `alt`, `eixo`, `duracao_sugerida` | **`pt`, `en`, `es`** | fallback para `en` |
+| Áudio — 9 municípios + 36 pontos | **`pt`, `en`, `es`** (135 arquivos) | toca a faixa `en` |
+
+Fallback é `en`, nunca `pt`: o público dos cinco idiomas sem conteúdo é internacional.
+
+**CS-CONT-008** — O fallback é **silencioso**. Nenhuma tela avisa que aquele idioma não tem
+conteúdo próprio — seria explicar a mecânica (CS-OURO-001) e transformar uma limitação em
+mensagem. `og:locale` e o atributo `lang` do HTML declaram o idioma **realmente servido** naquele
+bloco, para leitor de tela e para indexação.
+
+**CS-CONT-009** — Custo aceito e registrado: um comprador que escolhe `ko` vê a interface em
+coreano e ouve o áudio em inglês. Se aparecer verba ou tempo antes de 19/09, a ordem de expansão é
+`de` → `fr` → `it` → `zh` → `ko`, e só o pacote inteiro de um idioma entra — meio idioma é pior
+que nenhum.
+
+### 7.1 Validação de build — falha, não avisa
+
+**CS-VAL-001** — O build **falha** se qualquer uma destas condições ocorrer:
+
+1. algum município com ≠ 4 pontos;
+2. algum `teaser` com mais de 180 caracteres;
+3. algum ponto sem ao menos um item em `fonte_verificacao`;
+4. a string `Búzios`, `Buzios`, `Região dos Lagos` ou `os 10 munic` em qualquer arquivo de
+   conteúdo;
+5. `credito` ausente em qualquer foto;
+6. algum município em ≠ 2 rotas;
+7. `distancia_km` ou `tempo_estimado` preenchido sem `fonte` correspondente;
+8. `nome` de rota começando com nome de município;
+9. as strings `viagem`, `modo viagem` ou `roteiro` em nome de rota, componente, arquivo, evento
+   ou copy (CS-NOME-001);
+10. `pt`, `en` ou `es` ausente em qualquer campo de conteúdo ou faixa de áudio (CS-CONT-007);
+11. um idioma fora do trio presente **parcialmente** — meio idioma não entra (CS-CONT-009).
+
+**CS-VAL-002** — `scripts/export-content.ts` valida o schema **antes** de escrever e falha
+ruidosamente se um campo obrigatório estiver vazio.
+
+---
+
+## 8. Formulário e leads
+
+**CS-LEAD-001** — Um único formulário, aberto em modal a partir de qualquer CTA de município. O
+município de origem do clique já vem **marcado**; os outros oito aparecem como checkbox, em
+ordem alfabética.
+
+**CS-LEAD-002** — Campos: `nome` · `email` · `empresa` · `pais` (select) · `tipo_negocio`
+(agência | operadora | receptivo | imprensa | órgão público | outro) · `cidades[]` ·
+`consentimento` (checkbox **não** pré-marcado).
+
+**CS-LEAD-003 · Texto de consentimento** — literal, não parafrasear:
+
+> Autorizo o Conderlagos e a Tuggi a me enviarem o material das cidades selecionadas e
+> informações sobre a Costa do Sol. Posso pedir a exclusão dos meus dados a qualquer momento.
+
+**CS-LEAD-004** — Uma submissão gera **N registros** de `interesse_declarado`, um por município
+marcado.
+
+**CS-LEAD-005 · Persistência** — o DBA cria a tabela `leads_abav_2026` em schema isolado, sem
+relação com as tabelas de produto. Campos: os do formulário + `created_at`, `qr_id`, `lang`,
+`session_id`. **Nenhum lead em planilha de terceiro.**
+
+**CS-LEAD-006 · Endpoint** — rota serverless mínima (Cloudflare Function) com rate limit e
+validação de schema. A chave de escrita fica só no ambiente do endpoint, **nunca no cliente**.
+
+**CS-LEAD-007** — Taxa de conclusão medida em teste com 5 pessoas reais. Abaixo de 60%, o UX/UI
+reduz campos antes de seguir.
+
+---
+
+## 9. Instrumentação
+
+**CS-EVT-001** — Existe **um único helper** e nenhum componente chama o analytics diretamente:
+
+```ts
+track(evento: EventName, props?: Record<string, string | number>): void
+```
+
+**CS-EVT-002** — Todo evento recebe automaticamente `session_id` (UUID em `sessionStorage`,
+expira ao fechar a aba), `ts` (ISO) e `lang`.
+
+**CS-EVT-003 · Taxonomia:**
+
+| Evento | Propriedades |
+| :-- | :-- |
+| `session_start` | `qr_id`, `entry_municipio` (slug ou `null`), `device`, `locale_navegador`, `referrer` |
+| `lang_select` | `lang`, `modo` (`barra`) — só troca deliberada; a entrada não emite (CS-NAV-007) |
+| `home_fato_view` | `fato_id` |
+| `municipio_open` | `municipio`, `entry_municipio`, `cruzamento` (bool), `origem` (`home` \| `outras_oito` \| `menu`), `posicao_no_sorteio` |
+| `poi_open` | `poi_id`, `municipio` |
+| `audio_play` | `poi_id`, `municipio`, `origem` (`home` \| `cidade` \| `ponto` \| `rota`) |
+| `audio_progress` | `poi_id`, `pct` (25 \| 50 \| 75 \| 100) |
+| `rota_open` | `rota_id`, `origem` (`mapa` \| `cards` \| `cidade`) |
+| `rota_ouvir_start` / `rota_ouvir_complete` | `rota_id`, `pct_percorrido` |
+| `mapa_interacao` | `alvo` (`cidade` \| `rota`), `id` |
+| `cta_click` | `municipio` |
+| `form_open` / `form_submit` | `origem_municipio` |
+| `interesse_declarado` | `municipio` — um evento por município marcado |
+| `rota_download` | `rota_id` |
+| `share_click` | `tipo`, `municipio` \| `poi_id` |
+
+**CS-EVT-004** — Todo `municipio_open` carrega `entry_municipio` e o booleano `cruzamento`
+(`municipio !== entry_municipio`). Sem exceção, em qualquer origem.
+
+**CS-EVT-005** — A instrumentação entra na semana 3, junto com a navegação. Deixá-la para o final
+faz o painel nascer vazio, e isso é irrecuperável depois da feira.
+
+---
+
+## 10. Análise — a regra que impede a conclusão errada
+
+**CS-DADO-001** — Com entrada por mesa, a contagem de aberturas de um município **deixa de medir
+interesse** e passa a medir fluxo de pedestre na mesa, que é função da posição no estande e de
+quem está atendendo. Apresentar abertura bruta como "interesse" entrega conclusão errada para
+nove prefeitos ao mesmo tempo.
+
+**CS-DADO-002** — Cinco sinais distintos. **Nunca somados, nunca combinados num índice**, no
+código ou na tela:
+
+| Sinal | Evento | O que mede |
+| :-- | :-- | :-- |
+| Entrada | `session_start` + `entry_municipio` | fluxo de pedestre na mesa — posição no estande e atendimento. **Não é interesse pelo destino** |
+| Abertura | `municipio_open` | curiosidade — inflada para o município de entrada |
+| **Cruzamento** | `municipio_open` com `cruzamento: true` | **interesse genuíno, não induzido pela presença física — o número de destaque** |
+| Atenção | `audio_play` + `audio_progress` | segundos efetivamente ouvidos |
+| Interesse declarado | `interesse_declarado` | intenção — a pessoa pediu material |
+
+**CS-DADO-003** — O cruzamento é a métrica de destaque: é o único número que prova, com dado, que
+o consórcio gera valor que a soma das partes não gera.
+
+**CS-DADO-004** — Todo bloco do painel que exibe um número por município traz, impressa ao lado,
+esta nota:
+
+> A contagem de aberturas de um município inclui quem entrou pela mesa dele e é, por construção,
+> maior. A comparação justa entre municípios se faz por cruzamento e por atenção, nunca por
+> abertura bruta.
+
+### 10.1 Painel
+
+**CS-PAINEL-001** — Rota `/painel`, protegida por senha (basic auth no Cloudflare), sem idioma.
+
+**CS-PAINEL-002** — Blocos, nesta ordem:
+
+1. **Cruzamento** — no topo: quantos profissionais entraram por um município e abriram outro, em
+   valor absoluto e em % das sessões que entraram por mesa
+2. Alcance — sessões únicas, por dia e total
+3. Idioma — a medida direta do alcance internacional
+4. **Desempenho por mesa** — sessões iniciadas em cada mesa, rotulado como dado de fluxo físico,
+   não de interesse
+5. **Os cinco sinais por município**, lado a lado e nomeados: entrada · abertura · cruzamento ·
+   atenção · interesse declarado
+6. **Matriz de cruzamento 9×9** — entrou por X, abriu Y. Revela quais pares de municípios
+   interessam ao mesmo comprador; é o insumo direto de rota regional integrada e o argumento
+   factual a favor do consórcio
+7. Movimento por hora, por dia de feira
+8. Funil: `session_start` → `lang_select` → `audio_play` → 2º `audio_play` → `rota_ouvir_complete`
+   → `form_submit`
+9. Pontos mais ouvidos, ordenados por **tempo total de escuta**, não por clique
+10. **Recorte individual por município** — nove blocos, ordem alfabética, exportáveis em PDF
+    separado
+11. Qual peça física converteu (`qr_id`)
+
+**CS-PAINEL-003** — Existe protótipo de referência (`painel-conderlagos-amostra.html`, com números
+simulados). Reproduzir a estrutura e os cortes; **não reaproveitar os números**.
+
+**CS-PAINEL-004** — O painel não pode carregar credencial de leitura do analytics no cliente
+(CS-OURO-009). A leitura passa por Cloudflare Function atrás do basic auth. Ver
+[P-15](01-pendencias.md).
+
+---
+
+## 11. Design e performance
+
+**CS-DESIGN-001** — Mobile-first, testado primeiro em **375 px**. Desktop é adaptação, não o
+inverso.
+
+**CS-DESIGN-002** — Áudio é o produto; foto é a isca; texto é a acessibilidade. **Se em qualquer
+tela o texto ocupar mais espaço que o botão de play, a tela está errada.**
+
+**CS-DESIGN-003** — Paleta e tipografia saem do manual de marca do Conderlagos
+([P-01](01-pendencias.md)). Até chegar: tokens neutros, e **nenhuma cor codificada direto em
+componente** — tudo por custom properties num único arquivo de tema.
+
+**CS-DESIGN-004** — Alvos de toque ≥ 44×44 px. Contraste mínimo 4,5:1 para texto.
+
+**CS-PERF-001 · Orçamento não negociável:**
+
+| Métrica | Teto |
+| :-- | :-- |
+| Carga até a primeira tela interativa | **< 500 KB** |
+| HTML + CSS + JS inicial | **< 180 KB** comprimido |
+| LCP em 4G throttled (Moto G Power / iPhone SE) | **< 2,0 s** |
+| Do scan ao primeiro áudio tocável | **< 5 s** |
+| Lighthouse mobile — performance | **≥ 90** |
+| Lighthouse mobile — acessibilidade | **≥ 95** |
+
+**CS-PERF-002** — `scripts/perf-check.ts` com Lighthouse CI em rede throttled roda **em cada PR,
+desde a primeira semana**. PR que estoura o orçamento não entra.
+
+**CS-PERF-003** — Imagens: AVIF com fallback WebP, `srcset` responsivo, `loading="lazy"` fora da
+primeira dobra, dimensões declaradas para não causar layout shift.
+
+**CS-PERF-004** — Áudio: MP3 mono 48–64 kbps, carregado sob demanda, **um por vez**. Nunca
+pré-carregar os 36.
+
+**CS-PERF-005** — Service worker cacheia o shell da aplicação e os áudios **já ouvidos**. **Não**
+pré-cacheia tudo na entrada: isso quebraria o orçamento de 500 KB, que é o número que decide se o
+QR funciona no pavilhão lotado.
+
+---
+
+## 12. Aceite — o que o QA valida em dispositivo físico
+
+Emulador não vale para nenhum destes itens.
+
+| # | Verificação | Regras provadas |
+| :-- | :-- | :-- |
+| A-01 | iPhone (Safari iOS) e Android (Chrome), em 375 px e 414 px | CS-DESIGN-001 |
+| A-02 | Rede throttled a 3G lento **e** modo avião após a primeira carga | CS-PERF-001, CS-PERF-005 |
+| A-03 | Encadeamento de áudio da rota em Safari iOS físico, após o gesto inicial | CS-ROTA-003 |
+| A-04 | Duas sessões anônimas → ordens diferentes; recarga na mesma sessão → ordem igual | CS-SORT-001, CS-SORT-004 |
+| A-05 | Os nove redirects de mesa, um a um: município correto, idioma do aparelho, `entry_municipio` correto, botão voltar não retorna ao redirect | CS-NAV-002, CS-NAV-003, CS-NAV-005 |
+| A-06 | Entrar por `/saquarema` e abrir Arraial pelo módulo das outras oito → `cruzamento: true`, `origem: "outras_oito"`; abrir a própria Saquarema → `cruzamento: false` | CS-EVT-004, CS-OITO-006 |
+| A-07 | O módulo das outras oito nunca mostra o município atual, em nenhuma das nove páginas | CS-OITO-001 |
+| A-08 | Cobertura das rotas verificada por script: cada município em exatamente 2 | CS-CONT-004 |
+| A-09 | Seção "Lugares": em 20 sessões, nenhum município com zero ou dois cards; o ponto sorteado varia entre sessões | CS-HOME-006 |
+| A-10 | Nenhum `distancia_km` ou `tempo_estimado` publicado sem `fonte` | CS-CONT-003 |
+| A-11 | `viagem`, `modo viagem`, `roteiro`: zero ocorrências no código e no HTML gerado | CS-NOME-001 |
+| A-12 | Uma submissão com 3 municípios marcados → 3 eventos `interesse_declarado` | CS-LEAD-004 |
+| A-13 | Todos os eventos de CS-EVT-003 disparando, verificados no painel de analytics | CS-EVT-003 |
+| A-14 | `grep` no `out/`: nenhuma ocorrência de "Búzios", "Região dos Lagos", "os 10 municípios" — **inclusive em rótulo de mapa** | CS-OURO-003 |
+| A-15 | Todo `teaser` ≤ 180 caracteres no HTML gerado | CS-CONT-002 |
+| A-16 | Nenhuma foto sem crédito visível | CS-OURO-006 |
+| A-17 | Nenhuma requisição a domínio de terceiro além do CDN próprio e do analytics auto-hospedado | CS-OURO-010, CS-ARQ-004 |
+| A-18 | Do scan ao primeiro áudio de ponto: ≤ 2 toques, < 5 s | CS-MUN-004 |
+| A-19 | Taxa de conclusão do formulário ≥ 60% com 5 pessoas reais | CS-LEAD-007 |
+| A-20 | Escolher `ko` (ou `de`, `fr`, `it`, `zh`): interface no idioma escolhido, conteúdo e áudio em `en`, sem nenhum aviso na tela | CS-CONT-007, CS-CONT-008 |
+| A-21 | O atributo `lang` do HTML e `og:locale` declaram o idioma realmente servido no bloco, não o escolhido | CS-CONT-008 |
+
+---
+
+## 13. O que não fazer
+
+- Não conectar o site ao Supabase em tempo de execução.
+- Não usar Google Maps, Google Analytics, Meta Pixel ou qualquer script de terceiro com cookie.
+- Não criar ranking, contador público, badge de "mais visitado" ou qualquer elemento que compare
+  municípios em tela pública.
+- Não adicionar animação decorativa que custe orçamento de performance.
+- Não escrever adjetivo de folheto. Se a frase funcionaria para qualquer praia do Brasil, ela não
+  vai ao ar.
+- Não inventar dado, número, data ou fato histórico. Sem fonte, sem frase.
+- Não deixar a instrumentação para o final.
+- Não bloquear o deploy esperando o domínio do consórcio.
+
+---
+
+## 14. Divisão de trabalho
+
+| Papel | Escopo |
+| :-- | :-- |
+| **Product Owner** | este documento e `01-pendencias.md`; guarda das regras de ouro; aprova qualquer desvio |
+| **DBA Sr** | único a tocar o Supabase: `scripts/export-content.ts`, migration de `leads_abav_2026`, dump versionado |
+| **Fullstack Sr** | Next.js, rotas, componentes, endpoint de leads, painel, build e deploy |
+| **UX/UI + CRO Sr** | design system, telas, hierarquia visual, CTA, formulário, taxa de conclusão |
+| **QA Sr** | critérios de aceite do §12, dispositivo real, rede limitada, matriz de navegadores |
+| **Mobile Sr** | consultoria em comportamento de áudio, Safari iOS e gestos — não há app nativo aqui |
+
+Cada etapa concluída gera um documento em `docs/` descrevendo o que foi feito e por quê.
+
+**Ordem da primeira entrega, antes de qualquer código:** este documento → `01-pendencias.md` →
+`02-arquitetura.md` (Fullstack) → `03-modelo-de-dados.md` (DBA) → `scripts/validate-content.ts`
+funcionando com dados de exemplo.

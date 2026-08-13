@@ -1,0 +1,254 @@
+[
+  {
+    "id": "rota-da-lagoa",
+    "nome": {
+      "pt": "A rota da lagoa",
+      "en": "The lagoon route",
+      "es": "La ruta de la laguna"
+    },
+    "eixo": {
+      "pt": "[pt] Marcador de eixo geografico.",
+      "en": "[en] Marcador de eixo geografico.",
+      "es": "[es] Marcador de eixo geografico."
+    },
+    "cor": "#2f6f9f",
+    "municipios": [
+      "saquarema",
+      "araruama",
+      "iguaba-grande",
+      "sao-pedro-da-aldeia"
+    ],
+    "pontos": [
+      "saquarema-1",
+      "araruama-1",
+      "iguaba-grande-1",
+      "sao-pedro-da-aldeia-1"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42,
+          -22.5
+        ],
+        [
+          -42.1,
+          -22.6
+        ],
+        [
+          -42.2,
+          -22.7
+        ],
+        [
+          -42.3,
+          -22.8
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "[pt] 2 dias",
+      "en": "[en] 2 dias",
+      "es": "[es] 2 dias"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/rota-da-lagoa-pt.pdf",
+      "en": "/pdf/rota-da-lagoa-en.pdf",
+      "es": "/pdf/rota-da-lagoa-es.pdf"
+    }
+  },
+  {
+    "id": "rota-do-mar",
+    "nome": {
+      "pt": "A rota do mar",
+      "en": "The sea route",
+      "es": "La ruta del mar"
+    },
+    "eixo": {
+      "pt": "[pt] Marcador de eixo geografico.",
+      "en": "[en] Marcador de eixo geografico.",
+      "es": "[es] Marcador de eixo geografico."
+    },
+    "cor": "#1c8a8a",
+    "municipios": [
+      "cabo-frio",
+      "arraial-do-cabo"
+    ],
+    "pontos": [
+      "cabo-frio-1",
+      "arraial-do-cabo-1"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42,
+          -22.5
+        ],
+        [
+          -42.1,
+          -22.6
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "[pt] 2 dias",
+      "en": "[en] 2 dias",
+      "es": "[es] 2 dias"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/rota-do-mar-pt.pdf",
+      "en": "/pdf/rota-do-mar-en.pdf",
+      "es": "/pdf/rota-do-mar-es.pdf"
+    }
+  },
+  {
+    "id": "rota-da-mata",
+    "nome": {
+      "pt": "A rota da mata",
+      "en": "The forest route",
+      "es": "La ruta del bosque"
+    },
+    "eixo": {
+      "pt": "[pt] Marcador de eixo geografico.",
+      "en": "[en] Marcador de eixo geografico.",
+      "es": "[es] Marcador de eixo geografico."
+    },
+    "cor": "#3f7a3f",
+    "municipios": [
+      "silva-jardim",
+      "casimiro-de-abreu",
+      "rio-das-ostras"
+    ],
+    "pontos": [
+      "silva-jardim-1",
+      "casimiro-de-abreu-1",
+      "rio-das-ostras-1"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42,
+          -22.5
+        ],
+        [
+          -42.1,
+          -22.6
+        ],
+        [
+          -42.2,
+          -22.7
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "[pt] 2 dias",
+      "en": "[en] 2 dias",
+      "es": "[es] 2 dias"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/rota-da-mata-pt.pdf",
+      "en": "/pdf/rota-da-mata-en.pdf",
+      "es": "/pdf/rota-da-mata-es.pdf"
+    }
+  },
+  {
+    "id": "costa-do-sol-inteira",
+    "nome": {
+      "pt": "A Costa do Sol inteira",
+      "en": "The whole Costa do Sol",
+      "es": "Toda la Costa do Sol"
+    },
+    "eixo": {
+      "pt": "[pt] Marcador de eixo geografico.",
+      "en": "[en] Marcador de eixo geografico.",
+      "es": "[es] Marcador de eixo geografico."
+    },
+    "cor": "#b06a2c",
+    "municipios": [
+      "araruama",
+      "arraial-do-cabo",
+      "cabo-frio",
+      "casimiro-de-abreu",
+      "iguaba-grande",
+      "rio-das-ostras",
+      "sao-pedro-da-aldeia",
+      "saquarema",
+      "silva-jardim"
+    ],
+    "pontos": [
+      "araruama-1",
+      "arraial-do-cabo-1",
+      "cabo-frio-1",
+      "casimiro-de-abreu-1",
+      "iguaba-grande-1",
+      "rio-das-ostras-1",
+      "sao-pedro-da-aldeia-1",
+      "saquarema-1",
+      "silva-jardim-1"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42,
+          -22.5
+        ],
+        [
+          -42.1,
+          -22.6
+        ],
+        [
+          -42.2,
+          -22.7
+        ],
+        [
+          -42.3,
+          -22.8
+        ],
+        [
+          -42.4,
+          -22.9
+        ],
+        [
+          -42.5,
+          -23
+        ],
+        [
+          -42.6,
+          -23.1
+        ],
+        [
+          -42.7,
+          -23.2
+        ],
+        [
+          -42.8,
+          -23.3
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "[pt] 2 dias",
+      "en": "[en] 2 dias",
+      "es": "[es] 2 dias"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/costa-do-sol-inteira-pt.pdf",
+      "en": "/pdf/costa-do-sol-inteira-en.pdf",
+      "es": "/pdf/costa-do-sol-inteira-es.pdf"
+    }
+  }
+]

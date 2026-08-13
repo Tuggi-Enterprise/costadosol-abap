@@ -1,0 +1,53 @@
+[
+  {
+    "id": "aereo",
+    "titulo": {
+      "pt": "[pt] Marcador de titulo do fato aereo",
+      "en": "[en] Marcador de titulo do fato aereo",
+      "es": "[es] Marcador de titulo do fato aereo"
+    },
+    "numero": "000",
+    "texto": {
+      "pt": "[pt] Marcador de frase do fato aereo. Numero e fonte pendentes (P-22).",
+      "en": "[en] Marcador de frase do fato aereo. Numero e fonte pendentes (P-22).",
+      "es": "[es] Marcador de frase do fato aereo. Numero e fonte pendentes (P-22)."
+    },
+    "fonte_url": "https://example.org/fonte",
+    "fonte_nome": "EXEMPLO — fonte pendente (P-22)",
+    "confianca": "baixa"
+  },
+  {
+    "id": "wsl",
+    "titulo": {
+      "pt": "[pt] Marcador de titulo do fato wsl",
+      "en": "[en] Marcador de titulo do fato wsl",
+      "es": "[es] Marcador de titulo do fato wsl"
+    },
+    "numero": "000",
+    "texto": {
+      "pt": "[pt] Marcador de frase do fato wsl. Numero e fonte pendentes (P-22).",
+      "en": "[en] Marcador de frase do fato wsl. Numero e fonte pendentes (P-22).",
+      "es": "[es] Marcador de frase do fato wsl. Numero e fonte pendentes (P-22)."
+    },
+    "fonte_url": "https://example.org/fonte",
+    "fonte_nome": "EXEMPLO — fonte pendente (P-22)",
+    "confianca": "baixa"
+  },
+  {
+    "id": "natureza",
+    "titulo": {
+      "pt": "[pt] Marcador de titulo do fato natureza",
+      "en": "[en] Marcador de titulo do fato natureza",
+      "es": "[es] Marcador de titulo do fato natureza"
+    },
+    "numero": "000",
+    "texto": {
+      "pt": "[pt] Marcador de frase do fato natureza. Numero e fonte pendentes (P-22).",
+      "en": "[en] Marcador de frase do fato natureza. Numero e fonte pendentes (P-22).",
+      "es": "[es] Marcador de frase do fato natureza. Numero e fonte pendentes (P-22)."
+    },
+    "fonte_url": "https://example.org/fonte",
+    "fonte_nome": "EXEMPLO — fonte pendente (P-22)",
+    "confianca": "baixa"
+  }
+]

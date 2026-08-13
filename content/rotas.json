@@ -1,0 +1,254 @@
+[
+  {
+    "id": "rota-da-lagoa",
+    "nome": {
+      "pt": "A rota da lagoa",
+      "en": "The lagoon route",
+      "es": "La ruta de la laguna"
+    },
+    "eixo": {
+      "pt": "O entorno da Lagoa de Araruama",
+      "en": "Around the Araruama Lagoon",
+      "es": "El entorno de la Laguna de Araruama"
+    },
+    "cor": "#1d6f8b",
+    "municipios": [
+      "saquarema",
+      "araruama",
+      "iguaba-grande",
+      "sao-pedro-da-aldeia"
+    ],
+    "pontos": [
+      "saquarema-itauna",
+      "araruama-lagoa",
+      "iguaba-lagoa",
+      "aldeia-casa-da-flor"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42.51,
+          -22.92
+        ],
+        [
+          -42.3433,
+          -22.8728
+        ],
+        [
+          -42.2286,
+          -22.8394
+        ],
+        [
+          -42.1022,
+          -22.8386
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "4 cidades",
+      "en": "4 cities",
+      "es": "4 ciudades"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/rota-da-lagoa-pt.pdf",
+      "en": "/pdf/rota-da-lagoa-en.pdf",
+      "es": "/pdf/rota-da-lagoa-es.pdf"
+    }
+  },
+  {
+    "id": "rota-do-mar",
+    "nome": {
+      "pt": "A rota do mar aberto",
+      "en": "The open sea route",
+      "es": "La ruta del mar abierto"
+    },
+    "eixo": {
+      "pt": "O encontro do canal com o oceano",
+      "en": "Where the channel meets the ocean",
+      "es": "Donde el canal encuentra el océano"
+    },
+    "cor": "#0f8f8f",
+    "municipios": [
+      "cabo-frio",
+      "arraial-do-cabo"
+    ],
+    "pontos": [
+      "cabo-frio-praia-do-forte",
+      "arraial-prainhas"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42.0286,
+          -22.8894
+        ],
+        [
+          -42.0278,
+          -22.9661
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "2 cidades",
+      "en": "2 cities",
+      "es": "2 ciudades"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/rota-do-mar-pt.pdf",
+      "en": "/pdf/rota-do-mar-en.pdf",
+      "es": "/pdf/rota-do-mar-es.pdf"
+    }
+  },
+  {
+    "id": "rota-da-mata",
+    "nome": {
+      "pt": "A rota da mata",
+      "en": "The forest route",
+      "es": "La ruta del bosque"
+    },
+    "eixo": {
+      "pt": "A bacia do Rio São João",
+      "en": "The São João river basin",
+      "es": "La cuenca del río São João"
+    },
+    "cor": "#3f7a3f",
+    "municipios": [
+      "silva-jardim",
+      "casimiro-de-abreu",
+      "rio-das-ostras"
+    ],
+    "pontos": [
+      "silva-jardim-poco-das-antas",
+      "casimiro-morro-sao-joao",
+      "ostras-praca-da-baleia"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42.3906,
+          -22.6567
+        ],
+        [
+          -42.2044,
+          -22.4794
+        ],
+        [
+          -41.945,
+          -22.5269
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "3 cidades",
+      "en": "3 cities",
+      "es": "3 ciudades"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/rota-da-mata-pt.pdf",
+      "en": "/pdf/rota-da-mata-en.pdf",
+      "es": "/pdf/rota-da-mata-es.pdf"
+    }
+  },
+  {
+    "id": "costa-do-sol-inteira",
+    "nome": {
+      "pt": "A Costa do Sol inteira",
+      "en": "The whole Costa do Sol",
+      "es": "Toda la Costa do Sol"
+    },
+    "eixo": {
+      "pt": "De ponta a ponta do território",
+      "en": "From one end of the territory to the other",
+      "es": "De un extremo al otro del territorio"
+    },
+    "cor": "#b06a2c",
+    "municipios": [
+      "saquarema",
+      "araruama",
+      "silva-jardim",
+      "iguaba-grande",
+      "sao-pedro-da-aldeia",
+      "arraial-do-cabo",
+      "cabo-frio",
+      "casimiro-de-abreu",
+      "rio-das-ostras"
+    ],
+    "pontos": [
+      "saquarema-itauna",
+      "araruama-lagoa",
+      "silva-jardim-poco-das-antas",
+      "iguaba-lagoa",
+      "aldeia-casa-da-flor",
+      "arraial-prainhas",
+      "cabo-frio-praia-do-forte",
+      "casimiro-morro-sao-joao",
+      "ostras-praca-da-baleia"
+    ],
+    "geometria": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -42.51,
+          -22.92
+        ],
+        [
+          -42.3433,
+          -22.8728
+        ],
+        [
+          -42.3906,
+          -22.6567
+        ],
+        [
+          -42.2286,
+          -22.8394
+        ],
+        [
+          -42.1022,
+          -22.8386
+        ],
+        [
+          -42.0278,
+          -22.9661
+        ],
+        [
+          -42.0286,
+          -22.8894
+        ],
+        [
+          -42.2044,
+          -22.4794
+        ],
+        [
+          -41.945,
+          -22.5269
+        ]
+      ]
+    },
+    "duracao_sugerida": {
+      "pt": "9 cidades",
+      "en": "9 cities",
+      "es": "9 ciudades"
+    },
+    "distancia_km": null,
+    "tempo_estimado": null,
+    "fonte": null,
+    "pdf": {
+      "pt": "/pdf/costa-do-sol-inteira-pt.pdf",
+      "en": "/pdf/costa-do-sol-inteira-en.pdf",
+      "es": "/pdf/costa-do-sol-inteira-es.pdf"
+    }
+  }
+]

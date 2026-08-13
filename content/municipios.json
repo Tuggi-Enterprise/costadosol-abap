@@ -1,0 +1,389 @@
+[
+  {
+    "slug": "araruama",
+    "nome": "Araruama",
+    "linha": {
+      "pt": "A cidade que vive na margem da maior lagoa de água salgada da América Latina.",
+      "en": "The city on the shore of the largest saltwater lagoon in Latin America.",
+      "es": "La ciudad a orillas de la mayor laguna de agua salada de América Latina."
+    },
+    "hero": {
+      "src": "/img/mun/araruama",
+      "alt": {
+        "pt": "Vista de Araruama",
+        "en": "View of Araruama",
+        "es": "Vista de Araruama"
+      },
+      "credito": "Vinícius Agner · CC BY-SA 3.0"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-araruama.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-araruama.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-araruama.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/araruama/",
+      "selo": "/img/selo/araruama.svg"
+    },
+    "pontos": [
+      "araruama-lagoa",
+      "araruama-praia-seca",
+      "araruama-massambaba",
+      "araruama-juturnaiba"
+    ]
+  },
+  {
+    "slug": "arraial-do-cabo",
+    "nome": "Arraial do Cabo",
+    "linha": {
+      "pt": "Cerca de 30 pontos de mergulho a poucos minutos do porto.",
+      "en": "Around 30 dive sites, minutes from the harbour.",
+      "es": "Cerca de 30 puntos de buceo a pocos minutos del puerto."
+    },
+    "hero": {
+      "src": "/img/mun/arraial-do-cabo",
+      "alt": {
+        "pt": "Vista de Arraial do Cabo",
+        "en": "View of Arraial do Cabo",
+        "es": "Vista de Arraial do Cabo"
+      },
+      "credito": "Eduardo P · Public domain"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-arraial-do-cabo.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-arraial-do-cabo.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-arraial-do-cabo.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/arraial-do-cabo/",
+      "selo": "/img/selo/arraial-do-cabo.svg"
+    },
+    "pontos": [
+      "arraial-prainhas",
+      "arraial-farol",
+      "arraial-anjos",
+      "arraial-forno"
+    ]
+  },
+  {
+    "slug": "cabo-frio",
+    "nome": "Cabo Frio",
+    "linha": {
+      "pt": "Areia branca e fina de um lado, o monumento histórico mais antigo da região do outro.",
+      "en": "Fine white sand on one side, the region’s oldest historic monument on the other.",
+      "es": "Arena blanca y fina de un lado, el monumento histórico más antiguo de la región del otro."
+    },
+    "hero": {
+      "src": "/img/mun/cabo-frio",
+      "alt": {
+        "pt": "Vista de Cabo Frio",
+        "en": "View of Cabo Frio",
+        "es": "Vista de Cabo Frio"
+      },
+      "credito": "Ezarate · CC BY-SA 3.0"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-cabo-frio.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-cabo-frio.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-cabo-frio.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/cabo-frio/",
+      "selo": "/img/selo/cabo-frio.svg"
+    },
+    "pontos": [
+      "cabo-frio-praia-do-forte",
+      "cabo-frio-forte",
+      "cabo-frio-pero",
+      "cabo-frio-itajuru"
+    ]
+  },
+  {
+    "slug": "casimiro-de-abreu",
+    "nome": "Casimiro de Abreu",
+    "linha": {
+      "pt": "Um vulcão extinto de 800 metros, dois rios e o nome de um poeta.",
+      "en": "An extinct volcano 800 metres high, two rivers and a poet’s name.",
+      "es": "Un volcán extinto de 800 metros, dos ríos y el nombre de un poeta."
+    },
+    "hero": {
+      "src": "/img/pendente",
+      "alt": {
+        "pt": "Vista de Casimiro de Abreu",
+        "en": "View of Casimiro de Abreu",
+        "es": "Vista de Casimiro de Abreu"
+      },
+      "credito": "Foto pendente — banco das secretarias (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-casimiro-de-abreu.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-casimiro-de-abreu.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-casimiro-de-abreu.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/casimiro-de-abreu/",
+      "selo": "/img/selo/casimiro-de-abreu.svg"
+    },
+    "pontos": [
+      "casimiro-morro-sao-joao",
+      "casimiro-rio-macae",
+      "casimiro-barra-de-sao-joao",
+      "casimiro-museu"
+    ]
+  },
+  {
+    "slug": "iguaba-grande",
+    "nome": "Iguaba Grande",
+    "linha": {
+      "pt": "Cinco trilhas, uma serra e a pedra onde o peixe era salgado antes da geladeira existir.",
+      "en": "Five trails, a mountain range, and the rock where fish was salted before refrigeration.",
+      "es": "Cinco senderos, una sierra y la piedra donde se salaba el pescado antes de la nevera."
+    },
+    "hero": {
+      "src": "/img/pendente",
+      "alt": {
+        "pt": "Vista de Iguaba Grande",
+        "en": "View of Iguaba Grande",
+        "es": "Vista de Iguaba Grande"
+      },
+      "credito": "Foto pendente — banco das secretarias (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-iguaba-grande.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-iguaba-grande.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-iguaba-grande.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/iguaba-grande/",
+      "selo": "/img/selo/iguaba-grande.svg"
+    },
+    "pontos": [
+      "iguaba-lagoa",
+      "iguaba-pedra-da-salga",
+      "iguaba-sapeatiba",
+      "iguaba-santa-rita"
+    ]
+  },
+  {
+    "slug": "rio-das-ostras",
+    "nome": "Rio das Ostras",
+    "linha": {
+      "pt": "Vinte e oito quilômetros de costa, quinze praias e um festival de jazz e blues.",
+      "en": "Twenty-eight kilometres of coast, fifteen beaches and a jazz and blues festival.",
+      "es": "Veintiocho kilómetros de costa, quince playas y un festival de jazz y blues."
+    },
+    "hero": {
+      "src": "/img/mun/rio-das-ostras",
+      "alt": {
+        "pt": "Vista de Rio das Ostras",
+        "en": "View of Rio das Ostras",
+        "es": "Vista de Rio das Ostras"
+      },
+      "credito": "Yasmin Rollemberg · CC BY-SA 3.0"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-rio-das-ostras.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-rio-das-ostras.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-rio-das-ostras.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/rio-das-ostras/",
+      "selo": "/img/selo/rio-das-ostras.svg"
+    },
+    "pontos": [
+      "ostras-praca-da-baleia",
+      "ostras-costazul",
+      "ostras-pier",
+      "ostras-costoes"
+    ]
+  },
+  {
+    "slug": "sao-pedro-da-aldeia",
+    "nome": "São Pedro da Aldeia",
+    "linha": {
+      "pt": "Uma igreja de 1783, uma casa feita de cacos e o vento que traz os veleiros.",
+      "en": "A church from 1783, a house built from broken pieces, and the wind that brings the sailboats.",
+      "es": "Una iglesia de 1783, una casa hecha de fragmentos y el viento que trae los veleros."
+    },
+    "hero": {
+      "src": "/img/mun/sao-pedro-da-aldeia",
+      "alt": {
+        "pt": "Vista de São Pedro da Aldeia",
+        "en": "View of São Pedro da Aldeia",
+        "es": "Vista de São Pedro da Aldeia"
+      },
+      "credito": "Luis Francisco de Souza da Silveira · CC BY-SA 4.0"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-sao-pedro-da-aldeia.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-sao-pedro-da-aldeia.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-sao-pedro-da-aldeia.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/sao-pedro-da-aldeia/",
+      "selo": "/img/selo/sao-pedro-da-aldeia.svg"
+    },
+    "pontos": [
+      "aldeia-casa-da-flor",
+      "aldeia-igreja-matriz",
+      "aldeia-sudoeste",
+      "aldeia-aviacao-naval"
+    ]
+  },
+  {
+    "slug": "saquarema",
+    "nome": "Saquarema",
+    "linha": {
+      "pt": "A única cidade do mundo a receber as três divisões do circuito mundial de surfe.",
+      "en": "The only city in the world to host all three divisions of the world surfing tour.",
+      "es": "La única ciudad del mundo que recibe las tres divisiones del circuito mundial de surf."
+    },
+    "hero": {
+      "src": "/img/mun/saquarema",
+      "alt": {
+        "pt": "Vista de Saquarema",
+        "en": "View of Saquarema",
+        "es": "Vista de Saquarema"
+      },
+      "credito": "Roger Brock · CC BY-SA 4.0"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-saquarema.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-saquarema.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-saquarema.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.saquarema.rj.gov.br/turismo/",
+      "selo": "/img/selo/saquarema.svg"
+    },
+    "pontos": [
+      "saquarema-itauna",
+      "saquarema-nazareth",
+      "saquarema-lagoa",
+      "saquarema-vila"
+    ]
+  },
+  {
+    "slug": "silva-jardim",
+    "nome": "Silva Jardim",
+    "linha": {
+      "pt": "O município com o maior número de reservas particulares de patrimônio natural do estado.",
+      "en": "The municipality with the most private natural heritage reserves in the state.",
+      "es": "El municipio con el mayor número de reservas privadas de patrimonio natural del estado."
+    },
+    "hero": {
+      "src": "/img/pendente",
+      "alt": {
+        "pt": "Vista de Silva Jardim",
+        "en": "View of Silva Jardim",
+        "es": "Vista de Silva Jardim"
+      },
+      "credito": "Foto pendente — banco das secretarias (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-silva-jardim.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-silva-jardim.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-silva-jardim.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/silva-jardim/",
+      "selo": "/img/selo/silva-jardim.svg"
+    },
+    "pontos": [
+      "silva-jardim-poco-das-antas",
+      "silva-jardim-aldeia-velha",
+      "silva-jardim-sete-quedas",
+      "silva-jardim-lapa"
+    ]
+  }
+]

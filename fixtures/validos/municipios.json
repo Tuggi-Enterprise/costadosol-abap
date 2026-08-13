@@ -1,0 +1,389 @@
+[
+  {
+    "slug": "araruama",
+    "nome": "Araruama",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Araruama.",
+      "en": "[en] Marcador de posicionamento de Araruama.",
+      "es": "[es] Marcador de posicionamento de Araruama."
+    },
+    "hero": {
+      "src": "/img/mun/araruama",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Araruama.",
+        "en": "[en] Marcador de descricao da foto de Araruama.",
+        "es": "[es] Marcador de descricao da foto de Araruama."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-araruama.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-araruama.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-araruama.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/araruama.svg"
+    },
+    "pontos": [
+      "araruama-1",
+      "araruama-2",
+      "araruama-3",
+      "araruama-4"
+    ]
+  },
+  {
+    "slug": "arraial-do-cabo",
+    "nome": "Arraial do Cabo",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Arraial do Cabo.",
+      "en": "[en] Marcador de posicionamento de Arraial do Cabo.",
+      "es": "[es] Marcador de posicionamento de Arraial do Cabo."
+    },
+    "hero": {
+      "src": "/img/mun/arraial-do-cabo",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Arraial do Cabo.",
+        "en": "[en] Marcador de descricao da foto de Arraial do Cabo.",
+        "es": "[es] Marcador de descricao da foto de Arraial do Cabo."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-arraial-do-cabo.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-arraial-do-cabo.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-arraial-do-cabo.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/arraial-do-cabo.svg"
+    },
+    "pontos": [
+      "arraial-do-cabo-1",
+      "arraial-do-cabo-2",
+      "arraial-do-cabo-3",
+      "arraial-do-cabo-4"
+    ]
+  },
+  {
+    "slug": "cabo-frio",
+    "nome": "Cabo Frio",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Cabo Frio.",
+      "en": "[en] Marcador de posicionamento de Cabo Frio.",
+      "es": "[es] Marcador de posicionamento de Cabo Frio."
+    },
+    "hero": {
+      "src": "/img/mun/cabo-frio",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Cabo Frio.",
+        "en": "[en] Marcador de descricao da foto de Cabo Frio.",
+        "es": "[es] Marcador de descricao da foto de Cabo Frio."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-cabo-frio.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-cabo-frio.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-cabo-frio.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/cabo-frio.svg"
+    },
+    "pontos": [
+      "cabo-frio-1",
+      "cabo-frio-2",
+      "cabo-frio-3",
+      "cabo-frio-4"
+    ]
+  },
+  {
+    "slug": "casimiro-de-abreu",
+    "nome": "Casimiro de Abreu",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Casimiro de Abreu.",
+      "en": "[en] Marcador de posicionamento de Casimiro de Abreu.",
+      "es": "[es] Marcador de posicionamento de Casimiro de Abreu."
+    },
+    "hero": {
+      "src": "/img/mun/casimiro-de-abreu",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Casimiro de Abreu.",
+        "en": "[en] Marcador de descricao da foto de Casimiro de Abreu.",
+        "es": "[es] Marcador de descricao da foto de Casimiro de Abreu."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-casimiro-de-abreu.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-casimiro-de-abreu.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-casimiro-de-abreu.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/casimiro-de-abreu.svg"
+    },
+    "pontos": [
+      "casimiro-de-abreu-1",
+      "casimiro-de-abreu-2",
+      "casimiro-de-abreu-3",
+      "casimiro-de-abreu-4"
+    ]
+  },
+  {
+    "slug": "iguaba-grande",
+    "nome": "Iguaba Grande",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Iguaba Grande.",
+      "en": "[en] Marcador de posicionamento de Iguaba Grande.",
+      "es": "[es] Marcador de posicionamento de Iguaba Grande."
+    },
+    "hero": {
+      "src": "/img/mun/iguaba-grande",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Iguaba Grande.",
+        "en": "[en] Marcador de descricao da foto de Iguaba Grande.",
+        "es": "[es] Marcador de descricao da foto de Iguaba Grande."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-iguaba-grande.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-iguaba-grande.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-iguaba-grande.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/iguaba-grande.svg"
+    },
+    "pontos": [
+      "iguaba-grande-1",
+      "iguaba-grande-2",
+      "iguaba-grande-3",
+      "iguaba-grande-4"
+    ]
+  },
+  {
+    "slug": "rio-das-ostras",
+    "nome": "Rio das Ostras",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Rio das Ostras.",
+      "en": "[en] Marcador de posicionamento de Rio das Ostras.",
+      "es": "[es] Marcador de posicionamento de Rio das Ostras."
+    },
+    "hero": {
+      "src": "/img/mun/rio-das-ostras",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Rio das Ostras.",
+        "en": "[en] Marcador de descricao da foto de Rio das Ostras.",
+        "es": "[es] Marcador de descricao da foto de Rio das Ostras."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-rio-das-ostras.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-rio-das-ostras.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-rio-das-ostras.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/rio-das-ostras.svg"
+    },
+    "pontos": [
+      "rio-das-ostras-1",
+      "rio-das-ostras-2",
+      "rio-das-ostras-3",
+      "rio-das-ostras-4"
+    ]
+  },
+  {
+    "slug": "sao-pedro-da-aldeia",
+    "nome": "São Pedro da Aldeia",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de São Pedro da Aldeia.",
+      "en": "[en] Marcador de posicionamento de São Pedro da Aldeia.",
+      "es": "[es] Marcador de posicionamento de São Pedro da Aldeia."
+    },
+    "hero": {
+      "src": "/img/mun/sao-pedro-da-aldeia",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de São Pedro da Aldeia.",
+        "en": "[en] Marcador de descricao da foto de São Pedro da Aldeia.",
+        "es": "[es] Marcador de descricao da foto de São Pedro da Aldeia."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-sao-pedro-da-aldeia.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-sao-pedro-da-aldeia.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-sao-pedro-da-aldeia.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/sao-pedro-da-aldeia.svg"
+    },
+    "pontos": [
+      "sao-pedro-da-aldeia-1",
+      "sao-pedro-da-aldeia-2",
+      "sao-pedro-da-aldeia-3",
+      "sao-pedro-da-aldeia-4"
+    ]
+  },
+  {
+    "slug": "saquarema",
+    "nome": "Saquarema",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Saquarema.",
+      "en": "[en] Marcador de posicionamento de Saquarema.",
+      "es": "[es] Marcador de posicionamento de Saquarema."
+    },
+    "hero": {
+      "src": "/img/mun/saquarema",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Saquarema.",
+        "en": "[en] Marcador de descricao da foto de Saquarema.",
+        "es": "[es] Marcador de descricao da foto de Saquarema."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-saquarema.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-saquarema.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-saquarema.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/saquarema.svg"
+    },
+    "pontos": [
+      "saquarema-1",
+      "saquarema-2",
+      "saquarema-3",
+      "saquarema-4"
+    ]
+  },
+  {
+    "slug": "silva-jardim",
+    "nome": "Silva Jardim",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Silva Jardim.",
+      "en": "[en] Marcador de posicionamento de Silva Jardim.",
+      "es": "[es] Marcador de posicionamento de Silva Jardim."
+    },
+    "hero": {
+      "src": "/img/mun/silva-jardim",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Silva Jardim.",
+        "en": "[en] Marcador de descricao da foto de Silva Jardim.",
+        "es": "[es] Marcador de descricao da foto de Silva Jardim."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-silva-jardim.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-silva-jardim.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-silva-jardim.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/silva-jardim.svg"
+    },
+    "pontos": [
+      "silva-jardim-1",
+      "silva-jardim-2",
+      "silva-jardim-3",
+      "silva-jardim-4"
+    ]
+  }
+]

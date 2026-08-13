@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+
+/**
+ * ÚNICO lugar do projeto com cor, raio, sombra e escala tipográfica (CS-DESIGN-003).
+ *
+ * A paleta é provisória — o manual de marca do Conderlagos é P-01 — mas não é arbitrária:
+ * sai do que a região é. Água de lagoa rasa (turquesa esverdeado), oceano fundo (azul
+ * profundo), areia branca de Cabo Frio (papel quente), sal (neutro claro). Quando o manual
+ * chegar, troca-se este bloco e nenhum componente muda.
+ */
+@theme {
+  --color-oceano: oklch(0.28 0.06 235);
+  --color-oceano-fundo: oklch(0.19 0.045 240);
+  --color-lagoa: oklch(0.62 0.11 195);
+  --color-sal: oklch(0.97 0.008 200);
+  --color-areia: oklch(0.93 0.017 85);
+  --color-tinta: oklch(0.21 0.02 240);
+  --color-tinta-suave: oklch(0.48 0.02 240);
+  --color-borda: oklch(0.89 0.01 220);
+  --color-papel: oklch(0.99 0.004 200);
+  --color-destaque: oklch(0.58 0.14 45);
+  --color-destaque-tinta: oklch(0.99 0 0);
+
+  --radius-peca: 0.75rem;
+  --radius-pilula: 999px;
+
+  --font-texto: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-titulo: clamp(2rem, 8vw, 3.25rem);
+  --text-titulo--line-height: 1.02;
+  --text-secao: clamp(1.25rem, 4.5vw, 1.75rem);
+  --text-secao--line-height: 1.1;
+}
+
+html {
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--font-texto);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  /* Mobile-first de verdade: o conteúdo tem uma coluna, e o desktop é ela centrada. */
+  max-width: 46rem;
+  margin-inline: auto;
+  background: var(--color-papel);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* CS-DESIGN-004: alvo de toque nunca abaixo de 44 px. */
+button,
+a[data-alvo='toque'] {
+  min-height: 44px;
+}
+
+/**
+ * CS-DESIGN-004 — o anel de foco do navegador desaparece sobre os botoes escuros e some
+ * de vez sobre foto. Um anel proprio, com offset, e visivel nos dois fundos e e o que a
+ * meta de acessibilidade >= 95 confere.
+ */
+:focus-visible {
+  outline: 2px solid var(--color-destaque);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/**
+ * A ordem sorteada so existe depois de o script rodar (CS-SORT-002 le a semente do
+ * sessionStorage, que nao existe no servidor). Sem isto o visitante ve a ordem do
+ * arquivo e depois um salto, com as fotos ja na tela. Sem script, a grade aparece na
+ * ordem do arquivo — nunca invisivel.
+ */
+[data-sorteio='pendente'] {
+  opacity: 0;
+}
+
+[data-sorteio='pronto'] {
+  opacity: 1;
+  transition: opacity 140ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -29,8 +29,21 @@ export const MUNICIPIOS = [
 
 export const SLUGS = MUNICIPIOS.map((m) => m.slug)
 
-/** CS-NAV-006 — a barra mostra os oito. */
-export const IDIOMAS_INTERFACE = ['pt', 'en', 'es', 'fr', 'it', 'de', 'zh', 'ko'] as const
+/**
+ * Tres idiomas, nao oito — decisao do operador em 13/08/2026, que revoga a lista de oito
+ * de CS-NAV-006 e o P-14b que a acompanhava.
+ *
+ * O que os oito escondiam: cinco deles (fr, it, de, zh, ko) tinham interface traduzida e
+ * conteudo em ingles, e nenhum tinha passado por revisor humano (P-23). O comprador
+ * alemao escolhia "Deutsch", via cinco rotulos em alemao e o texto do lugar em ingles —
+ * promessa de cobertura que o conteudo nao cumpria. Tres idiomas cobrem interface E
+ * conteudo, e nenhuma tela mente sobre o que existe atras dela.
+ *
+ * Com isto, interface e conteudo passam a ter a MESMA lista. As duas constantes
+ * continuam separadas porque respondem a perguntas diferentes: uma diz que paginas o
+ * build emite, a outra o que todo bloco de conteudo precisa trazer.
+ */
+export const IDIOMAS_INTERFACE = ['pt', 'en', 'es'] as const
 
 /** CS-CONT-007 — conteudo e audio existem em tres. */
 export const IDIOMAS_CONTEUDO = ['pt', 'en', 'es'] as const
@@ -73,8 +86,10 @@ export const PROIBIDAS: readonly { padrao: RegExp; regra: string; motivo: string
 const IDIOMAS_VALIDOS = new Set<string>(IDIOMAS_INTERFACE)
 
 /**
- * Texto por idioma. `pt`, `en` e `es` sao obrigatorios (CS-CONT-007); os outros
- * cinco sao opcionais aqui e cobrados por inteiro em `idiomasParciais` (CS-CONT-009).
+ * Texto por idioma. `pt`, `en` e `es` sao obrigatorios (CS-CONT-007), e desde
+ * 13/08/2026 sao os UNICOS aceitos: um idioma fora do trio falha aqui mesmo. A varredura
+ * de `idiomasParciais` (CS-CONT-009) continua atras disto, para o dia em que a lista
+ * voltar a crescer.
  */
 export const textoMultilingue = (max?: number) =>
   z

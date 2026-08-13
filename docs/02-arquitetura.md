@@ -82,7 +82,7 @@ app/
   layout.tsx                 shell; nada de dado aqui
   page.tsx                   / — escolha de idioma (CS-NAV-007)
   [lang]/
-    layout.tsx               barra de idioma, rodapé com a linha do CS-OURO-002
+    layout.tsx               navegação, rodapé com seletor de idioma e a linha do CS-OURO-002
     page.tsx                 home
     [municipio]/page.tsx     página do município (CS-MUN-001)
     [municipio]/[ponto]/page.tsx
@@ -90,7 +90,7 @@ app/
     lugares/page.tsx  para-quem-vende/page.tsx  imprensa/page.tsx
   painel/page.tsx            sem idioma; lê pela Function (P-15)
 componentes/
-  Foto.tsx  Audio.tsx  BarraDeIdioma.tsx  Mapa.tsx  GradeDeMunicipios.tsx
+  Foto.tsx  Audio.tsx  SeletorDeIdioma.tsx  Mapa.tsx  GradeDeMunicipios.tsx
   OutrasOito.tsx  CardDePonto.tsx  Formulario.tsx
 lib/
   conteudo.ts                leitura tipada de content/ em tempo de build
@@ -123,7 +123,7 @@ antes de sair. `redirects()` do Next não serve para isso — redirect de servid
 - `scripts/gen-redirects.ts` lê `content/municipios.json` e escreve
   `public/<slug>/index.html` para os nove. **Gerado, nunca escrito à mão** — nome de município é
   dado, e dado tem um dono só (SSOT).
-- Cada página: lê `navigator.language`, resolve o idioma contra a lista de oito, grava
+- Cada página: lê `navigator.language`, resolve o idioma contra a lista de três, grava
   `entry_municipio` e `qr_id` em `sessionStorage`, e faz `location.replace('/<lang>/<slug>/')`.
 - `location.replace`, nunca `href` (`CS-NAV-003`).
 - Sem CSS externo, sem fonte, sem imagem: a página é invisível por 40 ms e qualquer byte a mais
@@ -135,8 +135,8 @@ antes de sair. `redirects()` do Next não serve para isso — redirect de servid
   servidor responde 308 antes de qualquer coisa, e um salto a mais é exatamente o que
   `CS-MUN-004` está contando. Vale para o cartão de mesa e para qualquer peça impressa.
 
-**Colisão de nomes verificada:** as rotas do Next na raiz são os oito idiomas (`/pt/`, `/en/`…) e
-`/painel/`. Os nove slugs de município não colidem com nenhuma. `gen-redirects.ts` falha se algum
+**Colisão de nomes verificada:** as rotas do Next na raiz são os três idiomas (`/pt/`, `/en/`,
+`/es/`) e `/painel/`. Os nove slugs de município não colidem com nenhuma. `gen-redirects.ts` falha se algum
 slug colidir com um segmento reservado.
 
 ---
@@ -146,9 +146,9 @@ slug colidir com um segmento reservado.
 `lib/idioma.ts` concentra `CS-CONT-007` inteiro:
 
 ```
-IDIOMAS_INTERFACE = pt en es fr it de zh ko     (8 — a barra mostra os oito)
+IDIOMAS_INTERFACE = pt en es                    (3 — o que o build emite)
 IDIOMAS_CONTEUDO  = pt en es                    (3 — conteúdo e áudio)
-FALLBACK_CONTEUDO = en
+FALLBACK_CONTEUDO = en                          (rede, desde 13/08: as listas são iguais)
 ```
 
 Uma função só resolve qual idioma um campo de conteúdo realmente serve, e **todo componente que
@@ -164,10 +164,12 @@ mentirmos e indexador registra errado.
 ## 6. Conteúdo em tempo de build
 
 `lib/conteudo.ts` importa os JSON de `content/` diretamente. Os arquivos são pequenos (36 pontos)
-e o Next resolve tudo em Server Component durante o `next build`: **nenhum byte de `content/`
-chega ao cliente além do que a página usa**. `generateStaticParams()` enumera 8 idiomas × 9
-municípios (72 páginas de município), × 36 pontos, 4 rotas e as fixas — ~450 páginas HTML, todas
-pré-renderizadas.
+e o Next resolve tudo em Server Component durante o `next build`. **Componente de cliente recebe
+recorte, nunca o objeto do schema:** `CardDePonto` e `GradeDeMunicipios` levavam o `Ponto` e o
+`Municipio` inteiros na carga RSC — com `fonte_verificacao`, áudio dos três idiomas e o marcador
+de foto pendente dentro — e hoje recebem só os campos que desenham (`PontoDoCard`,
+`CartaoDeMunicipio`). `generateStaticParams()` enumera 3 idiomas × 9 municípios (27 páginas de
+município), × 36 pontos, 4 rotas e as fixas — 159 páginas HTML, todas pré-renderizadas.
 
 O tipo vem do schema de `scripts/content-schema.ts` por inferência. **O schema é a fonte; o tipo
 é derivado.** Declarar a interface à mão em outro arquivo seria a segunda declaração do mesmo

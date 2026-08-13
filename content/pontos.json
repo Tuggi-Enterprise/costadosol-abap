@@ -16,7 +16,7 @@
     "teaser": {
       "pt": "Água morna e transparente, e uma das melhores raias de vento do país para kitesurf e windsurf.",
       "en": "Warm, clear water and one of the country’s best wind corridors for kitesurfing and windsurfing.",
-      "es": "Agua templada y transparente, y uno de los mejores corredores de viento del país para kitesurf."
+      "es": "Agua templada y transparente, y uno de los mejores corredores de viento del país para kitesurf y windsurf."
     },
     "texto": {
       "pt": "A lagoa banha sete municípios e é procurada por praticantes de kitesurf, windsurf e jet-ski. As praias de água salgada têm ondas curtas e fundo raso por centenas de metros.",
@@ -77,9 +77,9 @@
       "es": "El distrito donde laguna y océano corren lado a lado, separados por una franja de restinga."
     },
     "texto": {
-      "pt": "Praia Seca fica entre a Lagoa de Araruama e o mar aberto. De um lado, água parada e morna; do outro, arrebentação.",
-      "en": "Praia Seca sits between the Araruama Lagoon and the open sea: still, warm water on one side, surf on the other.",
-      "es": "Praia Seca está entre la Laguna de Araruama y el mar abierto: agua quieta y templada de un lado, rompiente del otro."
+      "pt": "Praia Seca fica entre a Lagoa de Araruama e o mar aberto. De um lado, água parada e morna. Do outro, arrebentação.",
+      "en": "Praia Seca sits between the Araruama Lagoon and the open sea. Still, warm water on one side. Surf on the other.",
+      "es": "Praia Seca está entre la Laguna de Araruama y el mar abierto. De un lado, agua quieta y templada. Del otro, rompiente."
     },
     "audio": {
       "pt": {
@@ -137,7 +137,7 @@
     "texto": {
       "pt": "A restinga separa a Lagoa de Araruama do oceano por dezenas de quilômetros. Mais da metade do Parque Estadual da Costa do Sol está na Área de Proteção Ambiental de Massambaba.",
       "en": "The sandbank separates the lagoon from the ocean for dozens of kilometres. More than half of Costa do Sol State Park lies within the Massambaba protected area.",
-      "es": "La restinga separa la laguna del océano por decenas de kilómetros. Más de la mitad del parque estatal está en el área protegida de Massambaba."
+      "es": "La restinga separa la laguna del océano por decenas de kilómetros. Más de la mitad del Parque Estadual da Costa do Sol está en el área de protección ambiental de Massambaba."
     },
     "audio": {
       "pt": {
@@ -248,12 +248,12 @@
     "teaser": {
       "pt": "Duas enseadas de areia branca no núcleo Atalaia do Parque Estadual da Costa do Sol.",
       "en": "Two white-sand coves inside the Atalaia sector of Costa do Sol State Park.",
-      "es": "Dos ensenadas de arena blanca en el sector Atalaia del parque estatal."
+      "es": "Dos ensenadas de arena blanca en el sector Atalaia del Parque Estadual da Costa do Sol."
     },
     "texto": {
       "pt": "O acesso é por escada, a partir do mirante do Pontal do Atalaia. A área integra o Parque Estadual da Costa do Sol.",
       "en": "Access is by staircase from the Pontal do Atalaia lookout. The area is part of Costa do Sol State Park.",
-      "es": "El acceso es por escalera desde el mirador de Pontal do Atalaia. El área integra el parque estatal."
+      "es": "El acceso es por escalera desde el mirador de Pontal do Atalaia. El área integra el Parque Estadual da Costa do Sol."
     },
     "audio": {
       "pt": {
@@ -295,8 +295,8 @@
     "tipo": "essencial",
     "nome": {
       "pt": "Praia do Farol",
-      "en": "Farol Beach",
-      "es": "Playa del Faro"
+      "en": "Praia do Farol",
+      "es": "Praia do Farol"
     },
     "categoria": "natureza",
     "coords": [
@@ -311,7 +311,7 @@
     "texto": {
       "pt": "A ilha é área militar e o desembarque é regulado. As águas transparentes são o motivo pelo qual a cidade é conhecida pelo mergulho.",
       "en": "The island is military ground and landing is regulated. Its transparent water is why the town is known for diving.",
-      "es": "La isla es área militar y el desembarco está regulado. Sus aguas transparentes explican la fama de buceo."
+      "es": "La isla es área militar y el desembarco está regulado. Sus aguas transparentes explican la fama de buceo de la ciudad."
     },
     "audio": {
       "pt": {
@@ -332,8 +332,8 @@
       "h": "/img/poi/arraial-farol",
       "alt": {
         "pt": "Praia do Farol",
-        "en": "Farol Beach",
-        "es": "Playa del Faro"
+        "en": "Praia do Farol",
+        "es": "Praia do Farol"
       },
       "credito": "Ezarate · CC BY-SA 3.0"
     },
@@ -353,8 +353,8 @@
     "tipo": "complementar",
     "nome": {
       "pt": "Praia dos Anjos",
-      "en": "Anjos Beach",
-      "es": "Playa de los Ángeles"
+      "en": "Praia dos Anjos",
+      "es": "Praia dos Anjos"
     },
     "categoria": "historia",
     "coords": [
@@ -367,9 +367,9 @@
       "es": "De donde salen los barcos y donde está el Museo Oceanográfico."
     },
     "texto": {
-      "pt": "A enseada abriga o porto de onde partem os passeios e o Museu Oceanográfico, listado pela Setur-RJ entre as atrações da cidade.",
-      "en": "The cove holds the harbour where boat tours depart and the Oceanographic Museum listed by Setur-RJ.",
-      "es": "La ensenada alberga el puerto de donde salen los paseos y el Museo Oceanográfico citado por Setur-RJ."
+      "pt": "A enseada abriga o porto de onde partem os passeios de barco e o Museu Oceanográfico.",
+      "en": "The cove holds the harbour where the boat trips leave from, and the Oceanographic Museum.",
+      "es": "La ensenada alberga el puerto de donde salen los paseos en barco y el Museo Oceanográfico."
     },
     "audio": {
       "pt": {
@@ -390,8 +390,8 @@
       "h": "/img/poi/arraial-anjos",
       "alt": {
         "pt": "Praia dos Anjos",
-        "en": "Anjos Beach",
-        "es": "Playa de los Ángeles"
+        "en": "Praia dos Anjos",
+        "es": "Praia dos Anjos"
       },
       "credito": "Rafael Rabello de Barros · CC BY-SA 3.0"
     },
@@ -411,8 +411,8 @@
     "tipo": "inesperado",
     "nome": {
       "pt": "Praia do Forno",
-      "en": "Forno Beach",
-      "es": "Playa del Forno"
+      "en": "Praia do Forno",
+      "es": "Praia do Forno"
     },
     "categoria": "natureza",
     "coords": [
@@ -420,9 +420,9 @@
       -42.0083
     ],
     "teaser": {
-      "pt": "Só se chega a pé, por trilha, ou de barco — não há estrada até a areia.",
-      "en": "Reached only on foot, by trail, or by boat — no road runs to the sand.",
-      "es": "Se llega solo a pie, por sendero, o en barco — no hay carretera hasta la arena."
+      "pt": "Só se chega a pé, por trilha, ou de barco. Não há estrada até a areia.",
+      "en": "You get there on foot or by boat. No road reaches the sand.",
+      "es": "Se llega a pie o en barco. No hay carretera hasta la arena."
     },
     "texto": {
       "pt": "A trilha parte da Praia dos Anjos. A enseada é fechada por costões dos dois lados.",
@@ -448,8 +448,8 @@
       "h": "/img/poi/arraial-forno",
       "alt": {
         "pt": "Praia do Forno",
-        "en": "Forno Beach",
-        "es": "Playa del Forno"
+        "en": "Praia do Forno",
+        "es": "Praia do Forno"
       },
       "credito": "Eurico Zimbres · CC BY-SA 2.5"
     },
@@ -469,8 +469,8 @@
     "tipo": "essencial",
     "nome": {
       "pt": "Praia do Forte",
-      "en": "Forte Beach",
-      "es": "Playa del Forte"
+      "en": "Praia do Forte",
+      "es": "Praia do Forte"
     },
     "categoria": "natureza",
     "coords": [
@@ -506,8 +506,8 @@
       "h": "/img/poi/cabo-frio-praia-do-forte",
       "alt": {
         "pt": "Praia do Forte",
-        "en": "Forte Beach",
-        "es": "Playa del Forte"
+        "en": "Praia do Forte",
+        "es": "Praia do Forte"
       },
       "credito": "Eduardo P · CC BY-SA 3.0"
     },
@@ -586,7 +586,7 @@
     "nome": {
       "pt": "Praia do Peró",
       "en": "Peró Beach",
-      "es": "Playa del Peró"
+      "es": "Playa de Peró"
     },
     "categoria": "esporte",
     "coords": [
@@ -623,7 +623,7 @@
       "alt": {
         "pt": "Praia do Peró",
         "en": "Peró Beach",
-        "es": "Playa del Peró"
+        "es": "Playa de Peró"
       },
       "credito": "MTur Destinos · Public domain"
     },
@@ -741,7 +741,7 @@
         "en": "Morro de São João",
         "es": "Morro de São João"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -768,9 +768,9 @@
       -42.2
     ],
     "teaser": {
-      "pt": "Quedas d’água e corredeiras — o trecho onde se pratica rafting na região.",
-      "en": "Waterfalls and rapids — the stretch where rafting happens in the region.",
-      "es": "Cascadas y rápidos — el tramo donde se practica rafting en la región."
+      "pt": "Quedas d’água e corredeiras. É o trecho onde se pratica rafting na região.",
+      "en": "Waterfalls and rapids. This is the stretch where rafting happens in the region.",
+      "es": "Cascadas y rápidos. Es el tramo donde se practica rafting en la región."
     },
     "texto": {
       "pt": "O rio tem grande número de quedas d’água e corredeiras, e é onde a região oferece rafting.",
@@ -875,7 +875,7 @@
     "tipo": "inesperado",
     "nome": {
       "pt": "Memória do poeta Casimiro de Abreu",
-      "en": "The poet Casimiro de Abreu",
+      "en": "Memory of the poet Casimiro de Abreu",
       "es": "Memoria del poeta Casimiro de Abreu"
     },
     "categoria": "cultura",
@@ -912,7 +912,7 @@
       "h": "/img/poi/casimiro-museu",
       "alt": {
         "pt": "Memória do poeta Casimiro de Abreu",
-        "en": "The poet Casimiro de Abreu",
+        "en": "Memory of the poet Casimiro de Abreu",
         "es": "Memoria del poeta Casimiro de Abreu"
       },
       "credito": "Vamberto Oliveira · CC BY-SA 4.0"
@@ -1000,9 +1000,9 @@
       -42.2244
     ],
     "teaser": {
-      "pt": "Salina natural onde o peixe era limpo, secado e salgado — o motivo de a cidade existir onde está.",
-      "en": "A natural salt works where fish was cleaned, dried and salted — the reason the town is where it is.",
-      "es": "Salina natural donde el pescado se limpiaba, secaba y salaba — la razón de que la ciudad esté allí."
+      "pt": "Salina natural onde o peixe era limpo, secado e salgado. É o motivo de a cidade estar onde está.",
+      "en": "A natural salt works where fish was cleaned, dried and salted. It is why the town grew where it did.",
+      "es": "Salina natural donde el pescado se limpiaba, secaba y salaba. Es la razón de que la ciudad esté donde está."
     },
     "texto": {
       "pt": "A pedra serviu como salina natural e área de limpeza, secagem e salga do pescado.",
@@ -1031,7 +1031,7 @@
         "en": "Pedra da Salga",
         "es": "Pedra da Salga"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1063,9 +1063,9 @@
       "es": "Sendero que sube a 350 metros de altitud, con vista de toda la laguna."
     },
     "texto": {
-      "pt": "É uma das cinco trilhas descritas pela Setur-RJ no município, e a que alcança maior altitude.",
-      "en": "It is one of the five trails Setur-RJ describes in the municipality, and the highest of them.",
-      "es": "Es uno de los cinco senderos descritos por Setur-RJ en el municipio, y el de mayor altitud."
+      "pt": "É a mais alta das cinco trilhas do município.",
+      "en": "It is the highest of the five trails in the municipality.",
+      "es": "Es el más alto de los cinco senderos del municipio."
     },
     "audio": {
       "pt": {
@@ -1089,7 +1089,7 @@
         "en": "Sapeatiba Range",
         "es": "Sierra de Sapeatiba"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1121,9 +1121,9 @@
       "es": "Isla dentro de la laguna, punto desde donde se ve la puesta de sol en verano."
     },
     "texto": {
-      "pt": "A ilha integra a lista oficial de atrações do município e é conhecida pelo pôr do sol de verão.",
-      "en": "The island is on the municipality’s official attraction list and is known for its summer sunset.",
-      "es": "La isla integra la lista oficial de atracciones del municipio y es conocida por su atardecer de verano."
+      "pt": "A ilha fica dentro da Lagoa de Araruama, e é conhecida pelo pôr do sol de verão.",
+      "en": "The island lies inside the Araruama Lagoon, and is known for its summer sunset.",
+      "es": "La isla está dentro de la Laguna de Araruama, y es conocida por su atardecer de verano."
     },
     "audio": {
       "pt": {
@@ -1147,7 +1147,7 @@
         "en": "Santa Rita Island",
         "es": "Isla de Santa Rita"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1165,8 +1165,8 @@
     "tipo": "essencial",
     "nome": {
       "pt": "Praça da Baleia",
-      "en": "Whale Square",
-      "es": "Plaza de la Ballena"
+      "en": "Praça da Baleia",
+      "es": "Praça da Baleia"
     },
     "categoria": "cultura",
     "coords": [
@@ -1174,9 +1174,9 @@
       -41.9453
     ],
     "teaser": {
-      "pt": "Escultura de baleia-jubarte de 20 metros em estrutura metálica revestida de bronze.",
-      "en": "A 20-metre humpback whale sculpture in metal structure clad in bronze sheets.",
-      "es": "Escultura de ballena jorobada de 20 metros en estructura metálica revestida de bronce."
+      "pt": "Escultura de baleia-jubarte de 20 metros sobre uma estrutura metálica revestida de bronze.",
+      "en": "A 20-metre humpback whale sculpture on a metal frame clad in bronze.",
+      "es": "Escultura de ballena jorobada de 20 metros sobre una estructura metálica revestida de bronce."
     },
     "texto": {
       "pt": "A Setur-RJ registra a obra como a maior homenagem a um cetáceo no mundo.",
@@ -1202,8 +1202,8 @@
       "h": "/img/poi/ostras-praca-da-baleia",
       "alt": {
         "pt": "Praça da Baleia",
-        "en": "Whale Square",
-        "es": "Plaza de la Ballena"
+        "en": "Praça da Baleia",
+        "es": "Praça da Baleia"
       },
       "credito": "Marcos Guerra · Public domain"
     },
@@ -1295,9 +1295,9 @@
       "es": "Estructura sobre el mar al final de la playa, punto de pesca y de vista."
     },
     "texto": {
-      "pt": "O píer consta da lista oficial de atrações do município.",
-      "en": "The pier is on the municipality’s official attraction list.",
-      "es": "El muelle consta en la lista oficial de atracciones del municipio."
+      "pt": "O píer avança sobre o mar no fim de Costazul, a maior praia oceânica da cidade.",
+      "en": "The pier reaches out over the sea at the end of Costazul, the town’s longest ocean beach.",
+      "es": "El muelle se adentra en el mar al final de Costazul, la mayor playa oceánica de la ciudad."
     },
     "audio": {
       "pt": {
@@ -1321,7 +1321,7 @@
         "en": "Costazul Pier",
         "es": "Muelle de Costazul"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1339,8 +1339,8 @@
     "tipo": "inesperado",
     "nome": {
       "pt": "Monumento dos Costões Rochosos",
-      "en": "Rocky Outcrops Monument",
-      "es": "Monumento de los Peñascos"
+      "en": "Monumento dos Costões Rochosos",
+      "es": "Monumento dos Costões Rochosos"
     },
     "categoria": "natureza",
     "coords": [
@@ -1376,10 +1376,10 @@
       "h": "/img/pendente",
       "alt": {
         "pt": "Monumento dos Costões Rochosos",
-        "en": "Rocky Outcrops Monument",
-        "es": "Monumento de los Peñascos"
+        "en": "Monumento dos Costões Rochosos",
+        "es": "Monumento dos Costões Rochosos"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1464,9 +1464,9 @@
       -42.1022
     ],
     "teaser": {
-      "pt": "Inaugurada em 1783; o conjunto serviu como colégio jesuíta para a região.",
-      "en": "Opened in 1783; the complex served as a Jesuit college for the region.",
-      "es": "Inaugurada en 1783; el conjunto sirvió como colegio jesuita para la región."
+      "pt": "Inaugurada em 1783. O conjunto serviu como colégio jesuíta para a região.",
+      "en": "Opened in 1783. The complex served as a Jesuit college for the region.",
+      "es": "Inaugurada en 1783. El conjunto sirvió como colegio jesuita para la región."
     },
     "texto": {
       "pt": "A igreja está no ponto alto do centro e é o edifício mais antigo em uso da cidade.",
@@ -1513,8 +1513,8 @@
     "tipo": "essencial",
     "nome": {
       "pt": "Praia do Sudoeste",
-      "en": "Sudoeste Beach",
-      "es": "Playa del Sudoeste"
+      "en": "Praia do Sudoeste",
+      "es": "Praia do Sudoeste"
     },
     "categoria": "esporte",
     "coords": [
@@ -1522,14 +1522,14 @@
       -42.1122
     ],
     "teaser": {
-      "pt": "Um quilômetro e meio de margem de lagoa, com vento forte e água parada — kitesurf e vela.",
-      "en": "A kilometre and a half of lagoon shore, strong wind and still water — kitesurfing and sailing.",
-      "es": "Kilómetro y medio de orilla de laguna, viento fuerte y agua quieta — kitesurf y vela."
+      "pt": "Um quilômetro e meio de margem de lagoa, com vento forte e água parada. Kitesurf e vela.",
+      "en": "A kilometre and a half of lagoon shore, strong wind and still water. Kitesurfing and sailing.",
+      "es": "Kilómetro y medio de orilla de laguna, viento fuerte y agua quieta. Kitesurf y vela."
     },
     "texto": {
-      "pt": "A Setur-RJ registra 1,5 km de extensão, águas mornas e transparentes, e o pôr do sol da região.",
-      "en": "Setur-RJ records 1.5 km of shore, warm transparent water, and the region’s sunset.",
-      "es": "Setur-RJ registra 1,5 km de extensión, aguas templadas y transparentes, y el atardecer de la región."
+      "pt": "A água é morna e transparente, e é daqui que se vê o pôr do sol da região.",
+      "en": "The water is warm and clear, and this is where the region’s sunset is watched from.",
+      "es": "El agua es templada y transparente, y desde aquí se ve el atardecer de la región."
     },
     "audio": {
       "pt": {
@@ -1550,8 +1550,8 @@
       "h": "/img/poi/aldeia-sudoeste",
       "alt": {
         "pt": "Praia do Sudoeste",
-        "en": "Sudoeste Beach",
-        "es": "Playa del Sudoeste"
+        "en": "Praia do Sudoeste",
+        "es": "Praia do Sudoeste"
       },
       "credito": "Newton paz peres · CC BY-SA 3.0"
     },
@@ -1585,9 +1585,9 @@
       "es": "La ciudad alberga la base de aviación naval del país, y el museo cuenta esa historia."
     },
     "texto": {
-      "pt": "O museu consta da lista oficial de atrações do município.",
-      "en": "The museum is on the municipality’s official attraction list.",
-      "es": "El museo consta en la lista oficial de atracciones del municipio."
+      "pt": "O museu funciona na base de aviação naval que a cidade abriga.",
+      "en": "The museum sits inside the naval aviation base the town hosts.",
+      "es": "El museo funciona en la base de aviación naval que alberga la ciudad."
     },
     "audio": {
       "pt": {
@@ -1611,7 +1611,7 @@
         "en": "Naval Aviation Museum",
         "es": "Museo de Aviación Naval"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1643,9 +1643,9 @@
       "es": "Sede de la etapa brasileña del circuito mundial de surf, con contrato renovado hasta 2028."
     },
     "texto": {
-      "pt": "A prefeitura registra que Saquarema é a única cidade do mundo a receber as três divisões do circuito — QS, CT e Challenger Series.",
-      "en": "The city records that Saquarema is the only city in the world hosting all three tour divisions — QS, CT and Challenger Series.",
-      "es": "El municipio registra que Saquarema es la única ciudad del mundo que recibe las tres divisiones — QS, CT y Challenger Series."
+      "pt": "A prefeitura registra que Saquarema é a única cidade do mundo a receber as três divisões do circuito: QS, CT e Challenger Series.",
+      "en": "The city records that Saquarema is the only city in the world hosting all three tour divisions: QS, CT and Challenger Series.",
+      "es": "El municipio registra que Saquarema es la única ciudad del mundo que recibe las tres divisiones: QS, CT y Challenger Series."
     },
     "audio": {
       "pt": {
@@ -1669,7 +1669,7 @@
         "en": "Itaúna Beach",
         "es": "Playa de Itaúna"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1759,9 +1759,9 @@
       "es": "La barra que une laguna y mar está a pocos metros de la rompiente de Itaúna."
     },
     "texto": {
-      "pt": "A lagoa consta entre as atrações listadas pela prefeitura, ao lado das lagoas de Jacarepiá e Vermelha.",
-      "en": "The lagoon is among the attractions listed by the city, alongside the Jacarepiá and Vermelha lagoons.",
-      "es": "La laguna está entre las atracciones listadas por el municipio, junto a Jacarepiá y Vermelha."
+      "pt": "Saquarema tem outras duas lagoas, a de Jacarepiá e a Vermelha.",
+      "en": "Saquarema has two other lagoons, Jacarepiá and Vermelha.",
+      "es": "Saquarema tiene otras dos lagunas, la de Jacarepiá y la Vermelha."
     },
     "audio": {
       "pt": {
@@ -1803,8 +1803,8 @@
     "tipo": "inesperado",
     "nome": {
       "pt": "Praia da Vila",
-      "en": "Vila Beach",
-      "es": "Playa de la Vila"
+      "en": "Praia da Vila",
+      "es": "Praia da Vila"
     },
     "categoria": "cultura",
     "coords": [
@@ -1817,9 +1817,9 @@
       "es": "La playa al pie de la iglesia, entre el peñasco y la barra de la laguna."
     },
     "texto": {
-      "pt": "É a praia do centro histórico, listada pela prefeitura junto de Prainha, Barrinha e Itaúna.",
-      "en": "It is the historic centre’s beach, listed by the city alongside Prainha, Barrinha and Itaúna.",
-      "es": "Es la playa del centro histórico, listada por el municipio junto a Prainha, Barrinha e Itaúna."
+      "pt": "É a praia do centro histórico, ao lado de Prainha, Barrinha e Itaúna.",
+      "en": "It is the historic centre’s beach, next to Prainha, Barrinha and Itaúna.",
+      "es": "Es la playa del centro histórico, junto a Prainha, Barrinha e Itaúna."
     },
     "audio": {
       "pt": {
@@ -1840,8 +1840,8 @@
       "h": "/img/poi/saquarema-vila",
       "alt": {
         "pt": "Praia da Vila",
-        "en": "Vila Beach",
-        "es": "Playa de la Vila"
+        "en": "Praia da Vila",
+        "es": "Praia da Vila"
       },
       "credito": "Cleo Fernando Martins Machado · CC BY-SA 3.0"
     },
@@ -1901,7 +1901,7 @@
         "en": "Poço das Antas Biological Reserve",
         "es": "Reserva Biológica Poço das Antas"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1930,12 +1930,12 @@
     "teaser": {
       "pt": "Distrito cortado por dois rios de águas cristalinas, dentro da APA São João / Mico-Leão-Dourado.",
       "en": "A district crossed by two clear-water rivers, inside the São João / Golden Lion Tamarin protected area.",
-      "es": "Distrito atravesado por dos ríos de aguas cristalinas, dentro del área protegida São João."
+      "es": "Distrito atravesado por dos ríos de aguas cristalinas, dentro del APA São João / Mico-Leão-Dourado."
     },
     "texto": {
-      "pt": "A Setur-RJ registra que dois rios de águas cristalinas cortam o distrito, situado na APA São João / Mico-Leão-Dourado.",
-      "en": "Setur-RJ records that two clear-water rivers cross the district, within the São João / Golden Lion Tamarin protected area.",
-      "es": "Setur-RJ registra que dos ríos de aguas cristalinas cruzan el distrito, en el área protegida São João."
+      "pt": "Os dois rios atravessam o distrito dentro da APA São João / Mico-Leão-Dourado.",
+      "en": "The two rivers cross the district inside the São João / Golden Lion Tamarin protected area.",
+      "es": "Los dos ríos atraviesan el distrito dentro del APA São João / Mico-Leão-Dourado."
     },
     "audio": {
       "pt": {
@@ -1959,7 +1959,7 @@
         "en": "Aldeia Velha",
         "es": "Aldeia Velha"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -1978,7 +1978,7 @@
     "nome": {
       "pt": "Cachoeira das Sete Quedas",
       "en": "Sete Quedas Waterfall",
-      "es": "Cascada de las Siete Caídas"
+      "es": "Cascada de Sete Quedas"
     },
     "categoria": "natureza",
     "coords": [
@@ -1986,14 +1986,14 @@
       -42.43
     ],
     "teaser": {
-      "pt": "Uma das duas cachoeiras que a Setur-RJ lista no município, ao lado da Cachoeira das Andorinhas.",
-      "en": "One of the two waterfalls Setur-RJ lists in the municipality, alongside Cachoeira das Andorinhas.",
-      "es": "Una de las dos cascadas que Setur-RJ lista en el municipio, junto a Cachoeira das Andorinhas."
+      "pt": "Uma das duas cachoeiras do município, ao lado da Cachoeira das Andorinhas.",
+      "en": "One of the two waterfalls in the municipality, alongside Cachoeira das Andorinhas.",
+      "es": "Una de las dos cascadas del municipio, junto a la Cachoeira das Andorinhas."
     },
     "texto": {
-      "pt": "A cachoeira consta da lista oficial de atrações do município.",
-      "en": "The waterfall is on the municipality’s official attraction list.",
-      "es": "La cascada consta en la lista oficial de atracciones del municipio."
+      "pt": "Fica em Silva Jardim, o município do estado com mais reservas particulares de patrimônio natural.",
+      "en": "It is in Silva Jardim, the municipality with the most private natural heritage reserves in the state.",
+      "es": "Está en Silva Jardim, el municipio con más reservas privadas de patrimonio natural del estado."
     },
     "audio": {
       "pt": {
@@ -2015,9 +2015,9 @@
       "alt": {
         "pt": "Cachoeira das Sete Quedas",
         "en": "Sete Quedas Waterfall",
-        "es": "Cascada de las Siete Caídas"
+        "es": "Cascada de Sete Quedas"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {
@@ -2049,9 +2049,9 @@
       "es": "La iglesia del centro, junto al Centro Cultural Capivari."
     },
     "texto": {
-      "pt": "A igreja e o Centro Cultural Capivari constam da lista oficial de atrações do município.",
-      "en": "The church and the Capivari Cultural Centre are on the municipality’s official attraction list.",
-      "es": "La iglesia y el Centro Cultural Capivari constan en la lista oficial de atracciones."
+      "pt": "A igreja fica no centro de Silva Jardim, na bacia do Rio São João.",
+      "en": "The church stands in the centre of Silva Jardim, in the São João river basin.",
+      "es": "La iglesia está en el centro de Silva Jardim, en la cuenca del río São João."
     },
     "audio": {
       "pt": {
@@ -2075,7 +2075,7 @@
         "en": "Church of Nossa Senhora da Lapa",
         "es": "Iglesia de Nossa Senhora da Lapa"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "fonte_verificacao": [
       {

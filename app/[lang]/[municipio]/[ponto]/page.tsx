@@ -46,10 +46,10 @@ export async function generateMetadata({
   const temFoto = ponto.foto.h !== FOTO_PENDENTE
 
   return {
-    title: `${nome.valor} — ${m.nome}`,
+    title: `${nome.valor}, ${m.nome}`,
     description: teaser.valor,
     openGraph: {
-      title: `${nome.valor} — ${m.nome}`,
+      title: `${nome.valor}, ${m.nome}`,
       description: teaser.valor,
       locale: teaser.idiomaServido,
       ...(temFoto ? { images: [{ url: `${ponto.foto.h}-800.webp` }] } : {}),
@@ -118,7 +118,7 @@ export default async function PaginaDoPonto({
 
       <div className="px-4 py-7">
         <Compartilhar
-          titulo={`${nome} — ${m.nome}`}
+          titulo={`${nome}, ${m.nome}`}
           rotulo={r.compartilhar}
           rotuloCopiado={r.linkCopiado}
           poiId={ponto.id}

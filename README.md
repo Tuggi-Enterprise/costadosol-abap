@@ -39,25 +39,25 @@ npm run export -- content-dev         # banco -> JSON, para desenvolvimento
 npm run export                        # banco -> content/ — recusa se o banco for de exemplo
 ```
 
-## Estado em 12/08/2026
+## Estado em 13/08/2026
 
 Hospedagem: **Vercel**. O site já roda: entrada de idioma, home com a grade sorteada, e a página
-de município com os quatro pontos e o módulo das outras oito. O build emite 8 páginas de idioma e
-72 de município como HTML estático.
+de município com os quatro pontos e o módulo das outras oito. O build emite 159 páginas estáticas:
+3 idiomas × (home, 9 municípios, 36 pontos, 4 rotas e as fixas).
 
 Pronto também: as regras consolidadas, o validador de conteúdo, as nove entradas de mesa, o banco
-local com as duas migrations aplicadas e o caminho banco → JSON fechado. **44 provas**, cada uma
+local com as duas migrations aplicadas e o caminho banco → JSON fechado. **70 provas**, cada uma
 citando o ID da regra.
 
 Onde ver o quê, rodando `npm run dev`:
 
 | URL | O que é |
 | :-- | :-- |
-| `/` | escolha de idioma, oito opções (CS-NAV-007) |
+| `/` | resolve o idioma por `navigator.language` e redireciona (CS-NAV-007) |
 | `/pt/` | home — grade dos nove, ordem sorteada por sessão |
 | `/pt/saquarema/` | página de município: 4 pontos, CTA, as outras oito |
 | `/saquarema/` | a entrada de mesa: grava a origem e sai em `location.replace` |
-| `/ko/silva-jardim/` | interface em coreano, conteúdo em inglês — CS-CONT-007 na prática |
+| `/es/silva-jardim/` | interface, conteúdo e áudio em espanhol — CS-CONT-007 na prática |
 | `/pt/rotas/` e `/pt/rotas/rota-da-lagoa/` | as quatro rotas e uma delas |
 | `/pt/lugares/` | os 36 lugares por município, em ordem alfabética |
 | `/pt/para-quem-vende/` | rotas, fatos com fonte e contato das nove secretarias |

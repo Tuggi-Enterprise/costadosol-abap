@@ -95,17 +95,12 @@ frase ("nenhuma busca") precisa de leitura do UX/UI quanto a CS-OURO-001.
 
 Ver "O que já está decidido", ao final. Deixou um resíduo pequeno, **P-14b**.
 
-### P-14b · A barra mostra oito idiomas e cinco deles servem conteúdo em inglês
+### ~~P-14b · A barra mostra oito idiomas e cinco deles servem conteúdo em inglês~~ — RESOLVIDA em 13/08/2026
 
-Consequência direta de CS-CONT-007, registrada porque é a única forma de a decisão ser revista com
-o custo à vista: mostrar oito opções é o argumento de alcance internacional (CS-NAV-006), e quem
-escolher `ko` ouve inglês. O fallback é silencioso por CS-CONT-008 — avisar seria explicar a
-mecânica.
-
-**Risco:** um comprador coreano ou alemão no estande percebe, e percebe justamente no momento em
-que a demonstração deveria impressionar. **Mitigação disponível:** expandir um idioma inteiro se
-sobrar prazo até 19/09, na ordem `de` → `fr` → `it` → `zh` → `ko` (CS-CONT-009).
-**Quem revisita:** Product Owner, quando o DBA fechar o custo unitário de produção de áudio.
+O operador cortou o site para **três idiomas** (`pt`, `en`, `es`), e o risco descrito aqui deixou
+de existir: cada idioma oferecido serve interface, conteúdo e áudio no próprio idioma. Regras
+atualizadas: CS-NAV-006, CS-CONT-007, CS-CONT-009. A ordem de expansão continua registrada em
+CS-CONT-009, e agora um idioma novo só entra com o pacote inteiro.
 
 ### P-15 · Como o `/painel` lê o dado sem credencial no cliente
 
@@ -151,10 +146,12 @@ CS-NAV-006 lista oito idiomas e o briefing fala em "8 bandeiras". Bandeira repre
 idioma: `es` tem mais de vinte países, `zh` esbarra em escolha politicamente carregada, e o
 público é comprador internacional.
 
-**Opções:** (a) nome do idioma no próprio idioma ("Português", "中文", "한국어") — padrão da
+**Opções:** (a) nome do idioma no próprio idioma ("Português", "English", "Español") — padrão da
 indústria; (b) bandeira + nome; (c) só bandeira, como no briefing.
-**Encaminhamento proposto:** (a). Resolve o problema e é mais legível em 375 px.
-**Decide:** UX/UI + Product Owner. **Bloqueia:** tela de entrada e barra de idioma.
+**Encaminhamento proposto:** (a), e é o que está no ar desde 13/08/2026, agora em `<option>` com
+`lang` próprio. Com três idiomas latinos o argumento contra a bandeira ficou mais fraco, mas
+continua valendo para `es`.
+**Decide:** UX/UI + Product Owner. **Bloqueia:** nada — implementado.
 
 ### P-20 · LGPD dos leads
 
@@ -178,11 +175,13 @@ primeira dobra depois do hero.
 **Decide:** Product Owner busca a fonte; humano confirma se pode citar.
 **Bloqueia:** seção de fatos da home.
 
-### P-23 · Quem revisa a tradução
+### P-23 · Quem revisa a tradução — **reduzida** em 13/08/2026
 
-Oito idiomas, incluindo `zh` e `ko`, num material institucional de ente público. Erro de tradução
-em nome próprio ou em nome de praia é o tipo de defeito que aparece na foto que o gabinete posta.
-Falta definir se há revisor humano por idioma, e quem.
+Era sobre oito idiomas, incluindo `zh` e `ko`. Com o corte para `pt`, `en` e `es` (CS-NAV-006),
+some a parte que não tinha como ser revisada aqui dentro; **fica** a que sempre importou: `en` e
+`es` são material institucional de ente público, e erro de tradução em nome próprio ou em nome de
+praia é o defeito que aparece na foto que o gabinete posta. Falta definir o revisor humano dos
+dois. Os textos de conteúdo continuam marcados com `revisor` em `fonte_verificacao`.
 **Decide:** humano. **Bloqueia:** congelamento de 19/09.
 
 ### P-24 · A palavra da presidência nos outros sete idiomas
@@ -302,9 +301,13 @@ Registrado aqui para não voltar como dúvida:
 - **Nenhum dado do site em tempo de execução** — CS-ARQ-001, não se reabre por conveniência de
   atualização.
 - **A entrada não pergunta o idioma** — decidido pelo operador em 13/08/2026. `/` resolve por
-  `navigator.language` e redireciona; a barra fixa continua mostrando as oito opções. Revoga a
-  tela cheia do §7.1 do briefing e reduz `lang_select` a troca deliberada. Regra: CS-NAV-007.
+  `navigator.language` e redireciona. Revoga a tela cheia do §7.1 do briefing e reduz
+  `lang_select` a troca deliberada. Regra: CS-NAV-007.
   Reverter é editar um arquivo (`app/page.tsx`).
+- **Três idiomas, e a escolha mora no rodapé** — decidido pelo operador em 13/08/2026. O site
+  serve `pt`, `en` e `es`, e a barra fixa de pílulas no topo virou um `select` no rodapé, que
+  navega ao escolher. Fecha P-14b, reduz P-23 e revoga a lista de oito de CS-NAV-006. Regras:
+  CS-NAV-006, CS-NAV-008, CS-NAV-010, CS-CONT-007, CS-CONT-009.
 - **Hospedagem: Vercel** — decidido pelo operador em 12/08/2026, no lugar do Cloudflare Pages do
   briefing. Consequência: sai o `output: 'export'`, e CSP, rewrites das entradas de mesa,
   endpoint de leads e basic auth do painel passam a ser código versionado neste repositório em

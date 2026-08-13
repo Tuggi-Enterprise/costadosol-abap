@@ -177,12 +177,20 @@ test('CS-CONT-007: falta de audio em um dos tres idiomas falha', async () => {
   assert.equal(municipioSchema.safeParse(municipio).success, false)
 })
 
-test('CS-CONT-009: idioma fora do trio presente pela metade falha', async () => {
+/**
+ * Desde 13/08/2026 o site tem tres idiomas, e nao oito: nao existe mais "idioma fora do
+ * trio" legal. CS-CONT-009 nascia para o meio-idioma opcional, e agora e a forma FRACA da
+ * garantia — o schema recusa o idioma desconhecido antes de qualquer campo ficar pela
+ * metade. E isso que este teste prova; `idiomasParciais` fica como segunda linha, para o
+ * dia em que a lista voltar a crescer.
+ */
+test('CS-CONT-009: idioma fora do trio e recusado inteiro, e nao aceito pela metade', async () => {
   const conteudo = await conteudoValido()
-  conteudo.pontos[0]!.texto['de'] = 'Ein Beispieltext.'
-  const falhas = verificarConteudo(conteudo).filter((f) => f.regra === 'CS-CONT-009')
-  assert.equal(falhas.length, 1)
-  assert.match(falhas[0]!.mensagem, /presente pela metade/)
+  const ponto = structuredClone(conteudo.pontos[0]!)
+  ponto.texto['de'] = 'Ein Beispieltext.'
+  const resultado = pontoSchema.safeParse(ponto)
+  assert.equal(resultado.success, false)
+  assert.match(JSON.stringify(resultado.error?.issues), /idioma desconhecido: de/)
 })
 
 test('CS-CONT-001: ponto orfao, que nenhum municipio lista, falha', async () => {

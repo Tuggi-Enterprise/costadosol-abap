@@ -6,7 +6,7 @@
  */
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { MUNICIPIOS } from '../scripts/content-schema.ts'
+import { IDIOMAS_INTERFACE, MUNICIPIOS } from '../scripts/content-schema.ts'
 import {
   SEGMENTOS_RESERVADOS,
   TETO_BYTES,
@@ -48,13 +48,13 @@ test('CS-MUN-004: cada entrada cabe no teto de bytes e nao pede recurso externo'
   }
 })
 
-test('CS-NAV-002: resolve os oito idiomas da interface, com fallback pt', () => {
+test('CS-NAV-002: resolve os tres idiomas da interface, com fallback pt', () => {
   const html = paginas[0]!.html
-  for (const idioma of ['pt', 'en', 'es', 'fr', 'it', 'de', 'zh', 'ko']) {
+  for (const idioma of IDIOMAS_INTERFACE) {
     assert.ok(html.includes(`"${idioma}"`), `falta ${idioma}`)
   }
   assert.match(html, /l="pt"/)
-  // pt-BR, en-US e zh-CN precisam casar pelo prefixo, senao todo aparelho cai em pt.
+  // pt-BR, en-US e es-AR precisam casar pelo prefixo, senao todo aparelho cai em pt.
   assert.match(html, /n\.indexOf\(I\[i\]\+"-"\)===0/)
 })
 

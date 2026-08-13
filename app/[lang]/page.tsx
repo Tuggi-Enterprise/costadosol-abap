@@ -77,7 +77,15 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             site chamado Costa do Sol afirma um número que a fonte oficial contradiz. */}
         <h2 className="px-4 text-secao font-semibold">{r.cidades}</h2>
         <p className="mt-1 mb-4 px-4 text-[0.8rem] text-tinta-suave">{r.ordemSorteada}</p>
-        <GradeDeMunicipios itens={lista} lang={lang} origem="home" />
+        <GradeDeMunicipios
+          itens={lista.map((m) => ({
+            slug: m.slug,
+            nome: m.nome,
+            foto: { src: m.hero.src, alt: texto(m.hero.alt, lang), credito: m.hero.credito },
+          }))}
+          lang={lang}
+          origem="home"
+        />
       </section>
 
       <section className="px-4 py-9">

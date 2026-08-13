@@ -62,6 +62,7 @@ p {
 
 /* CS-DESIGN-004: alvo de toque nunca abaixo de 44 px. */
 button,
+select,
 a[data-alvo='toque'] {
   min-height: 44px;
 }

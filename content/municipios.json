@@ -143,7 +143,7 @@
         "en": "View of Casimiro de Abreu",
         "es": "Vista de Casimiro de Abreu"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "audio": {
       "pt": {
@@ -175,9 +175,9 @@
     "slug": "iguaba-grande",
     "nome": "Iguaba Grande",
     "linha": {
-      "pt": "Cinco trilhas, uma serra e a pedra onde o peixe era salgado antes da geladeira existir.",
-      "en": "Five trails, a mountain range, and the rock where fish was salted before refrigeration.",
-      "es": "Cinco senderos, una sierra y la piedra donde se salaba el pescado antes de la nevera."
+      "pt": "Cinco trilhas, uma serra e a pedra onde se salgava o peixe antes de existir geladeira.",
+      "en": "Five trails, a mountain range, and the rock where fish was salted before there were fridges.",
+      "es": "Cinco senderos, una sierra y la piedra donde se salaba el pescado antes de que hubiera neveras."
     },
     "hero": {
       "src": "/img/pendente",
@@ -186,7 +186,7 @@
         "en": "View of Iguaba Grande",
         "es": "Vista de Iguaba Grande"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "audio": {
       "pt": {
@@ -347,9 +347,9 @@
     "slug": "silva-jardim",
     "nome": "Silva Jardim",
     "linha": {
-      "pt": "O município com o maior número de reservas particulares de patrimônio natural do estado.",
-      "en": "The municipality with the most private natural heritage reserves in the state.",
-      "es": "El municipio con el mayor número de reservas privadas de patrimonio natural del estado."
+      "pt": "Nenhum outro município do estado tem tantas reservas particulares de patrimônio natural.",
+      "en": "No other municipality in the state has as many private natural heritage reserves.",
+      "es": "Ningún otro municipio del estado tiene tantas reservas privadas de patrimonio natural."
     },
     "hero": {
       "src": "/img/pendente",
@@ -358,7 +358,7 @@
         "en": "View of Silva Jardim",
         "es": "Vista de Silva Jardim"
       },
-      "credito": "Foto pendente — banco das secretarias (P-05)"
+      "credito": "Foto ainda não disponível"
     },
     "audio": {
       "pt": {

@@ -10,7 +10,7 @@
  * a capa aceita o botão como filho e o coloca logo abaixo da linha.
  */
 import type { ReactNode } from 'react'
-import { Foto } from './Foto.tsx'
+import { Foto, FOTO_PENDENTE } from './Foto.tsx'
 
 export function Hero({
   src,
@@ -63,10 +63,16 @@ export function Hero({
       </div>
       </div>
       {/* Fora da foto: sobre ela, o crédito ficava atrás do gradiente e do botão — ou
-          seja, deixava de ser visível, que é exatamente o que A-16 confere. */}
-      <p title={credito} className="truncate px-4 pt-1.5 text-[0.7rem] text-tinta-suave">
-        {credito}
-      </p>
+          seja, deixava de ser visível, que é exatamente o que A-16 confere.
+
+          Foto que não existe não tem autor a creditar, e a linha ia à tela mesmo assim:
+          três municípios publicavam o marcador interno de P-05, com o número do card,
+          embaixo de um retângulo azul. Crédito só onde existe foto. */}
+      {src !== FOTO_PENDENTE && (
+        <p title={credito} className="truncate px-4 pt-1.5 text-[0.7rem] text-tinta-suave">
+          {credito}
+        </p>
+      )}
     </header>
   )
 }

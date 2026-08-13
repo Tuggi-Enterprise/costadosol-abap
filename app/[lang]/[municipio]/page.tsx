@@ -35,10 +35,10 @@ export async function generateMetadata({
   // para título e descrição, que existem.
   const temFoto = m.hero.src !== FOTO_PENDENTE
   return {
-    title: `${m.nome} — Costa do Sol`,
+    title: `${m.nome}, Costa do Sol`,
     description: linha.valor,
     openGraph: {
-      title: `${m.nome} — Costa do Sol`,
+      title: `${m.nome}, Costa do Sol`,
       description: linha.valor,
       // CS-CONT-008: declara o idioma servido, não o escolhido.
       locale: linha.idiomaServido,
@@ -91,15 +91,33 @@ export default async function PaginaDoMunicipio({
       </Hero>
 
       <section>
-        {pontos.map((ponto, indice) => (
-          <CardDePonto
-            key={ponto.id}
-            ponto={ponto}
-            lang={lang}
-            numero={indice + 1}
-            rotulos={{ ouvir: r.ouvir, lerMais: r.lerMais, lerMenos: r.lerMenos }}
-          />
-        ))}
+        {pontos.map((ponto, indice) => {
+          // O recorte é montado aqui: o card é componente de cliente, e o `Ponto` inteiro
+          // levava `fonte_verificacao` — afirmação apurada, data e revisor — ao navegador.
+          const faixaDoPonto = servir(ponto.audio, lang)
+          return (
+            <CardDePonto
+              key={ponto.id}
+              ponto={{
+                id: ponto.id,
+                municipio: ponto.municipio,
+                nome: texto(ponto.nome, lang),
+                teaser: texto(ponto.teaser, lang),
+                texto: texto(ponto.texto, lang),
+                idiomaDoTexto: servir(ponto.texto, lang).idiomaServido,
+                foto: {
+                  src: ponto.foto.v,
+                  alt: texto(ponto.foto.alt, lang),
+                  credito: ponto.foto.credito,
+                },
+                audio: { url: faixaDoPonto.valor.url, dur: faixaDoPonto.valor.dur },
+              }}
+              lang={lang}
+              numero={indice + 1}
+              rotulos={{ ouvir: r.ouvir, lerMais: r.lerMais, lerMenos: r.lerMenos }}
+            />
+          )
+        })}
       </section>
 
       {/*
@@ -120,7 +138,7 @@ export default async function PaginaDoMunicipio({
           data-alvo="toque"
           className="flex items-center justify-center rounded-pilula border border-oceano px-6 py-4 text-center text-oceano"
         >
-          {r.secretaria} — {m.nome}
+          {r.secretariaDaCidade.replace('{cidade}', m.nome)}
         </a>
       </div>
 
@@ -128,14 +146,26 @@ export default async function PaginaDoMunicipio({
           entrada. CS-OITO-006: é daqui que sai a métrica mais valiosa do projeto. */}
       <section className="bg-sal py-7">
         <h2 className="mb-3 px-4 text-secao font-semibold">{r.outrasOito}</h2>
-        <GradeDeMunicipios itens={outrasOito(slug)} lang={lang} origem="outras_oito" />
+        <GradeDeMunicipios
+          itens={outrasOito(slug).map((outra) => ({
+            slug: outra.slug,
+            nome: outra.nome,
+            foto: {
+              src: outra.hero.src,
+              alt: texto(outra.hero.alt, lang),
+              credito: outra.hero.credito,
+            },
+          }))}
+          lang={lang}
+          origem="outras_oito"
+        />
       </section>
 
       {/* CS-MUN-002 fecha a página aqui. É o vetor de saída do conteúdo do pavilhão: quem
           está com o telefone na mão manda a cidade para quem decide a compra. */}
       <div className="px-4 py-7">
         <Compartilhar
-          titulo={`${m.nome} — Costa do Sol`}
+          titulo={`${m.nome}, Costa do Sol`}
           rotulo={r.compartilhar}
           rotuloCopiado={r.linkCopiado}
           municipio={m.slug}

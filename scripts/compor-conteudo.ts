@@ -24,7 +24,7 @@ const REVISOR = 'Levantamento em fonte oficial — revisão humana pendente (P-2
 
 /** Marcador de foto que ainda nao existe. O componente Foto desenha o espaco vazio. */
 const FOTO_PENDENTE = '/img/pendente'
-const CREDITO_PENDENTE = 'Foto pendente — banco das secretarias (P-05)'
+const CREDITO_PENDENTE = 'Foto ainda não disponível'
 
 /** Fotos baixadas com licenca livre que, olhadas uma a uma, NAO servem ao ponto. */
 const DESCARTADAS = new Set([
@@ -71,7 +71,7 @@ const DADOS: MunicipioBruto[] = [
         teaser: {
           pt: 'Água morna e transparente, e uma das melhores raias de vento do país para kitesurf e windsurf.',
           en: 'Warm, clear water and one of the country’s best wind corridors for kitesurfing and windsurfing.',
-          es: 'Agua templada y transparente, y uno de los mejores corredores de viento del país para kitesurf.',
+          es: 'Agua templada y transparente, y uno de los mejores corredores de viento del país para kitesurf y windsurf.',
         },
         texto: {
           pt: 'A lagoa banha sete municípios e é procurada por praticantes de kitesurf, windsurf e jet-ski. As praias de água salgada têm ondas curtas e fundo raso por centenas de metros.',
@@ -91,9 +91,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'El distrito donde laguna y océano corren lado a lado, separados por una franja de restinga.',
         },
         texto: {
-          pt: 'Praia Seca fica entre a Lagoa de Araruama e o mar aberto. De um lado, água parada e morna; do outro, arrebentação.',
-          en: 'Praia Seca sits between the Araruama Lagoon and the open sea: still, warm water on one side, surf on the other.',
-          es: 'Praia Seca está entre la Laguna de Araruama y el mar abierto: agua quieta y templada de un lado, rompiente del otro.',
+          pt: 'Praia Seca fica entre a Lagoa de Araruama e o mar aberto. De um lado, água parada e morna. Do outro, arrebentação.',
+          en: 'Praia Seca sits between the Araruama Lagoon and the open sea. Still, warm water on one side. Surf on the other.',
+          es: 'Praia Seca está entre la Laguna de Araruama y el mar abierto. De un lado, agua quieta y templada. Del otro, rompiente.',
         },
         afirmacao: 'Praia Seca é distrito de Araruama, situado entre a Lagoa de Araruama e o oceano.',
         fonte: SETUR('araruama'),
@@ -110,7 +110,7 @@ const DADOS: MunicipioBruto[] = [
         texto: {
           pt: 'A restinga separa a Lagoa de Araruama do oceano por dezenas de quilômetros. Mais da metade do Parque Estadual da Costa do Sol está na Área de Proteção Ambiental de Massambaba.',
           en: 'The sandbank separates the lagoon from the ocean for dozens of kilometres. More than half of Costa do Sol State Park lies within the Massambaba protected area.',
-          es: 'La restinga separa la laguna del océano por decenas de kilómetros. Más de la mitad del parque estatal está en el área protegida de Massambaba.',
+          es: 'La restinga separa la laguna del océano por decenas de kilómetros. Más de la mitad del Parque Estadual da Costa do Sol está en el área de protección ambiental de Massambaba.',
         },
         afirmacao: 'O Parque Estadual da Costa do Sol foi criado pelo Decreto Estadual 42.929, de 18 de abril de 2011, com 9.790,44 hectares.',
         fonte: DECRETO_PARQUE,
@@ -151,12 +151,12 @@ const DADOS: MunicipioBruto[] = [
         teaser: {
           pt: 'Duas enseadas de areia branca no núcleo Atalaia do Parque Estadual da Costa do Sol.',
           en: 'Two white-sand coves inside the Atalaia sector of Costa do Sol State Park.',
-          es: 'Dos ensenadas de arena blanca en el sector Atalaia del parque estatal.',
+          es: 'Dos ensenadas de arena blanca en el sector Atalaia del Parque Estadual da Costa do Sol.',
         },
         texto: {
           pt: 'O acesso é por escada, a partir do mirante do Pontal do Atalaia. A área integra o Parque Estadual da Costa do Sol.',
           en: 'Access is by staircase from the Pontal do Atalaia lookout. The area is part of Costa do Sol State Park.',
-          es: 'El acceso es por escalera desde el mirador de Pontal do Atalaia. El área integra el parque estatal.',
+          es: 'El acceso es por escalera desde el mirador de Pontal do Atalaia. El área integra el Parque Estadual da Costa do Sol.',
         },
         afirmacao: 'As Prainhas do Pontal do Atalaia estão entre as atrações listadas pela Setur-RJ para Arraial do Cabo.',
         fonte: SETUR('arraial-do-cabo'),
@@ -164,7 +164,7 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'arraial-farol', foto: 'img/poi/arraial-farol', tipo: 'essencial', categoria: 'natureza',
         coords: [-22.9975, -41.9908],
-        nome: { pt: 'Praia do Farol', en: 'Farol Beach', es: 'Playa del Faro' },
+        nome: { pt: 'Praia do Farol', en: 'Praia do Farol', es: 'Praia do Farol' },
         teaser: {
           pt: 'Na Ilha do Cabo Frio, com acesso só por embarcação autorizada e tempo de permanência controlado.',
           en: 'On Cabo Frio Island, reachable only by authorised boat, with a controlled time ashore.',
@@ -173,7 +173,7 @@ const DADOS: MunicipioBruto[] = [
         texto: {
           pt: 'A ilha é área militar e o desembarque é regulado. As águas transparentes são o motivo pelo qual a cidade é conhecida pelo mergulho.',
           en: 'The island is military ground and landing is regulated. Its transparent water is why the town is known for diving.',
-          es: 'La isla es área militar y el desembarco está regulado. Sus aguas transparentes explican la fama de buceo.',
+          es: 'La isla es área militar y el desembarco está regulado. Sus aguas transparentes explican la fama de buceo de la ciudad.',
         },
         afirmacao: 'A Praia do Farol fica na Ilha do Cabo Frio e é citada pela Setur-RJ entre as praias de Arraial do Cabo.',
         fonte: SETUR('arraial-do-cabo'),
@@ -181,16 +181,16 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'arraial-anjos', foto: 'img/poi/arraial-anjos', tipo: 'complementar', categoria: 'historia',
         coords: [-22.9714, -42.0203],
-        nome: { pt: 'Praia dos Anjos', en: 'Anjos Beach', es: 'Playa de los Ángeles' },
+        nome: { pt: 'Praia dos Anjos', en: 'Praia dos Anjos', es: 'Praia dos Anjos' },
         teaser: {
           pt: 'De onde saem os barcos, e onde fica o Museu Oceanográfico da cidade.',
           en: 'Where the boats leave from, and home to the town’s Oceanographic Museum.',
           es: 'De donde salen los barcos y donde está el Museo Oceanográfico.',
         },
         texto: {
-          pt: 'A enseada abriga o porto de onde partem os passeios e o Museu Oceanográfico, listado pela Setur-RJ entre as atrações da cidade.',
-          en: 'The cove holds the harbour where boat tours depart and the Oceanographic Museum listed by Setur-RJ.',
-          es: 'La ensenada alberga el puerto de donde salen los paseos y el Museo Oceanográfico citado por Setur-RJ.',
+          pt: 'A enseada abriga o porto de onde partem os passeios de barco e o Museu Oceanográfico.',
+          en: 'The cove holds the harbour where the boat trips leave from, and the Oceanographic Museum.',
+          es: 'La ensenada alberga el puerto de donde salen los paseos en barco y el Museo Oceanográfico.',
         },
         afirmacao: 'A Praia dos Anjos e o Museu Oceanográfico constam da lista oficial de atrações de Arraial do Cabo.',
         fonte: SETUR('arraial-do-cabo'),
@@ -198,11 +198,11 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'arraial-forno', foto: 'img/poi/arraial-forno', tipo: 'inesperado', categoria: 'natureza',
         coords: [-22.9722, -42.0083],
-        nome: { pt: 'Praia do Forno', en: 'Forno Beach', es: 'Playa del Forno' },
+        nome: { pt: 'Praia do Forno', en: 'Praia do Forno', es: 'Praia do Forno' },
         teaser: {
-          pt: 'Só se chega a pé, por trilha, ou de barco — não há estrada até a areia.',
-          en: 'Reached only on foot, by trail, or by boat — no road runs to the sand.',
-          es: 'Se llega solo a pie, por sendero, o en barco — no hay carretera hasta la arena.',
+          pt: 'Só se chega a pé, por trilha, ou de barco. Não há estrada até a areia.',
+          en: 'You get there on foot or by boat. No road reaches the sand.',
+          es: 'Se llega a pie o en barco. No hay carretera hasta la arena.',
         },
         texto: {
           pt: 'A trilha parte da Praia dos Anjos. A enseada é fechada por costões dos dois lados.',
@@ -227,7 +227,7 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'cabo-frio-praia-do-forte', foto: 'img/poi/cabo-frio-praia-do-forte', tipo: 'essencial', categoria: 'natureza',
         coords: [-22.8894, -42.0197],
-        nome: { pt: 'Praia do Forte', en: 'Forte Beach', es: 'Playa del Forte' },
+        nome: { pt: 'Praia do Forte', en: 'Praia do Forte', es: 'Praia do Forte' },
         teaser: {
           pt: 'Sete quilômetros de areia fina e branca, do Canto do Forte às dunas.',
           en: 'Seven kilometres of fine white sand, from Canto do Forte to the dunes.',
@@ -261,7 +261,7 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'cabo-frio-pero', foto: 'img/poi/cabo-frio-pero', tipo: 'complementar', categoria: 'esporte',
         coords: [-22.8419, -41.9636],
-        nome: { pt: 'Praia do Peró', en: 'Peró Beach', es: 'Playa del Peró' },
+        nome: { pt: 'Praia do Peró', en: 'Peró Beach', es: 'Playa de Peró' },
         teaser: {
           pt: 'Praia oceânica com certificação Bandeira Azul e campo de dunas aberto ao vento.',
           en: 'Ocean beach with Blue Flag certification and a dune field open to the wind.',
@@ -326,9 +326,9 @@ const DADOS: MunicipioBruto[] = [
         coords: [-22.4833, -42.2],
         nome: { pt: 'Rio Macaé', en: 'Macaé River', es: 'Río Macaé' },
         teaser: {
-          pt: 'Quedas d’água e corredeiras — o trecho onde se pratica rafting na região.',
-          en: 'Waterfalls and rapids — the stretch where rafting happens in the region.',
-          es: 'Cascadas y rápidos — el tramo donde se practica rafting en la región.',
+          pt: 'Quedas d’água e corredeiras. É o trecho onde se pratica rafting na região.',
+          en: 'Waterfalls and rapids. This is the stretch where rafting happens in the region.',
+          es: 'Cascadas y rápidos. Es el tramo donde se practica rafting en la región.',
         },
         texto: {
           pt: 'O rio tem grande número de quedas d’água e corredeiras, e é onde a região oferece rafting.',
@@ -358,7 +358,7 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'casimiro-museu', foto: 'img/poi/casimiro-museu', tipo: 'inesperado', categoria: 'cultura',
         coords: [-22.4794, -42.2019],
-        nome: { pt: 'Memória do poeta Casimiro de Abreu', en: 'The poet Casimiro de Abreu', es: 'Memoria del poeta Casimiro de Abreu' },
+        nome: { pt: 'Memória do poeta Casimiro de Abreu', en: 'Memory of the poet Casimiro de Abreu', es: 'Memoria del poeta Casimiro de Abreu' },
         teaser: {
           pt: 'A cidade leva o nome de um dos principais representantes do romantismo brasileiro.',
           en: 'The town is named after a leading figure of Brazilian Romanticism.',
@@ -379,9 +379,9 @@ const DADOS: MunicipioBruto[] = [
     foto: FOTO_PENDENTE,
     secretaria: SETUR('iguaba-grande'),
     linha: {
-      pt: 'Cinco trilhas, uma serra e a pedra onde o peixe era salgado antes da geladeira existir.',
-      en: 'Five trails, a mountain range, and the rock where fish was salted before refrigeration.',
-      es: 'Cinco senderos, una sierra y la piedra donde se salaba el pescado antes de la nevera.',
+      pt: 'Cinco trilhas, uma serra e a pedra onde se salgava o peixe antes de existir geladeira.',
+      en: 'Five trails, a mountain range, and the rock where fish was salted before there were fridges.',
+      es: 'Cinco senderos, una sierra y la piedra donde se salaba el pescado antes de que hubiera neveras.',
     },
     pontos: [
       {
@@ -406,9 +406,9 @@ const DADOS: MunicipioBruto[] = [
         coords: [-22.8342, -42.2244],
         nome: { pt: 'Pedra da Salga', en: 'Pedra da Salga', es: 'Pedra da Salga' },
         teaser: {
-          pt: 'Salina natural onde o peixe era limpo, secado e salgado — o motivo de a cidade existir onde está.',
-          en: 'A natural salt works where fish was cleaned, dried and salted — the reason the town is where it is.',
-          es: 'Salina natural donde el pescado se limpiaba, secaba y salaba — la razón de que la ciudad esté allí.',
+          pt: 'Salina natural onde o peixe era limpo, secado e salgado. É o motivo de a cidade estar onde está.',
+          en: 'A natural salt works where fish was cleaned, dried and salted. It is why the town grew where it did.',
+          es: 'Salina natural donde el pescado se limpiaba, secaba y salaba. Es la razón de que la ciudad esté donde está.',
         },
         texto: {
           pt: 'A pedra serviu como salina natural e área de limpeza, secagem e salga do pescado.',
@@ -428,9 +428,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'Sendero que sube a 350 metros de altitud, con vista de toda la laguna.',
         },
         texto: {
-          pt: 'É uma das cinco trilhas descritas pela Setur-RJ no município, e a que alcança maior altitude.',
-          en: 'It is one of the five trails Setur-RJ describes in the municipality, and the highest of them.',
-          es: 'Es uno de los cinco senderos descritos por Setur-RJ en el municipio, y el de mayor altitud.',
+          pt: 'É a mais alta das cinco trilhas do município.',
+          en: 'It is the highest of the five trails in the municipality.',
+          es: 'Es el más alto de los cinco senderos del municipio.',
         },
         afirmacao: 'A Serra de Sapeatiba alcança 350 metros de altitude e integra as trilhas listadas pela Setur-RJ em Iguaba Grande.',
         fonte: SETUR('iguaba-grande'),
@@ -445,9 +445,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'Isla dentro de la laguna, punto desde donde se ve la puesta de sol en verano.',
         },
         texto: {
-          pt: 'A ilha integra a lista oficial de atrações do município e é conhecida pelo pôr do sol de verão.',
-          en: 'The island is on the municipality’s official attraction list and is known for its summer sunset.',
-          es: 'La isla integra la lista oficial de atracciones del municipio y es conocida por su atardecer de verano.',
+          pt: 'A ilha fica dentro da Lagoa de Araruama, e é conhecida pelo pôr do sol de verão.',
+          en: 'The island lies inside the Araruama Lagoon, and is known for its summer sunset.',
+          es: 'La isla está dentro de la Laguna de Araruama, y es conocida por su atardecer de verano.',
         },
         afirmacao: 'A Ilha de Santa Rita consta da lista oficial de atrações de Iguaba Grande, com destaque para o pôr do sol no verão.',
         fonte: SETUR('iguaba-grande'),
@@ -467,11 +467,11 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'ostras-praca-da-baleia', foto: 'img/poi/ostras-praca-da-baleia', tipo: 'essencial', categoria: 'cultura',
         coords: [-22.5272, -41.9453],
-        nome: { pt: 'Praça da Baleia', en: 'Whale Square', es: 'Plaza de la Ballena' },
+        nome: { pt: 'Praça da Baleia', en: 'Praça da Baleia', es: 'Praça da Baleia' },
         teaser: {
-          pt: 'Escultura de baleia-jubarte de 20 metros em estrutura metálica revestida de bronze.',
-          en: 'A 20-metre humpback whale sculpture in metal structure clad in bronze sheets.',
-          es: 'Escultura de ballena jorobada de 20 metros en estructura metálica revestida de bronce.',
+          pt: 'Escultura de baleia-jubarte de 20 metros sobre uma estrutura metálica revestida de bronze.',
+          en: 'A 20-metre humpback whale sculpture on a metal frame clad in bronze.',
+          es: 'Escultura de ballena jorobada de 20 metros sobre una estructura metálica revestida de bronce.',
         },
         texto: {
           pt: 'A Setur-RJ registra a obra como a maior homenagem a um cetáceo no mundo.',
@@ -508,9 +508,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'Estructura sobre el mar al final de la playa, punto de pesca y de vista.',
         },
         texto: {
-          pt: 'O píer consta da lista oficial de atrações do município.',
-          en: 'The pier is on the municipality’s official attraction list.',
-          es: 'El muelle consta en la lista oficial de atracciones del municipio.',
+          pt: 'O píer avança sobre o mar no fim de Costazul, a maior praia oceânica da cidade.',
+          en: 'The pier reaches out over the sea at the end of Costazul, the town’s longest ocean beach.',
+          es: 'El muelle se adentra en el mar al final de Costazul, la mayor playa oceánica de la ciudad.',
         },
         afirmacao: 'O Píer de Costazul consta da lista oficial de atrações de Rio das Ostras.',
         fonte: SETUR('rio-das-ostras'),
@@ -518,7 +518,7 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'ostras-costoes', foto: FOTO_PENDENTE, tipo: 'inesperado', categoria: 'natureza',
         coords: [-22.5219, -41.9481],
-        nome: { pt: 'Monumento dos Costões Rochosos', en: 'Rocky Outcrops Monument', es: 'Monumento de los Peñascos' },
+        nome: { pt: 'Monumento dos Costões Rochosos', en: 'Monumento dos Costões Rochosos', es: 'Monumento dos Costões Rochosos' },
         teaser: {
           pt: 'Marco dedicado às formações de pedra que separam uma praia da outra ao longo da costa.',
           en: 'A marker dedicated to the rock formations that separate one beach from the next along the coast.',
@@ -566,9 +566,9 @@ const DADOS: MunicipioBruto[] = [
         coords: [-22.8386, -42.1022],
         nome: { pt: 'Igreja Matriz de São Pedro', en: 'São Pedro Mother Church', es: 'Iglesia Matriz de São Pedro' },
         teaser: {
-          pt: 'Inaugurada em 1783; o conjunto serviu como colégio jesuíta para a região.',
-          en: 'Opened in 1783; the complex served as a Jesuit college for the region.',
-          es: 'Inaugurada en 1783; el conjunto sirvió como colegio jesuita para la región.',
+          pt: 'Inaugurada em 1783. O conjunto serviu como colégio jesuíta para a região.',
+          en: 'Opened in 1783. The complex served as a Jesuit college for the region.',
+          es: 'Inaugurada en 1783. El conjunto sirvió como colegio jesuita para la región.',
         },
         texto: {
           pt: 'A igreja está no ponto alto do centro e é o edifício mais antigo em uso da cidade.',
@@ -581,16 +581,16 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'aldeia-sudoeste', foto: 'img/poi/aldeia-sudoeste', tipo: 'essencial', categoria: 'esporte',
         coords: [-22.8447, -42.1122],
-        nome: { pt: 'Praia do Sudoeste', en: 'Sudoeste Beach', es: 'Playa del Sudoeste' },
+        nome: { pt: 'Praia do Sudoeste', en: 'Praia do Sudoeste', es: 'Praia do Sudoeste' },
         teaser: {
-          pt: 'Um quilômetro e meio de margem de lagoa, com vento forte e água parada — kitesurf e vela.',
-          en: 'A kilometre and a half of lagoon shore, strong wind and still water — kitesurfing and sailing.',
-          es: 'Kilómetro y medio de orilla de laguna, viento fuerte y agua quieta — kitesurf y vela.',
+          pt: 'Um quilômetro e meio de margem de lagoa, com vento forte e água parada. Kitesurf e vela.',
+          en: 'A kilometre and a half of lagoon shore, strong wind and still water. Kitesurfing and sailing.',
+          es: 'Kilómetro y medio de orilla de laguna, viento fuerte y agua quieta. Kitesurf y vela.',
         },
         texto: {
-          pt: 'A Setur-RJ registra 1,5 km de extensão, águas mornas e transparentes, e o pôr do sol da região.',
-          en: 'Setur-RJ records 1.5 km of shore, warm transparent water, and the region’s sunset.',
-          es: 'Setur-RJ registra 1,5 km de extensión, aguas templadas y transparentes, y el atardecer de la región.',
+          pt: 'A água é morna e transparente, e é daqui que se vê o pôr do sol da região.',
+          en: 'The water is warm and clear, and this is where the region’s sunset is watched from.',
+          es: 'El agua es templada y transparente, y desde aquí se ve el atardecer de la región.',
         },
         afirmacao: 'A Praia do Sudoeste tem 1,5 km de extensão, com águas mornas e transparentes.',
         fonte: SETUR('sao-pedro-da-aldeia'),
@@ -605,9 +605,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'La ciudad alberga la base de aviación naval del país, y el museo cuenta esa historia.',
         },
         texto: {
-          pt: 'O museu consta da lista oficial de atrações do município.',
-          en: 'The museum is on the municipality’s official attraction list.',
-          es: 'El museo consta en la lista oficial de atracciones del municipio.',
+          pt: 'O museu funciona na base de aviação naval que a cidade abriga.',
+          en: 'The museum sits inside the naval aviation base the town hosts.',
+          es: 'El museo funciona en la base de aviación naval que alberga la ciudad.',
         },
         afirmacao: 'O Museu da Aviação Naval consta da lista oficial de atrações de São Pedro da Aldeia.',
         fonte: SETUR('sao-pedro-da-aldeia'),
@@ -634,9 +634,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'Sede de la etapa brasileña del circuito mundial de surf, con contrato renovado hasta 2028.',
         },
         texto: {
-          pt: 'A prefeitura registra que Saquarema é a única cidade do mundo a receber as três divisões do circuito — QS, CT e Challenger Series.',
-          en: 'The city records that Saquarema is the only city in the world hosting all three tour divisions — QS, CT and Challenger Series.',
-          es: 'El municipio registra que Saquarema es la única ciudad del mundo que recibe las tres divisiones — QS, CT y Challenger Series.',
+          pt: 'A prefeitura registra que Saquarema é a única cidade do mundo a receber as três divisões do circuito: QS, CT e Challenger Series.',
+          en: 'The city records that Saquarema is the only city in the world hosting all three tour divisions: QS, CT and Challenger Series.',
+          es: 'El municipio registra que Saquarema es la única ciudad del mundo que recibe las tres divisiones: QS, CT y Challenger Series.',
         },
         afirmacao: 'Saquarema é a única cidade do mundo a receber as três etapas do circuito da WSL, com a etapa mundial renovada até 2028.',
         fonte: 'https://www.saquarema.rj.gov.br/saquarema-garante-etapa-do-mundial-de-surfe-ate-2028/',
@@ -668,9 +668,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'La barra que une laguna y mar está a pocos metros de la rompiente de Itaúna.',
         },
         texto: {
-          pt: 'A lagoa consta entre as atrações listadas pela prefeitura, ao lado das lagoas de Jacarepiá e Vermelha.',
-          en: 'The lagoon is among the attractions listed by the city, alongside the Jacarepiá and Vermelha lagoons.',
-          es: 'La laguna está entre las atracciones listadas por el municipio, junto a Jacarepiá y Vermelha.',
+          pt: 'Saquarema tem outras duas lagoas, a de Jacarepiá e a Vermelha.',
+          en: 'Saquarema has two other lagoons, Jacarepiá and Vermelha.',
+          es: 'Saquarema tiene otras dos lagunas, la de Jacarepiá y la Vermelha.',
         },
         afirmacao: 'A Lagoa de Saquarema consta da lista oficial de atrações da prefeitura de Saquarema.',
         fonte: PREFEITURA_SAQUAREMA,
@@ -678,16 +678,16 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'saquarema-vila', foto: 'img/poi/saquarema-vila', tipo: 'inesperado', categoria: 'cultura',
         coords: [-22.9283, -42.5081],
-        nome: { pt: 'Praia da Vila', en: 'Vila Beach', es: 'Playa de la Vila' },
+        nome: { pt: 'Praia da Vila', en: 'Praia da Vila', es: 'Praia da Vila' },
         teaser: {
           pt: 'A praia aos pés da igreja, entre o costão e a barra da lagoa.',
           en: 'The beach at the foot of the church, between the rocks and the lagoon bar.',
           es: 'La playa al pie de la iglesia, entre el peñasco y la barra de la laguna.',
         },
         texto: {
-          pt: 'É a praia do centro histórico, listada pela prefeitura junto de Prainha, Barrinha e Itaúna.',
-          en: 'It is the historic centre’s beach, listed by the city alongside Prainha, Barrinha and Itaúna.',
-          es: 'Es la playa del centro histórico, listada por el municipio junto a Prainha, Barrinha e Itaúna.',
+          pt: 'É a praia do centro histórico, ao lado de Prainha, Barrinha e Itaúna.',
+          en: 'It is the historic centre’s beach, next to Prainha, Barrinha and Itaúna.',
+          es: 'Es la playa del centro histórico, junto a Prainha, Barrinha e Itaúna.',
         },
         afirmacao: 'A Praia da Vila consta da lista oficial de praias da prefeitura de Saquarema.',
         fonte: PREFEITURA_SAQUAREMA,
@@ -699,9 +699,9 @@ const DADOS: MunicipioBruto[] = [
     foto: FOTO_PENDENTE,
     secretaria: SETUR('silva-jardim'),
     linha: {
-      pt: 'O município com o maior número de reservas particulares de patrimônio natural do estado.',
-      en: 'The municipality with the most private natural heritage reserves in the state.',
-      es: 'El municipio con el mayor número de reservas privadas de patrimonio natural del estado.',
+      pt: 'Nenhum outro município do estado tem tantas reservas particulares de patrimônio natural.',
+      en: 'No other municipality in the state has as many private natural heritage reserves.',
+      es: 'Ningún otro municipio del estado tiene tantas reservas privadas de patrimonio natural.',
     },
     pontos: [
       {
@@ -728,12 +728,12 @@ const DADOS: MunicipioBruto[] = [
         teaser: {
           pt: 'Distrito cortado por dois rios de águas cristalinas, dentro da APA São João / Mico-Leão-Dourado.',
           en: 'A district crossed by two clear-water rivers, inside the São João / Golden Lion Tamarin protected area.',
-          es: 'Distrito atravesado por dos ríos de aguas cristalinas, dentro del área protegida São João.',
+          es: 'Distrito atravesado por dos ríos de aguas cristalinas, dentro del APA São João / Mico-Leão-Dourado.',
         },
         texto: {
-          pt: 'A Setur-RJ registra que dois rios de águas cristalinas cortam o distrito, situado na APA São João / Mico-Leão-Dourado.',
-          en: 'Setur-RJ records that two clear-water rivers cross the district, within the São João / Golden Lion Tamarin protected area.',
-          es: 'Setur-RJ registra que dos ríos de aguas cristalinas cruzan el distrito, en el área protegida São João.',
+          pt: 'Os dois rios atravessam o distrito dentro da APA São João / Mico-Leão-Dourado.',
+          en: 'The two rivers cross the district inside the São João / Golden Lion Tamarin protected area.',
+          es: 'Los dos ríos atraviesan el distrito dentro del APA São João / Mico-Leão-Dourado.',
         },
         afirmacao: 'Dois rios de águas cristalinas cortam o distrito de Aldeia Velha, situado na APA São João / Mico-Leão-Dourado.',
         fonte: SETUR('silva-jardim'),
@@ -741,16 +741,16 @@ const DADOS: MunicipioBruto[] = [
       {
         id: 'silva-jardim-sete-quedas', foto: FOTO_PENDENTE, tipo: 'inesperado', categoria: 'natureza',
         coords: [-22.5250, -42.4300],
-        nome: { pt: 'Cachoeira das Sete Quedas', en: 'Sete Quedas Waterfall', es: 'Cascada de las Siete Caídas' },
+        nome: { pt: 'Cachoeira das Sete Quedas', en: 'Sete Quedas Waterfall', es: 'Cascada de Sete Quedas' },
         teaser: {
-          pt: 'Uma das duas cachoeiras que a Setur-RJ lista no município, ao lado da Cachoeira das Andorinhas.',
-          en: 'One of the two waterfalls Setur-RJ lists in the municipality, alongside Cachoeira das Andorinhas.',
-          es: 'Una de las dos cascadas que Setur-RJ lista en el municipio, junto a Cachoeira das Andorinhas.',
+          pt: 'Uma das duas cachoeiras do município, ao lado da Cachoeira das Andorinhas.',
+          en: 'One of the two waterfalls in the municipality, alongside Cachoeira das Andorinhas.',
+          es: 'Una de las dos cascadas del municipio, junto a la Cachoeira das Andorinhas.',
         },
         texto: {
-          pt: 'A cachoeira consta da lista oficial de atrações do município.',
-          en: 'The waterfall is on the municipality’s official attraction list.',
-          es: 'La cascada consta en la lista oficial de atracciones del municipio.',
+          pt: 'Fica em Silva Jardim, o município do estado com mais reservas particulares de patrimônio natural.',
+          en: 'It is in Silva Jardim, the municipality with the most private natural heritage reserves in the state.',
+          es: 'Está en Silva Jardim, el municipio con más reservas privadas de patrimonio natural del estado.',
         },
         afirmacao: 'A Cachoeira das Sete Quedas consta da lista oficial de atrações de Silva Jardim.',
         fonte: SETUR('silva-jardim'),
@@ -765,9 +765,9 @@ const DADOS: MunicipioBruto[] = [
           es: 'La iglesia del centro, junto al Centro Cultural Capivari.',
         },
         texto: {
-          pt: 'A igreja e o Centro Cultural Capivari constam da lista oficial de atrações do município.',
-          en: 'The church and the Capivari Cultural Centre are on the municipality’s official attraction list.',
-          es: 'La iglesia y el Centro Cultural Capivari constan en la lista oficial de atracciones.',
+          pt: 'A igreja fica no centro de Silva Jardim, na bacia do Rio São João.',
+          en: 'The church stands in the centre of Silva Jardim, in the São João river basin.',
+          es: 'La iglesia está en el centro de Silva Jardim, en la cuenca del río São João.',
         },
         afirmacao: 'A Igreja Nossa Senhora da Lapa e o Centro Cultural Capivari constam da lista oficial de atrações de Silva Jardim.',
         fonte: SETUR('silva-jardim'),
@@ -954,7 +954,7 @@ const fatos = [
   {
     id: 'natureza',
     titulo: { pt: 'Um parque estadual com o nome da região', en: 'A state park named after the region', es: 'Un parque estatal con el nombre de la región' },
-    numero: '9.790 ha',
+    numero: '9 790 ha',
     texto: {
       pt: 'O Parque Estadual da Costa do Sol foi criado em 2011 e protege 9.790 hectares distribuídos por seis municípios da região.',
       en: 'Costa do Sol State Park was created in 2011 and protects 9,790 hectares across six municipalities in the region.',

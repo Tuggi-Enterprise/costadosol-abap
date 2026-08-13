@@ -13,9 +13,24 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Foto } from './Foto.tsx'
 import { Audio } from './Audio.tsx'
-import { servir, texto } from '../lib/idioma.ts'
 import { track } from '../lib/track.ts'
-import type { Ponto } from '../lib/conteudo.ts'
+
+/**
+ * Só o que o card desenha. O `Ponto` inteiro levava ao navegador `fonte_verificacao` —
+ * a afirmação apurada, a data da consulta e o nome do revisor, com número de card dentro —
+ * multiplicado pelos quatro pontos de cada página de município.
+ */
+export type PontoDoCard = {
+  id: string
+  municipio: string
+  nome: string
+  teaser: string
+  texto: string
+  /** CS-CONT-008: o idioma REALMENTE servido em `texto`, que pode não ser o escolhido. */
+  idiomaDoTexto: string
+  foto: { src: string; alt: string; credito: string }
+  audio: { url: string; dur: number }
+}
 
 export function CardDePonto({
   ponto,
@@ -23,19 +38,18 @@ export function CardDePonto({
   numero,
   rotulos,
 }: {
-  ponto: Ponto
+  ponto: PontoDoCard
   lang: string
   numero: number
   rotulos: { ouvir: string; lerMais: string; lerMenos: string }
 }) {
   const [aberto, setAberto] = useState(false)
-  const faixa = servir(ponto.audio, lang)
 
   return (
     <article className="px-4 py-7 [&+&]:border-t [&+&]:border-borda/50">
       <Foto
-        src={ponto.foto.v}
-        alt={texto(ponto.foto.alt, lang)}
+        src={ponto.foto.src}
+        alt={ponto.foto.alt}
         credito={ponto.foto.credito}
         proporcao="h"
         // A ausência de foto é desenhada do mesmo jeito nas quatro telas que a mostram
@@ -52,19 +66,19 @@ export function CardDePonto({
             deve precisar de outra página para ler. */}
         <h3 className="text-secao font-semibold">
           <Link href={`/${lang}/${ponto.municipio}/${ponto.id}/`} className="underline-offset-4 hover:underline">
-            {texto(ponto.nome, lang)}
+            {ponto.nome}
           </Link>
         </h3>
       </div>
 
       <p className="mt-1.5 max-w-[46ch] text-[0.95rem] leading-snug text-tinta-suave">
-        {texto(ponto.teaser, lang)}
+        {ponto.teaser}
       </p>
 
       <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
         <Audio
-          url={faixa.valor.url}
-          duracao={faixa.valor.dur}
+          url={ponto.audio.url}
+          duracao={ponto.audio.dur}
           rotulo={rotulos.ouvir}
           poiId={ponto.id}
           municipio={ponto.municipio}
@@ -88,10 +102,10 @@ export function CardDePonto({
         // O `lang` declara o idioma REALMENTE servido, não o escolhido (CS-CONT-008):
         // leitor de tela pronuncia errado se mentirmos.
         <p
-          lang={servir(ponto.texto, lang).idiomaServido}
+          lang={ponto.idiomaDoTexto}
           className="mt-3 max-w-[62ch] text-[0.95rem] leading-relaxed"
         >
-          {texto(ponto.texto, lang)}
+          {ponto.texto}
         </p>
       )}
     </article>

@@ -29,13 +29,13 @@ export function paginaDeRedirecionamento(slug: string, nome: string): string {
 <html lang="pt"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Costa do Sol — ${nome}</title>
+<title>${nome}, Costa do Sol</title>
 <script>(function(){var I=[${idiomas}],S="${slug}",n=(navigator.language||"pt").toLowerCase(),l="pt";
 for(var i=0;i<I.length;i++){if(n===I[i]||n.indexOf(I[i]+"-")===0){l=I[i];break}}
 try{sessionStorage.setItem("entry_municipio",S);sessionStorage.setItem("qr_id","mesa-"+S)}catch(e){}
 location.replace("/"+l+"/"+S+"/")})();</script>
 <noscript><meta http-equiv="refresh" content="0;url=/pt/${slug}/"></noscript>
-</head><body><noscript><a href="/pt/${slug}/">Costa do Sol — ${nome}</a></noscript></body></html>
+</head><body><noscript><a href="/pt/${slug}/">${nome}, Costa do Sol</a></noscript></body></html>
 `
 }
 

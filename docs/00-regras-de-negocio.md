@@ -69,8 +69,12 @@ precisa de legenda explicando, está mal feita.
 não é copy e não viola esta regra.
 
 **CS-OURO-002 · A marca Tuggi só aparece no rodapé**, na forma exata `Conteúdo e tecnologia:
-Tuggi`. Em nenhum outro lugar, em nenhum tamanho. Única exceção: o texto de consentimento do
-formulário (CS-LEAD-003), que é texto jurídico e precisa nomear o controlador dos dados.
+Tuggi` — e no idioma da página: `Content and technology: Tuggi`, `Contenido y tecnología: Tuggi`.
+Em nenhum outro lugar, em nenhum tamanho. Única exceção: o texto de consentimento do formulário
+(CS-LEAD-003), que é texto jurídico e precisa nomear o controlador dos dados.
+
+*Revisão de 13/08/2026, decidida pelo operador:* a linha é uma sentença, não um logotipo, e ficava
+em português nas páginas em inglês e espanhol. O nome **Tuggi** não se traduz; o resto, sim.
 
 **CS-OURO-003 · Nove municípios.** Araruama, Arraial do Cabo, Cabo Frio, Casimiro de Abreu,
 Iguaba Grande, Rio das Ostras, São Pedro da Aldeia, Saquarema, Silva Jardim.
@@ -170,9 +174,15 @@ sessão**: não muda quando a pessoa navega para outro município.
 
 ### 5.2 Idioma
 
-**CS-NAV-006** — `lang ∈ { pt, en, es, fr, it, de, zh, ko }`. Oito idiomas, sempre os oito
-visíveis: ver as oito opções é o argumento para o comprador internacional. A **interface** existe
-nos oito; o **conteúdo** não — ver CS-CONT-007.
+**CS-NAV-006** — `lang ∈ { pt, en, es }`. Três idiomas, e a interface e o conteúdo cobrem os
+mesmos três.
+
+*Revisão de 13/08/2026, decidida pelo operador, que revoga a lista de oito.* Os cinco que saíram
+(fr, it, de, zh, ko) tinham interface traduzida e conteúdo em inglês, e nenhum deles passou por
+revisor humano — era a P-14b, aberta desde 12/08. O comprador alemão escolhia "Deutsch", via cinco
+rótulos em alemão e o texto de cada lugar em inglês: a lista de oito prometia uma cobertura que o
+conteúdo não tinha. Com três, nenhuma tela mente sobre o que existe atrás dela, e P-14b e P-23
+fecham juntas.
 
 **CS-NAV-007 · Entrada pela home (`/`)** — **o idioma é resolvido, não perguntado.**
 `navigator.language` decide, com fallback `pt`, e a pessoa cai direto em `/<lang>/`. Não há tela
@@ -182,19 +192,27 @@ entrada é `locale_navegador`, em `session_start`.
 *Revisão de 13/08/2026, decidida pelo operador, que revoga a tela cheia de oito bandeiras do §7.1
 do briefing.* O motivo é o mesmo que já valia para a entrada por mesa (CS-NAV-008): o aparelho já
 sabe o idioma, e uma tela a mais entre o QR e o conteúdo perde gente em pé, num corredor de feira.
-O argumento de alcance internacional (CS-NAV-006) não dependia daquela tela — a barra fixa mostra
-as oito opções em toda página, e é lá que a troca deliberada acontece.
+O argumento de alcance internacional (CS-NAV-006) não dependia daquela tela: a troca deliberada
+acontece no seletor do rodapé, presente em toda página.
 
 **CS-NAV-008 · Entrada por mesa (`/[slug]`)** — **sem tela intermediária**. Renderiza a página do
-município já no idioma detectado, com as oito opções numa barra fixa no topo, visível e não
-bloqueante. Troca emite `lang_select` com `modo: "barra"`. O sinal de idioma aqui é
-`locale_navegador`, e para o argumento de demanda internacional vale tanto quanto a escolha
+município já no idioma detectado. Troca emite `lang_select` com `modo: "rodape"`. O sinal de idioma
+aqui é `locale_navegador`, e para o argumento de demanda internacional vale tanto quanto a escolha
 explícita.
+
+*Revisão de 13/08/2026, decidida pelo operador:* a barra fixa de pílulas no topo saiu, e a escolha
+virou um `select` no rodapé. No topo, ela custava a primeira faixa de toda página para uma decisão
+que a entrada já resolve sozinha (CS-NAV-007) — quem chega no idioma certo, que é a maioria, pagava
+a barra em cada rolagem e nunca a usava. No rodapé, o custo fica com quem tem o problema.
 
 **CS-NAV-009** — A escolha de idioma vai para `sessionStorage`.
 
-**CS-NAV-010** — Em ambos os modos, num iPhone SE (375 px), qualquer opção de idioma é alcançável
-de dedo, sem rolar.
+**CS-NAV-010** — Num iPhone SE (375 px), a escolha de idioma é um alvo de 44 px e todas as opções
+cabem sem rolagem horizontal.
+
+*Revisão de 13/08/2026:* a exigência de alcançar a opção **sem rolar a página** caiu junto com a
+barra do topo. Um `select` no rodapé exige rolar até lá, e é o preço aceito em CS-NAV-008. Sem
+script, o rodapé traz os três idiomas como links.
 
 ### 5.3 Mapa de rotas do site
 
@@ -392,26 +410,29 @@ virar problema político. Por isso é teste, não disciplina.
 natureza`), `titulo`, `numero`, `texto`, `fonte_url`, `fonte_nome`, `confianca`. Todo fato
 exibido carrega fonte.
 
-**CS-CONT-007 · Cobertura de idioma** — decisão do operador em 12/08/2026, com o custo de produção
-como motivo.
+**CS-CONT-007 · Cobertura de idioma** — decisão do operador em 12/08/2026, revista em 13/08/2026,
+com o custo de produção como motivo.
 
 | Camada | Idiomas obrigatórios | Comportamento nos demais |
 | :-- | :-- | :-- |
-| Interface — rótulo, botão, navegação, formulário, mensagem de erro | os **oito** | — |
+| Interface — rótulo, botão, navegação, formulário, mensagem de erro | **`pt`, `en`, `es`** | idioma fora do trio não existe |
 | Conteúdo — `linha`, `teaser`, `texto`, `nome` de ponto e de rota, `alt`, `eixo`, `duracao_sugerida` | **`pt`, `en`, `es`** | fallback para `en` |
 | Áudio — 9 municípios + 36 pontos | **`pt`, `en`, `es`** (135 arquivos) | toca a faixa `en` |
 
-Fallback é `en`, nunca `pt`: o público dos cinco idiomas sem conteúdo é internacional.
+Interface e conteúdo passaram a ter a **mesma** lista em 13/08/2026 (ver CS-NAV-006): era a
+diferença entre as duas linhas que produzia a tela mentirosa. O fallback continua sendo `en`,
+nunca `pt`, e agora só alcança conteúdo que o validador já exigiu — é rede, não caminho.
 
 **CS-CONT-008** — O fallback é **silencioso**. Nenhuma tela avisa que aquele idioma não tem
 conteúdo próprio — seria explicar a mecânica (CS-OURO-001) e transformar uma limitação em
 mensagem. `og:locale` e o atributo `lang` do HTML declaram o idioma **realmente servido** naquele
 bloco, para leitor de tela e para indexação.
 
-**CS-CONT-009** — Custo aceito e registrado: um comprador que escolhe `ko` vê a interface em
-coreano e ouve o áudio em inglês. Se aparecer verba ou tempo antes de 19/09, a ordem de expansão é
-`de` → `fr` → `it` → `zh` → `ko`, e só o pacote inteiro de um idioma entra — meio idioma é pior
-que nenhum.
+**CS-CONT-009** — **Meio idioma é pior que nenhum**, e desde 13/08/2026 essa é a razão de o site
+ter três e não oito: o comprador coreano via a interface em coreano e ouvia o áudio em inglês, e
+nada na tela dizia isso. Se aparecer verba ou tempo antes de 19/09, a ordem de expansão é
+`de` → `fr` → `it` → `zh` → `ko`, e um idioma novo só entra com **interface, conteúdo e áudio**
+juntos. O validador recusa qualquer idioma fora do trio até que isso aconteça.
 
 ### 7.1 Validação de build — falha, não avisa
 
@@ -429,7 +450,8 @@ que nenhum.
 9. as strings `viagem`, `modo viagem` ou `roteiro` em nome de rota, componente, arquivo, evento
    ou copy (CS-NOME-001);
 10. `pt`, `en` ou `es` ausente em qualquer campo de conteúdo ou faixa de áudio (CS-CONT-007);
-11. um idioma fora do trio presente **parcialmente** — meio idioma não entra (CS-CONT-009).
+11. qualquer idioma fora de `pt`, `en`, `es` em campo multilíngue — desde 13/08/2026 o trio é a
+    lista inteira, e o idioma desconhecido é recusado antes de chegar a meio idioma (CS-CONT-009).
 
 **CS-VAL-002** — `scripts/export-content.ts` valida o schema **antes** de escrever e falha
 ruidosamente se um campo obrigatório estiver vazio.
@@ -632,7 +654,7 @@ Emulador não vale para nenhum destes itens.
 | A-17 | Nenhuma requisição a domínio de terceiro além do CDN próprio e do analytics auto-hospedado | CS-OURO-010, CS-ARQ-004 |
 | A-18 | Do scan ao primeiro áudio de ponto: ≤ 2 toques, < 5 s | CS-MUN-004 |
 | A-19 | Taxa de conclusão do formulário ≥ 60% com 5 pessoas reais | CS-LEAD-007 |
-| A-20 | Escolher `ko` (ou `de`, `fr`, `it`, `zh`): interface no idioma escolhido, conteúdo e áudio em `en`, sem nenhum aviso na tela | CS-CONT-007, CS-CONT-008 |
+| A-20 | O seletor do rodapé oferece `pt`, `en` e `es`, e cada um serve interface **e** conteúdo no próprio idioma | CS-CONT-007, CS-NAV-006 |
 | A-21 | O atributo `lang` do HTML e `og:locale` declaram o idioma realmente servido no bloco, não o escolhido | CS-CONT-008 |
 
 ---

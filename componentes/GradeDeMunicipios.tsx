@@ -15,15 +15,24 @@ import Link from 'next/link'
 import { Foto } from './Foto.tsx'
 import { embaralhar, semente } from '../lib/sessao.ts'
 import { marcarOrigemDeAbertura } from '../lib/track.ts'
-import { texto } from '../lib/idioma.ts'
-import type { Municipio } from '../lib/conteudo.ts'
+
+/**
+ * O recorte chega pronto do servidor, como em LugaresDaHome. Passar o `Municipio` inteiro
+ * mandava para o navegador o áudio dos três idiomas, a secretaria e a lista de pontos de
+ * cada cidade — e, nas três cidades sem foto, o marcador interno que ocupa o crédito.
+ */
+export type CartaoDeMunicipio = {
+  slug: string
+  nome: string
+  foto: { src: string; alt: string; credito: string }
+}
 
 export function GradeDeMunicipios({
   itens,
   lang,
   origem,
 }: {
-  itens: Municipio[]
+  itens: CartaoDeMunicipio[]
   lang: string
   origem: 'home' | 'outras_oito'
 }) {
@@ -57,9 +66,9 @@ export function GradeDeMunicipios({
             className="group relative block overflow-hidden rounded-peca"
           >
             <Foto
-              src={m.hero.src}
-              alt={texto(m.hero.alt, lang)}
-              credito={m.hero.credito}
+              src={m.foto.src}
+              alt={m.foto.alt}
+              credito={m.foto.credito}
               proporcao="v"
               arredondada={false}
               // No card, o crédito vai para o alto: embaixo ele colidia com o nome da

@@ -21,11 +21,6 @@ export const NOME_DO_IDIOMA: Record<IdiomaInterface, string> = {
   pt: 'Português',
   en: 'English',
   es: 'Español',
-  fr: 'Français',
-  it: 'Italiano',
-  de: 'Deutsch',
-  zh: '中文',
-  ko: '한국어',
 }
 
 export function ehIdiomaDeInterface(valor: string): valor is IdiomaInterface {

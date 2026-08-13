@@ -13,7 +13,7 @@ import { metadataDoSite as metadata } from '../lib/site.ts'
 
 const CHAVES = Object.keys(rotulos('pt')) as (keyof Rotulos)[]
 
-test('CS-CONT-007: a interface existe nos oito idiomas, com todas as chaves preenchidas', () => {
+test('CS-CONT-007: a interface existe nos tres idiomas, com todas as chaves preenchidas', () => {
   for (const idioma of IDIOMAS_INTERFACE) {
     const r = rotulos(idioma)
     for (const chave of CHAVES) {
@@ -23,7 +23,7 @@ test('CS-CONT-007: a interface existe nos oito idiomas, com todas as chaves pree
   }
 })
 
-test('CS-CONT-007: idioma fora dos oito cai em pt, e nao em tela em branco', () => {
+test('CS-CONT-007: idioma fora dos tres cai em pt, e nao em tela em branco', () => {
   assert.deepEqual(rotulos('ja'), rotulos('pt'))
 })
 

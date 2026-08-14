@@ -18,6 +18,7 @@
     "export": "tsx scripts/export-content.ts",
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "tsx scripts/a11y-check.ts",
     "prebuild": "npm run validate",
     "start": "next start",
     "fotos": "tsx scripts/fotos-do-conteudo.ts",

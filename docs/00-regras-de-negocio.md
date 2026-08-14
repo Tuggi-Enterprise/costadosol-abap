@@ -322,6 +322,24 @@ gabinete municipal vai postar.
 **CS-MUN-004** — Do scan ao primeiro áudio de um ponto: no máximo **2 toques** e **menos de 5 s**
 quando a entrada for por mesa.
 
+**CS-MUN-005 · Canais de rede social do município.** *Pedido do operador em 14/08/2026, para
+divulgação.* Cada município publica seus canais oficiais **dentro do mesmo bloco** do link da
+secretaria, no nível **terciário** de CS-DESIGN-005. Não é seção própria: uma quarta seção aqui
+disputaria com a conversão que CS-OITO-004 protege.
+
+- **Link, nunca embed.** Widget de feed carrega script e cookie de terceiro e derruba
+  CS-OURO-010 e o critério A-17 — o mesmo motivo pelo qual o vídeo da capa não é embed.
+- **Conta da Secretaria de Turismo quando existe; da prefeitura quando não existe.** Oito das
+  dez têm conta própria de turismo. Casimiro de Abreu e Rio das Ostras não têm, e nas duas foi
+  o próprio site oficial do município que apontou a conta da prefeitura.
+- **Mesma quantidade de canais em todos os dez** — validado no build. Três cidades com duas
+  redes e sete com uma faz as três parecerem mais ativas, e paridade entre municípios
+  (CS-OURO-004) vale para esta faixa da tela como vale para os pontos. Rede nova entra nas dez
+  ou não entra. Hoje: Instagram, nos dez.
+- **Todo perfil carrega `fonte` e `consultado_em`**, como qualquer afirmação (CS-OURO-006).
+  Link para conta abandonada ou para fã page em página de ente público é o risco real aqui, e
+  **os dez perfis ainda esperam confirmação das secretarias** — ver [P-30](01-pendencias.md).
+
 ### 6.4 Módulo "as outras cidades"
 
 É o mecanismo que transforma dez mesas separadas em uma região. Sem ele, o estande é uma feira
@@ -611,6 +629,31 @@ componente** — tudo por custom properties num único arquivo de tema.
 
 **CS-DESIGN-004** — Alvos de toque ≥ 44×44 px. Contraste mínimo 4,5:1 para texto.
 
+**CS-DESIGN-005 · Três níveis de ação, e um dono só.** *Decidido pelo operador em 14/08/2026,
+depois de o site chegar a quatro tratamentos de botão escritos à mão, em quatro arquivos, sem
+nome nenhum.* Toda ação clicável vestida de botão sai de `classesDeAcao()`, em
+[`componentes/acao.ts`](../componentes/acao.ts). Escrever a aparência de um botão em qualquer
+outro arquivo é defeito, e um teste confere.
+
+| Nível | O que é | Onde está hoje |
+| :-- | :-- | :-- |
+| **primária** | a ação principal da dobra, **uma só** | o play (CS-DESIGN-002) |
+| **secundária** | o caminho oficial que a página oferece depois da principal | secretaria do município, lista dos 40 lugares |
+| **terciária** | existe, não disputa | compartilhar, canais de rede social |
+
+**Nível é peso; largura é espaço; as duas são independentes.** Era exatamente aí que os dois
+tratamentos do meio divergiam antes desta regra: um era largo por estar sozinho no bloco, o
+outro estreito por estar numa linha, e a diferença de padding virou uma diferença de
+hierarquia que ninguém decidiu.
+
+**Link de texto não é ação e não passa por aqui** — voltar de nível, ou o link da secretaria
+dentro de uma linha da tabela de contatos, são links em fluxo de leitura. Vestir de pílula
+cada linha de uma tabela de dez transforma a tabela em dez chamadas.
+
+**Esta regra não decide cor.** Os níveis citam token de `app/tema.css`, e CS-DESIGN-003 continua
+sendo quem manda em paleta. Quando o manual de marca (P-01) chegar, muda-se o tema e nenhum
+nível muda.
+
 **CS-PERF-001 · Orçamento não negociável:**
 
 | Métrica | Teto |
@@ -624,6 +667,45 @@ componente** — tudo por custom properties num único arquivo de tema.
 
 **CS-PERF-002** — `scripts/perf-check.ts` com Lighthouse CI em rede throttled roda **em cada PR,
 desde a primeira semana**. PR que estoura o orçamento não entra.
+
+> **Divergência aberta, apurada em 14/08/2026: `scripts/perf-check.ts` nunca existiu.** A meta
+> de performance ≥ 90 e a de acessibilidade ≥ 95 desta seção foram, até esta data, intenção e
+> não garantia. Lighthouse precisa de Chrome e de um servidor de pé, o que é decisão de
+> infraestrutura de CI e não cabe a um commit de conteúdo. **O que passou a existir** é
+> `scripts/a11y-check.ts`, que roda no `postbuild`, varre as 176 páginas geradas e derruba o
+> build — sem navegador, sem rede. Ele cobre marcação (CS-DESIGN-006 abaixo); **não** cobre
+> performance, ordem de foco nem leitura real por leitor de tela, que continuam esperando o
+> Lighthouse e o critério A-22.
+
+**CS-DESIGN-006 · Acessibilidade: régua no build, e dois controles na tela.** *Decidido pelo
+operador em 14/08/2026.* Duas coisas diferentes, e a primeira é a que sustenta a segunda.
+
+**A régua** — `scripts/a11y-check.ts` roda no `postbuild` e derruba o build quando qualquer
+página gerada tem imagem sem `alt`, controle sem nome acessível, `<html>` sem `lang`, `id`
+repetido, página sem `<h1>` ou com dois, ou `target="_blank"` sem `rel="noopener"`. O
+verificador é provado por testes que lhe dão marcação defeituosa de propósito: verificador que
+nunca acusou nada é indistinguível de verificador quebrado. O contraste dos tokens é
+**calculado** a partir do OKLCH de `app/tema.css`, par a par, contra os 4,5:1 de CS-DESIGN-004
+— ninguém estima contraste de OKLCH de cabeça, e foi essa conta que achou o turquesa a 3,35:1
+em quatro telas. Exclusão da varredura carrega o motivo escrito e aparece na saída toda vez.
+
+**Os controles** — no rodapé, ao lado da escolha de idioma, nunca na primeira dobra
+(CS-HOME-001). São dois:
+
+| Controle | Estados | O que faz |
+| :-- | :-- | :-- |
+| Tamanho do texto | `padrao`, `grande`, `maior` | `font-size` da raiz; todo o resto é `rem` e acompanha |
+| Movimento | `sistema`, `reduzido` | para o vídeo da capa e as transições |
+
+- **O padrão de movimento é `sistema`, não "completo".** Quem já pediu `prefers-reduced-motion`
+  no aparelho não pede de novo aqui; o controle existe para quem não sabe que essa chave existe.
+- **A escolha vale para a sessão**, em `sessionStorage`, como o resto do estado do site. Não é
+  cookie e não identifica ninguém: CS-OURO-010 fica inteiro.
+- **Não existe "alto contraste"**, e a ausência é decisão: a paleta publicada mede de 6,0:1 a
+  18,4:1, e uma segunda paleta seria um segundo lugar com cor, que é o que CS-DESIGN-003 proíbe
+  enquanto o manual de marca (P-01) não chega.
+- **O alvo de toque não encolhe com o texto:** os 44 px de CS-DESIGN-004 são px de propósito,
+  porque são piso e não altura.
 
 **CS-PERF-003** — Imagens: AVIF com fallback WebP, `srcset` responsivo, `loading="lazy"` fora da
 primeira dobra, dimensões declaradas para não causar layout shift.
@@ -664,6 +746,8 @@ Emulador não vale para nenhum destes itens.
 | A-19 | Taxa de conclusão do formulário ≥ 60% com 5 pessoas reais | CS-LEAD-007 |
 | A-20 | O seletor do rodapé oferece `pt`, `en` e `es`, e cada um serve interface **e** conteúdo no próprio idioma | CS-CONT-007, CS-NAV-006 |
 | A-21 | O atributo `lang` do HTML e `og:locale` declaram o idioma realmente servido no bloco, não o escolhido | CS-CONT-008 |
+| A-22 | **Com teclado e com leitor de tela, num aparelho de verdade:** percorrer a home e uma página de município só com Tab, sem cair em armadilha de foco nem em controle sem nome; ouvir a página de município inteira no VoiceOver do iOS e no TalkBack do Android. É o que a régua do build **não** alcança, e não tem substituto automático | CS-DESIGN-004, CS-DESIGN-006 |
+| A-23 | Escolher "A++" e recarregar: o texto já nasce grande, **sem salto de layout**. Escolher "Movimento reduzido" com a home aberta: o vídeo da capa para na hora, sem recarregar | CS-DESIGN-006 |
 
 ---
 

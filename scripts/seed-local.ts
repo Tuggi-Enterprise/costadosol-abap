@@ -23,13 +23,13 @@ export async function semear(db: PGlite, conteudo: Conteudo, dadosDeExemplo: boo
 
   for (const m of conteudo.municipios) {
     await db.query(
-      `insert into costadosol.municipio (slug, nome, linha, hero_src, hero_alt, hero_credito, audio, secretaria)
-       values ($1,$2,$3,$4,$5,$6,$7,$8)
+      `insert into costadosol.municipio (slug, nome, linha, hero_src, hero_alt, hero_credito, audio, secretaria, redes)
+       values ($1,$2,$3,$4,$5,$6,$7,$8,$9)
        on conflict (slug) do update set
          nome = excluded.nome, linha = excluded.linha, hero_src = excluded.hero_src,
          hero_alt = excluded.hero_alt, hero_credito = excluded.hero_credito,
-         audio = excluded.audio, secretaria = excluded.secretaria`,
-      [m.slug, m.nome, m.linha, m.hero.src, m.hero.alt, m.hero.credito, m.audio, m.secretaria],
+         audio = excluded.audio, secretaria = excluded.secretaria, redes = excluded.redes`,
+      [m.slug, m.nome, m.linha, m.hero.src, m.hero.alt, m.hero.credito, m.audio, m.secretaria, JSON.stringify(m.redes)],
     )
   }
 

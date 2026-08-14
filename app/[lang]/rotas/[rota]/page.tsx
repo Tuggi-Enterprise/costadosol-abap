@@ -83,7 +83,7 @@ export default async function PaginaDaRota({
                 sizes="5.5rem"
               />
               <div>
-                <p className="text-[0.7rem] tracking-wide text-lagoa uppercase">
+                <p className="text-[0.7rem] tracking-wide text-lagoa-tinta uppercase">
                   {nomeDoMunicipio.get(ponto.municipio)}
                 </p>
                 <h3 className="text-[1rem] leading-tight font-medium">

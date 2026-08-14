@@ -12,6 +12,20 @@
   --color-oceano: oklch(0.28 0.06 235);
   --color-oceano-fundo: oklch(0.19 0.045 240);
   --color-lagoa: oklch(0.62 0.11 195);
+  /**
+   * O mesmo turquesa, escurecido até passar como TEXTO sobre papel.
+   *
+   * `--color-lagoa` nasceu para superfície — o preenchimento da barra de progresso sobre o
+   * botão escuro, onde ele mede 5,35:1 e está certo. Como texto sobre papel ele media
+   * **3,35:1**, abaixo dos 4,5:1 de CS-DESIGN-004, e estava assim em quatro telas, sempre em
+   * rótulo pequeno de caixa alta, que é justamente onde contraste baixo cobra mais caro.
+   * Ninguém tinha visto porque contraste de OKLCH não se estima de cabeça: quem viu foi a
+   * conta, em testes/acessibilidade.
+   *
+   * Dois tokens e não um porque são dois usos com dois fundos. Escurecer o `lagoa` original
+   * teria apagado a barra de progresso contra o azul do botão.
+   */
+  --color-lagoa-tinta: oklch(0.46 0.09 195);
   --color-sal: oklch(0.97 0.008 200);
   --color-areia: oklch(0.93 0.017 85);
   --color-tinta: oklch(0.21 0.02 240);
@@ -93,6 +107,30 @@ a[data-alvo='toque'] {
   transition: opacity 140ms ease-out;
 }
 
+/**
+ * CS-DESIGN-006 — o tamanho do texto que o visitante escolheu no rodapé.
+ *
+ * Mexe no `font-size` da raiz, e só nele: toda medida de texto do site é `rem` ou `clamp()`
+ * em `rem`, então uma linha aqui redimensiona título, rótulo, botão e espaçamento juntos, na
+ * proporção em que foram desenhados. Escalar componente por componente daria o mesmo
+ * resultado errado de dez formas diferentes.
+ *
+ * Os alvos de toque NÃO encolhem junto: `min-h-[44px]` é px de propósito (CS-DESIGN-004), e
+ * é o piso, não a altura.
+ */
+html[data-texto='grande'] {
+  font-size: 112.5%;
+}
+
+html[data-texto='maior'] {
+  font-size: 125%;
+}
+
+/**
+ * Movimento reduzido por preferência do sistema OU por escolha no rodapé. As duas regras são
+ * a mesma declaração, e ficam juntas para não divergirem — o vídeo da capa consulta a mesma
+ * decisão em lib/preferencias.ts, porque parar um vídeo é JavaScript, não CSS.
+ */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -103,4 +141,15 @@ a[data-alvo='toque'] {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+html[data-movimento='reduzido'] {
+  scroll-behavior: auto;
+}
+
+html[data-movimento='reduzido'] *,
+html[data-movimento='reduzido'] *::before,
+html[data-movimento='reduzido'] *::after {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
 }

@@ -33,7 +33,7 @@ export default async function Lugares({ params }: { params: Promise<{ lang: stri
           <LinkDeMunicipio
             href={`/${lang}/${m.slug}/`}
             municipio={m.slug}
-            className="inline-flex items-center text-[0.7rem] tracking-widest text-lagoa uppercase"
+            className="inline-flex items-center text-[0.7rem] tracking-widest text-lagoa-tinta uppercase"
           >
             {m.nome}
           </LinkDeMunicipio>

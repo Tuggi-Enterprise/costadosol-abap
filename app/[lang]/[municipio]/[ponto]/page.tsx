@@ -102,7 +102,7 @@ export default async function PaginaDoPonto({
         <Link
           href={`/${lang}/${slug}/`}
           data-alvo="toque"
-          className="inline-flex items-center text-[0.8rem] tracking-wide text-lagoa uppercase"
+          className="inline-flex items-center text-[0.8rem] tracking-wide text-lagoa-tinta uppercase"
         >
           ← {m.nome}
         </Link>

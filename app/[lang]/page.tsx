@@ -4,6 +4,7 @@ import { GradeDeMunicipios } from '../../componentes/GradeDeMunicipios.tsx'
 import { Hero } from '../../componentes/Hero.tsx'
 import { Audio } from '../../componentes/Audio.tsx'
 import { LugaresDaHome, type LugarDeCidade } from '../../componentes/LugaresDaHome.tsx'
+import { classesDeAcao } from '../../componentes/acao.ts'
 import { conteudo, municipios, pontosDo } from '../../lib/conteudo.ts'
 import { rotulos } from '../../lib/interface.ts'
 import { IDIOMAS_INTERFACE, servir, texto } from '../../lib/idioma.ts'
@@ -103,11 +104,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       <section className="px-4 py-9">
-        <Link
-          href={`/${lang}/lugares/`}
-          data-alvo="toque"
-          className="inline-flex items-center gap-2 rounded-pilula border border-oceano px-5 py-3 text-oceano"
-        >
+        {/* CS-DESIGN-005: secundária, largura natural. Mesmo peso do link da secretaria na
+            página de município, e é isso que a padronização garante: antes os dois eram
+            contorno oceano com padding diferente, e a diferença virava hierarquia. */}
+        <Link href={`/${lang}/lugares/`} className={classesDeAcao('secundaria')}>
           {r.osLugares} →
         </Link>
       </section>

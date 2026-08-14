@@ -6,7 +6,7 @@
  */
 import assert from 'node:assert/strict'
 import { after, before, test } from 'node:test'
-import { readFile } from 'node:fs/promises'
+import { readdir, readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import type { PGlite } from '@electric-sql/pglite'
 import { abrir, aplicarMigrations } from '../scripts/db-local.ts'
@@ -35,12 +35,32 @@ after(async () => {
   await db.close()
 })
 
+/**
+ * A lista sai do diretorio, nao de uma copia escrita a mao aqui: a copia obrigava a editar
+ * este teste a cada migration nova, e um teste que so pede para ser atualizado nao prova
+ * nada. O que ele prova agora e que **toda** migration versionada aplicou, em ordem.
+ */
+async function migrationsNoDisco(): Promise<string[]> {
+  const nomes = await readdir('supabase/migrations')
+  return nomes.filter((n) => n.endsWith('.sql')).sort()
+}
+
 test('as migrations de supabase/migrations aplicam em Postgres de verdade', async () => {
   const { rows } = await db.query<{ nome: string }>('select nome from public._migracoes order by nome')
-  assert.deepEqual(
-    rows.map((r) => r.nome),
-    ['20260812120000_costadosol_conteudo.sql', '20260812120100_abav_leads.sql'],
+  assert.deepEqual(rows.map((r) => r.nome), await migrationsNoDisco())
+})
+
+/**
+ * O protocolo do time exige migration versionada **com up/down**. Sem rollback escrito no
+ * mesmo commit, desfazer vira improviso sob pressao, que e exatamente quando nao se
+ * improvisa em banco.
+ */
+test('toda migration tem rollback correspondente em supabase/rollback', async () => {
+  const rollbacks = new Set(await readdir('supabase/rollback'))
+  const sem = (await migrationsNoDisco()).filter(
+    (nome) => !rollbacks.has(nome.replace(/\.sql$/, '.down.sql')),
   )
+  assert.deepEqual(sem, [], `migration sem rollback: ${sem.join(', ')}`)
 })
 
 test('aplicar duas vezes nao repete migration — o controle e idempotente', async () => {

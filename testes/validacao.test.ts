@@ -80,6 +80,23 @@ test('CS-OURO-003: Armacao dos Buzios faz parte do conjunto, com a grafia oficia
   assert.deepEqual(verificarConteudo(conteudo), [])
 })
 
+test('CS-MUN-005: municipio sem canal de rede social falha', async () => {
+  const conteudo = await conteudoValido()
+  const municipio = { ...conteudo.municipios[0]!, redes: [] }
+  assert.equal(municipioSchema.safeParse(municipio).success, false)
+})
+
+/**
+ * O defeito que esta regra evita nao e "faltou canal", e "uma cidade tem dois e a outra
+ * tem um". Ninguem reclama de link faltando; reclama-se de a cidade vizinha aparecer mais.
+ */
+test('CS-MUN-005: numero desigual de canais entre municipios falha', async () => {
+  const conteudo = await conteudoValido()
+  const primeiro = conteudo.municipios[0]!
+  primeiro.redes = [...primeiro.redes, { ...primeiro.redes[0]!, rede: 'facebook' }]
+  assert.ok(regras(verificarConteudo(conteudo)).includes('CS-MUN-005'))
+})
+
 test('CS-OURO-003: a razao social no lugar da marca falha em copy', async () => {
   const conteudo = await conteudoValido()
   conteudo.municipios[0]!.linha['pt'] = 'Uma cidade da Regi' + 'ão dos Lagos.'

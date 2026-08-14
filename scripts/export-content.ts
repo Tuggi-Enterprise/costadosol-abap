@@ -18,7 +18,7 @@ import { abrir } from './db-local.ts'
 
 type LinhaMunicipio = {
   slug: string; nome: string; linha: object; hero_src: string; hero_alt: object
-  hero_credito: string; audio: object; secretaria: object; pontos: string[]
+  hero_credito: string; audio: object; secretaria: object; redes: unknown[]; pontos: string[]
 }
 type LinhaPonto = {
   id: string; municipio: string; tipo: string; categoria: string; nome: object; teaser: object
@@ -70,6 +70,7 @@ export async function lerDoBanco(db: PGlite): Promise<Conteudo> {
       hero: { src: m.hero_src, alt: m.hero_alt, credito: m.hero_credito },
       audio: m.audio,
       secretaria: m.secretaria,
+      redes: m.redes,
       pontos: m.pontos,
     })),
     pontos: pontos.rows.map((p) => ({

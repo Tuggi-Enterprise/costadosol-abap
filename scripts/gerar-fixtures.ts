@@ -28,6 +28,18 @@ const municipios = MUNICIPIOS.map((m) => ({
     credito: 'EXEMPLO — credito pendente (P-05)',
   },
   audio: audio(`mun-${m.slug}`, 45),
+  // CS-MUN-005: perfil de exemplo, nunca o real. Fixture que aponta para conta de verdade
+  // vira link publicado por engano no dia em que alguem servir fixtures em producao.
+  redes: [
+    {
+      rede: 'instagram' as const,
+      perfil: `@exemplo.${m.slug}`,
+      url: `https://example.org/${m.slug}`,
+      dono: 'turismo' as const,
+      fonte: `https://example.org/${m.slug}`,
+      consultado_em: '2026-08-14',
+    },
+  ],
   secretaria: {
     nome: 'Secretaria Municipal de Turismo',
     url: 'https://example.org/secretaria',

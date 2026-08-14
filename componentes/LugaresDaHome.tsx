@@ -70,7 +70,7 @@ export function LugaresDaHome({ grupos, lang }: { grupos: LugarDeCidade[]; lang:
                 pendente_em="proporcao"
                 sizes="(min-width: 46rem) 17rem, 62vw"
               />
-              <p className="mt-2 text-[0.7rem] tracking-wide text-lagoa uppercase">{grupo.nome}</p>
+              <p className="mt-2 text-[0.7rem] tracking-wide text-lagoa-tinta uppercase">{grupo.nome}</p>
               <h3 className="text-[1rem] leading-tight font-medium">{ponto.nome}</h3>
             </Link>
           </li>

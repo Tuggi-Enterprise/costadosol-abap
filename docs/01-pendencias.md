@@ -30,6 +30,7 @@ Duas classes, e elas se resolvem em lugares diferentes:
 | P-08 | Planta e metragem do estande | nº de pontos de acesso wi-fi e divisórias | crítico |
 | P-09 | Confirmação de que são dez mesas nomeadas por município, e quem opera cada uma | CS-NAV-001 e toda a leitura de dado por mesa | crítico |
 | P-09b | Decisão sobre fones: dois pares no ponto central (recomendado) ou um par por mesa | custo ~9× maior na segunda opção | 19/09 |
+| P-30 | Confirmação, secretaria por secretaria, dos dez perfis de rede social publicados | CS-MUN-005 — o link já está no ar | **antes da feira** |
 
 **P-01** — Até chegar, o design roda com tokens neutros e nenhuma cor codificada em componente
 (CS-DESIGN-003). Quanto mais tarde chegar, mais caro fica trocar.
@@ -45,6 +46,17 @@ Não publicar nada antes de confirmar com a secretaria.
 
 **P-08 / P-09** — Viraram críticos com a mudança para uma mesa por município: uma mesa sem sinal
 é uma mesa cujo QR não funciona, e o prefeito daquele município vai perceber.
+
+**P-30** — Os dez perfis de CS-MUN-005 foram levantados em fonte oficial em 14/08/2026 e cada um
+carrega `fonte` e `consultado_em` em `content/municipios.json`, mas **levantamento não é
+confirmação**. O risco não é o link quebrar: é apontar para uma conta que a secretaria abandonou,
+ou para um perfil de terceiro que se apresenta como oficial. Um caso já apareceu no levantamento
+— Rio das Ostras usa `riodasostrasgov` no Facebook e no TikTok, mas o Instagram oficial é
+`prefeiturariodasostras`; seguir a busca teria publicado o perfil errado.
+
+Duas das dez apontam para a **prefeitura**, não para o turismo, porque não existe conta de
+turismo: Casimiro de Abreu e Rio das Ostras. Se qualquer uma das duas abrir conta de turismo até
+a feira, é troca de uma linha em `scripts/compor-conteudo.ts`.
 
 ---
 

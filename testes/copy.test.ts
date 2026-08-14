@@ -134,16 +134,25 @@ test('CS-OURO-006: nenhum marcador interno do time chega a tela', () => {
  * "Secretaria de Turismo de Cabo Frio" em pt e es, "Cabo Frio Tourism Office" em ingles:
  * a cidade muda de lado. Concatenacao com separador fixo produzia as tres erradas.
  */
+/**
+ * A lista e explicita de proposito. Chaveta em rotulo so vale onde alguem substitui, e quem
+ * substitui esta em `app/[lang]/[municipio]/page.tsx`; acrescentar uma chave aqui sem
+ * acrescentar o `.replace()` la publica `{cidade}` na tela do visitante.
+ */
+const ROTULOS_COM_CIDADE = ['secretariaDaCidade', 'redesDaCidade'] as const
+
 test('CS-CONT-007: o rotulo que recebe nome de cidade traz o lugar do nome', () => {
   for (const idioma of IDIOMAS_INTERFACE) {
-    assert.match(
-      rotulos(idioma).secretariaDaCidade,
-      /\{cidade\}/,
-      `${idioma}.secretariaDaCidade nao tem onde encaixar a cidade`,
-    )
+    for (const chave of ROTULOS_COM_CIDADE) {
+      assert.match(
+        rotulos(idioma)[chave],
+        /\{cidade\}/,
+        `${idioma}.${chave} nao tem onde encaixar a cidade`,
+      )
+    }
   }
   for (const { onde, valor } of rotulosPublicados()) {
-    if (onde.endsWith('.secretariaDaCidade')) continue
+    if (ROTULOS_COM_CIDADE.some((chave) => onde.endsWith(`.${chave}`))) continue
     assert.doesNotMatch(valor, /\{/, `rotulo ${onde} tem chaveta que ninguem substitui`)
   }
 })

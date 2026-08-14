@@ -19,6 +19,7 @@
  */
 import { useEffect, useRef, useState } from 'react'
 import { track } from '../lib/track.ts'
+import { classesDeAcao } from './acao.ts'
 
 let tocandoAgora: HTMLAudioElement | null = null
 
@@ -106,13 +107,10 @@ export function Audio({
         disabled={indisponivel}
         aria-pressed={tocando}
         aria-busy={carregando}
-        className={
-          'relative flex items-center gap-3 overflow-hidden rounded-pilula font-medium transition-colors ' +
-          (largo ? 'w-full justify-center px-6 py-4 text-lg ' : 'px-4 py-2 text-sm ') +
-          (indisponivel
-            ? 'cursor-not-allowed bg-sal text-tinta-suave'
-            : 'bg-oceano text-white hover:bg-oceano-fundo')
-        }
+        // CS-DESIGN-005: primária, sempre — é o play, e ele é o produto (CS-DESIGN-002).
+        // `relative overflow-hidden` é desta peça, não do nível: existe para a barra de
+        // progresso lá embaixo caber dentro do botão.
+        className={`relative overflow-hidden ${classesDeAcao('primaria', largo ? 'cheia' : 'natural', { desabilitada: indisponivel })}`}
       >
         <span
           aria-hidden

@@ -30,6 +30,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.araruama",
+        "url": "https://example.org/araruama",
+        "dono": "turismo",
+        "fonte": "https://example.org/araruama",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -73,6 +83,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.armacao-dos-buzios",
+        "url": "https://example.org/armacao-dos-buzios",
+        "dono": "turismo",
+        "fonte": "https://example.org/armacao-dos-buzios",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -116,6 +136,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.arraial-do-cabo",
+        "url": "https://example.org/arraial-do-cabo",
+        "dono": "turismo",
+        "fonte": "https://example.org/arraial-do-cabo",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -159,6 +189,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.cabo-frio",
+        "url": "https://example.org/cabo-frio",
+        "dono": "turismo",
+        "fonte": "https://example.org/cabo-frio",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -202,6 +242,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.casimiro-de-abreu",
+        "url": "https://example.org/casimiro-de-abreu",
+        "dono": "turismo",
+        "fonte": "https://example.org/casimiro-de-abreu",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -245,6 +295,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.iguaba-grande",
+        "url": "https://example.org/iguaba-grande",
+        "dono": "turismo",
+        "fonte": "https://example.org/iguaba-grande",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -288,6 +348,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.rio-das-ostras",
+        "url": "https://example.org/rio-das-ostras",
+        "dono": "turismo",
+        "fonte": "https://example.org/rio-das-ostras",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -331,6 +401,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.sao-pedro-da-aldeia",
+        "url": "https://example.org/sao-pedro-da-aldeia",
+        "dono": "turismo",
+        "fonte": "https://example.org/sao-pedro-da-aldeia",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -374,6 +454,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.saquarema",
+        "url": "https://example.org/saquarema",
+        "dono": "turismo",
+        "fonte": "https://example.org/saquarema",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",
@@ -417,6 +507,16 @@
         "dur": 45
       }
     },
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@exemplo.silva-jardim",
+        "url": "https://example.org/silva-jardim",
+        "dono": "turismo",
+        "fonte": "https://example.org/silva-jardim",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://example.org/secretaria",

@@ -36,6 +36,8 @@ export type Rotulos = {
   secretaria: string
   /** Leva `{cidade}`: a ordem das palavras muda entre os tres idiomas. */
   secretariaDaCidade: string
+  /** CS-MUN-005 — rotulo do grupo de canais. Leva `{cidade}`, pela mesma razao. */
+  redesDaCidade: string
   osLugares: string
   idioma: string
   cidades: string
@@ -60,6 +62,11 @@ export type Rotulos = {
   maisEm: string
   /** CS-OURO-002: a assinatura da marca, e a unica linha da Tuggi no site. */
   assinatura: string
+  /** CS-DESIGN-006 — os controles de leitura do rodape. */
+  leituraTamanho: string
+  leituraMovimento: string
+  leituraMovimentoSistema: string
+  leituraMovimentoReduzido: string
 }
 
 const DICIONARIO: Record<string, Rotulos> = {
@@ -73,6 +80,7 @@ const DICIONARIO: Record<string, Rotulos> = {
     receberMaterial: 'Receber o material de',
     secretaria: 'Secretaria de Turismo',
     secretariaDaCidade: 'Secretaria de Turismo de {cidade}',
+    redesDaCidade: 'Canais de {cidade}',
     osLugares: 'Os 40 lugares do Conderlagos',
     idioma: 'Idioma',
     cidades: 'Cidades',
@@ -95,6 +103,10 @@ const DICIONARIO: Record<string, Rotulos> = {
     linkCopiado: 'Link copiado',
     maisEm: 'Mais em',
     assinatura: 'Conteúdo e tecnologia: Tuggi',
+    leituraTamanho: 'Tamanho do texto',
+    leituraMovimento: 'Movimento',
+    leituraMovimentoSistema: 'Como está',
+    leituraMovimentoReduzido: 'Reduzido',
   },
   en: {
     ouvirCidade: 'Listen to the city',
@@ -106,6 +118,7 @@ const DICIONARIO: Record<string, Rotulos> = {
     receberMaterial: 'Receive material from',
     secretaria: 'Tourism Office',
     secretariaDaCidade: '{cidade} Tourism Office',
+    redesDaCidade: '{cidade} channels',
     osLugares: 'The 40 places in Conderlagos',
     idioma: 'Language',
     cidades: 'Cities',
@@ -128,6 +141,10 @@ const DICIONARIO: Record<string, Rotulos> = {
     linkCopiado: 'Link copied',
     maisEm: 'More in',
     assinatura: 'Content and technology: Tuggi',
+    leituraTamanho: 'Text size',
+    leituraMovimento: 'Motion',
+    leituraMovimentoSistema: 'As is',
+    leituraMovimentoReduzido: 'Reduced',
   },
   es: {
     ouvirCidade: 'Escuchar la ciudad',
@@ -139,6 +156,7 @@ const DICIONARIO: Record<string, Rotulos> = {
     receberMaterial: 'Recibir el material de',
     secretaria: 'Secretaría de Turismo',
     secretariaDaCidade: 'Secretaría de Turismo de {cidade}',
+    redesDaCidade: 'Canales de {cidade}',
     osLugares: 'Los 40 lugares de Conderlagos',
     idioma: 'Idioma',
     cidades: 'Ciudades',
@@ -161,6 +179,10 @@ const DICIONARIO: Record<string, Rotulos> = {
     linkCopiado: 'Enlace copiado',
     maisEm: 'Más en',
     assinatura: 'Contenido y tecnología: Tuggi',
+    leituraTamanho: 'Tamaño del texto',
+    leituraMovimento: 'Movimiento',
+    leituraMovimentoSistema: 'Como está',
+    leituraMovimentoReduzido: 'Reducido',
   },
 }
 

@@ -12,6 +12,7 @@
  */
 import { useState } from 'react'
 import { track, type Props } from '../lib/track.ts'
+import { classesDeAcao } from './acao.ts'
 
 export function Compartilhar({
   titulo,
@@ -57,7 +58,9 @@ export function Compartilhar({
     <button
       type="button"
       onClick={aoCompartilhar}
-      className="inline-flex items-center gap-2 rounded-pilula border border-borda px-5 py-3 text-sm text-tinta-suave"
+      // CS-DESIGN-005: terciária. Fecha a página sem disputar com o play nem com o canal
+      // oficial da cidade, que é o que CS-MUN-002 pede dela.
+      className={classesDeAcao('terciaria')}
     >
       <svg
         aria-hidden

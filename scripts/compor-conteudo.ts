@@ -15,8 +15,8 @@ import { MUNICIPIOS } from './content-schema.ts'
 
 const CONSULTA = '2026-08-12'
 
-/** Armacao dos Buzios entrou dois dias depois do resto, e a data de consulta e a dele. */
-const CONSULTA_BUZIOS = '2026-08-14'
+/** Segundo levantamento: Armacao dos Buzios e os canais de rede social (CS-MUN-005). */
+const CONSULTA_14_08 = '2026-08-14'
 
 /**
  * ATENCAO: as coordenadas sao aproximadas, tiradas da localizacao geral de cada ponto.
@@ -42,6 +42,50 @@ const SETUR = (slug: string) => `https://www.turismo.rj.gov.br/destino/${slug}/`
 const TURISMO_BUZIOS = (caminho: string) => `https://turismo.buzios.rj.gov.br/${caminho}/`
 const PREFEITURA_SAQUAREMA = 'https://www.saquarema.rj.gov.br/turismo/'
 const DECRETO_PARQUE = 'https://www.saquarema.rj.gov.br/wp-content/uploads/2020/07/DECRETO-N%C2%B0-42.929-11-PCSOL.pdf'
+
+/**
+ * CS-MUN-005 — o canal de rede social de cada municipio, levantado em 14/08/2026.
+ *
+ * **A regra de escolha, e ela e uma so:** conta da Secretaria de Turismo quando existe;
+ * conta da prefeitura quando nao existe. Oito das dez tem conta propria de turismo; Casimiro
+ * de Abreu e Rio das Ostras nao, e nas duas o proprio site oficial aponta a conta da
+ * prefeitura — foi de la que o perfil saiu, e nao de busca.
+ *
+ * **Instagram nos dez, e so ele, de proposito.** Varias das dez tambem tem Facebook, YouTube
+ * ou TikTok, e a lista aceita os tres primeiros. Publicar duas redes numa cidade e uma em
+ * outra faz a primeira parecer mais ativa que a segunda, que e o tipo de leitura que
+ * CS-OURO-004 existe para evitar. Rede nova entra quando entrar nas dez.
+ *
+ * **Cuidado ao mexer:** o perfil que a busca devolve nem sempre e o que o municipio publica.
+ * Rio das Ostras usa `riodasostrasgov` no Facebook e no TikTok, mas o Instagram oficial e
+ * `prefeiturariodasostras`; seguir a busca teria publicado um link errado.
+ */
+const IG = (perfil: string) => `https://www.instagram.com/${perfil}/`
+
+type RedeBruta = { perfil: string; dono: 'turismo' | 'prefeitura'; fonte: string }
+
+/** Onde cada perfil foi conferido. O proprio perfil declara de quem e, no nome da conta. */
+const REDES: Record<string, RedeBruta> = {
+  araruama: { perfil: 'setur_araruamaoficial', dono: 'turismo', fonte: IG('setur_araruamaoficial') },
+  'armacao-dos-buzios': { perfil: 'secturismobuzios', dono: 'turismo', fonte: IG('secturismobuzios') },
+  'arraial-do-cabo': { perfil: 'setur.arraialdocabo', dono: 'turismo', fonte: IG('setur.arraialdocabo') },
+  'cabo-frio': { perfil: 'cabofrioturismo', dono: 'turismo', fonte: IG('cabofrioturismo') },
+  'casimiro-de-abreu': {
+    perfil: 'prefeituradecasimirodeabreu',
+    dono: 'prefeitura',
+    // A propria pagina da Secretaria de Turismo e Eventos aponta esta conta, nao uma dela.
+    fonte: 'https://casimirodeabreu.rj.gov.br/secretarias/turismo-e-eventos/',
+  },
+  'iguaba-grande': { perfil: 'secturiguabagrande', dono: 'turismo', fonte: IG('secturiguabagrande') },
+  'rio-das-ostras': {
+    perfil: 'prefeiturariodasostras',
+    dono: 'prefeitura',
+    fonte: 'https://www.riodasostras.rj.gov.br/',
+  },
+  'sao-pedro-da-aldeia': { perfil: 'turismosaopedrodaaldeia', dono: 'turismo', fonte: IG('turismosaopedrodaaldeia') },
+  saquarema: { perfil: 'turismosaquaremarj', dono: 'turismo', fonte: IG('turismosaquaremarj') },
+  'silva-jardim': { perfil: 'sec.turismosilvajardim', dono: 'turismo', fonte: IG('sec.turismosilvajardim') },
+}
 
 type Texto3 = { pt: string; en: string; es: string }
 type PontoBruto = {
@@ -170,7 +214,7 @@ const DADOS: MunicipioBruto[] = [
         },
         afirmacao: 'A Praia da Armação tem 400 metros, margeia a Orla Bardot e reúne três esculturas de bronze em homenagem a Brigitte Bardot, aos pescadores e a Juscelino Kubitschek; no trecho ficam o Píer do Centro e o Píer dos Pescadores.',
         fonte: TURISMO_BUZIOS('praias/praia-da-armacao'),
-        consultado_em: CONSULTA_BUZIOS,
+        consultado_em: CONSULTA_14_08,
       },
       {
         id: 'buzios-ferradura', foto: 'img/poi/buzios-ferradura', tipo: 'essencial', categoria: 'natureza',
@@ -188,7 +232,7 @@ const DADOS: MunicipioBruto[] = [
         },
         afirmacao: 'A Praia da Ferradura tem 1,5 km de extensão, é protegida dos ventos e das correntes marítimas e recebe esportes náuticos como wake-board, mergulho, pedalinho e caiaque.',
         fonte: TURISMO_BUZIOS('praias/praia-da-ferradura'),
-        consultado_em: CONSULTA_BUZIOS,
+        consultado_em: CONSULTA_14_08,
       },
       {
         id: 'buzios-geriba', foto: 'img/poi/buzios-geriba', tipo: 'essencial', categoria: 'esporte',
@@ -206,7 +250,7 @@ const DADOS: MunicipioBruto[] = [
         },
         afirmacao: 'A Praia de Geribá tem quase 2 km de extensão e é ideal para a prática de surf; na Ponta do Marisco, no canto direito, há rochas com mais de dois bilhões de anos que evidenciam a abertura do oceano Atlântico e a separação entre o continente americano e o africano.',
         fonte: TURISMO_BUZIOS('praias/praia-de-geriba'),
-        consultado_em: CONSULTA_BUZIOS,
+        consultado_em: CONSULTA_14_08,
       },
       {
         id: 'buzios-rua-das-pedras', foto: 'img/poi/buzios-rua-das-pedras', tipo: 'inesperado', categoria: 'cultura',
@@ -224,7 +268,7 @@ const DADOS: MunicipioBruto[] = [
         },
         afirmacao: 'As pedras da Rua das Pedras vieram da pedreira que existiu na Ponta do Marisco, no canto direito da Praia de Geribá.',
         fonte: TURISMO_BUZIOS('praias/praia-de-geriba'),
-        consultado_em: CONSULTA_BUZIOS,
+        consultado_em: CONSULTA_14_08,
       },
     ],
   },
@@ -893,9 +937,21 @@ const municipios = DADOS.map((m) => {
   const oficial = MUNICIPIOS.find((x) => x.slug === m.slug)
   if (!oficial) throw new Error(`slug fora da lista oficial: ${m.slug}`)
   const capa = foto(m.foto)
+  const rede = REDES[m.slug]
+  if (!rede) throw new Error(`CS-MUN-005: ${m.slug} sem canal de rede social`)
   return {
     slug: m.slug,
     nome: oficial.nome,
+    redes: [
+      {
+        rede: 'instagram' as const,
+        perfil: `@${rede.perfil}`,
+        url: IG(rede.perfil),
+        dono: rede.dono,
+        fonte: rede.fonte,
+        consultado_em: CONSULTA_14_08,
+      },
+    ],
     linha: m.linha,
     hero: {
       src: capa.src,

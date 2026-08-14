@@ -2,6 +2,16 @@
   {
     "slug": "araruama",
     "nome": "Araruama",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@setur_araruamaoficial",
+        "url": "https://www.instagram.com/setur_araruamaoficial/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/setur_araruamaoficial/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "A cidade que vive na margem da maior lagoa de água salgada da América Latina.",
       "en": "The city on the shore of the largest saltwater lagoon in Latin America.",
@@ -45,6 +55,16 @@
   {
     "slug": "armacao-dos-buzios",
     "nome": "Armação dos Búzios",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@secturismobuzios",
+        "url": "https://www.instagram.com/secturismobuzios/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/secturismobuzios/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Vinte e três praias ao redor de uma península só.",
       "en": "Twenty-three beaches around a single peninsula.",
@@ -88,6 +108,16 @@
   {
     "slug": "arraial-do-cabo",
     "nome": "Arraial do Cabo",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@setur.arraialdocabo",
+        "url": "https://www.instagram.com/setur.arraialdocabo/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/setur.arraialdocabo/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Cerca de 30 pontos de mergulho a poucos minutos do porto.",
       "en": "Around 30 dive sites, minutes from the harbour.",
@@ -131,6 +161,16 @@
   {
     "slug": "cabo-frio",
     "nome": "Cabo Frio",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@cabofrioturismo",
+        "url": "https://www.instagram.com/cabofrioturismo/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/cabofrioturismo/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Areia branca e fina de um lado, o monumento histórico mais antigo da região do outro.",
       "en": "Fine white sand on one side, the region’s oldest historic monument on the other.",
@@ -174,6 +214,16 @@
   {
     "slug": "casimiro-de-abreu",
     "nome": "Casimiro de Abreu",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@prefeituradecasimirodeabreu",
+        "url": "https://www.instagram.com/prefeituradecasimirodeabreu/",
+        "dono": "prefeitura",
+        "fonte": "https://casimirodeabreu.rj.gov.br/secretarias/turismo-e-eventos/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Um vulcão extinto de 800 metros, dois rios e o nome de um poeta.",
       "en": "An extinct volcano 800 metres high, two rivers and a poet’s name.",
@@ -217,6 +267,16 @@
   {
     "slug": "iguaba-grande",
     "nome": "Iguaba Grande",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@secturiguabagrande",
+        "url": "https://www.instagram.com/secturiguabagrande/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/secturiguabagrande/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Cinco trilhas, uma serra e a pedra onde se salgava o peixe antes de existir geladeira.",
       "en": "Five trails, a mountain range, and the rock where fish was salted before there were fridges.",
@@ -260,6 +320,16 @@
   {
     "slug": "rio-das-ostras",
     "nome": "Rio das Ostras",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@prefeiturariodasostras",
+        "url": "https://www.instagram.com/prefeiturariodasostras/",
+        "dono": "prefeitura",
+        "fonte": "https://www.riodasostras.rj.gov.br/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Vinte e oito quilômetros de costa, quinze praias e um festival de jazz e blues.",
       "en": "Twenty-eight kilometres of coast, fifteen beaches and a jazz and blues festival.",
@@ -303,6 +373,16 @@
   {
     "slug": "sao-pedro-da-aldeia",
     "nome": "São Pedro da Aldeia",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@turismosaopedrodaaldeia",
+        "url": "https://www.instagram.com/turismosaopedrodaaldeia/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/turismosaopedrodaaldeia/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Uma igreja de 1783, uma casa feita de cacos e o vento que traz os veleiros.",
       "en": "A church from 1783, a house built from broken pieces, and the wind that brings the sailboats.",
@@ -346,6 +426,16 @@
   {
     "slug": "saquarema",
     "nome": "Saquarema",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@turismosaquaremarj",
+        "url": "https://www.instagram.com/turismosaquaremarj/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/turismosaquaremarj/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "A única cidade do mundo a receber as três divisões do circuito mundial de surfe.",
       "en": "The only city in the world to host all three divisions of the world surfing tour.",
@@ -389,6 +479,16 @@
   {
     "slug": "silva-jardim",
     "nome": "Silva Jardim",
+    "redes": [
+      {
+        "rede": "instagram",
+        "perfil": "@sec.turismosilvajardim",
+        "url": "https://www.instagram.com/sec.turismosilvajardim/",
+        "dono": "turismo",
+        "fonte": "https://www.instagram.com/sec.turismosilvajardim/",
+        "consultado_em": "2026-08-14"
+      }
+    ],
     "linha": {
       "pt": "Nenhum outro município do estado tem tantas reservas particulares de patrimônio natural.",
       "en": "No other municipality in the state has as many private natural heritage reserves.",

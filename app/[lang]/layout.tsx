@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import { DeclararIdioma } from '../../componentes/DeclararIdioma.tsx'
 import { Marca } from '../../componentes/Marca.tsx'
+import { PreferenciasDeLeitura } from '../../componentes/PreferenciasDeLeitura.tsx'
 import { SeletorDeIdioma } from '../../componentes/SeletorDeIdioma.tsx'
 import { Navegacao } from '../../componentes/Navegacao.tsx'
 import { IDIOMAS_INTERFACE, ehIdiomaDeInterface } from '../../lib/idioma.ts'
@@ -41,6 +42,18 @@ export default async function LayoutDeIdioma({
           para o que isso contraria em CS-NAV-008 e CS-NAV-010. */}
       <footer className="border-t border-borda px-4 py-6 pb-[calc(1.5rem+56px+env(safe-area-inset-bottom))] text-xs text-tinta-suave md:pb-6">
         <SeletorDeIdioma atual={lang} />
+        {/* CS-DESIGN-006: ao lado do idioma, pela mesma razão que levou o idioma para cá —
+            é ajuste, e ajuste mora onde a pessoa procura ajuste, não na primeira dobra. */}
+        <PreferenciasDeLeitura
+          rotulos={{
+            tamanhoDoTexto: rotulos(lang).leituraTamanho,
+            movimento: rotulos(lang).leituraMovimento,
+            movimentoPorNivel: {
+              sistema: rotulos(lang).leituraMovimentoSistema,
+              reduzido: rotulos(lang).leituraMovimentoReduzido,
+            },
+          }}
+        />
         <div className="mt-6">
           <Marca />
         </div>

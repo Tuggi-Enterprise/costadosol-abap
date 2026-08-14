@@ -60,7 +60,7 @@ export function CardDePonto({
       />
 
       <div className="mt-3 flex items-baseline gap-2">
-        <span className="text-sm tabular-nums text-lagoa">{String(numero).padStart(2, '0')}</span>
+        <span className="text-sm tabular-nums text-lagoa-tinta">{String(numero).padStart(2, '0')}</span>
         {/* O nome leva à página do ponto, que é o endereço que se compartilha. O texto
             continua abrindo aqui mesmo (CS-MUN-002): quem tem 60 segundos no balcão não
             deve precisar de outra página para ler. */}

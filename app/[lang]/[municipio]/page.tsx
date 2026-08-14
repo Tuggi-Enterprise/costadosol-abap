@@ -7,6 +7,8 @@ import { Hero } from '../../../componentes/Hero.tsx'
 import { GradeDeMunicipios } from '../../../componentes/GradeDeMunicipios.tsx'
 import { RegistrarAberturaDeMunicipio } from '../../../componentes/RegistrarAbertura.tsx'
 import { FOTO_PENDENTE } from '../../../componentes/Foto.tsx'
+import { classesDeAcao } from '../../../componentes/acao.ts'
+import { RedesDoMunicipio } from '../../../componentes/RedesDoMunicipio.tsx'
 import { municipios, outrasCidades, pontosDo } from '../../../lib/conteudo.ts'
 import { IDIOMAS_INTERFACE, ehIdiomaDeInterface, servir, texto } from '../../../lib/idioma.ts'
 import { rotulos } from '../../../lib/interface.ts'
@@ -131,15 +133,20 @@ export default async function PaginaDoMunicipio({
         página tem para oferecer é o canal oficial da cidade, que existe e funciona.
       */}
       <div className="border-t border-borda/60 px-4 py-7">
+        {/* CS-DESIGN-005: secundária. É o caminho oficial que a página oferece depois do
+            play, e é largura cheia porque está sozinha no bloco — largura é espaço, não
+            peso. */}
         <a
           href={m.secretaria.url}
           target="_blank"
           rel="noopener noreferrer"
-          data-alvo="toque"
-          className="flex items-center justify-center rounded-pilula border border-oceano px-6 py-4 text-center text-oceano"
+          className={`${classesDeAcao('secundaria', 'cheia')} text-center`}
         >
           {r.secretariaDaCidade.replace('{cidade}', m.nome)}
         </a>
+        {/* CS-MUN-005: dentro do mesmo bloco do canal oficial, e não como seção própria.
+            Uma quarta seção aqui competiria com a conversão que CS-OITO-004 protege. */}
+        <RedesDoMunicipio redes={m.redes} rotulo={r.redesDaCidade} cidade={m.nome} />
       </div>
 
       {/* CS-OITO-004: depois do CTA, para não competir com a conversão da cidade de

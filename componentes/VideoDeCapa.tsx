@@ -21,6 +21,7 @@
  * porque é ele que a política de reprodução automática dos navegadores exige ver.
  */
 import { useEffect, useRef } from 'react'
+import { EVENTO_MUDOU, movimentoReduzido } from '../lib/preferencias.ts'
 
 export function VideoDeCapa({ src, poster, alt }: { src: string; poster: string; alt: string }) {
   const referencia = useRef<HTMLVideoElement>(null)
@@ -28,11 +29,26 @@ export function VideoDeCapa({ src, poster, alt }: { src: string; poster: string;
   useEffect(() => {
     const video = referencia.current
     if (!video) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    // `play()` rejeita quando a política de energia do aparelho recusa a reprodução
-    // automática. Não é erro a tratar: o poster continua na tela, que é o mesmo resultado
-    // do movimento reduzido.
-    void video.play().catch(() => {})
+
+    // A decisão de parar não é tomada aqui: `movimentoReduzido()` junta a preferência do
+    // sistema com a escolha do rodapé (CS-DESIGN-006), e é a mesma resposta que o CSS usa.
+    function acompanhar() {
+      if (!video) return
+      if (movimentoReduzido()) {
+        video.pause()
+        return
+      }
+      // `play()` rejeita quando a política de energia do aparelho recusa a reprodução
+      // automática. Não é erro a tratar: o poster continua na tela, que é o mesmo resultado
+      // do movimento reduzido.
+      void video.play().catch(() => {})
+    }
+
+    acompanhar()
+    // O controle está no rodapé da MESMA página: sem isto, quem pede para reduzir movimento
+    // continua com o vídeo rodando acima até trocar de página.
+    window.addEventListener(EVENTO_MUDOU, acompanhar)
+    return () => window.removeEventListener(EVENTO_MUDOU, acompanhar)
   }, [])
 
   return (

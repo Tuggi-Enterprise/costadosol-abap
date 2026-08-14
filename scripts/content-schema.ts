@@ -159,9 +159,32 @@ const credito = z.string().min(1, 'CS-VAL-001: credito de foto obrigatorio')
 // Schemas de arquivo
 // ---------------------------------------------------------------------------
 
+/**
+ * CS-MUN-005 — o canal de rede social do municipio.
+ *
+ * `min(1)` nao e capricho: e CS-OURO-004 aplicada a esta faixa da tela. Se tres cidades
+ * mostram icone e uma nao mostra nada, o buraco aparece, e a paridade entre municipios e a
+ * regra mais politica do projeto.
+ *
+ * `dono` distingue conta da Secretaria de Turismo de conta da prefeitura, e existe porque
+ * duas das dez nao tem conta propria de turismo. Nao vai a tela: o que o visitante le e o
+ * proprio @, que ja diz de quem e.
+ */
+export const redeSocialSchema = z.strictObject({
+  rede: z.enum(['instagram', 'facebook', 'youtube']),
+  /** Como aparece na tela, com arroba. */
+  perfil: z.string().min(1),
+  url: z.url(),
+  dono: z.enum(['turismo', 'prefeitura']),
+  /** Onde o perfil foi confirmado. CS-OURO-006 vale para link como vale para frase. */
+  fonte: z.url(),
+  consultado_em: z.iso.date(),
+})
+
 export const municipioSchema = z.strictObject({
   slug: z.enum(SLUGS as [string, ...string[]]),
   nome: z.string().min(1),
+  redes: z.array(redeSocialSchema).min(1, 'CS-MUN-005: municipio sem canal deixa buraco na grade'),
   linha: textoMultilingue(),
   hero: z.strictObject({
     src: z.string().min(1),
@@ -381,6 +404,37 @@ export function coberturaDeRotas(conteudo: Conteudo): Falha[] {
   return falhas
 }
 
+/**
+ * CS-MUN-005 — todo municipio mostra a MESMA quantidade de canais.
+ *
+ * O schema de linha ja exige pelo menos um. Esta regra e a outra metade, e e a que ninguem
+ * lembra: se tres cidades publicam Instagram e Facebook e sete publicam so Instagram, as
+ * tres parecem mais ativas que as sete. Paridade entre municipios (CS-OURO-004) e a regra
+ * mais politica do projeto, e ela vale para esta faixa da tela como vale para os pontos.
+ *
+ * Rede nova, portanto, entra nas dez ou nao entra.
+ */
+export function paridadeDeRedes(conteudo: Conteudo): Falha[] {
+  const contagens = new Map<number, string[]>()
+  for (const m of conteudo.municipios) {
+    const quantas = m.redes.length
+    contagens.set(quantas, [...(contagens.get(quantas) ?? []), m.slug])
+  }
+  if (contagens.size <= 1) return []
+
+  const resumo = [...contagens.entries()]
+    .sort((a, b) => b[1].length - a[1].length)
+    .map(([quantas, slugs]) => `${quantas} em ${slugs.join(', ')}`)
+    .join('; ')
+  return [
+    {
+      regra: 'CS-MUN-005',
+      onde: 'municipios.json',
+      mensagem: `numero de canais desigual entre municipios: ${resumo}`,
+    },
+  ]
+}
+
 /** CS-CONT-003 / CS-VAL-001.7 — numero de distancia ou tempo exige fonte apurada. */
 export function numeroExigeFonte(conteudo: Conteudo): Falha[] {
   return conteudo.rotas
@@ -471,6 +525,7 @@ export function verificarConteudo(conteudo: Conteudo): Falha[] {
   return [
     ...municipiosDoConsorcio(conteudo),
     ...paridadeDePontos(conteudo),
+    ...paridadeDeRedes(conteudo),
     ...coberturaDeRotas(conteudo),
     ...numeroExigeFonte(conteudo),
     ...nomeDeRota(conteudo),

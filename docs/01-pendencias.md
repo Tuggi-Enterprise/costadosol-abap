@@ -1,11 +1,11 @@
-# 01 — Pendências · Costa do Sol / ABAV Expo 2026
+# 01 — Pendências · Conderlagos / ABAV Expo 2026
 
 **Dono:** Product Owner. Lista viva — atualizada a cada resposta recebida.
-**Última atualização:** 12/08/2026.
+**Última atualização:** 14/08/2026.
 
 Duas classes, e elas se resolvem em lugares diferentes:
 
-- **Bloco A — pendências com o cliente** (P-01 a P-09): dependem do Conderlagos ou das nove
+- **Bloco A — pendências com o cliente** (P-01 a P-09): dependem do Conderlagos ou das dez
   secretarias. Só o operador humano cobra.
 - **Bloco B — ambiguidades do briefing** (P-10 a P-26): dependem de uma decisão interna ou de uma
   confirmação em fonte oficial. Nenhum agente resolve sozinho (CS-OURO-008); as que já têm
@@ -22,13 +22,13 @@ Duas classes, e elas se resolvem em lugares diferentes:
 | :-- | :-- | :-- | :-- |
 | P-01 | Manual de marca, logotipo e paleta do Conderlagos | design system inteiro | urgente |
 | P-02 | Grafia exata do nome e do cargo do presidente | rodapé e release | 19/09 |
-| P-03 | Aprovação da lista dos 36 pontos | conteúdo, áudio, fotos — tudo a jusante | urgente |
+| P-03 | Aprovação da lista dos 40 pontos | conteúdo, áudio, fotos — tudo a jusante | urgente |
 | P-04 | Distâncias e tempos entre municípios de cada rota, apurados em fonte de roteirização | campos `distancia_km` e `tempo_estimado` | 19/09 |
-| P-05 | Banco de fotos das nove secretarias | hero e cards; sem foto o município entra em fila de licenciamento | **22/08 — duro** |
+| P-05 | Banco de fotos das dez secretarias | hero e cards; sem foto o município entra em fila de licenciamento | **22/08 — duro** |
 | P-06 | Gravação de 20 s da voz do presidente | produção de áudio da home | urgente |
 | P-07 | Regras de visitação do Parque Ecológico Mico-Leão-Dourado (Silva Jardim) | ponto de Silva Jardim | 19/09 |
 | P-08 | Planta e metragem do estande | nº de pontos de acesso wi-fi e divisórias | crítico |
-| P-09 | Confirmação de que são nove mesas nomeadas por município, e quem opera cada uma | CS-NAV-001 e toda a leitura de dado por mesa | crítico |
+| P-09 | Confirmação de que são dez mesas nomeadas por município, e quem opera cada uma | CS-NAV-001 e toda a leitura de dado por mesa | crítico |
 | P-09b | Decisão sobre fones: dois pares no ponto central (recomendado) ou um par por mesa | custo ~9× maior na segunda opção | 19/09 |
 
 **P-01** — Até chegar, o design roda com tokens neutros e nenhuma cor codificada em componente
@@ -54,7 +54,7 @@ Não publicar nada antes de confirmar com a secretaria.
 
 O briefing diz "Umami ou Plausible auto-hospedado". A taxonomia de CS-EVT-003 depende de eventos
 com **várias propriedades** (`municipio_open` tem cinco) e o painel depende de conseguir cruzar
-duas delas (matriz 9×9 de `entry_municipio` × `municipio`). Nem toda ferramenta cookieless faz
+duas delas (matriz 10×10 de `entry_municipio` × `municipio`). Nem toda ferramenta cookieless faz
 isso na versão auto-hospedada, e o painel inteiro do §10.1 morre se não fizer.
 
 **Ninguém escolhe por preferência.** Confirmar na documentação oficial, na versão que vamos
@@ -64,15 +64,18 @@ para alimentar `/painel`; (c) retenção de dado bruto no plano auto-hospedado.
 oficial e propõe, com a verificação anexada; Product Owner homologa.
 **Bloqueia:** semana 3 (instrumentação, CS-EVT-005) — e, junto com P-15, a hospedagem toda.
 
-### P-11 · O basemap do mapa rotula Búzios
+### P-11 · O basemap do mapa rotula cidades de fora do consórcio
 
-CS-OURO-003 proíbe Búzios em traçado **e em rótulo**. O PMTiles da região, derivado de OSM,
-traz Búzios rotulado como qualquer outro município vizinho — e o mapa da home é a peça mais
-visível do site. Isso não é detalhe de estilo: é a regra de ouro mais política do projeto sendo
-violada por padrão da ferramenta.
+**A metade política desta pendência caiu em 14/08/2026 com P-29.** Ela nasceu porque o PMTiles
+derivado de OSM rotula Búzios, e CS-OURO-003 proibia Búzios em traçado e em rótulo. Búzios
+entrou no projeto: rotular Búzios deixou de ser violação e passou a ser obrigação.
 
-**Opções:** (a) estilo que suprima rótulos de lugar fora dos nove, mantendo a geografia;
-(b) basemap sem rótulo nenhum, com os nove rótulos desenhados por nós; (c) cair para SVG
+**O que sobrou é cartográfico, não político:** o basemap rotula igualmente Macaé, Maricá,
+Niterói e o que mais couber no enquadramento, e nenhuma delas é do consórcio. Um mapa em que a
+cidade de fora tem o mesmo peso visual da cidade de dentro não comunica o território.
+
+**Opções:** (a) estilo que suprima rótulos de lugar fora dos dez, mantendo a geografia;
+(b) basemap sem rótulo nenhum, com os dez rótulos desenhados por nós; (c) cair para SVG
 estilizado (já previsto em CS-HOME-004 como plano de peso).
 **Encaminhamento proposto:** (b) — resolve o rótulo e ainda tira peso; nenhuma cidade vizinha
 aparece nomeada, o que é defensável como escolha cartográfica.
@@ -84,7 +87,7 @@ Ver "O que já está decidido", ao final.
 
 ### P-13 · "Cinco lugares, nenhuma busca."
 
-Encerramento fixo do "ouvir a rota", mas a `costa-do-sol-inteira` atravessa nove municípios e
+Encerramento fixo do "ouvir a rota", mas a `conderlagos-inteiro` atravessa dez municípios e
 não terá cinco pontos. Número em copy sem lastro no dado viola CS-OURO-006.
 
 **Encaminhamento proposto:** contagem dinâmica a partir de `rotas.json`. A segunda metade da
@@ -105,7 +108,7 @@ CS-CONT-009, e agora um idioma novo só entra com o pacote inteiro.
 ### P-15 · Como o `/painel` lê o dado sem credencial no cliente
 
 CS-OURO-009 proíbe chave no cliente, e `/painel` precisa consultar a API do analytics. Uma página
-estática com token de leitura embutido entrega o dado de nove prefeituras a quem abrir o
+estática com token de leitura embutido entrega o dado de dez prefeituras a quem abrir o
 DevTools.
 
 **Encaminhamento proposto:** Cloudflare Function como proxy de leitura, atrás do mesmo basic auth,
@@ -118,14 +121,14 @@ com o token só no ambiente da Function — mesmo padrão do endpoint de leads (
 distribuição não está definida. Se um município tiver 4 essenciais e outro 1, a paridade
 (CS-OURO-004) quebra na percepção mesmo com a contagem igual.
 
-**Opções:** (a) mesma distribuição obrigatória nos nove, validada no build; (b) livre, com o
+**Opções:** (a) mesma distribuição obrigatória nos dez, validada no build; (b) livre, com o
 `tipo` sem efeito visual nenhum.
 **Decide:** Product Owner. **Bloqueia:** regra 1 de CS-VAL-001.
 
 ### P-17 · Geração das `og:image` por município
 
 CS-MUN-003 pede `og:image` com o nome do município renderizado sobre a foto. Falta decidir se é
-gerada no build (dependência de renderização de imagem) ou entregue pronta pelo design, nove
+gerada no build (dependência de renderização de imagem) ou entregue pronta pelo design, dez
 arquivos à mão.
 **Decide:** Fullstack + UX/UI. **Impacto:** tempo de build vs. trabalho manual repetido a cada
 troca de foto.
@@ -160,10 +163,10 @@ depende disso: quem é o controlador e quem é o operador; por quanto tempo o da
 atende o pedido de exclusão que o próprio texto promete; e se há aviso de privacidade linkado.
 **Decide:** humano (é decisão jurídica, não de produto). **Bloqueia:** publicação do formulário.
 
-### P-21 · A rota `costa-do-sol-inteira` cabe num PDF de uma página?
+### P-21 · A rota `conderlagos-inteiro` cabe num PDF de uma página?
 
-Nove municípios, e CS-VENDE-001 promete "PDF de uma página" para cada rota. Também falta definir
-quantos pontos ela lista em `pontos[]` — todos os 36 tornariam a página de rota longa demais para
+Dez municípios, e CS-VENDE-001 promete "PDF de uma página" para cada rota. Também falta definir
+quantos pontos ela lista em `pontos[]` — todos os 40 tornariam a página de rota longa demais para
 o padrão de 60 segundos no balcão.
 **Decide:** Product Owner + UX/UI. **Bloqueia:** `rotas.json` e o layout da página de rota.
 
@@ -192,7 +195,7 @@ em texto nos outros sete, versão dublada, ou o card só aparece em `pt`.
 
 ### P-25 · Senha do painel — quem tem, e quantas
 
-CS-PAINEL-001 pede basic auth. Uma senha só, compartilhada entre presidência e nove prefeituras,
+CS-PAINEL-001 pede basic auth. Uma senha só, compartilhada entre presidência e dez prefeituras,
 não permite revogar acesso de ninguém isoladamente e não distingue quem viu o quê. O recorte
 individual por município (CS-PAINEL-002, bloco 10) sugere que cada prefeitura veria o próprio
 bloco — mas o painel é uma URL única para todos.
@@ -208,13 +211,28 @@ repositório.** Sem ele, a estrutura e os cortes são reconstruídos por leitura
 diverge do que o cliente já viu.
 **Precisa:** o humano colocar o arquivo em `docs/referencia/`. **Bloqueia:** layout do painel.
 
-### P-29 · As duas expressões autorizadas por CS-OURO-003 são factualmente falsas
+### P-29 · As duas expressões autorizadas por CS-OURO-003 eram factualmente falsas — **FECHADA em 14/08/2026, pela opção 2**
 
-**Esta é a pendência mais grave da lista, e ela bloqueia copy — não desenho, não código.**
+> **Decisão do operador em 14/08/2026: Armação dos Búzios entra, e o site passa a se chamar
+> Conderlagos.** Com isso as duas afirmações falsas somem por construção — o conjunto do site
+> passa a ser exatamente o conjunto do consórcio, e o nome "Costa do Sol" sai da copy (fica
+> só onde é nome próprio de outra coisa: o Parque Estadual da Costa do Sol).
+>
+> **O que mudou no repositório:** `MUNICIPIOS` passou a ter dez entradas e virou a fonte única
+> da contagem; `CS-OURO-004` passou de 36 para 40 pontos; `rota-do-mar` ganhou Búzios; a rota
+> `costa-do-sol-inteira` virou `conderlagos-inteiro`; a proibição da palavra "Búzios" saiu de
+> `PROIBIDAS`; e dois testes de interface passaram a conferir os números publicados contra o
+> schema, no lugar do antigo veto por palavra.
+>
+> **O que ficou pendente e é do cliente:** os quatro pontos de Búzios saíram do portal da
+> Secretaria de Turismo do município, e continuam sujeitos à aprovação de P-03 como os
+> outros. A décima mesa e o décimo QR entram no escopo de P-09.
 
-CS-OURO-003 autoriza duas expressões e proíbe as outras: *"os nove municípios do
-Conderlagos"* e *"Costa do Sol"*. A apuração em fonte oficial, em 12/08/2026, mostra que
-nenhuma das duas descreve o conjunto de nove deste projeto:
+**Registro do problema, como estava antes da decisão.**
+
+CS-OURO-003 autorizava duas expressões e proibia as outras: *"os nove municípios do
+Conderlagos"* e *"Costa do Sol"*. A apuração em fonte oficial, em 12/08/2026, mostrou que
+nenhuma das duas descrevia o conjunto de nove que o projeto tinha:
 
 | Fato apurado | Fonte |
 | :-- | :-- |
@@ -222,40 +240,36 @@ nenhuma das duas descreve o conjunto de nove deste projeto:
 | A **região turística Costa do Sol tem treze municípios** — inclui Búzios, Macaé, Maricá, Quissamã e Carapebus — e **não inclui Silva Jardim** | [Setur-RJ](https://www.turismo.rj.gov.br/regioes/costa-do-sol/) |
 | Existe um **Parque Estadual da Costa do Sol** (Decreto 42.929/2011, 9.790,44 ha) em seis municípios, um deles Búzios | [Decreto estadual](https://www.saquarema.rj.gov.br/wp-content/uploads/2020/07/DECRETO-N%C2%B0-42.929-11-PCSOL.pdf) |
 
-Ou seja: escrever "os nove municípios do Conderlagos" publica um número errado sobre um
-consórcio público, e chamar o conjunto de "Costa do Sol" inclui Silva Jardim numa região
-turística oficial da qual ele não faz parte. As duas coisas violam CS-OURO-006, e a
+Ou seja: escrever "os nove municípios do Conderlagos" publicava um número errado sobre um
+consórcio público, e chamar o conjunto de "Costa do Sol" incluía Silva Jardim numa região
+turística oficial da qual ele não faz parte. As duas coisas violavam CS-OURO-006, e a
 primeira é do tipo que a assessoria de um prefeito percebe no primeiro dia de feira.
 
-**O que já foi feito para não travar o trabalho:** nenhuma das duas expressões foi escrita
-no conteúdo. As nove páginas usam o nome do próprio município, e a home usa "Costa do Sol"
-apenas como **nome do site**, sem afirmar que ele corresponde ao consórcio ou à região
-turística. Nenhum texto publicado hoje conta municípios.
+**Como o trabalho seguiu sem travar, até a decisão:** nenhuma das duas expressões foi escrita
+no conteúdo. As páginas usavam o nome do próprio município, e a home usava "Costa do Sol"
+apenas como **nome do site**, sem afirmar que ele correspondia ao consórcio ou à região
+turística. Nenhum texto publicado contava municípios.
 
-Uma exceção, e ela é da própria regra: a chamada obrigatória de CS-OITO-003 — *"A Costa do
-Sol tem mais oito cidades."* — carrega a contagem embutida. Ela está no ar porque é texto
-prescrito por regra; se a decisão de P-29 for pela opção 2 ou 3, essa frase muda junto.
+**As três opções que estavam na mesa,** para o registro de por que a escolhida foi a 2:
 
-**Opções, e todas são decisão do cliente:**
+1. **Confirmar que a exclusão de Búzios era decisão comercial do consórcio** — a expressão
+   correta passaria a ser "nove dos dez municípios do Conderlagos", ou não contar em lugar
+   nenhum. Descartada: deixava a pergunta "cadê Búzios?" de pé no balcão.
+2. **Incluir Búzios**, revogando a lista de nove de CS-OURO-003. **Escolhida.** Custou uma
+   décima mesa, um décimo QR, quatro pontos novos com fonte oficial e Búzios na `rota-do-mar`.
+3. **Manter os nove sem nomear o conjunto** como consórcio nem como região turística.
+   Descartada junto com a renomeação do site: um site chamado Conderlagos que não é o
+   Conderlagos seria o mesmo defeito com outro nome.
 
-1. **Confirmar que a exclusão de Búzios é decisão comercial do consórcio** — nesse caso a
-   expressão correta passa a ser algo como "nove dos dez municípios do Conderlagos", ou
-   simplesmente não contar municípios em lugar nenhum.
-2. **Incluir Búzios**, revogando CS-OURO-003 — muda dez mesas, dez QRs, quarenta pontos e
-   a cobertura das rotas.
-3. **Manter os nove sem nomear o conjunto** como consórcio nem como região turística: o
-   site fala de nove cidades, e ponto.
+**O que a decisão deixou aberto:** a décima mesa e o décimo QR (P-09), e a aprovação dos
+quatro pontos de Búzios (P-03). **Prazo real:** antes de qualquer material impresso.
 
-**Decide:** humano, com o Conderlagos. **Bloqueia:** toda copy institucional — home,
-release de imprensa, PDF das rotas e a página "para quem vende". **Prazo real:** antes de
-qualquer material impresso, não 19/09.
-
-### P-28 · As coordenadas dos 36 pontos são aproximadas
+### P-28 · As coordenadas dos 40 pontos são aproximadas
 
 Foram derivadas da localização geral de cada ponto durante a composição do conteúdo, não
 de levantamento em campo nem de base oficial. Servem para posicionar marcador num mapa de
 região; **não servem para navegação**, e um marcador no lugar errado numa tela vista por
-nove prefeituras é constrangimento barato de evitar.
+dez prefeituras é constrangimento barato de evitar.
 **Precisa:** conferência ponto a ponto antes de o mapa da home ir ao ar (CS-HOME-003).
 **Decide:** quem revisar o conteúdo, junto de P-03.
 
@@ -314,6 +328,6 @@ Registrado aqui para não voltar como dúvida:
   vez de configuração no painel do host. CS-ARQ-001 continua inteiro — as páginas seguem
   pré-renderizadas no build e o site não consulta banco em tempo de execução. Detalhe em
   [02-arquitetura.md §1](02-arquitetura.md).
-- **Domínio de construção** — `costadosol.tuggi.app`; o CNAME do consórcio não bloqueia deploy
+- **Domínio de construção** — `revista.conderlagos.com.br`; o CNAME do consórcio não bloqueia deploy
   (CS-ARQ-005).
 - **Tailwind vs. CSS Modules** — decisão livre do UX/UI, documentada em `02-arquitetura.md`.

@@ -6,6 +6,13 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:P%C3%B4r_do_Sol_-_Araruama.JPG",
     "arquivo": "File:Pôr do Sol - Araruama.JPG"
   },
+  "img/mun/armacao-dos-buzios": {
+    "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0",
+    "autor": "Halley Pacheco de Oliveira",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Igreja_de_Santana_em_B%C3%BAzios_01.jpg",
+    "arquivo": "File:Igreja de Santana em Búzios 01.jpg"
+  },
   "img/mun/arraial-do-cabo": {
     "credito": "Eduardo P · Public domain",
     "autor": "Eduardo P",
@@ -82,6 +89,34 @@
     "licenca": "CC0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Juturna%C3%ADba.jpg",
     "arquivo": "File:Juturnaíba.jpg"
+  },
+  "img/poi/buzios-orla-bardot": {
+    "credito": "Josue Marinho · CC BY 3.0",
+    "autor": "Josue Marinho",
+    "licenca": "CC BY 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:B%C3%BAzios_RJ_Brasil_-_Est%C3%A1tua_de_Brigit_Bardot,_Orla_Bardot_-_panoramio.jpg",
+    "arquivo": "File:Búzios RJ Brasil - Estátua de Brigit Bardot, Orla Bardot - panoramio.jpg"
+  },
+  "img/poi/buzios-ferradura": {
+    "credito": "Msadp77 · CC BY-SA 3.0",
+    "autor": "Msadp77",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:PRAIA_DA_FERRADURA.B%C3%9AZIOS.JPG",
+    "arquivo": "File:PRAIA DA FERRADURA.BÚZIOS.JPG"
+  },
+  "img/poi/buzios-geriba": {
+    "credito": "Pedro Perales Ramalho · CC BY-SA 3.0",
+    "autor": "Pedro Perales Ramalho",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Anoitecer_na_praia_de_Gerib%C3%A1.JPG",
+    "arquivo": "File:Anoitecer na praia de Geribá.JPG"
+  },
+  "img/poi/buzios-rua-das-pedras": {
+    "credito": "Isadoraacrd · CC BY-SA 3.0",
+    "autor": "Isadoraacrd",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Rua_das_pedras.JPG",
+    "arquivo": "File:Rua das pedras.JPG"
   },
   "img/poi/arraial-prainhas": {
     "credito": "Daniel Souza Lima · CC BY-SA 3.0",

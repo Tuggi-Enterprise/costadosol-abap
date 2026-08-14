@@ -12,12 +12,19 @@ import sharp from 'sharp'
 
 export const LARGURAS = [400, 800] as const
 
+/**
+ * `marca/` fica de fora: o logotipo nao e foto, nao passa pelo componente `Foto` e nao usa
+ * `<picture>` com avif. Varrido junto, ele ganhava quatro arquivos que nenhuma tag pede.
+ */
+const FORA_DA_VARREDURA = new Set(['marca'])
+
 async function arquivosWebp(diretorio: string): Promise<string[]> {
   const entradas = await readdir(diretorio, { withFileTypes: true })
   const achados: string[] = []
   for (const entrada of entradas) {
     const caminho = join(diretorio, entrada.name)
-    if (entrada.isDirectory()) achados.push(...(await arquivosWebp(caminho)))
+    if (entrada.isDirectory() && FORA_DA_VARREDURA.has(entrada.name)) continue
+    else if (entrada.isDirectory()) achados.push(...(await arquivosWebp(caminho)))
     else if (entrada.name.endsWith('.webp') && !LARGURAS.some((l) => entrada.name.endsWith(`-${l}.webp`))) {
       achados.push(caminho)
     }

@@ -1,6 +1,6 @@
 # costadosol-abav
 
-Site da **Costa do Sol** — os nove municípios do Conderlagos — para o estande da ABAV Expo 2026.
+Site do **Conderlagos** — os dez municípios do consórcio — para o estande da ABAV Expo 2026.
 Feira: 30/09 a 02/10/2026. **Congelamento de conteúdo: 19/09/2026.**
 
 Repositório novo e isolado. Nada aqui é importado de, nem escrito em, `tuggi-cms`,
@@ -42,10 +42,10 @@ npm run export                        # banco -> content/ — recusa se o banco 
 ## Estado em 13/08/2026
 
 Hospedagem: **Vercel**. O site já roda: entrada de idioma, home com a grade sorteada, e a página
-de município com os quatro pontos e o módulo das outras oito. O build emite 159 páginas estáticas:
-3 idiomas × (home, 9 municípios, 36 pontos, 4 rotas e as fixas).
+de município com os quatro pontos e o módulo das outras cidades. O build emite 174 páginas estáticas:
+3 idiomas × (home, 10 municípios, 40 pontos, 4 rotas e as fixas).
 
-Pronto também: as regras consolidadas, o validador de conteúdo, as nove entradas de mesa, o banco
+Pronto também: as regras consolidadas, o validador de conteúdo, as dez entradas de mesa, o banco
 local com as duas migrations aplicadas e o caminho banco → JSON fechado. **70 provas**, cada uma
 citando o ID da regra.
 
@@ -54,18 +54,18 @@ Onde ver o quê, rodando `npm run dev`:
 | URL | O que é |
 | :-- | :-- |
 | `/` | resolve o idioma por `navigator.language` e redireciona (CS-NAV-007) |
-| `/pt/` | home — grade dos nove, ordem sorteada por sessão |
-| `/pt/saquarema/` | página de município: 4 pontos, CTA, as outras oito |
+| `/pt/` | home — grade dos dez, ordem sorteada por sessão |
+| `/pt/saquarema/` | página de município: 4 pontos, CTA, as outras cidades |
 | `/saquarema/` | a entrada de mesa: grava a origem e sai em `location.replace` |
 | `/es/silva-jardim/` | interface, conteúdo e áudio em espanhol — CS-CONT-007 na prática |
 | `/pt/rotas/` e `/pt/rotas/rota-da-lagoa/` | as quatro rotas e uma delas |
-| `/pt/lugares/` | os 36 lugares por município, em ordem alfabética |
-| `/pt/para-quem-vende/` | rotas, fatos com fonte e contato das nove secretarias |
+| `/pt/lugares/` | os 40 lugares por município, em ordem alfabética |
+| `/pt/para-quem-vende/` | rotas, fatos com fonte e contato das dez secretarias |
 
 **`content/` tem conteúdo real**, apurado em fonte oficial (Setur-RJ, prefeituras, decreto
-estadual) e composto por `npm run conteudo`. Cada um dos 36 pontos cita a URL de onde o fato saiu.
+estadual) e composto por `npm run conteudo`. Cada um dos 40 pontos cita a URL de onde o fato saiu.
 As fotos vêm do Wikimedia Commons com licença livre e autor identificado (`npm run fotos`);
-24 dos 36 pontos têm foto, e os 12 restantes mostram o espaço vazio até P-05 fechar.
+24 dos 40 pontos têm foto, e os 12 restantes mostram o espaço vazio até P-05 fechar.
 
 **Leia P-29 antes de escrever qualquer copy institucional.** A apuração mostrou que as duas
 expressões autorizadas pela regra CS-OURO-003 são factualmente falsas.

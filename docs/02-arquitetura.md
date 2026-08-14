@@ -1,4 +1,4 @@
-# 02 — Arquitetura · Costa do Sol / ABAV Expo 2026
+# 02 — Arquitetura · Conderlagos / ABAV Expo 2026
 
 **Dono:** Fullstack. **Data:** 12/08/2026.
 Regras que este documento implementa: [00-regras-de-negocio.md](00-regras-de-negocio.md).
@@ -114,14 +114,14 @@ segredo vaza para o navegador, e é essa a fronteira a vigiar em revisão.
 
 ---
 
-## 4. Os nove pontos de entrada
+## 4. Os dez pontos de entrada
 
 `CS-NAV-002` pede uma página de ~2 KB sem framework, que grave a origem em `sessionStorage`
 antes de sair. `redirects()` do Next não serve para isso — redirect de servidor não escreve
 `sessionStorage`. Então a página é HTML gerado, e o `rewrites()` só a torna alcançável.
 
 - `scripts/gen-redirects.ts` lê `content/municipios.json` e escreve
-  `public/<slug>/index.html` para os nove. **Gerado, nunca escrito à mão** — nome de município é
+  `public/<slug>/index.html` para os dez. **Gerado, nunca escrito à mão** — nome de município é
   dado, e dado tem um dono só (SSOT).
 - Cada página: lê `navigator.language`, resolve o idioma contra a lista de três, grava
   `entry_municipio` e `qr_id` em `sessionStorage`, e faz `location.replace('/<lang>/<slug>/')`.
@@ -136,7 +136,7 @@ antes de sair. `redirects()` do Next não serve para isso — redirect de servid
   `CS-MUN-004` está contando. Vale para o cartão de mesa e para qualquer peça impressa.
 
 **Colisão de nomes verificada:** as rotas do Next na raiz são os três idiomas (`/pt/`, `/en/`,
-`/es/`) e `/painel/`. Os nove slugs de município não colidem com nenhuma. `gen-redirects.ts` falha se algum
+`/es/`) e `/painel/`. Os dez slugs de município não colidem com nenhuma. `gen-redirects.ts` falha se algum
 slug colidir com um segmento reservado.
 
 ---
@@ -163,13 +163,13 @@ mentirmos e indexador registra errado.
 
 ## 6. Conteúdo em tempo de build
 
-`lib/conteudo.ts` importa os JSON de `content/` diretamente. Os arquivos são pequenos (36 pontos)
+`lib/conteudo.ts` importa os JSON de `content/` diretamente. Os arquivos são pequenos (40 pontos)
 e o Next resolve tudo em Server Component durante o `next build`. **Componente de cliente recebe
 recorte, nunca o objeto do schema:** `CardDePonto` e `GradeDeMunicipios` levavam o `Ponto` e o
 `Municipio` inteiros na carga RSC — com `fonte_verificacao`, áudio dos três idiomas e o marcador
 de foto pendente dentro — e hoje recebem só os campos que desenham (`PontoDoCard`,
-`CartaoDeMunicipio`). `generateStaticParams()` enumera 3 idiomas × 9 municípios (27 páginas de
-município), × 36 pontos, 4 rotas e as fixas — 159 páginas HTML, todas pré-renderizadas.
+`CartaoDeMunicipio`). `generateStaticParams()` enumera 3 idiomas × 10 municípios (27 páginas de
+município), × 40 pontos, 4 rotas e as fixas — 174 páginas HTML, todas pré-renderizadas.
 
 O tipo vem do schema de `scripts/content-schema.ts` por inferência. **O schema é a fonte; o tipo
 é derivado.** Declarar a interface à mão em outro arquivo seria a segunda declaração do mesmo
@@ -181,7 +181,7 @@ fato.
 
 | Coisa | Onde vive | Por quê |
 | :-- | :-- | :-- |
-| Site | Vercel, `costadosol.tuggi.app` | `CS-ARQ-005` |
+| Site | Vercel, `revista.conderlagos.com.br` | `CS-ARQ-005` |
 | Cabeçalhos de segurança e CSP | `headers()` no `next.config.ts` | versionado com o código, não no painel do host |
 | Basic auth do `/painel` | `middleware.ts` | `CS-PAINEL-001` |
 | Chave de escrita dos leads | variável de ambiente da Vercel | `CS-LEAD-006`, `CS-OURO-009` |
@@ -190,7 +190,7 @@ fato.
 O painel é uma página estática que busca `/api/painel-dados` — um Route Handler que consulta o
 analytics com o token do ambiente e devolve **já agregado**. O cliente nunca vê o token nem o
 dado bruto. Se o painel consultasse o analytics direto, o token estaria no bundle e o dado de
-nove prefeituras ficaria a um DevTools de distância.
+dez prefeituras ficaria a um DevTools de distância.
 
 **CSP** já está no `next.config.ts` e restringe `connect-src` ao próprio domínio; ganha o host do
 analytics quando P-10 fechar.
@@ -215,7 +215,7 @@ O que **não** é adiável e já está no helper: `session_id`, `ts` e `lang` au
 (`CS-EVT-002`), e o par `entry_municipio` + `cruzamento` em todo `municipio_open`
 (`CS-EVT-004`) — calculado dentro do helper, a partir do `sessionStorage`, e não passado pelo
 componente que chama. Deixar o componente calcular `cruzamento` é entregar a métrica mais valiosa
-do projeto a nove lugares diferentes, cada um com uma chance de errar.
+do projeto a dez lugares diferentes, cada um com uma chance de errar.
 
 ---
 
@@ -228,9 +228,9 @@ Pages atende range.
 Duas restrições de regra mandam no estilo:
 
 - **[P-11] — nenhum rótulo do basemap.** O extrato de OSM rotula Búzios, e `CS-OURO-003` proíbe.
-  O estilo não desenha `place labels`; os nove nomes são desenhados por nós, como camada de
+  O estilo não desenha `place labels`; os dez nomes são desenhados por nós, como camada de
   símbolos alimentada por `content/municipios.json`.
-- **`CS-HOME-003`** — nove marcadores idênticos, nenhum destaque. O estilo não tem expressão
+- **`CS-HOME-003`** — dez marcadores idênticos, nenhum destaque. O estilo não tem expressão
   condicional por município; se tivesse, a primeira "melhoria" seria destacar um.
 
 `CS-HOME-004` obriga a **medir** antes de manter o mapa: se a primeira carga passar de 500 KB, cai
@@ -258,7 +258,7 @@ de inspeção visual.
 encadeamento da rota (`CS-ROTA-002`) e o gesto que o Safari iOS exige (`CS-ROTA-003`).
 
 **Service worker** — cacheia o shell e **só os áudios já ouvidos** (`CS-PERF-005`). Não
-pré-cacheia nada: pré-cache de 36 áudios é o erro que quebra o QR no pavilhão lotado.
+pré-cacheia nada: pré-cache de 40 áudios é o erro que quebra o QR no pavilhão lotado.
 
 ---
 
@@ -266,7 +266,7 @@ pré-cacheia nada: pré-cache de 36 áudios é o erro que quebra o QR no pavilh�
 
 1. Scaffold, tema, `content-schema.ts`, `validate-content.ts`, fixtures — **agora**; é o portão
    do §16 do briefing.
-2. `gen-redirects.ts` e as nove entradas de mesa — antes de qualquer tela, porque é o caminho
+2. `gen-redirects.ts` e as dez entradas de mesa — antes de qualquer tela, porque é o caminho
    real do visitante.
 3. Página do município + `OutrasOito` — a porta de entrada (`CS-MUN-001`) e a métrica de
    cruzamento (`CS-OITO-006`).

@@ -1,4 +1,4 @@
-# 03 — Modelo de dados · Costa do Sol / ABAV Expo 2026
+# 03 — Modelo de dados · Conderlagos / ABAV Expo 2026
 
 **Dono:** DBA. **Data:** 12/08/2026.
 Regras: [00-regras-de-negocio.md](00-regras-de-negocio.md). Arquitetura:
@@ -155,14 +155,14 @@ também o que roda antes de todo build (`CS-VAL-002`).
 
 Nenhum destes campos é derivável de nada; alguém digita, e o prazo de 19/09 é sobre eles:
 
-- `linha` dos nove municípios, em 3 idiomas — 27 frases.
-- `teaser` (≤180 caracteres) e `texto` dos 36 pontos, em 3 idiomas.
-- `fonte_verificacao` de **cada um dos 36 pontos**, com `revisor` nomeado ([P-23](01-pendencias.md)).
-- `coords` dos 36 pontos.
+- `linha` dos dez municípios, em 3 idiomas — 30 frases.
+- `teaser` (≤180 caracteres) e `texto` dos 40 pontos, em 3 idiomas.
+- `fonte_verificacao` de **cada um dos 40 pontos**, com `revisor` nomeado ([P-23](01-pendencias.md)).
+- `coords` dos 40 pontos.
 - `geometria` das 4 rotas.
 - `credito` de toda foto ([P-05](01-pendencias.md)).
 - os 3 fatos com fonte ([P-22](01-pendencias.md)).
-- 135 arquivos de áudio (45 × 3 idiomas, `CS-CONT-007`).
+- 150 arquivos de áudio (45 × 3 idiomas, `CS-CONT-007`).
 
 ---
 

@@ -1,4 +1,4 @@
-# 00 — Regras de negócio · Costa do Sol / ABAV Expo 2026
+# 00 — Regras de negócio · Conderlagos / ABAV Expo 2026
 
 **Fonte:** briefing de implementação `costadosol-abav` v1.2, de 11/08/2026.
 **Dono deste documento:** Product Owner. Nenhum outro agente escreve aqui.
@@ -15,15 +15,15 @@ teste correspondente é promessa sem prova; a lista do §11 diz quais são obrig
 
 ## 1. Missão e escopo
 
-**CS-ESCOPO-001** — O produto é uma experiência web mobile-first que apresenta a Costa do Sol
-— os nove municípios do consórcio Conderlagos — ao público profissional da ABAV Expo 2026
-(30/09 a 02/10/2026, com congelamento de conteúdo em 19/09/2026).
+**CS-ESCOPO-001** — O produto é uma experiência web mobile-first que apresenta o **Conderlagos**
+— os dez municípios do consórcio — ao público profissional da ABAV Expo 2026 (30/09 a
+02/10/2026, com congelamento de conteúdo em 19/09/2026).
 
 **CS-ESCOPO-002** — O material é institucional, do destino. **Não é demonstração de produto.**
 Nenhuma tela pública explica como a experiência funciona por dentro.
 
 **CS-ESCOPO-003** — O projeto entrega duas coisas: o site público e um painel de dados
-consolidado, usado pela presidência do consórcio e por cada uma das nove prefeituras.
+consolidado, usado pela presidência do consórcio e por cada uma das dez prefeituras.
 
 **CS-ESCOPO-004** — Repositório novo e isolado (`costadosol-abav`). Nada é importado de, nem
 escrito em, `tuggi-cms`, `tuggi-drive-v2` ou `tuggi-enterprise`.
@@ -38,8 +38,8 @@ ou conversa é defeito, porque reabre a confusão que a fusão resolveu.
 | Termo canônico | O que é | Nomes **revogados** |
 | :-- | :-- | :-- |
 | **rota** | um dos quatro percursos entre municípios | "modo viagem", "roteiro", "viagem" |
-| **ponto** | um dos 36 lugares | "POI" em copy (`poi_id` permanece só como nome de campo de evento) |
-| **município** | uma das nove cidades | "cidade" em nome de campo de dado (em copy, "cidade" é permitido) |
+| **ponto** | um dos 40 lugares | "POI" em copy (`poi_id` permanece só como nome de campo de evento) |
+| **município** | uma das dez cidades | "cidade" em nome de campo de dado (em copy, "cidade" é permitido) |
 | **mesa** | ponto de entrada físico no estande, um por município | — |
 | **cruzamento** | sessão que entrou por um município e abriu outro | — |
 
@@ -76,27 +76,33 @@ Em nenhum outro lugar, em nenhum tamanho. Única exceção: o texto de consentim
 *Revisão de 13/08/2026, decidida pelo operador:* a linha é uma sentença, não um logotipo, e ficava
 em português nas páginas em inglês e espanhol. O nome **Tuggi** não se traduz; o resto, sim.
 
-**CS-OURO-003 · Nove municípios.** Araruama, Arraial do Cabo, Cabo Frio, Casimiro de Abreu,
-Iguaba Grande, Rio das Ostras, São Pedro da Aldeia, Saquarema, Silva Jardim.
+**CS-OURO-003 · Dez municípios — o consórcio inteiro.** Araruama, Armação dos Búzios, Arraial
+do Cabo, Cabo Frio, Casimiro de Abreu, Iguaba Grande, Rio das Ostras, São Pedro da Aldeia,
+Saquarema, Silva Jardim.
 
-> **Conflito aberto com a realidade — ver [P-29](01-pendencias.md).** Apurado em fonte
-> oficial em 12/08/2026: o Conderlagos tem **dez** municípios, e a região turística Costa
-> do Sol da Setur-RJ tem **treze** e não inclui Silva Jardim. As duas expressões que esta
-> regra autoriza são, hoje, factualmente falsas, e publicá-las viola CS-OURO-006. Até o
-> cliente decidir, **nenhum texto publicado conta municípios** — as páginas usam o nome de
-> cada cidade, e "Costa do Sol" aparece só como nome do site.
+> **Revisão de 14/08/2026, decidida pelo operador, que fecha [P-29](01-pendencias.md) pela
+> opção 2.** Até esta data a regra listava **nove** municípios e proibia Búzios por escrito. A
+> apuração de 12/08/2026 mostrou o preço disso: o Conderlagos tem dez, e "os nove municípios
+> do Conderlagos" publicava número errado sobre um consórcio público. Búzios
+> entrou, e a mesma decisão trocou o nome do site de "Costa do Sol" para **Conderlagos** — o
+> que também resolve a outra metade de P-29, já que a região turística Costa do Sol da
+> Setur-RJ tem treze municípios e não inclui Silva Jardim.
 
-**Búzios não existe neste projeto** — não aparece em copy, dado, rota, foto, traçado de mapa,
-rótulo de mapa, nem em "próximo a". Proibido escrever "os 10 municípios" ou "Região dos Lagos";
-a expressão correta é **"os nove municípios do Conderlagos"** ou **"Costa do Sol"**.
-*Consequência não óbvia:* o basemap do mapa (§7.2-A do briefing) rotula Búzios por padrão. Ver
+**A contagem tem um dono só:** `MUNICIPIOS`, em `scripts/content-schema.ts`. Copy que conta
+município ou lugar deriva daquela constante, e um teste de interface confere os dois números
+publicados contra ela. Nenhum documento, rótulo ou rota repete o número por conta própria.
+
+**"Região dos Lagos" continua proibido em copy**, e a razão mudou: não é nome errado, é a razão
+social. O consórcio se chama Consórcio Intermunicipal de Desenvolvimento da Região dos Lagos, e
+o que vai à tela é a marca, **Conderlagos**. *Consequência não óbvia:* o basemap do mapa (§7.2-A
+do briefing) rotulava Búzios por padrão, e isso deixou de ser defeito — ver
 [P-11](01-pendencias.md).
 
-**CS-OURO-004 · Paridade absoluta entre municípios.** Exatamente 4 pontos cada, 36 no total.
+**CS-OURO-004 · Paridade absoluta entre municípios.** Exatamente 4 pontos cada, 40 no total.
 Nenhum ranking, contador, badge de "mais visto" ou destaque visual em nenhuma tela pública.
 
 **CS-OURO-005 · Ordem sorteada** em toda listagem clicável de municípios (grade da home, módulo
-das outras oito). **Ordem alfabética** em toda listagem não clicável: rodapé, créditos, PDF,
+das outras cidades). **Ordem alfabética** em toda listagem não clicável: rodapé, créditos, PDF,
 relatório, tabela de secretarias, blocos por município do painel.
 
 **CS-OURO-006 · Nenhum dado inventado.** Nenhum número de leitos, ocupação, receita, fluxo
@@ -139,17 +145,19 @@ MapLibre GL JS + PMTiles auto-hospedado; analytics cookieless auto-hospedado (Um
 **Proibido:** Google Maps JS API, qualquer analytics de terceiro com cookie, biblioteca de UI
 pesada. Tailwind vs. CSS Modules é decisão do UX/UI, documentada em `docs/02-arquitetura.md`.
 
-**CS-ARQ-005** — Domínio de construção: `costadosol.tuggi.app`. O deploy **não** espera o domínio
-do consórcio; o CNAME é cortesia com prazo-limite de 19/09.
+**CS-ARQ-005** — Domínio: `revista.conderlagos.com.br`, decidido pelo operador em 14/08/2026.
+Era `revista.conderlagos.com.br`, domínio de terceiro com o nome antigo. **O domínio entra dentro do
+QR impresso:** QR gerado antes desta troca aponta para o host velho, e reimprimir mesa é prazo
+de gráfica, não de deploy. Antes de mandar imprimir, conferir que o DNS já responde.
 
 ---
 
 ## 5. Entrada e navegação
 
-### 5.1 Nove pontos de entrada — uma mesa por município
+### 5.1 Dez pontos de entrada — uma mesa por município
 
 **CS-NAV-001** — O estande tem uma mesa por município, cada uma com seu QR, apontando para uma
-URL curta digitável: `costadosol.tuggi.app/<slug>` (ex.: `/saquarema`).
+URL curta digitável: `revista.conderlagos.com.br/<slug>` (ex.: `/saquarema`).
 
 **CS-NAV-002** — Cada `/[slug]/index.html` é uma página estática de redirecionamento (~2 KB, sem
 framework, sem CSS externo) que: lê `navigator.language` e resolve o idioma (fallback `pt`);
@@ -224,7 +232,7 @@ script, o rodapé traz os três idiomas como links.
 /[lang]/[municipio]/[ponto]    página do ponto (link direto e compartilhamento)
 /[lang]/rotas                  as quatro rotas
 /[lang]/rotas/[rota]           uma rota
-/[lang]/lugares                os 36 lugares, agrupados por município em ordem alfabética
+/[lang]/lugares                os 40 lugares, agrupados por município em ordem alfabética
 /[lang]/para-quem-vende        rotas, fatos de acesso, contatos das secretarias
 /[lang]/imprensa               release, 8 fotos em alta, texto de 300 palavras (fora do menu)
 /painel                        painel de dados, protegido por senha, sem idioma
@@ -244,13 +252,13 @@ procura navegação escondida atrás de um ícone. O rodapé é a única faixa q
 sem trocar a mão de posição. No desktop a mesma lista vira uma linha no topo.
 *Decidido pelo operador em 13/08/2026.*
 
-**CS-HOME-001 · Hero** — foto full-bleed, "Costa do Sol", uma linha, botão de play (45 s)
+**CS-HOME-001 · Hero** — vídeo institucional full-bleed, "Conderlagos", uma linha, botão de play (45 s)
 ocupando ≥30% da largura da tela. Sem menu hambúrguer na primeira dobra, sem carrossel.
 
 **CS-HOME-002 · Palavra da presidência** — card discreto, 20 s, na voz do presidente do
 consórcio.
 
-**CS-HOME-003 · Mapa da região**, logo abaixo do hero. Nove marcadores **idênticos** (mesmo raio,
+**CS-HOME-003 · Mapa da região**, logo abaixo do hero. Dez marcadores **idênticos** (mesmo raio,
 cor, peso de rótulo), nenhum destaque, nenhum contador. As quatro rotas traçadas por cima, cada
 uma na sua cor, ativáveis por toque. Tocar município → `/[lang]/[municipio]`; tocar rota →
 `/[lang]/rotas/[rota]`. Emite `mapa_interacao` com `alvo` e `id`.
@@ -263,11 +271,11 @@ registrada em `docs/`.
 texto pequeno. **Fato, nunca adjetivo.** Proibido "paradisíaco", "deslumbrante", "imperdível".
 Emite `home_fato_view`.
 
-**CS-HOME-006 · Seção "Lugares"** — nove cards, **um ponto por município**, sempre. Qual dos
+**CS-HOME-006 · Seção "Lugares"** — dez cards, **um ponto por município**, sempre. Qual dos
 quatro pontos aparece é sorteado por sessão, com a mesma semente da ordem dos cards. Link ao
-final: "Os 36 lugares da Costa do Sol" → `/[lang]/lugares`.
+final: "Os 40 lugares do Conderlagos" → `/[lang]/lugares`.
 
-**CS-HOME-007 · Grade dos nove municípios** — cards fotográficos verticais: foto, nome, nada
+**CS-HOME-007 · Grade dos dez municípios** — cards fotográficos verticais: foto, nome, nada
 mais. Rodapé da seção, em texto pequeno: *"A ordem das cidades é sorteada a cada acesso."*
 
 ### 6.2 Sorteio
@@ -279,7 +287,7 @@ da sessão**: voltar para a home reproduz a mesma ordem.
 (`crypto.randomUUID()`), embaralhamento determinístico Fisher–Yates com PRNG semeado.
 **`Math.random()` direto é proibido** — a ordem tem de ser reproduzível dentro da sessão.
 
-**CS-SORT-003** — A mesma semente rege a grade da home, o módulo das outras oito e o ponto
+**CS-SORT-003** — A mesma semente rege a grade da home, o módulo das outras cidades e o ponto
 sorteado da seção "Lugares".
 
 **CS-SORT-004** — Duas sessões distintas produzem ordens diferentes; recarregar dentro da mesma
@@ -304,7 +312,7 @@ hero fotográfico + nome do município + UMA linha
 4 pontos: foto 4:5 · nome · teaser ≤180 car. · ► ouvir · "ler mais" (expande o texto)
 CTA: "Receber o material de [cidade]"
 selo + link da secretaria de turismo
-★ as outras oito cidades
+★ as outras cidades
 compartilhar
 ```
 
@@ -314,17 +322,17 @@ gabinete municipal vai postar.
 **CS-MUN-004** — Do scan ao primeiro áudio de um ponto: no máximo **2 toques** e **menos de 5 s**
 quando a entrada for por mesa.
 
-### 6.4 Módulo "as outras oito cidades"
+### 6.4 Módulo "as outras cidades"
 
-É o mecanismo que transforma nove mesas separadas em uma região. Sem ele, o estande é uma feira
-de nove municípios dividindo aluguel. Recebe o mesmo cuidado de implementação que o hero.
+É o mecanismo que transforma dez mesas separadas em uma região. Sem ele, o estande é uma feira
+de dez municípios dividindo aluguel. Recebe o mesmo cuidado de implementação que o hero.
 
-**CS-OITO-001** — Grade fotográfica das **outras oito**, nunca do município atual, em nenhuma das
-nove páginas.
+**CS-OITO-001** — Grade fotográfica das **outras cidades**, nunca do município atual, em nenhuma das
+dez páginas.
 
 **CS-OITO-002** — Ordem sorteada com a mesma semente de sessão (CS-SORT-003).
 
-**CS-OITO-003** — Chamada neutra: *"A Costa do Sol tem mais oito cidades."* Proibido "veja
+**CS-OITO-003** — Chamada neutra: *"O Conderlagos tem mais nove cidades."* O numeral sai de `MUNICIPIOS` e é conferido por teste (CS-OURO-003). Proibido "veja
 também", "você pode gostar", "relacionados".
 
 **CS-OITO-004** — Posicionado **depois** do CTA, para não competir com a conversão do município
@@ -332,7 +340,7 @@ de entrada.
 
 **CS-OITO-005** — Sem contador, sem badge, sem destaque de nenhum município.
 
-**CS-OITO-006** — Cada abertura daqui emite `municipio_open` com `origem: "outras_oito"` e
+**CS-OITO-006** — Cada abertura daqui emite `municipio_open` com `origem: "outras_cidades"` e
 `cruzamento: true`. **É aqui que a métrica mais valiosa do projeto é gerada.**
 
 ### 6.5 Página da rota
@@ -364,7 +372,7 @@ constante. Ver [P-13](01-pendencias.md).
 ### 6.6 Para quem vende
 
 **CS-VENDE-001** — As quatro rotas, cada uma com PDF de uma página; os três fatos de acesso e
-calendário, com fonte; tabela com o contato das nove secretarias em ordem alfabética; botão para
+calendário, com fonte; tabela com o contato das dez secretarias em ordem alfabética; botão para
 o formulário.
 
 ---
@@ -398,7 +406,7 @@ roteirização — nunca estimados**), `pdf`.
 | `rota-da-lagoa` | Saquarema · Araruama · Iguaba Grande · São Pedro da Aldeia |
 | `rota-do-mar` | Cabo Frio · Arraial do Cabo |
 | `rota-da-mata` | Silva Jardim · Casimiro de Abreu · Rio das Ostras |
-| `costa-do-sol-inteira` | as nove |
+| `conderlagos-inteiro` | as dez |
 
 Rota cria hierarquia entre municípios por construção; a cobertura plana é o que impede isso de
 virar problema político. Por isso é teste, não disciplina.
@@ -417,7 +425,7 @@ com o custo de produção como motivo.
 | :-- | :-- | :-- |
 | Interface — rótulo, botão, navegação, formulário, mensagem de erro | **`pt`, `en`, `es`** | idioma fora do trio não existe |
 | Conteúdo — `linha`, `teaser`, `texto`, `nome` de ponto e de rota, `alt`, `eixo`, `duracao_sugerida` | **`pt`, `en`, `es`** | fallback para `en` |
-| Áudio — 9 municípios + 36 pontos | **`pt`, `en`, `es`** (135 arquivos) | toca a faixa `en` |
+| Áudio — 10 municípios + 40 pontos | **`pt`, `en`, `es`** (150 arquivos) | toca a faixa `en` |
 
 Interface e conteúdo passaram a ter a **mesma** lista em 13/08/2026 (ver CS-NAV-006): era a
 diferença entre as duas linhas que produzia a tela mentirosa. O fallback continua sendo `en`,
@@ -471,7 +479,7 @@ ordem alfabética.
 **CS-LEAD-003 · Texto de consentimento** — literal, não parafrasear:
 
 > Autorizo o Conderlagos e a Tuggi a me enviarem o material das cidades selecionadas e
-> informações sobre a Costa do Sol. Posso pedir a exclusão dos meus dados a qualquer momento.
+> informações sobre o Conderlagos. Posso pedir a exclusão dos meus dados a qualquer momento.
 
 **CS-LEAD-004** — Uma submissão gera **N registros** de `interesse_declarado`, um por município
 marcado.
@@ -506,7 +514,7 @@ expira ao fechar a aba), `ts` (ISO) e `lang`.
 | `session_start` | `qr_id`, `entry_municipio` (slug ou `null`), `device`, `locale_navegador`, `referrer` |
 | `lang_select` | `lang`, `modo` (`barra`) — só troca deliberada; a entrada não emite (CS-NAV-007) |
 | `home_fato_view` | `fato_id` |
-| `municipio_open` | `municipio`, `entry_municipio`, `cruzamento` (bool), `origem` (`home` \| `outras_oito` \| `menu`), `posicao_no_sorteio` |
+| `municipio_open` | `municipio`, `entry_municipio`, `cruzamento` (bool), `origem` (`home` \| `outras_cidades` \| `menu`), `posicao_no_sorteio` |
 | `poi_open` | `poi_id`, `municipio` |
 | `audio_play` | `poi_id`, `municipio`, `origem` (`home` \| `cidade` \| `ponto` \| `rota`) |
 | `audio_progress` | `poi_id`, `pct` (25 \| 50 \| 75 \| 100) |
@@ -532,7 +540,7 @@ faz o painel nascer vazio, e isso é irrecuperável depois da feira.
 **CS-DADO-001** — Com entrada por mesa, a contagem de aberturas de um município **deixa de medir
 interesse** e passa a medir fluxo de pedestre na mesa, que é função da posição no estande e de
 quem está atendendo. Apresentar abertura bruta como "interesse" entrega conclusão errada para
-nove prefeitos ao mesmo tempo.
+dez prefeitos ao mesmo tempo.
 
 **CS-DADO-002** — Cinco sinais distintos. **Nunca somados, nunca combinados num índice**, no
 código ou na tela:
@@ -569,14 +577,14 @@ esta nota:
    não de interesse
 5. **Os cinco sinais por município**, lado a lado e nomeados: entrada · abertura · cruzamento ·
    atenção · interesse declarado
-6. **Matriz de cruzamento 9×9** — entrou por X, abriu Y. Revela quais pares de municípios
+6. **Matriz de cruzamento 10×10** — entrou por X, abriu Y. Revela quais pares de municípios
    interessam ao mesmo comprador; é o insumo direto de rota regional integrada e o argumento
    factual a favor do consórcio
 7. Movimento por hora, por dia de feira
 8. Funil: `session_start` → `lang_select` → `audio_play` → 2º `audio_play` → `rota_ouvir_complete`
    → `form_submit`
 9. Pontos mais ouvidos, ordenados por **tempo total de escuta**, não por clique
-10. **Recorte individual por município** — nove blocos, ordem alfabética, exportáveis em PDF
+10. **Recorte individual por município** — dez blocos, ordem alfabética, exportáveis em PDF
     separado
 11. Qual peça física converteu (`qr_id`)
 
@@ -621,7 +629,7 @@ desde a primeira semana**. PR que estoura o orçamento não entra.
 primeira dobra, dimensões declaradas para não causar layout shift.
 
 **CS-PERF-004** — Áudio: MP3 mono 48–64 kbps, carregado sob demanda, **um por vez**. Nunca
-pré-carregar os 36.
+pré-carregar os 40.
 
 **CS-PERF-005** — Service worker cacheia o shell da aplicação e os áudios **já ouvidos**. **Não**
 pré-cacheia tudo na entrada: isso quebraria o orçamento de 500 KB, que é o número que decide se o
@@ -639,9 +647,9 @@ Emulador não vale para nenhum destes itens.
 | A-02 | Rede throttled a 3G lento **e** modo avião após a primeira carga | CS-PERF-001, CS-PERF-005 |
 | A-03 | Encadeamento de áudio da rota em Safari iOS físico, após o gesto inicial | CS-ROTA-003 |
 | A-04 | Duas sessões anônimas → ordens diferentes; recarga na mesma sessão → ordem igual | CS-SORT-001, CS-SORT-004 |
-| A-05 | Os nove redirects de mesa, um a um: município correto, idioma do aparelho, `entry_municipio` correto, botão voltar não retorna ao redirect | CS-NAV-002, CS-NAV-003, CS-NAV-005 |
-| A-06 | Entrar por `/saquarema` e abrir Arraial pelo módulo das outras oito → `cruzamento: true`, `origem: "outras_oito"`; abrir a própria Saquarema → `cruzamento: false` | CS-EVT-004, CS-OITO-006 |
-| A-07 | O módulo das outras oito nunca mostra o município atual, em nenhuma das nove páginas | CS-OITO-001 |
+| A-05 | Os dez redirects de mesa, um a um: município correto, idioma do aparelho, `entry_municipio` correto, botão voltar não retorna ao redirect | CS-NAV-002, CS-NAV-003, CS-NAV-005 |
+| A-06 | Entrar por `/saquarema` e abrir Arraial pelo módulo das outras cidades → `cruzamento: true`, `origem: "outras_cidades"`; abrir a própria Saquarema → `cruzamento: false` | CS-EVT-004, CS-OITO-006 |
+| A-07 | O módulo das outras cidades nunca mostra o município atual, em nenhuma das dez páginas | CS-OITO-001 |
 | A-08 | Cobertura das rotas verificada por script: cada município em exatamente 2 | CS-CONT-004 |
 | A-09 | Seção "Lugares": em 20 sessões, nenhum município com zero ou dois cards; o ponto sorteado varia entre sessões | CS-HOME-006 |
 | A-10 | Nenhum `distancia_km` ou `tempo_estimado` publicado sem `fonte` | CS-CONT-003 |

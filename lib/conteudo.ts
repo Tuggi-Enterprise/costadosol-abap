@@ -60,7 +60,7 @@ export function pontosDo(slug: string): Ponto[] {
 }
 
 /** CS-OITO-001: as outras oito, nunca a atual. Em nenhuma das nove paginas. */
-export function outrasOito(slug: string): Municipio[] {
+export function outrasCidades(slug: string): Municipio[] {
   return municipios().filter((m) => m.slug !== slug)
 }
 

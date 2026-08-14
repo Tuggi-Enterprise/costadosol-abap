@@ -72,7 +72,7 @@ export function track(evento: Evento, props: Props = {}): void {
  *   `mesa`    — chegou direto na pagina do municipio da propria mesa (CS-NAV-002)
  *   `interno` — outro link do site (lista de lugares, cidades de uma rota)
  */
-export type OrigemDeAbertura = 'home' | 'outras_oito' | 'menu' | 'mesa' | 'interno'
+export type OrigemDeAbertura = 'home' | 'outras_cidades' | 'menu' | 'mesa' | 'interno'
 
 /**
  * O clique acontece numa pagina e a abertura e contada na seguinte. Sem este bilhete, ou

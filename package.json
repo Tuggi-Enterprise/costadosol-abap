@@ -2,7 +2,7 @@
   "name": "costadosol-abav",
   "version": "0.1.0",
   "private": true,
-  "description": "Costa do Sol — nove municipios do Conderlagos — ABAV Expo 2026",
+  "description": "Conderlagos — ABAV Expo 2026",
   "type": "module",
   "engines": {
     "node": ">=20.9.0"

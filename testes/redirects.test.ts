@@ -1,5 +1,5 @@
 /**
- * Prova das nove entradas de mesa — criterio de aceite A-05.
+ * Prova das entradas de mesa — criterio de aceite A-05.
  *
  * O teste roda sobre o HTML gerado, nao sobre a intencao: e o mesmo texto que vai para
  * public/<slug>/index.html.
@@ -16,8 +16,10 @@ import {
 
 const paginas = MUNICIPIOS.map((m) => ({ ...m, html: paginaDeRedirecionamento(m.slug, m.nome) }))
 
-test('CS-NAV-002: existe uma entrada para cada um dos nove municipios', () => {
-  assert.equal(paginas.length, 9)
+test('CS-NAV-002: existe uma entrada de mesa para cada municipio do consorcio', () => {
+  // Contado a partir de MUNICIPIOS, nunca escrito a mao: quando Armacao dos Buzios entrou,
+  // a decima mesa tinha que aparecer sozinha, e um "9" cravado aqui teria escondido isso.
+  assert.equal(paginas.length, MUNICIPIOS.length)
   for (const { slug, html } of paginas) {
     assert.ok(html.includes(`"${slug}"`), `${slug} nao aparece na propria pagina`)
   }

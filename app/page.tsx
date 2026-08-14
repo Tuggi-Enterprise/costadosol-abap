@@ -16,6 +16,7 @@
  * significar apenas troca deliberada de idioma, que é o que ele deveria medir.
  */
 import { useEffect } from 'react'
+import { Marca } from '../componentes/Marca.tsx'
 import { resolverDoNavegador } from '../lib/idioma.ts'
 import { absorverParametroDeEntrada, guardarIdioma, idiomaGuardado } from '../lib/sessao.ts'
 import { trackSessionStart } from '../lib/track.ts'
@@ -32,9 +33,13 @@ export default function Entrada() {
     window.location.replace(`/${idioma}/`)
   }, [])
 
+  // Fundo claro, não o azul de antes: o logotipo tem fundo branco chapado (ver
+  // componentes/Marca.tsx), e sobre o azul ele viraria um retângulo branco. O `h1` continua
+  // existindo para leitor de tela e para o caso de a imagem não carregar.
   return (
-    <main className="grid min-h-dvh place-items-center bg-oceano-fundo p-6">
-      <h1 className="text-titulo font-semibold text-white/90">Costa do Sol</h1>
+    <main className="grid min-h-dvh place-items-center bg-papel p-6">
+      <h1 className="sr-only">Conderlagos</h1>
+      <Marca tamanho="entrada" />
     </main>
   )
 }

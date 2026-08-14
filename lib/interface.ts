@@ -6,10 +6,15 @@
  * Regras que mandam na redacao daqui:
  *   CS-OURO-001 — nenhuma explicacao de mecanica. Nada de "modo", "recurso", "toque aqui
  *                 para ativar". O rotulo diz o que acontece, nao como funciona.
- *   CS-OITO-003 — a chamada das outras oito e neutra: nada de "veja tambem".
+ *   CS-OITO-003 — a chamada das outras cidades e neutra: nada de "veja tambem".
  *
- * A chamada da capa NAO conta municipios: enquanto P-29 nao fecha, dizer "nove cidades"
- * numa pagina chamada Costa do Sol afirma um numero que a fonte oficial contradiz.
+ * O site passou a se chamar **Conderlagos** por decisao do operador em 14/08/2026, e P-29
+ * fechou junto, pela opcao 2: Armacao dos Buzios entrou, sao dez municipios e 40 lugares.
+ *
+ * **Os dois numeros escritos aqui em letra — "nove cidades" e "40 lugares" — nao sao copy
+ * livre.** Eles derivam de `MUNICIPIOS` e `PONTOS_POR_MUNICIPIO`, em scripts/content-schema,
+ * e um teste de interface confere os dois contra o schema a cada rodada. Municipio novo, ou
+ * ponto por municipio diferente, quebra o teste em vez de publicar numero velho.
  *
  * `receberMaterial` nao aparece em tela hoje: o CTA de CS-LEAD-001 saiu da pagina do
  * municipio enquanto P-20 (LGPD) e P-27 (banco) nao fecham. O rotulo fica porque a regra
@@ -25,7 +30,7 @@ export type Rotulos = {
   ouvir: string
   lerMais: string
   lerMenos: string
-  outrasOito: string
+  outrasCidades: string
   ordemSorteada: string
   receberMaterial: string
   secretaria: string
@@ -35,6 +40,8 @@ export type Rotulos = {
   idioma: string
   cidades: string
   chamadaDaCapa: string
+  /** Descreve o filme da capa para quem nao o ve. Nao e legenda: nao vai a tela. */
+  videoDaCapa: string
   ouvirRegiao: string
   navCidades: string
   navRotas: string
@@ -61,15 +68,16 @@ const DICIONARIO: Record<string, Rotulos> = {
     ouvir: 'Ouvir',
     lerMais: 'Ler mais',
     lerMenos: 'Ler menos',
-    outrasOito: 'A Costa do Sol tem mais oito cidades.',
+    outrasCidades: 'O Conderlagos tem mais nove cidades.',
     ordemSorteada: 'A ordem muda a cada visita.',
     receberMaterial: 'Receber o material de',
     secretaria: 'Secretaria de Turismo',
     secretariaDaCidade: 'Secretaria de Turismo de {cidade}',
-    osLugares: 'Os 36 lugares da Costa do Sol',
+    osLugares: 'Os 40 lugares do Conderlagos',
     idioma: 'Idioma',
     cidades: 'Cidades',
     chamadaDaCapa: 'Entre a lagoa e o mar aberto, no litoral do Rio de Janeiro.',
+    videoDaCapa: 'Imagens aéreas das praias, das lagoas e das cidades do Conderlagos.',
     ouvirRegiao: 'Ouvir a região',
     navCidades: 'Cidades',
     navRotas: 'Rotas',
@@ -93,15 +101,16 @@ const DICIONARIO: Record<string, Rotulos> = {
     ouvir: 'Listen',
     lerMais: 'Read more',
     lerMenos: 'Read less',
-    outrasOito: 'Costa do Sol has eight more cities.',
+    outrasCidades: 'Conderlagos has nine more cities.',
     ordemSorteada: 'The order changes on every visit.',
     receberMaterial: 'Receive material from',
     secretaria: 'Tourism Office',
     secretariaDaCidade: '{cidade} Tourism Office',
-    osLugares: 'The 36 places in Costa do Sol',
+    osLugares: 'The 40 places in Conderlagos',
     idioma: 'Language',
     cidades: 'Cities',
     chamadaDaCapa: 'Between the lagoon and the open sea, on the Rio de Janeiro coast.',
+    videoDaCapa: 'Aerial footage of the beaches, lagoons and towns of Conderlagos.',
     ouvirRegiao: 'Listen to the region',
     navCidades: 'Cities',
     navRotas: 'Routes',
@@ -125,15 +134,16 @@ const DICIONARIO: Record<string, Rotulos> = {
     ouvir: 'Escuchar',
     lerMais: 'Leer más',
     lerMenos: 'Leer menos',
-    outrasOito: 'Costa do Sol tiene ocho ciudades más.',
+    outrasCidades: 'Conderlagos tiene nueve ciudades más.',
     ordemSorteada: 'El orden cambia en cada visita.',
     receberMaterial: 'Recibir el material de',
     secretaria: 'Secretaría de Turismo',
     secretariaDaCidade: 'Secretaría de Turismo de {cidade}',
-    osLugares: 'Los 36 lugares de Costa do Sol',
+    osLugares: 'Los 40 lugares de Conderlagos',
     idioma: 'Idioma',
     cidades: 'Ciudades',
     chamadaDaCapa: 'Entre la laguna y el mar abierto, en el litoral de Río de Janeiro.',
+    videoDaCapa: 'Imágenes aéreas de las playas, las lagunas y las ciudades de Conderlagos.',
     ouvirRegiao: 'Escuchar la región',
     navCidades: 'Ciudades',
     navRotas: 'Rutas',

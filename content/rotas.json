@@ -74,11 +74,13 @@
     "cor": "#0f8f8f",
     "municipios": [
       "cabo-frio",
-      "arraial-do-cabo"
+      "arraial-do-cabo",
+      "armacao-dos-buzios"
     ],
     "pontos": [
       "cabo-frio-praia-do-forte",
-      "arraial-prainhas"
+      "arraial-prainhas",
+      "buzios-orla-bardot"
     ],
     "geometria": {
       "type": "LineString",
@@ -90,13 +92,17 @@
         [
           -42.0278,
           -22.9661
+        ],
+        [
+          -41.8817,
+          -22.7469
         ]
       ]
     },
     "duracao_sugerida": {
-      "pt": "2 cidades",
-      "en": "2 cities",
-      "es": "2 ciudades"
+      "pt": "3 cidades",
+      "en": "3 cities",
+      "es": "3 ciudades"
     },
     "distancia_km": null,
     "tempo_estimado": null,
@@ -162,11 +168,11 @@
     }
   },
   {
-    "id": "costa-do-sol-inteira",
+    "id": "conderlagos-inteiro",
     "nome": {
-      "pt": "A Costa do Sol inteira",
-      "en": "The whole Costa do Sol",
-      "es": "Toda la Costa do Sol"
+      "pt": "O Conderlagos inteiro",
+      "en": "The whole of Conderlagos",
+      "es": "Conderlagos entero"
     },
     "eixo": {
       "pt": "De ponta a ponta do território",
@@ -182,6 +188,7 @@
       "sao-pedro-da-aldeia",
       "arraial-do-cabo",
       "cabo-frio",
+      "armacao-dos-buzios",
       "casimiro-de-abreu",
       "rio-das-ostras"
     ],
@@ -193,6 +200,7 @@
       "aldeia-casa-da-flor",
       "arraial-prainhas",
       "cabo-frio-praia-do-forte",
+      "buzios-orla-bardot",
       "casimiro-morro-sao-joao",
       "ostras-praca-da-baleia"
     ],
@@ -228,6 +236,10 @@
           -22.8894
         ],
         [
+          -41.8817,
+          -22.7469
+        ],
+        [
           -42.2044,
           -22.4794
         ],
@@ -238,17 +250,17 @@
       ]
     },
     "duracao_sugerida": {
-      "pt": "9 cidades",
-      "en": "9 cities",
-      "es": "9 ciudades"
+      "pt": "10 cidades",
+      "en": "10 cities",
+      "es": "10 ciudades"
     },
     "distancia_km": null,
     "tempo_estimado": null,
     "fonte": null,
     "pdf": {
-      "pt": "/pdf/costa-do-sol-inteira-pt.pdf",
-      "en": "/pdf/costa-do-sol-inteira-en.pdf",
-      "es": "/pdf/costa-do-sol-inteira-es.pdf"
+      "pt": "/pdf/conderlagos-inteiro-pt.pdf",
+      "en": "/pdf/conderlagos-inteiro-en.pdf",
+      "es": "/pdf/conderlagos-inteiro-es.pdf"
     }
   }
 ]

@@ -72,14 +72,14 @@ const nomesDeRota: Record<string, Record<string, string>> = {
   'rota-da-lagoa': { pt: 'A rota da lagoa', en: 'The lagoon route', es: 'La ruta de la laguna' },
   'rota-do-mar': { pt: 'A rota do mar', en: 'The sea route', es: 'La ruta del mar' },
   'rota-da-mata': { pt: 'A rota da mata', en: 'The forest route', es: 'La ruta del bosque' },
-  'costa-do-sol-inteira': { pt: 'A Costa do Sol inteira', en: 'The whole Costa do Sol', es: 'Toda la Costa do Sol' },
+  'conderlagos-inteiro': { pt: 'O Conderlagos inteiro', en: 'The whole of Conderlagos', es: 'Conderlagos entero' },
 }
 
 const cores: Record<string, string> = {
   'rota-da-lagoa': '#2f6f9f',
   'rota-do-mar': '#1c8a8a',
   'rota-da-mata': '#3f7a3f',
-  'costa-do-sol-inteira': '#b06a2c',
+  'conderlagos-inteiro': '#b06a2c',
 }
 
 const rotas = Object.entries(COBERTURA_ROTAS).map(([id, slugs]) => ({

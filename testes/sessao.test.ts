@@ -22,7 +22,7 @@ test('CS-SORT-001/004: a mesma semente reproduz a mesma ordem, sempre', () => {
 
 test('CS-SORT-004: duas sessoes distintas produzem ordens diferentes', () => {
   const ordens = new Set(sementes.map((s) => embaralhar(SLUGS, s).join(',')))
-  // Nao se exige que as 20 sejam unicas — 9! permutacoes tornam colisao improvavel, mas o
+  // Nao se exige que as 20 sejam unicas — as permutacoes tornam colisao improvavel, mas o
   // que a regra promete e que a ordem NAO e constante entre sessoes.
   assert.ok(ordens.size > 1, 'a ordem nao muda entre sessoes: o sorteio nao esta sorteando')
 })
@@ -38,8 +38,8 @@ test('CS-OURO-005/CS-SORT-002: o embaralhamento nao perde nem duplica municipio'
 test('CS-HOME-006: um ponto por municipio, e o indice cai sempre dentro dos quatro', () => {
   for (const semente of sementes) {
     const escolhidos = SLUGS.map((slug) => ({ slug, indice: sortearIndice(semente, slug, 4) }))
-    assert.equal(escolhidos.length, 9, 'A-09: nenhum municipio com zero ou dois cards')
-    assert.equal(new Set(escolhidos.map((e) => e.slug)).size, 9)
+    assert.equal(escolhidos.length, SLUGS.length, 'A-09: nenhum municipio com zero ou dois cards')
+    assert.equal(new Set(escolhidos.map((e) => e.slug)).size, SLUGS.length)
     for (const { slug, indice } of escolhidos) {
       assert.ok(indice >= 0 && indice < 4, `${slug}: indice ${indice} fora dos quatro pontos`)
     }
@@ -57,9 +57,9 @@ test('CS-HOME-006: o ponto sorteado varia entre sessoes, e nao entre recargas', 
   }
 })
 
-test('CS-HOME-006: numa mesma sessao os nove municipios nao caem todos no mesmo indice', () => {
+test('CS-HOME-006: numa mesma sessao os municipios nao caem todos no mesmo indice', () => {
   // Sem a chave por municipio no PRNG, uma semente sortearia um indice so e a home
-  // mostraria o ponto 1 dos nove — paridade preservada e variedade nenhuma.
+  // mostraria o ponto 1 de todos — paridade preservada e variedade nenhuma.
   const variados = sementes.filter(
     (s) => new Set(SLUGS.map((slug) => sortearIndice(s, slug, 4))).size > 1,
   )

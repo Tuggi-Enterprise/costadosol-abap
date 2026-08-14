@@ -1,5 +1,5 @@
 /**
- * Schema e regras de conteudo do projeto Costa do Sol.
+ * Schema e regras de conteudo do projeto Conderlagos.
  *
  * Este arquivo e a fonte unica das regras de CS-VAL-001. O tipo de conteudo do site
  * e derivado daqui por inferencia (ver docs/02-arquitetura.md secao 6); declarar a
@@ -14,9 +14,21 @@ import { z } from 'zod'
 // Constantes de negocio
 // ---------------------------------------------------------------------------
 
-/** CS-OURO-003 — os nove, e so os nove. Ordem alfabetica (CS-OURO-005). */
+/**
+ * CS-OURO-003 — os municipios do consorcio, e so eles. Ordem alfabetica (CS-OURO-005).
+ *
+ * **Sao DEZ desde 14/08/2026, e a decima e Armacao dos Buzios.** Ate ali eram nove, e a
+ * ausencia de Buzios era regra escrita: "Buzios nao existe neste projeto". P-29 mostrou o
+ * preco disso — o Conderlagos tem dez municipios, entao "os nove municipios do Conderlagos"
+ * publicava um numero errado sobre um consorcio publico, e era exatamente a frase que a
+ * assessoria de um prefeito le no primeiro dia de feira. O operador fechou P-29 pela opcao
+ * 2 (incluir Buzios) no mesmo dia em que o site passou a se chamar Conderlagos.
+ *
+ * Quem contar municipio em qualquer lugar conta DAQUI. Nao ha segundo lugar com o numero.
+ */
 export const MUNICIPIOS = [
   { slug: 'araruama', nome: 'Araruama' },
+  { slug: 'armacao-dos-buzios', nome: 'Armação dos Búzios' },
   { slug: 'arraial-do-cabo', nome: 'Arraial do Cabo' },
   { slug: 'cabo-frio', nome: 'Cabo Frio' },
   { slug: 'casimiro-de-abreu', nome: 'Casimiro de Abreu' },
@@ -54,9 +66,12 @@ export const FALLBACK_CONTEUDO = 'en'
 /** CS-CONT-004 — cada municipio em exatamente 2 rotas. */
 export const COBERTURA_ROTAS: Record<string, readonly string[]> = {
   'rota-da-lagoa': ['saquarema', 'araruama', 'iguaba-grande', 'sao-pedro-da-aldeia'],
-  'rota-do-mar': ['cabo-frio', 'arraial-do-cabo'],
+  'rota-do-mar': ['cabo-frio', 'arraial-do-cabo', 'armacao-dos-buzios'],
   'rota-da-mata': ['silva-jardim', 'casimiro-de-abreu', 'rio-das-ostras'],
-  'costa-do-sol-inteira': SLUGS,
+  // Era `costa-do-sol-inteira`. O id foi trocado junto com o nome do site em 14/08/2026:
+  // ele nomeia os PDF que o visitante baixa (`/pdf/<id>-<idioma>.pdf`), entao carrega o
+  // nome antigo para dentro do arquivo salvo no telefone de quem compra.
+  'conderlagos-inteiro': SLUGS,
 }
 
 export const TEASER_MAX = 180
@@ -69,11 +84,16 @@ export const ROTAS_POR_MUNICIPIO = 2
  * a string literal proibida, e o `grep` do criterio A-14 nao acusa este arquivo.
  */
 export const PROIBIDAS: readonly { padrao: RegExp; regra: string; motivo: string }[] = [
-  { padrao: new RegExp('b' + 'uzios', 'i'), regra: 'CS-OURO-003', motivo: 'municipio que nao existe neste projeto' },
-  { padrao: new RegExp('b' + 'úzios', 'i'), regra: 'CS-OURO-003', motivo: 'municipio que nao existe neste projeto' },
-  { padrao: new RegExp('regi' + 'ão dos lagos', 'i'), regra: 'CS-OURO-003', motivo: 'a expressao correta e Costa do Sol' },
-  { padrao: new RegExp('regiao dos lagos', 'i'), regra: 'CS-OURO-003', motivo: 'a expressao correta e Costa do Sol' },
-  { padrao: new RegExp('os 10 munic', 'i'), regra: 'CS-OURO-003', motivo: 'sao nove municipios' },
+  // As duas proibicoes de "Buzios" sairam em 14/08/2026: o municipio entrou no projeto.
+  // As duas de "os 10 municipios" e "Costa do Sol" sairam pelo mesmo motivo — dez virou o
+  // numero certo, e o nome do conjunto virou Conderlagos.
+  //
+  // "Regiao dos Lagos" continua proibido em COPY, e a razao mudou: agora nao e nome errado,
+  // e nome de outra coisa. O consorcio se chama Consorcio Intermunicipal de Desenvolvimento
+  // da Regiao dos Lagos, e a marca que vai a tela e "Conderlagos". Escrever o nome longo em
+  // copy de turista troca a marca pela razao social.
+  { padrao: new RegExp('regi' + 'ão dos lagos', 'i'), regra: 'CS-OURO-003', motivo: 'a marca publicada e Conderlagos' },
+  { padrao: new RegExp('regiao dos lagos', 'i'), regra: 'CS-OURO-003', motivo: 'a marca publicada e Conderlagos' },
   { padrao: new RegExp('modo viagem', 'i'), regra: 'CS-NOME-001', motivo: 'o conceito e rota' },
   { padrao: new RegExp('\\broteiros?\\b', 'i'), regra: 'CS-NOME-001', motivo: 'o conceito e rota' },
   { padrao: new RegExp('\\bviagem\\b', 'i'), regra: 'CS-NOME-001', motivo: 'o conceito e rota' },
@@ -256,8 +276,8 @@ export function palavrasProibidas(conteudo: Conteudo): Falha[] {
   return falhas
 }
 
-/** CS-OURO-003 — nove municipios, nem oito nem dez, e os nove certos. */
-export function noveMunicipios(conteudo: Conteudo): Falha[] {
+/** CS-OURO-003 — os municipios de MUNICIPIOS, todos, so eles, com a grafia oficial. */
+export function municipiosDoConsorcio(conteudo: Conteudo): Falha[] {
   const falhas: Falha[] = []
   const presentes = new Set(conteudo.municipios.map((m) => m.slug))
   for (const slug of SLUGS) {
@@ -285,7 +305,7 @@ export function noveMunicipios(conteudo: Conteudo): Falha[] {
   return falhas
 }
 
-/** CS-OURO-004 / CS-VAL-001.1 — exatamente 4 pontos por municipio, 36 no total. */
+/** CS-OURO-004 / CS-VAL-001.1 — exatamente 4 pontos por municipio, 40 no total. */
 export function paridadeDePontos(conteudo: Conteudo): Falha[] {
   const falhas: Falha[] = []
   for (const municipio of conteudo.municipios) {
@@ -449,7 +469,7 @@ export function idiomasParciais(conteudo: Conteudo): Falha[] {
 /** Todas as regras globais, na ordem em que sao mais uteis de ler. */
 export function verificarConteudo(conteudo: Conteudo): Falha[] {
   return [
-    ...noveMunicipios(conteudo),
+    ...municipiosDoConsorcio(conteudo),
     ...paridadeDePontos(conteudo),
     ...coberturaDeRotas(conteudo),
     ...numeroExigeFonte(conteudo),

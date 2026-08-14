@@ -232,6 +232,238 @@
     "ordem": 4
   },
   {
+    "id": "armacao-dos-buzios-1",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "essencial",
+    "nome": {
+      "pt": "[pt] Lugar 1 de Armação dos Búzios",
+      "en": "[en] Lugar 1 de Armação dos Búzios",
+      "es": "[es] Lugar 1 de Armação dos Búzios"
+    },
+    "categoria": "natureza",
+    "coords": [
+      -22.6,
+      -42
+    ],
+    "teaser": {
+      "pt": "[pt] Marcador de chamada do lugar 1 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "en": "[en] Marcador de chamada do lugar 1 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "es": "[es] Marcador de chamada do lugar 1 de Armação dos Búzios, dentro do limite de 180 caracteres."
+    },
+    "texto": {
+      "pt": "[pt] Marcador de texto completo do lugar 1 de Armação dos Búzios.",
+      "en": "[en] Marcador de texto completo do lugar 1 de Armação dos Búzios.",
+      "es": "[es] Marcador de texto completo do lugar 1 de Armação dos Búzios."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/armacao-dos-buzios-1.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/armacao-dos-buzios-1.mp3",
+        "dur": 50
+      },
+      "es": {
+        "url": "/audio/es/armacao-dos-buzios-1.mp3",
+        "dur": 50
+      }
+    },
+    "foto": {
+      "v": "/img/poi/armacao-dos-buzios-1-v",
+      "h": "/img/poi/armacao-dos-buzios-1-h",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto do lugar 1.",
+        "en": "[en] Marcador de descricao da foto do lugar 1.",
+        "es": "[es] Marcador de descricao da foto do lugar 1."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "EXEMPLO — afirmacao pendente de apuracao (P-03)",
+        "url": "https://example.org/fonte",
+        "consultado_em": "2026-08-12",
+        "revisor": "pendente (P-23)"
+      }
+    ],
+    "ordem": 1
+  },
+  {
+    "id": "armacao-dos-buzios-2",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "essencial",
+    "nome": {
+      "pt": "[pt] Lugar 2 de Armação dos Búzios",
+      "en": "[en] Lugar 2 de Armação dos Búzios",
+      "es": "[es] Lugar 2 de Armação dos Búzios"
+    },
+    "categoria": "historia",
+    "coords": [
+      -22.6,
+      -42.05
+    ],
+    "teaser": {
+      "pt": "[pt] Marcador de chamada do lugar 2 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "en": "[en] Marcador de chamada do lugar 2 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "es": "[es] Marcador de chamada do lugar 2 de Armação dos Búzios, dentro do limite de 180 caracteres."
+    },
+    "texto": {
+      "pt": "[pt] Marcador de texto completo do lugar 2 de Armação dos Búzios.",
+      "en": "[en] Marcador de texto completo do lugar 2 de Armação dos Búzios.",
+      "es": "[es] Marcador de texto completo do lugar 2 de Armação dos Búzios."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/armacao-dos-buzios-2.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/armacao-dos-buzios-2.mp3",
+        "dur": 50
+      },
+      "es": {
+        "url": "/audio/es/armacao-dos-buzios-2.mp3",
+        "dur": 50
+      }
+    },
+    "foto": {
+      "v": "/img/poi/armacao-dos-buzios-2-v",
+      "h": "/img/poi/armacao-dos-buzios-2-h",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto do lugar 2.",
+        "en": "[en] Marcador de descricao da foto do lugar 2.",
+        "es": "[es] Marcador de descricao da foto do lugar 2."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "EXEMPLO — afirmacao pendente de apuracao (P-03)",
+        "url": "https://example.org/fonte",
+        "consultado_em": "2026-08-12",
+        "revisor": "pendente (P-23)"
+      }
+    ],
+    "ordem": 2
+  },
+  {
+    "id": "armacao-dos-buzios-3",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "complementar",
+    "nome": {
+      "pt": "[pt] Lugar 3 de Armação dos Búzios",
+      "en": "[en] Lugar 3 de Armação dos Búzios",
+      "es": "[es] Lugar 3 de Armação dos Búzios"
+    },
+    "categoria": "cultura",
+    "coords": [
+      -22.6,
+      -42.1
+    ],
+    "teaser": {
+      "pt": "[pt] Marcador de chamada do lugar 3 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "en": "[en] Marcador de chamada do lugar 3 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "es": "[es] Marcador de chamada do lugar 3 de Armação dos Búzios, dentro do limite de 180 caracteres."
+    },
+    "texto": {
+      "pt": "[pt] Marcador de texto completo do lugar 3 de Armação dos Búzios.",
+      "en": "[en] Marcador de texto completo do lugar 3 de Armação dos Búzios.",
+      "es": "[es] Marcador de texto completo do lugar 3 de Armação dos Búzios."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/armacao-dos-buzios-3.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/armacao-dos-buzios-3.mp3",
+        "dur": 50
+      },
+      "es": {
+        "url": "/audio/es/armacao-dos-buzios-3.mp3",
+        "dur": 50
+      }
+    },
+    "foto": {
+      "v": "/img/poi/armacao-dos-buzios-3-v",
+      "h": "/img/poi/armacao-dos-buzios-3-h",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto do lugar 3.",
+        "en": "[en] Marcador de descricao da foto do lugar 3.",
+        "es": "[es] Marcador de descricao da foto do lugar 3."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "EXEMPLO — afirmacao pendente de apuracao (P-03)",
+        "url": "https://example.org/fonte",
+        "consultado_em": "2026-08-12",
+        "revisor": "pendente (P-23)"
+      }
+    ],
+    "ordem": 3
+  },
+  {
+    "id": "armacao-dos-buzios-4",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "inesperado",
+    "nome": {
+      "pt": "[pt] Lugar 4 de Armação dos Búzios",
+      "en": "[en] Lugar 4 de Armação dos Búzios",
+      "es": "[es] Lugar 4 de Armação dos Búzios"
+    },
+    "categoria": "gastronomia",
+    "coords": [
+      -22.6,
+      -42.15
+    ],
+    "teaser": {
+      "pt": "[pt] Marcador de chamada do lugar 4 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "en": "[en] Marcador de chamada do lugar 4 de Armação dos Búzios, dentro do limite de 180 caracteres.",
+      "es": "[es] Marcador de chamada do lugar 4 de Armação dos Búzios, dentro do limite de 180 caracteres."
+    },
+    "texto": {
+      "pt": "[pt] Marcador de texto completo do lugar 4 de Armação dos Búzios.",
+      "en": "[en] Marcador de texto completo do lugar 4 de Armação dos Búzios.",
+      "es": "[es] Marcador de texto completo do lugar 4 de Armação dos Búzios."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/armacao-dos-buzios-4.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/armacao-dos-buzios-4.mp3",
+        "dur": 50
+      },
+      "es": {
+        "url": "/audio/es/armacao-dos-buzios-4.mp3",
+        "dur": 50
+      }
+    },
+    "foto": {
+      "v": "/img/poi/armacao-dos-buzios-4-v",
+      "h": "/img/poi/armacao-dos-buzios-4-h",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto do lugar 4.",
+        "en": "[en] Marcador de descricao da foto do lugar 4.",
+        "es": "[es] Marcador de descricao da foto do lugar 4."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "EXEMPLO — afirmacao pendente de apuracao (P-03)",
+        "url": "https://example.org/fonte",
+        "consultado_em": "2026-08-12",
+        "revisor": "pendente (P-23)"
+      }
+    ],
+    "ordem": 4
+  },
+  {
     "id": "arraial-do-cabo-1",
     "municipio": "arraial-do-cabo",
     "tipo": "essencial",
@@ -242,7 +474,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -22.6,
+      -22.7,
       -42
     ],
     "teaser": {
@@ -300,7 +532,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -22.6,
+      -22.7,
       -42.05
     ],
     "teaser": {
@@ -358,7 +590,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -22.6,
+      -22.7,
       -42.1
     ],
     "teaser": {
@@ -416,7 +648,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -22.6,
+      -22.7,
       -42.15
     ],
     "teaser": {
@@ -474,7 +706,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -22.7,
+      -22.8,
       -42
     ],
     "teaser": {
@@ -532,7 +764,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -22.7,
+      -22.8,
       -42.05
     ],
     "teaser": {
@@ -590,7 +822,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -22.7,
+      -22.8,
       -42.1
     ],
     "teaser": {
@@ -648,7 +880,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -22.7,
+      -22.8,
       -42.15
     ],
     "teaser": {
@@ -706,7 +938,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -22.8,
+      -22.9,
       -42
     ],
     "teaser": {
@@ -764,7 +996,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -22.8,
+      -22.9,
       -42.05
     ],
     "teaser": {
@@ -822,7 +1054,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -22.8,
+      -22.9,
       -42.1
     ],
     "teaser": {
@@ -880,7 +1112,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -22.8,
+      -22.9,
       -42.15
     ],
     "teaser": {
@@ -938,7 +1170,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -22.9,
+      -23,
       -42
     ],
     "teaser": {
@@ -996,7 +1228,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -22.9,
+      -23,
       -42.05
     ],
     "teaser": {
@@ -1054,7 +1286,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -22.9,
+      -23,
       -42.1
     ],
     "teaser": {
@@ -1112,7 +1344,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -22.9,
+      -23,
       -42.15
     ],
     "teaser": {
@@ -1170,7 +1402,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -23,
+      -23.1,
       -42
     ],
     "teaser": {
@@ -1228,7 +1460,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -23,
+      -23.1,
       -42.05
     ],
     "teaser": {
@@ -1286,7 +1518,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -23,
+      -23.1,
       -42.1
     ],
     "teaser": {
@@ -1344,7 +1576,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -23,
+      -23.1,
       -42.15
     ],
     "teaser": {
@@ -1402,7 +1634,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -23.1,
+      -23.2,
       -42
     ],
     "teaser": {
@@ -1460,7 +1692,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -23.1,
+      -23.2,
       -42.05
     ],
     "teaser": {
@@ -1518,7 +1750,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -23.1,
+      -23.2,
       -42.1
     ],
     "teaser": {
@@ -1576,7 +1808,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -23.1,
+      -23.2,
       -42.15
     ],
     "teaser": {
@@ -1634,7 +1866,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -23.2,
+      -23.3,
       -42
     ],
     "teaser": {
@@ -1692,7 +1924,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -23.2,
+      -23.3,
       -42.05
     ],
     "teaser": {
@@ -1750,7 +1982,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -23.2,
+      -23.3,
       -42.1
     ],
     "teaser": {
@@ -1808,7 +2040,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -23.2,
+      -23.3,
       -42.15
     ],
     "teaser": {
@@ -1866,7 +2098,7 @@
     },
     "categoria": "natureza",
     "coords": [
-      -23.3,
+      -23.4,
       -42
     ],
     "teaser": {
@@ -1924,7 +2156,7 @@
     },
     "categoria": "historia",
     "coords": [
-      -23.3,
+      -23.4,
       -42.05
     ],
     "teaser": {
@@ -1982,7 +2214,7 @@
     },
     "categoria": "cultura",
     "coords": [
-      -23.3,
+      -23.4,
       -42.1
     ],
     "teaser": {
@@ -2040,7 +2272,7 @@
     },
     "categoria": "gastronomia",
     "coords": [
-      -23.3,
+      -23.4,
       -42.15
     ],
     "teaser": {

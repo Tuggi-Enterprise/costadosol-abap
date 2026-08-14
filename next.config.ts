@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
   // (CS-NAV-002), e o router do Next nao as acha sozinho: sem este rewrite, /saquarema/
   // devolve 404 — verificado removendo o rewrite e rebuildando, nao por leitura.
   //
-  // O QR impresso deve trazer a barra final (costadosol.tuggi.app/saquarema/): sem ela o
+  // O QR impresso deve trazer a barra final (revista.conderlagos.com.br/saquarema/): sem ela o
   // servidor responde 308 antes de chegar aqui, e um salto a mais no pavilhao lotado e
   // exatamente o que CS-MUN-004 esta contando.
   async rewrites() {

@@ -13,6 +13,8 @@ import { test } from 'node:test'
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import {
+  MUNICIPIOS,
+  PONTOS_POR_MUNICIPIO,
   municipioSchema,
   pontoSchema,
   rotaSchema,
@@ -38,8 +40,8 @@ const regras = (falhas: { regra: string }[]) => falhas.map((f) => f.regra)
 test('CS-VAL-001: o conjunto de exemplo passa inteiro', async () => {
   const { conteudo, falhas } = await lerEValidar(DIRETORIO)
   assert.deepEqual(falhas, [])
-  assert.equal(conteudo?.municipios.length, 9)
-  assert.equal(conteudo?.pontos.length, 36)
+  assert.equal(conteudo?.municipios.length, MUNICIPIOS.length)
+  assert.equal(conteudo?.pontos.length, MUNICIPIOS.length * PONTOS_POR_MUNICIPIO)
   assert.equal(conteudo?.rotas.length, 4)
 })
 
@@ -49,7 +51,7 @@ test('CS-VAL-002: diretorio sem conteudo falha, e nao passa em silencio', async 
   assert.ok(falhas.every((f) => f.regra === 'CS-VAL-002'))
 })
 
-test('CS-OURO-003: um dos nove ausente falha', async () => {
+test('CS-OURO-003: um dos municipios do consorcio ausente falha', async () => {
   const conteudo = await conteudoValido()
   conteudo.municipios = conteudo.municipios.filter((m) => m.slug !== 'silva-jardim')
   assert.ok(regras(verificarConteudo(conteudo)).includes('CS-OURO-003'))
@@ -57,22 +59,32 @@ test('CS-OURO-003: um dos nove ausente falha', async () => {
 
 test('CS-OURO-003: grafia oficial do municipio falha se divergir', async () => {
   const conteudo = await conteudoValido()
-  conteudo.municipios[6]!.nome = 'Sao Pedro da Aldeia'
+  // Achado por slug, nao por indice: quando Armacao dos Buzios entrou em segundo lugar na
+  // ordem alfabetica, todo indice cravado depois dele passou a apontar para outra cidade.
+  const alvo = conteudo.municipios.find((m) => m.slug === 'sao-pedro-da-aldeia')!
+  alvo.nome = 'Sao Pedro da Aldeia'
   assert.ok(regras(verificarConteudo(conteudo)).includes('CS-OURO-003'))
 })
 
-test('CS-OURO-003: o municipio que nao existe neste projeto falha em qualquer campo', async () => {
+/**
+ * Ate 14/08/2026 este teste provava o contrario: que escrever "Búzios" em qualquer campo
+ * derrubava o build, porque o municipio estava fora do projeto por regra. P-29 fechou pela
+ * opcao 2, Búzios entrou, e a proibicao saiu junto. O que sobrou de CS-OURO-003 e a grafia
+ * oficial, provada acima, e a lista completa, provada no teste anterior.
+ */
+test('CS-OURO-003: Armacao dos Buzios faz parte do conjunto, com a grafia oficial', async () => {
   const conteudo = await conteudoValido()
-  const proibido = 'B' + 'úzios'
-  conteudo.pontos[0]!.texto['pt'] = `Fica perto de ${proibido}.`
-  assert.ok(regras(verificarConteudo(conteudo)).includes('CS-OURO-003'))
+  const buzios = conteudo.municipios.find((m) => m.slug === 'armacao-dos-buzios')
+  assert.ok(buzios, 'o decimo municipio do consorcio nao esta no conteudo')
+  assert.equal(buzios.nome, 'Armação dos Búzios')
+  assert.deepEqual(verificarConteudo(conteudo), [])
 })
 
-test('CS-OURO-003: "os 10 munic" e a expressao revogada falham', async () => {
+test('CS-OURO-003: a razao social no lugar da marca falha em copy', async () => {
   const conteudo = await conteudoValido()
-  conteudo.municipios[0]!.linha['pt'] = 'Um d' + 'os 10 munic' + 'ipios da Regi' + 'ão dos Lagos.'
+  conteudo.municipios[0]!.linha['pt'] = 'Uma cidade da Regi' + 'ão dos Lagos.'
   const encontradas = verificarConteudo(conteudo).filter((f) => f.regra === 'CS-OURO-003')
-  assert.equal(encontradas.length, 2)
+  assert.equal(encontradas.length, 1)
 })
 
 test('CS-NOME-001: os nomes revogados pela v1.2 falham em copy', async () => {

@@ -43,6 +43,49 @@
     ]
   },
   {
+    "slug": "armacao-dos-buzios",
+    "nome": "Armação dos Búzios",
+    "linha": {
+      "pt": "Vinte e três praias ao redor de uma península só.",
+      "en": "Twenty-three beaches around a single peninsula.",
+      "es": "Veintitrés playas alrededor de una sola península."
+    },
+    "hero": {
+      "src": "/img/pendente",
+      "alt": {
+        "pt": "Vista de Armação dos Búzios",
+        "en": "View of Armação dos Búzios",
+        "es": "Vista de Armação dos Búzios"
+      },
+      "credito": "Foto ainda não disponível"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-armacao-dos-buzios.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-armacao-dos-buzios.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-armacao-dos-buzios.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://www.turismo.rj.gov.br/destino/armacao-dos-buzios/",
+      "selo": "/img/selo/armacao-dos-buzios.svg"
+    },
+    "pontos": [
+      "buzios-orla-bardot",
+      "buzios-ferradura",
+      "buzios-geriba",
+      "buzios-rua-das-pedras"
+    ]
+  },
+  {
     "slug": "arraial-do-cabo",
     "nome": "Arraial do Cabo",
     "linha": {

@@ -232,6 +232,238 @@
     "ordem": 4
   },
   {
+    "id": "buzios-orla-bardot",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "essencial",
+    "nome": {
+      "pt": "Orla Brigitte Bardot",
+      "en": "Brigitte Bardot Boardwalk",
+      "es": "Paseo Brigitte Bardot"
+    },
+    "categoria": "historia",
+    "coords": [
+      -22.7476,
+      -41.8817
+    ],
+    "teaser": {
+      "pt": "Quatrocentos metros de calçada à beira da Praia da Armação, com três esculturas de bronze.",
+      "en": "Four hundred metres of walkway along Praia da Armação, with three bronze sculptures.",
+      "es": "Cuatrocientos metros de paseo junto a la Praia da Armação, con tres esculturas de bronce."
+    },
+    "texto": {
+      "pt": "As esculturas homenageiam Brigitte Bardot, os pescadores e Juscelino Kubitschek. No mesmo trecho ficam o Píer do Centro, de onde saem os passeios de barco, e o Píer dos Pescadores, ainda usado por famílias de pescadores.",
+      "en": "The sculptures honour Brigitte Bardot, the local fishermen and Juscelino Kubitschek. The same stretch holds the Centro pier, where boat tours depart, and the fishermen’s pier, still used by fishing families today.",
+      "es": "Las esculturas homenajean a Brigitte Bardot, a los pescadores y a Juscelino Kubitschek. En el mismo tramo están el muelle del Centro, de donde salen los paseos en barco, y el muelle de los pescadores, todavía usado por familias de pescadores."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/buzios-orla-bardot.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/buzios-orla-bardot.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/buzios-orla-bardot.mp3",
+        "dur": 45
+      }
+    },
+    "foto": {
+      "v": "/img/pendente",
+      "h": "/img/pendente",
+      "alt": {
+        "pt": "Orla Brigitte Bardot",
+        "en": "Brigitte Bardot Boardwalk",
+        "es": "Paseo Brigitte Bardot"
+      },
+      "credito": "Foto ainda não disponível"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "A Praia da Armação tem 400 metros, margeia a Orla Bardot e reúne três esculturas de bronze em homenagem a Brigitte Bardot, aos pescadores e a Juscelino Kubitschek; no trecho ficam o Píer do Centro e o Píer dos Pescadores.",
+        "url": "https://turismo.buzios.rj.gov.br/praias/praia-da-armacao/",
+        "consultado_em": "2026-08-14",
+        "revisor": "Levantamento em fonte oficial — revisão humana pendente (P-23)"
+      }
+    ],
+    "ordem": 1
+  },
+  {
+    "id": "buzios-ferradura",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "essencial",
+    "nome": {
+      "pt": "Praia da Ferradura",
+      "en": "Ferradura Beach",
+      "es": "Playa de Ferradura"
+    },
+    "categoria": "natureza",
+    "coords": [
+      -22.7614,
+      -41.8797
+    ],
+    "teaser": {
+      "pt": "Um quilômetro e meio de areia clara numa enseada fechada em forma de ferradura.",
+      "en": "A kilometre and a half of pale sand in a cove closed into a horseshoe shape.",
+      "es": "Un kilómetro y medio de arena clara en una ensenada cerrada en forma de herradura."
+    },
+    "texto": {
+      "pt": "O formato da enseada protege a praia dos ventos e das correntes marítimas, e é o que a torna procurada por quem viaja com crianças. A água calma e fria recebe mergulho, caiaque, pedalinho e wakeboard.",
+      "en": "The shape of the cove shelters the beach from wind and sea currents, which is what makes it a favourite for families with children. The calm, cold water is used for diving, kayaking, pedal boats and wakeboarding.",
+      "es": "La forma de la ensenada protege la playa del viento y de las corrientes marinas, y es lo que la hace buscada por quienes van con niños. El agua tranquila y fría recibe buceo, kayak, hidropedales y wakeboard."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/buzios-ferradura.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/buzios-ferradura.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/buzios-ferradura.mp3",
+        "dur": 45
+      }
+    },
+    "foto": {
+      "v": "/img/pendente",
+      "h": "/img/pendente",
+      "alt": {
+        "pt": "Praia da Ferradura",
+        "en": "Ferradura Beach",
+        "es": "Playa de Ferradura"
+      },
+      "credito": "Foto ainda não disponível"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "A Praia da Ferradura tem 1,5 km de extensão, é protegida dos ventos e das correntes marítimas e recebe esportes náuticos como wake-board, mergulho, pedalinho e caiaque.",
+        "url": "https://turismo.buzios.rj.gov.br/praias/praia-da-ferradura/",
+        "consultado_em": "2026-08-14",
+        "revisor": "Levantamento em fonte oficial — revisão humana pendente (P-23)"
+      }
+    ],
+    "ordem": 2
+  },
+  {
+    "id": "buzios-geriba",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "essencial",
+    "nome": {
+      "pt": "Praia de Geribá",
+      "en": "Geribá Beach",
+      "es": "Playa de Geribá"
+    },
+    "categoria": "esporte",
+    "coords": [
+      -22.7719,
+      -41.9086
+    ],
+    "teaser": {
+      "pt": "Quase dois quilômetros de areia fina e branca, com água agitada: é a praia do surfe.",
+      "en": "Almost two kilometres of fine white sand and rough water: this is the surfing beach.",
+      "es": "Casi dos kilómetros de arena fina y blanca, con agua agitada: es la playa del surf."
+    },
+    "texto": {
+      "pt": "No canto direito fica a Ponta do Marisco, cujas rochas têm mais de dois bilhões de anos e registram a abertura do oceano Atlântico, quando a América se separou da África. O lado esquerdo tem espaço delimitado para esportes na areia.",
+      "en": "At the right end sits Ponta do Marisco, whose rocks are more than two billion years old and record the opening of the Atlantic Ocean, when America split from Africa. The left end has an area set aside for beach sports.",
+      "es": "En el extremo derecho está la Ponta do Marisco, cuyas rocas tienen más de dos mil millones de años y registran la apertura del océano Atlántico, cuando América se separó de África. El lado izquierdo tiene un espacio delimitado para deportes en la arena."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/buzios-geriba.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/buzios-geriba.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/buzios-geriba.mp3",
+        "dur": 45
+      }
+    },
+    "foto": {
+      "v": "/img/pendente",
+      "h": "/img/pendente",
+      "alt": {
+        "pt": "Praia de Geribá",
+        "en": "Geribá Beach",
+        "es": "Playa de Geribá"
+      },
+      "credito": "Foto ainda não disponível"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "A Praia de Geribá tem quase 2 km de extensão e é ideal para a prática de surf; na Ponta do Marisco, no canto direito, há rochas com mais de dois bilhões de anos que evidenciam a abertura do oceano Atlântico e a separação entre o continente americano e o africano.",
+        "url": "https://turismo.buzios.rj.gov.br/praias/praia-de-geriba/",
+        "consultado_em": "2026-08-14",
+        "revisor": "Levantamento em fonte oficial — revisão humana pendente (P-23)"
+      }
+    ],
+    "ordem": 3
+  },
+  {
+    "id": "buzios-rua-das-pedras",
+    "municipio": "armacao-dos-buzios",
+    "tipo": "inesperado",
+    "nome": {
+      "pt": "Rua das Pedras",
+      "en": "Rua das Pedras",
+      "es": "Rua das Pedras"
+    },
+    "categoria": "cultura",
+    "coords": [
+      -22.748,
+      -41.8829
+    ],
+    "teaser": {
+      "pt": "A rua do centro é calçada com pedra tirada da Ponta do Marisco, no canto de Geribá.",
+      "en": "The street in the town centre is paved with stone quarried at Ponta do Marisco, off Geribá.",
+      "es": "La calle del centro está pavimentada con piedra sacada de la Ponta do Marisco, junto a Geribá."
+    },
+    "texto": {
+      "pt": "A pedreira que existiu na Ponta do Marisco forneceu as pedras que dão nome à rua. Hoje ela concentra lojas, bares e restaurantes, e é onde a cidade se encontra depois que o sol se põe.",
+      "en": "The quarry that once operated at Ponta do Marisco supplied the stones that give the street its name. Today it gathers shops, bars and restaurants, and it is where the town meets once the sun goes down.",
+      "es": "La cantera que existió en la Ponta do Marisco proveyó las piedras que dan nombre a la calle. Hoy reúne tiendas, bares y restaurantes, y es donde la ciudad se encuentra después de la puesta del sol."
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/buzios-rua-das-pedras.mp3",
+        "dur": 50
+      },
+      "en": {
+        "url": "/audio/en/buzios-rua-das-pedras.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/buzios-rua-das-pedras.mp3",
+        "dur": 45
+      }
+    },
+    "foto": {
+      "v": "/img/pendente",
+      "h": "/img/pendente",
+      "alt": {
+        "pt": "Rua das Pedras",
+        "en": "Rua das Pedras",
+        "es": "Rua das Pedras"
+      },
+      "credito": "Foto ainda não disponível"
+    },
+    "fonte_verificacao": [
+      {
+        "afirmacao": "As pedras da Rua das Pedras vieram da pedreira que existiu na Ponta do Marisco, no canto direito da Praia de Geribá.",
+        "url": "https://turismo.buzios.rj.gov.br/praias/praia-de-geriba/",
+        "consultado_em": "2026-08-14",
+        "revisor": "Levantamento em fonte oficial — revisão humana pendente (P-23)"
+      }
+    ],
+    "ordem": 4
+  },
+  {
     "id": "arraial-prainhas",
     "municipio": "arraial-do-cabo",
     "tipo": "essencial",

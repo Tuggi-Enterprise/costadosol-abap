@@ -15,6 +15,7 @@ const FORA = ['map', 'mapa', 'flag', 'bandeira', 'brasão', 'coat of arms', 'log
 const BUSCAS: Busca[] = [
   // Heros de municipio
   { destino: 'img/mun/araruama', termos: 'Araruama lagoa vista', exigir: ['araruama'], excluir: FORA },
+  { destino: 'img/mun/armacao-dos-buzios', termos: 'Armação dos Búzios praia vista', exigir: ['buzios'], excluir: FORA },
   { destino: 'img/mun/arraial-do-cabo', termos: 'Arraial do Cabo praia', exigir: ['arraial'], excluir: FORA },
   { destino: 'img/mun/cabo-frio', termos: 'Cabo Frio praia do forte', exigir: ['cabo frio', 'cabofrio'], excluir: FORA },
   { destino: 'img/mun/casimiro-de-abreu', termos: 'Casimiro de Abreu Rio de Janeiro', exigir: ['casimiro de abreu', 'barra de sao joao'], excluir: FORA },
@@ -29,6 +30,11 @@ const BUSCAS: Busca[] = [
   { destino: 'img/poi/araruama-praia-seca', termos: 'Praia Seca Araruama', exigir: ['praia seca'], excluir: FORA },
   { destino: 'img/poi/araruama-massambaba', termos: 'Massambaba restinga', exigir: ['massambaba'], excluir: FORA },
   { destino: 'img/poi/araruama-juturnaiba', termos: 'Lagoa de Juturnaíba', exigir: ['juturnaiba'], excluir: FORA },
+
+  { destino: 'img/poi/buzios-orla-bardot', termos: 'Orla Bardot Búzios estátua Brigitte Bardot', exigir: ['bardot', 'armacao'], excluir: FORA },
+  { destino: 'img/poi/buzios-ferradura', termos: 'Praia da Ferradura Búzios', exigir: ['ferradura'], excluir: FORA },
+  { destino: 'img/poi/buzios-geriba', termos: 'Praia de Geribá Búzios', exigir: ['geriba'], excluir: FORA },
+  { destino: 'img/poi/buzios-rua-das-pedras', termos: 'Rua das Pedras Búzios', exigir: ['rua das pedras'], excluir: FORA },
 
   { destino: 'img/poi/arraial-prainhas', termos: 'Prainhas do Pontal do Atalaia', exigir: ['pontal', 'prainhas'], excluir: FORA },
   { destino: 'img/poi/arraial-farol', termos: 'Ilha do Cabo Frio farol praia', exigir: ['farol', 'ilha do cabo frio'], excluir: FORA },

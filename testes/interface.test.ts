@@ -7,7 +7,7 @@
  */
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { IDIOMAS_INTERFACE } from '../scripts/content-schema.ts'
+import { IDIOMAS_INTERFACE, MUNICIPIOS, PONTOS_POR_MUNICIPIO } from '../scripts/content-schema.ts'
 import { rotulos, type Rotulos } from '../lib/interface.ts'
 import { metadataDoSite as metadata } from '../lib/site.ts'
 
@@ -62,38 +62,54 @@ test('CS-NOME-001: os nomes revogados da v1.2 nao aparecem em rotulo publicado',
 })
 
 /**
- * P-29: as duas expressoes que CS-OURO-003 autoriza contam municipios, e a apuracao de
- * 12/08/2026 mostrou que a contagem esta errada — o Conderlagos tem dez, e a regiao
- * turistica da Setur-RJ tem treze e nao inclui Silva Jardim. Ate o cliente decidir,
- * nenhum texto publicado conta cidade.
+ * P-29 fechou em 14/08/2026 pela opcao 2: Armacao dos Buzios entrou, o conjunto passou a
+ * ser o consorcio inteiro e o site passou a se chamar Conderlagos. Com isso a contagem
+ * deixou de ser proibida e passou a ser **conferivel**, que e coisa melhor.
  *
- * A excecao e a chamada prescrita por CS-OITO-003 ("mais oito cidades"), que e texto de
- * regra: se P-29 fechar pela opcao 2 ou 3, ela muda junto.
+ * Ate aqui o guarda era um veto por palavra: nenhum rotulo podia dizer "nove", "nine",
+ * "conderlagos". Veto por palavra nao percebe o defeito que importa — o rotulo dizer OITO
+ * quando o schema tem dez municipios. Os dois testes abaixo derivam o numero de
+ * `MUNICIPIOS` e `PONTOS_POR_MUNICIPIO`, entao mexer no schema sem mexer na copy quebra
+ * aqui, em vez de publicar um numero errado sobre um consorcio publico.
  */
-test('CS-OURO-006/P-29: nenhum rotulo publicado conta municipios', () => {
-  const contagens = [
-    /\bnove\s+(munic|cidad)/i,
-    /\bdez\s+(munic|cidad)/i,
-    /\bnine\s+(munic|cit)/i,
-    /\bten\s+(munic|cit)/i,
-    /\bnueve\s+(munic|ciudad)/i,
-    /\bos\s+9\s+(munic|cidad)/i,
-    /conderlagos/i,
-  ]
+const NUMERAL_POR_EXTENSO: Record<string, Record<number, string>> = {
+  pt: { 7: 'sete', 8: 'oito', 9: 'nove', 10: 'dez', 11: 'onze', 12: 'doze' },
+  en: { 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve' },
+  es: { 7: 'siete', 8: 'ocho', 9: 'nueve', 10: 'diez', 11: 'once', 12: 'doce' },
+}
+
+test('CS-OITO-003/P-29: a chamada das outras cidades conta o que o schema conta', () => {
+  const outras = MUNICIPIOS.length - 1
   for (const idioma of IDIOMAS_INTERFACE) {
-    const r = rotulos(idioma)
-    for (const chave of CHAVES) {
-      for (const contagem of contagens) {
-        assert.doesNotMatch(r[chave], contagem, `${idioma}.${chave} conta municipios`)
-      }
-    }
+    const numeral = NUMERAL_POR_EXTENSO[idioma]?.[outras]
+    assert.ok(numeral, `falta o numeral de ${outras} em ${idioma}: acrescente a tabela acima`)
+    assert.match(
+      rotulos(idioma).outrasCidades,
+      new RegExp(`\\b${numeral}\\b`, 'i'),
+      `${idioma}.outrasCidades nao diz "${numeral}", e o schema tem ${MUNICIPIOS.length} municipios`,
+    )
   }
 })
 
-test('CS-OURO-006/P-29: a descricao do site nao conta municipios', () => {
+test('CS-OURO-004: o rotulo dos lugares conta os pontos que a paridade exige', () => {
+  const total = MUNICIPIOS.length * PONTOS_POR_MUNICIPIO
+  for (const idioma of IDIOMAS_INTERFACE) {
+    assert.match(
+      rotulos(idioma).osLugares,
+      new RegExp(`\\b${total}\\b`),
+      `${idioma}.osLugares nao diz ${total}, que e ${MUNICIPIOS.length} x ${PONTOS_POR_MUNICIPIO}`,
+    )
+  }
+})
+
+/**
+ * A descricao vai no preview de todo link compartilhado, onde ninguem a revisa. Numero
+ * nenhum ali: e o unico texto do site que nao aparece em tela para alguem conferir.
+ */
+test('CS-OURO-006: a descricao do site nao conta municipios', () => {
   const descricao = String(metadata.description ?? '')
   assert.ok(descricao.length > 0, 'o site sem descricao publica um preview vazio')
-  assert.doesNotMatch(descricao, /\bnove\b|conderlagos/i)
+  assert.doesNotMatch(descricao, /\b(nove|dez|nine|ten|nueve|diez|\d+)\b/i)
 })
 
 /**

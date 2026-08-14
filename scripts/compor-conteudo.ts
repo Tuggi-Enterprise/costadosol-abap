@@ -15,6 +15,9 @@ import { MUNICIPIOS } from './content-schema.ts'
 
 const CONSULTA = '2026-08-12'
 
+/** Armacao dos Buzios entrou dois dias depois do resto, e a data de consulta e a dele. */
+const CONSULTA_BUZIOS = '2026-08-14'
+
 /**
  * ATENCAO: as coordenadas sao aproximadas, tiradas da localizacao geral de cada ponto.
  * Servem para posicionar marcador em mapa de regiao; NAO servem para navegacao. Antes de
@@ -35,6 +38,8 @@ const DESCARTADAS = new Set([
 ])
 
 const SETUR = (slug: string) => `https://www.turismo.rj.gov.br/destino/${slug}/`
+/** Portal da Secretaria de Turismo de Armacao dos Buzios: descreve praia por praia. */
+const TURISMO_BUZIOS = (caminho: string) => `https://turismo.buzios.rj.gov.br/${caminho}/`
 const PREFEITURA_SAQUAREMA = 'https://www.saquarema.rj.gov.br/turismo/'
 const DECRETO_PARQUE = 'https://www.saquarema.rj.gov.br/wp-content/uploads/2020/07/DECRETO-N%C2%B0-42.929-11-PCSOL.pdf'
 
@@ -50,6 +55,8 @@ type PontoBruto = {
   texto: Texto3
   afirmacao: string
   fonte: string
+  /** Só onde a consulta não foi na data do levantamento original (CONSULTA). */
+  consultado_em?: string
 }
 type MunicipioBruto = { slug: string; linha: Texto3; foto: string; secretaria: string; pontos: PontoBruto[] }
 
@@ -131,6 +138,93 @@ const DADOS: MunicipioBruto[] = [
         },
         afirmacao: 'A Lagoa de Juturnaíba é a única lagoa de água doce da região.',
         fonte: SETUR('araruama'),
+      },
+    ],
+  },
+  {
+    // Armacao dos Buzios entrou em 14/08/2026, quando P-29 fechou pela opcao 2. Os quatro
+    // pontos saem do portal da propria Secretaria de Turismo do municipio, que descreve
+    // praia por praia; a pagina da Setur-RJ, fonte dos outros nove, so cita as 23 praias.
+    slug: 'armacao-dos-buzios',
+    foto: 'img/mun/armacao-dos-buzios',
+    secretaria: SETUR('armacao-dos-buzios'),
+    linha: {
+      pt: 'Vinte e três praias ao redor de uma península só.',
+      en: 'Twenty-three beaches around a single peninsula.',
+      es: 'Veintitrés playas alrededor de una sola península.',
+    },
+    pontos: [
+      {
+        id: 'buzios-orla-bardot', foto: 'img/poi/buzios-orla-bardot', tipo: 'essencial', categoria: 'historia',
+        coords: [-22.7476, -41.8817],
+        nome: { pt: 'Orla Brigitte Bardot', en: 'Brigitte Bardot Boardwalk', es: 'Paseo Brigitte Bardot' },
+        teaser: {
+          pt: 'Quatrocentos metros de calçada à beira da Praia da Armação, com três esculturas de bronze.',
+          en: 'Four hundred metres of walkway along Praia da Armação, with three bronze sculptures.',
+          es: 'Cuatrocientos metros de paseo junto a la Praia da Armação, con tres esculturas de bronce.',
+        },
+        texto: {
+          pt: 'As esculturas homenageiam Brigitte Bardot, os pescadores e Juscelino Kubitschek. No mesmo trecho ficam o Píer do Centro, de onde saem os passeios de barco, e o Píer dos Pescadores, ainda usado por famílias de pescadores.',
+          en: 'The sculptures honour Brigitte Bardot, the local fishermen and Juscelino Kubitschek. The same stretch holds the Centro pier, where boat tours depart, and the fishermen’s pier, still used by fishing families today.',
+          es: 'Las esculturas homenajean a Brigitte Bardot, a los pescadores y a Juscelino Kubitschek. En el mismo tramo están el muelle del Centro, de donde salen los paseos en barco, y el muelle de los pescadores, todavía usado por familias de pescadores.',
+        },
+        afirmacao: 'A Praia da Armação tem 400 metros, margeia a Orla Bardot e reúne três esculturas de bronze em homenagem a Brigitte Bardot, aos pescadores e a Juscelino Kubitschek; no trecho ficam o Píer do Centro e o Píer dos Pescadores.',
+        fonte: TURISMO_BUZIOS('praias/praia-da-armacao'),
+        consultado_em: CONSULTA_BUZIOS,
+      },
+      {
+        id: 'buzios-ferradura', foto: 'img/poi/buzios-ferradura', tipo: 'essencial', categoria: 'natureza',
+        coords: [-22.7614, -41.8797],
+        nome: { pt: 'Praia da Ferradura', en: 'Ferradura Beach', es: 'Playa de Ferradura' },
+        teaser: {
+          pt: 'Um quilômetro e meio de areia clara numa enseada fechada em forma de ferradura.',
+          en: 'A kilometre and a half of pale sand in a cove closed into a horseshoe shape.',
+          es: 'Un kilómetro y medio de arena clara en una ensenada cerrada en forma de herradura.',
+        },
+        texto: {
+          pt: 'O formato da enseada protege a praia dos ventos e das correntes marítimas, e é o que a torna procurada por quem viaja com crianças. A água calma e fria recebe mergulho, caiaque, pedalinho e wakeboard.',
+          en: 'The shape of the cove shelters the beach from wind and sea currents, which is what makes it a favourite for families with children. The calm, cold water is used for diving, kayaking, pedal boats and wakeboarding.',
+          es: 'La forma de la ensenada protege la playa del viento y de las corrientes marinas, y es lo que la hace buscada por quienes van con niños. El agua tranquila y fría recibe buceo, kayak, hidropedales y wakeboard.',
+        },
+        afirmacao: 'A Praia da Ferradura tem 1,5 km de extensão, é protegida dos ventos e das correntes marítimas e recebe esportes náuticos como wake-board, mergulho, pedalinho e caiaque.',
+        fonte: TURISMO_BUZIOS('praias/praia-da-ferradura'),
+        consultado_em: CONSULTA_BUZIOS,
+      },
+      {
+        id: 'buzios-geriba', foto: 'img/poi/buzios-geriba', tipo: 'essencial', categoria: 'esporte',
+        coords: [-22.7719, -41.9086],
+        nome: { pt: 'Praia de Geribá', en: 'Geribá Beach', es: 'Playa de Geribá' },
+        teaser: {
+          pt: 'Quase dois quilômetros de areia fina e branca, com água agitada: é a praia do surfe.',
+          en: 'Almost two kilometres of fine white sand and rough water: this is the surfing beach.',
+          es: 'Casi dos kilómetros de arena fina y blanca, con agua agitada: es la playa del surf.',
+        },
+        texto: {
+          pt: 'No canto direito fica a Ponta do Marisco, cujas rochas têm mais de dois bilhões de anos e registram a abertura do oceano Atlântico, quando a América se separou da África. O lado esquerdo tem espaço delimitado para esportes na areia.',
+          en: 'At the right end sits Ponta do Marisco, whose rocks are more than two billion years old and record the opening of the Atlantic Ocean, when America split from Africa. The left end has an area set aside for beach sports.',
+          es: 'En el extremo derecho está la Ponta do Marisco, cuyas rocas tienen más de dos mil millones de años y registran la apertura del océano Atlántico, cuando América se separó de África. El lado izquierdo tiene un espacio delimitado para deportes en la arena.',
+        },
+        afirmacao: 'A Praia de Geribá tem quase 2 km de extensão e é ideal para a prática de surf; na Ponta do Marisco, no canto direito, há rochas com mais de dois bilhões de anos que evidenciam a abertura do oceano Atlântico e a separação entre o continente americano e o africano.',
+        fonte: TURISMO_BUZIOS('praias/praia-de-geriba'),
+        consultado_em: CONSULTA_BUZIOS,
+      },
+      {
+        id: 'buzios-rua-das-pedras', foto: 'img/poi/buzios-rua-das-pedras', tipo: 'inesperado', categoria: 'cultura',
+        coords: [-22.748, -41.8829],
+        nome: { pt: 'Rua das Pedras', en: 'Rua das Pedras', es: 'Rua das Pedras' },
+        teaser: {
+          pt: 'A rua do centro é calçada com pedra tirada da Ponta do Marisco, no canto de Geribá.',
+          en: 'The street in the town centre is paved with stone quarried at Ponta do Marisco, off Geribá.',
+          es: 'La calle del centro está pavimentada con piedra sacada de la Ponta do Marisco, junto a Geribá.',
+        },
+        texto: {
+          pt: 'A pedreira que existiu na Ponta do Marisco forneceu as pedras que dão nome à rua. Hoje ela concentra lojas, bares e restaurantes, e é onde a cidade se encontra depois que o sol se põe.',
+          en: 'The quarry that once operated at Ponta do Marisco supplied the stones that give the street its name. Today it gathers shops, bars and restaurants, and it is where the town meets once the sun goes down.',
+          es: 'La cantera que existió en la Ponta do Marisco proveyó las piedras que dan nombre a la calle. Hoy reúne tiendas, bares y restaurantes, y es donde la ciudad se encuentra después de la puesta del sol.',
+        },
+        afirmacao: 'As pedras da Rua das Pedras vieram da pedreira que existiu na Ponta do Marisco, no canto direito da Praia de Geribá.',
+        fonte: TURISMO_BUZIOS('praias/praia-de-geriba'),
+        consultado_em: CONSULTA_BUZIOS,
       },
     ],
   },
@@ -838,7 +932,7 @@ const pontos = DADOS.flatMap((m) =>
         credito: imagem.credito,
       },
       fonte_verificacao: [
-        { afirmacao: p.afirmacao, url: p.fonte, consultado_em: CONSULTA, revisor: REVISOR },
+        { afirmacao: p.afirmacao, url: p.fonte, consultado_em: p.consultado_em ?? CONSULTA, revisor: REVISOR },
       ],
       ordem: indice + 1,
     }
@@ -848,6 +942,7 @@ const pontos = DADOS.flatMap((m) =>
 /** Centroides aproximados, mesma ressalva das coordenadas dos pontos (P-28). */
 const CENTRO: Record<string, [number, number]> = {
   araruama: [-22.8728, -42.3433],
+  'armacao-dos-buzios': [-22.7469, -41.8817],
   'arraial-do-cabo': [-22.9661, -42.0278],
   'cabo-frio': [-22.8894, -42.0286],
   'casimiro-de-abreu': [-22.4794, -42.2044],
@@ -871,7 +966,7 @@ const ROTAS = [
     nome: { pt: 'A rota do mar aberto', en: 'The open sea route', es: 'La ruta del mar abierto' },
     eixo: { pt: 'O encontro do canal com o oceano', en: 'Where the channel meets the ocean', es: 'Donde el canal encuentra el océano' },
     cor: '#0f8f8f',
-    municipios: ['cabo-frio', 'arraial-do-cabo'],
+    municipios: ['cabo-frio', 'arraial-do-cabo', 'armacao-dos-buzios'],
   },
   {
     id: 'rota-da-mata',
@@ -881,13 +976,13 @@ const ROTAS = [
     municipios: ['silva-jardim', 'casimiro-de-abreu', 'rio-das-ostras'],
   },
   {
-    id: 'costa-do-sol-inteira',
-    nome: { pt: 'A Costa do Sol inteira', en: 'The whole Costa do Sol', es: 'Toda la Costa do Sol' },
+    id: 'conderlagos-inteiro',
+    nome: { pt: 'O Conderlagos inteiro', en: 'The whole of Conderlagos', es: 'Conderlagos entero' },
     eixo: { pt: 'De ponta a ponta do território', en: 'From one end of the territory to the other', es: 'De un extremo al otro del territorio' },
     cor: '#b06a2c',
     municipios: [
       'saquarema', 'araruama', 'silva-jardim', 'iguaba-grande', 'sao-pedro-da-aldeia',
-      'arraial-do-cabo', 'cabo-frio', 'casimiro-de-abreu', 'rio-das-ostras',
+      'arraial-do-cabo', 'cabo-frio', 'armacao-dos-buzios', 'casimiro-de-abreu', 'rio-das-ostras',
     ],
   },
 ]

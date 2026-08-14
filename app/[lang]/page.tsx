@@ -12,13 +12,27 @@ export function generateStaticParams() {
   return IDIOMAS_INTERFACE.map((lang) => ({ lang }))
 }
 
+/**
+ * O filme institucional do consórcio, servido do próprio site (ver componentes/VideoDeCapa).
+ * O poster é um quadro do próprio vídeo: nada de foto de outro lugar por trás do play.
+ */
+const VIDEO_DA_CAPA = {
+  src: '/video/conderlagos.mp4',
+  poster: '/video/conderlagos-poster.webp',
+} as const
+
+/** CS-OURO-006 vale para vídeo igual: material do consórcio, cedido pelo consórcio. */
+const CREDITO_DA_CAPA = 'Conderlagos'
+
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const r = rotulos(lang)
   const lista = municipios()
   const fatos = conteudo().fatos
-  // A capa é a foto de um município, e ela muda quando o banco das secretarias chegar
-  // (P-05). Não é destaque de cidade: é a única foto de largura inteira do site.
+  // A capa da home deixou de ser foto de um município: desde 14/08/2026 é o filme
+  // institucional do consórcio (VIDEO_DA_CAPA). A faixa de áudio da região continua saindo
+  // da mesma cidade de antes, porque é a gravação que existe (P-03); é dado de áudio, não
+  // escolha de destaque, e some quando a faixa da região for gravada.
   const capa = lista.find((m) => m.slug === 'cabo-frio') ?? lista[0]!
   const faixa = servir(capa.audio, lang)
 
@@ -37,10 +51,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   return (
     <main>
       <Hero
-        src={capa.hero.src}
-        alt={texto(capa.hero.alt, lang)}
-        credito={capa.hero.credito}
-        titulo="Costa do Sol"
+        video={VIDEO_DA_CAPA}
+        alt={r.videoDaCapa}
+        credito={CREDITO_DA_CAPA}
+        titulo="Conderlagos"
         linha={r.chamadaDaCapa}
       >
         {/* CS-HOME-001: o play da capa é o maior elemento da primeira dobra. */}
@@ -49,7 +63,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           duracao={faixa.valor.dur}
           rotulo={r.ouvirRegiao}
           poiId="regiao"
-          municipio="costa-do-sol"
+          municipio="conderlagos"
           origem="home"
           largo
         />
@@ -73,8 +87,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       <section className="pt-8">
-        {/* Sem contagem de municípios enquanto P-29 não fechar: dizer "nove cidades" num
-            site chamado Costa do Sol afirma um número que a fonte oficial contradiz. */}
+        {/* O título da seção não conta cidades. Com o site chamado Conderlagos, o número
+            que vale é o do consórcio, e ele muda quando Armação dos Búzios entrar. */}
         <h2 className="px-4 text-secao font-semibold">{r.cidades}</h2>
         <p className="mt-1 mb-4 px-4 text-[0.8rem] text-tinta-suave">{r.ordemSorteada}</p>
         <GradeDeMunicipios

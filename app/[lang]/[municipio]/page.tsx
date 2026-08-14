@@ -7,7 +7,7 @@ import { Hero } from '../../../componentes/Hero.tsx'
 import { GradeDeMunicipios } from '../../../componentes/GradeDeMunicipios.tsx'
 import { RegistrarAberturaDeMunicipio } from '../../../componentes/RegistrarAbertura.tsx'
 import { FOTO_PENDENTE } from '../../../componentes/Foto.tsx'
-import { municipios, outrasOito, pontosDo } from '../../../lib/conteudo.ts'
+import { municipios, outrasCidades, pontosDo } from '../../../lib/conteudo.ts'
 import { IDIOMAS_INTERFACE, ehIdiomaDeInterface, servir, texto } from '../../../lib/idioma.ts'
 import { rotulos } from '../../../lib/interface.ts'
 
@@ -35,10 +35,10 @@ export async function generateMetadata({
   // para título e descrição, que existem.
   const temFoto = m.hero.src !== FOTO_PENDENTE
   return {
-    title: `${m.nome}, Costa do Sol`,
+    title: `${m.nome}, Conderlagos`,
     description: linha.valor,
     openGraph: {
-      title: `${m.nome}, Costa do Sol`,
+      title: `${m.nome}, Conderlagos`,
       description: linha.valor,
       // CS-CONT-008: declara o idioma servido, não o escolhido.
       locale: linha.idiomaServido,
@@ -145,9 +145,9 @@ export default async function PaginaDoMunicipio({
       {/* CS-OITO-004: depois do CTA, para não competir com a conversão da cidade de
           entrada. CS-OITO-006: é daqui que sai a métrica mais valiosa do projeto. */}
       <section className="bg-sal py-7">
-        <h2 className="mb-3 px-4 text-secao font-semibold">{r.outrasOito}</h2>
+        <h2 className="mb-3 px-4 text-secao font-semibold">{r.outrasCidades}</h2>
         <GradeDeMunicipios
-          itens={outrasOito(slug).map((outra) => ({
+          itens={outrasCidades(slug).map((outra) => ({
             slug: outra.slug,
             nome: outra.nome,
             foto: {
@@ -157,7 +157,7 @@ export default async function PaginaDoMunicipio({
             },
           }))}
           lang={lang}
-          origem="outras_oito"
+          origem="outras_cidades"
         />
       </section>
 
@@ -165,7 +165,7 @@ export default async function PaginaDoMunicipio({
           está com o telefone na mão manda a cidade para quem decide a compra. */}
       <div className="px-4 py-7">
         <Compartilhar
-          titulo={`${m.nome}, Costa do Sol`}
+          titulo={`${m.nome}, Conderlagos`}
           rotulo={r.compartilhar}
           rotuloCopiado={r.linkCopiado}
           municipio={m.slug}

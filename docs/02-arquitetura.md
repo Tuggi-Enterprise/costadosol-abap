@@ -131,7 +131,7 @@ antes de sair. `redirects()` do Next não serve para isso — redirect de servid
 - `trailingSlash: true`, e o `rewrites()` do `next.config.ts` aponta cada `/<slug>` para
   `public/<slug>/index.html`. **Medido, não deduzido:** removendo o rewrite e rebuildando,
   `/saquarema/` devolve 404 — o router do Next não acha a página sozinho.
-- **O QR impresso precisa trazer a barra final** (`costadosol.tuggi.app/saquarema/`). Sem ela o
+- **O QR impresso precisa trazer a barra final** (`revista.conderlagos.com.br/saquarema/`). Sem ela o
   servidor responde 308 antes de qualquer coisa, e um salto a mais é exatamente o que
   `CS-MUN-004` está contando. Vale para o cartão de mesa e para qualquer peça impressa.
 

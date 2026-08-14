@@ -43,6 +43,49 @@
     ]
   },
   {
+    "slug": "armacao-dos-buzios",
+    "nome": "Armação dos Búzios",
+    "linha": {
+      "pt": "[pt] Marcador de posicionamento de Armação dos Búzios.",
+      "en": "[en] Marcador de posicionamento de Armação dos Búzios.",
+      "es": "[es] Marcador de posicionamento de Armação dos Búzios."
+    },
+    "hero": {
+      "src": "/img/mun/armacao-dos-buzios",
+      "alt": {
+        "pt": "[pt] Marcador de descricao da foto de Armação dos Búzios.",
+        "en": "[en] Marcador de descricao da foto de Armação dos Búzios.",
+        "es": "[es] Marcador de descricao da foto de Armação dos Búzios."
+      },
+      "credito": "EXEMPLO — credito pendente (P-05)"
+    },
+    "audio": {
+      "pt": {
+        "url": "/audio/pt/mun-armacao-dos-buzios.mp3",
+        "dur": 45
+      },
+      "en": {
+        "url": "/audio/en/mun-armacao-dos-buzios.mp3",
+        "dur": 45
+      },
+      "es": {
+        "url": "/audio/es/mun-armacao-dos-buzios.mp3",
+        "dur": 45
+      }
+    },
+    "secretaria": {
+      "nome": "Secretaria Municipal de Turismo",
+      "url": "https://example.org/secretaria",
+      "selo": "/img/selo/armacao-dos-buzios.svg"
+    },
+    "pontos": [
+      "armacao-dos-buzios-1",
+      "armacao-dos-buzios-2",
+      "armacao-dos-buzios-3",
+      "armacao-dos-buzios-4"
+    ]
+  },
+  {
     "slug": "arraial-do-cabo",
     "nome": "Arraial do Cabo",
     "linha": {

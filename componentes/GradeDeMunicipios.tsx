@@ -34,7 +34,7 @@ export function GradeDeMunicipios({
 }: {
   itens: CartaoDeMunicipio[]
   lang: string
-  origem: 'home' | 'outras_oito'
+  origem: 'home' | 'outras_cidades'
 }) {
   // A ordem do servidor é a do arquivo; o sorteio acontece na montagem, quando a semente
   // da sessão existe. sessionStorage não existe no servidor — não há como sortear antes.

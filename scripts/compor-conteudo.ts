@@ -29,14 +29,6 @@ const REVISOR = 'Levantamento em fonte oficial — revisão humana pendente (P-2
 const FOTO_PENDENTE = '/img/pendente'
 const CREDITO_PENDENTE = 'Foto ainda não disponível'
 
-/** Fotos baixadas com licenca livre que, olhadas uma a uma, NAO servem ao ponto. */
-const DESCARTADAS = new Set([
-  'img/poi/silva-jardim-aldeia-velha', // "Aldeia Velha de Monsanto": e Portugal
-  'img/poi/silva-jardim-poco-das-antas', // mico-leao fotografado no Zoologico de Sao Paulo
-  'img/mun/casimiro-de-abreu', // retrato do poeta, nao a cidade
-  'img/mun/iguaba-grande', // estacao meteorologica
-])
-
 const SETUR = (slug: string) => `https://www.turismo.rj.gov.br/destino/${slug}/`
 /** Portal da Secretaria de Turismo de Armacao dos Buzios: descreve praia por praia. */
 const TURISMO_BUZIOS = (caminho: string) => `https://turismo.buzios.rj.gov.br/${caminho}/`
@@ -434,7 +426,7 @@ const DADOS: MunicipioBruto[] = [
   },
   {
     slug: 'casimiro-de-abreu',
-    foto: FOTO_PENDENTE,
+    foto: 'img/mun/casimiro-de-abreu',
     secretaria: SETUR('casimiro-de-abreu'),
     linha: {
       pt: 'Um vulcão extinto de 800 metros, dois rios e o nome de um poeta.',
@@ -443,7 +435,7 @@ const DADOS: MunicipioBruto[] = [
     },
     pontos: [
       {
-        id: 'casimiro-morro-sao-joao', foto: FOTO_PENDENTE, tipo: 'essencial', categoria: 'natureza',
+        id: 'casimiro-morro-sao-joao', foto: 'img/poi/casimiro-morro-sao-joao', tipo: 'essencial', categoria: 'natureza',
         coords: [-22.5433, -41.9975],
         nome: { pt: 'Morro de São João', en: 'Morro de São João', es: 'Morro de São João' },
         teaser: {
@@ -514,7 +506,7 @@ const DADOS: MunicipioBruto[] = [
   },
   {
     slug: 'iguaba-grande',
-    foto: FOTO_PENDENTE,
+    foto: 'img/mun/iguaba-grande',
     secretaria: SETUR('iguaba-grande'),
     linha: {
       pt: 'Cinco trilhas, uma serra e a pedra onde se salgava o peixe antes de existir geladeira.',
@@ -540,7 +532,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('iguaba-grande'),
       },
       {
-        id: 'iguaba-pedra-da-salga', foto: FOTO_PENDENTE, tipo: 'inesperado', categoria: 'historia',
+        id: 'iguaba-pedra-da-salga', foto: 'img/poi/iguaba-pedra-da-salga', tipo: 'inesperado', categoria: 'historia',
         coords: [-22.8342, -42.2244],
         nome: { pt: 'Pedra da Salga', en: 'Pedra da Salga', es: 'Pedra da Salga' },
         teaser: {
@@ -557,7 +549,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('iguaba-grande'),
       },
       {
-        id: 'iguaba-sapeatiba', foto: FOTO_PENDENTE, tipo: 'complementar', categoria: 'natureza',
+        id: 'iguaba-sapeatiba', foto: 'img/poi/iguaba-sapeatiba', tipo: 'complementar', categoria: 'natureza',
         coords: [-22.8106, -42.2664],
         nome: { pt: 'Serra de Sapeatiba', en: 'Sapeatiba Range', es: 'Sierra de Sapeatiba' },
         teaser: {
@@ -574,7 +566,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('iguaba-grande'),
       },
       {
-        id: 'iguaba-santa-rita', foto: FOTO_PENDENTE, tipo: 'complementar', categoria: 'natureza',
+        id: 'iguaba-santa-rita', foto: 'img/poi/iguaba-santa-rita', tipo: 'complementar', categoria: 'natureza',
         coords: [-22.8447, -42.2119],
         nome: { pt: 'Ilha de Santa Rita', en: 'Santa Rita Island', es: 'Isla de Santa Rita' },
         teaser: {
@@ -637,7 +629,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('rio-das-ostras'),
       },
       {
-        id: 'ostras-pier', foto: FOTO_PENDENTE, tipo: 'complementar', categoria: 'cultura',
+        id: 'ostras-pier', foto: 'img/poi/ostras-pier', tipo: 'complementar', categoria: 'cultura',
         coords: [-22.5361, -41.9269],
         nome: { pt: 'Píer de Costazul', en: 'Costazul Pier', es: 'Muelle de Costazul' },
         teaser: {
@@ -654,7 +646,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('rio-das-ostras'),
       },
       {
-        id: 'ostras-costoes', foto: FOTO_PENDENTE, tipo: 'inesperado', categoria: 'natureza',
+        id: 'ostras-costoes', foto: 'img/poi/ostras-costoes', tipo: 'inesperado', categoria: 'natureza',
         coords: [-22.5219, -41.9481],
         nome: { pt: 'Monumento dos Costões Rochosos', en: 'Monumento dos Costões Rochosos', es: 'Monumento dos Costões Rochosos' },
         teaser: {
@@ -734,7 +726,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('sao-pedro-da-aldeia'),
       },
       {
-        id: 'aldeia-aviacao-naval', foto: FOTO_PENDENTE, tipo: 'complementar', categoria: 'historia',
+        id: 'aldeia-aviacao-naval', foto: 'img/poi/aldeia-aviacao-naval', tipo: 'complementar', categoria: 'historia',
         coords: [-22.8125, -42.0925],
         nome: { pt: 'Museu da Aviação Naval', en: 'Naval Aviation Museum', es: 'Museo de Aviación Naval' },
         teaser: {
@@ -763,7 +755,7 @@ const DADOS: MunicipioBruto[] = [
     },
     pontos: [
       {
-        id: 'saquarema-itauna', foto: FOTO_PENDENTE, tipo: 'essencial', categoria: 'esporte',
+        id: 'saquarema-itauna', foto: 'img/poi/saquarema-itauna', tipo: 'essencial', categoria: 'esporte',
         coords: [-22.9328, -42.4794],
         nome: { pt: 'Praia de Itaúna', en: 'Itaúna Beach', es: 'Playa de Itaúna' },
         teaser: {
@@ -834,7 +826,7 @@ const DADOS: MunicipioBruto[] = [
   },
   {
     slug: 'silva-jardim',
-    foto: FOTO_PENDENTE,
+    foto: 'img/mun/silva-jardim',
     secretaria: SETUR('silva-jardim'),
     linha: {
       pt: 'Nenhum outro município do estado tem tantas reservas particulares de patrimônio natural.',
@@ -843,7 +835,7 @@ const DADOS: MunicipioBruto[] = [
     },
     pontos: [
       {
-        id: 'silva-jardim-poco-das-antas', foto: FOTO_PENDENTE, tipo: 'essencial', categoria: 'natureza',
+        id: 'silva-jardim-poco-das-antas', foto: 'img/poi/silva-jardim-poco-das-antas', tipo: 'essencial', categoria: 'natureza',
         coords: [-22.5497, -42.2711],
         nome: { pt: 'Reserva Biológica Poço das Antas', en: 'Poço das Antas Biological Reserve', es: 'Reserva Biológica Poço das Antas' },
         teaser: {
@@ -860,7 +852,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('silva-jardim'),
       },
       {
-        id: 'silva-jardim-aldeia-velha', foto: FOTO_PENDENTE, tipo: 'complementar', categoria: 'natureza',
+        id: 'silva-jardim-aldeia-velha', foto: 'img/poi/silva-jardim-aldeia-velha', tipo: 'complementar', categoria: 'natureza',
         coords: [-22.5167, -42.4167],
         nome: { pt: 'Aldeia Velha', en: 'Aldeia Velha', es: 'Aldeia Velha' },
         teaser: {
@@ -877,7 +869,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('silva-jardim'),
       },
       {
-        id: 'silva-jardim-sete-quedas', foto: FOTO_PENDENTE, tipo: 'inesperado', categoria: 'natureza',
+        id: 'silva-jardim-sete-quedas', foto: 'img/poi/silva-jardim-sete-quedas', tipo: 'inesperado', categoria: 'natureza',
         coords: [-22.5250, -42.4300],
         nome: { pt: 'Cachoeira das Sete Quedas', en: 'Sete Quedas Waterfall', es: 'Cascada de Sete Quedas' },
         teaser: {
@@ -894,7 +886,7 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('silva-jardim'),
       },
       {
-        id: 'silva-jardim-lapa', foto: FOTO_PENDENTE, tipo: 'complementar', categoria: 'historia',
+        id: 'silva-jardim-lapa', foto: 'img/poi/silva-jardim-lapa', tipo: 'complementar', categoria: 'historia',
         coords: [-22.6567, -42.3906],
         nome: { pt: 'Igreja Nossa Senhora da Lapa', en: 'Church of Nossa Senhora da Lapa', es: 'Iglesia de Nossa Senhora da Lapa' },
         teaser: {
@@ -916,17 +908,18 @@ const DADOS: MunicipioBruto[] = [
 
 // ---------------------------------------------------------------------------
 
-const catalogoDeFotos: Record<string, { credito: string }> = JSON.parse(
+const catalogoDeFotos: Record<string, { credito: string; alt?: Texto3 }> = JSON.parse(
   await readFile('content/fotos.json', 'utf8'),
 )
 
-function foto(destino: string): { src: string; credito: string } {
-  if (destino === FOTO_PENDENTE || DESCARTADAS.has(destino)) {
-    return { src: FOTO_PENDENTE, credito: CREDITO_PENDENTE }
-  }
+/**
+ * Destino sem entrada em content/fotos.json vira o marcador de pendente: e o catalogo, e nao
+ * esta tabela, que diz se a foto existe (scripts/fotos-do-conteudo).
+ */
+function foto(destino: string): { src: string; credito: string; alt: Texto3 | undefined } {
   const achada = catalogoDeFotos[destino]
-  if (!achada) return { src: FOTO_PENDENTE, credito: CREDITO_PENDENTE }
-  return { src: `/${destino}`, credito: achada.credito }
+  if (!achada) return { src: FOTO_PENDENTE, credito: CREDITO_PENDENTE, alt: undefined }
+  return { src: `/${destino}`, credito: achada.credito, alt: achada.alt }
 }
 
 const idiomas = ['pt', 'en', 'es'] as const
@@ -955,7 +948,7 @@ const municipios = DADOS.map((m) => {
     linha: m.linha,
     hero: {
       src: capa.src,
-      alt: {
+      alt: capa.alt ?? {
         pt: `Vista de ${oficial.nome}`,
         en: `View of ${oficial.nome}`,
         es: `Vista de ${oficial.nome}`,
@@ -984,7 +977,7 @@ const pontos = DADOS.flatMap((m) =>
       foto: {
         v: imagem.src,
         h: imagem.src,
-        alt: { pt: p.nome.pt, en: p.nome.en, es: p.nome.es },
+        alt: imagem.alt ?? { pt: p.nome.pt, en: p.nome.en, es: p.nome.es },
         credito: imagem.credito,
       },
       fonte_verificacao: [
@@ -1079,11 +1072,11 @@ const fatos = [
   {
     id: 'aereo',
     titulo: { pt: 'Voo internacional direto', en: 'Direct international flights', es: 'Vuelo internacional directo' },
-    numero: '2026',
+    numero: '54',
     texto: {
-      pt: 'Os voos internacionais regulares entre Cabo Frio e a Argentina foram retomados em 2026, depois de cinco anos de interrupção.',
-      en: 'Regular international flights between Cabo Frio and Argentina resumed in 2026, after a five-year gap.',
-      es: 'Los vuelos internacionales regulares entre Cabo Frio y Argentina se reanudaron en 2026, tras cinco años de interrupción.',
+      pt: 'Voos diretos de Buenos Aires e Rosário para Cabo Frio entre janeiro e abril de 2026, que retomaram a rota internacional depois de cinco anos.',
+      en: 'Direct flights from Buenos Aires and Rosario to Cabo Frio between January and April 2026, resuming the international route after five years.',
+      es: 'Vuelos directos de Buenos Aires y Rosario a Cabo Frio entre enero y abril de 2026, que retomaron la ruta internacional tras cinco años.',
     },
     fonte_url: 'https://noticias.cabofrio.rj.gov.br/primeiros-turistas-argentinos-desembarcam-em-cabo-frio-e-marcam-retomada-dos-voos-internacionais-em-2026/',
     fonte_nome: 'Prefeitura de Cabo Frio',
@@ -1094,22 +1087,26 @@ const fatos = [
     titulo: { pt: 'As três divisões do circuito mundial', en: 'All three world tour divisions', es: 'Las tres divisiones del circuito mundial' },
     numero: '3',
     texto: {
-      pt: 'Saquarema é a única cidade do mundo a receber as três divisões do circuito mundial de surfe, com a etapa principal renovada até 2028.',
-      en: 'Saquarema is the only city in the world to host all three divisions of the world surfing tour, with the main stop renewed through 2028.',
-      es: 'Saquarema es la única ciudad del mundo que recibe las tres divisiones del circuito mundial de surf, con la etapa principal renovada hasta 2028.',
+      // A frase das tres divisoes esta na pagina de turismo da prefeitura; a noticia de
+      // 2028, que era a fonte antes, so fala da etapa principal.
+      pt: 'Saquarema é a única cidade do mundo que recebe as três divisões do circuito mundial de surfe da WSL.',
+      en: 'Saquarema is the only city in the world that hosts all three divisions of the WSL world surfing tour.',
+      es: 'Saquarema es la única ciudad del mundo que recibe las tres divisiones del circuito mundial de surf de la WSL.',
     },
-    fonte_url: 'https://www.saquarema.rj.gov.br/saquarema-garante-etapa-do-mundial-de-surfe-ate-2028/',
+    fonte_url: PREFEITURA_SAQUAREMA,
     fonte_nome: 'Prefeitura de Saquarema',
     confianca: 'alta',
   },
   {
     id: 'natureza',
-    titulo: { pt: 'Um parque estadual com o nome da região', en: 'A state park named after the region', es: 'Un parque estatal con el nombre de la región' },
-    numero: '9 790 ha',
+    titulo: { pt: 'Um parque estadual de ponta a ponta', en: 'A state park across the region', es: 'Un parque estatal de punta a punta' },
+    // Espaco fino inseparavel: "9.790" le como nove virgula sete em ingles, e "9,790" como
+    // nove virgula sete em portugues. O espaco e a grafia do SI, e nao quebra linha.
+    numero: '9\u202f790 ha',
     texto: {
-      pt: 'O Parque Estadual da Costa do Sol foi criado em 2011 e protege 9.790 hectares distribuídos por seis municípios da região.',
-      en: 'Costa do Sol State Park was created in 2011 and protects 9,790 hectares across six municipalities in the region.',
-      es: 'El Parque Estadual da Costa do Sol fue creado en 2011 y protege 9.790 hectáreas en seis municipios de la región.',
+      pt: 'O Parque Estadual da Costa do Sol, criado em 2011, protege 9.790 hectares distribuídos por seis municípios.',
+      en: 'Costa do Sol State Park, created in 2011, protects 9,790 hectares across six municipalities.',
+      es: 'El Parque Estadual da Costa do Sol, creado en 2011, protege 9.790 hectáreas en seis municipios.',
     },
     fonte_url: DECRETO_PARQUE,
     fonte_nome: 'Decreto Estadual 42.929/2011',

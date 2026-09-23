@@ -1,275 +1,890 @@
 {
-  "img/mun/araruama": {
-    "credito": "Vinícius Agner · CC BY-SA 3.0",
-    "autor": "Vinícius Agner",
+  "img/gal/araruama-1": {
+    "credito": "Rômulo Gama Ferreira · CC BY 2.0",
+    "autor": "Rômulo Gama Ferreira",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Araruama_-_RJ_(50971789128).jpg",
+    "arquivo": "File:Araruama - RJ (50971789128).jpg",
+    "alt": {
+      "pt": "Faixa de areia avançando sobre a Lagoa de Araruama",
+      "en": "Sandbar stretching into Araruama Lagoon",
+      "es": "Franja de arena que avanza sobre la Laguna de Araruama"
+    }
+  },
+  "img/gal/araruama-2": {
+    "credito": "Juh oliveira87 · CC BY-SA 3.0",
+    "autor": "Juh oliveira87",
     "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:P%C3%B4r_do_Sol_-_Araruama.JPG",
-    "arquivo": "File:Pôr do Sol - Araruama.JPG"
+    "pagina": "https://commons.wikimedia.org/wiki/File:Fim_de_tarde_na_Lagoa_de_Araruama.JPG",
+    "arquivo": "File:Fim de tarde na Lagoa de Araruama.JPG",
+    "alt": {
+      "pt": "Pôr do sol na Lagoa de Araruama emoldurado por folhas de coqueiro",
+      "en": "Sunset over Araruama Lagoon framed by palm fronds",
+      "es": "Puesta de sol en la Laguna de Araruama enmarcada por hojas de cocotero"
+    }
+  },
+  "img/gal/araruama-3": {
+    "credito": "Ebengtso · CC BY-SA 3.0",
+    "autor": "Ebengtso",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:P1070982.JPG",
+    "arquivo": "File:P1070982.JPG",
+    "alt": {
+      "pt": "Pescador caminhando nas águas rasas da Lagoa de Araruama",
+      "en": "Fisherman wading in the shallow waters of Araruama Lagoon",
+      "es": "Pescador caminando en las aguas bajas de la Laguna de Araruama"
+    }
+  },
+  "img/gal/armacao-dos-buzios-1": {
+    "credito": "Juh oliveira87 · CC BY-SA 3.0",
+    "autor": "Juh oliveira87",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_Brava_-_B%C3%BAzios.jpg",
+    "arquivo": "File:Praia Brava - Búzios.jpg",
+    "alt": {
+      "pt": "Praia Brava de Búzios vista do alto, com casas na encosta",
+      "en": "Praia Brava in Búzios seen from above, with houses on the hillside",
+      "es": "Praia Brava de Búzios vista desde lo alto, con casas en la ladera"
+    }
+  },
+  "img/gal/armacao-dos-buzios-2": {
+    "credito": "Leandrobarr · CC BY-SA 3.0",
+    "autor": "Leandrobarr",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_da_Arma%C3%A7%C3%A3o,_B%C3%BAzios_2.JPG",
+    "arquivo": "File:Praia da Armação, Búzios 2.JPG",
+    "alt": {
+      "pt": "Barcos de pesca na Praia da Armação com o casario de Búzios ao fundo",
+      "en": "Fishing boats at Armação Beach with Búzios houses behind",
+      "es": "Barcas de pesca en la Playa de Armação con el caserío de Búzios al fondo"
+    }
+  },
+  "img/gal/armacao-dos-buzios-3": {
+    "credito": "Patrick Montenegro · CC BY-SA 4.0",
+    "autor": "Patrick Montenegro",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Panorama_da_Praia_de_Manguinhos.jpg",
+    "arquivo": "File:Panorama da Praia de Manguinhos.jpg",
+    "alt": {
+      "pt": "Panorama da Praia de Manguinhos com barcos ancorados",
+      "en": "Panorama of Manguinhos Beach with anchored boats",
+      "es": "Panorama de la Playa de Manguinhos con barcas fondeadas"
+    }
+  },
+  "img/gal/arraial-do-cabo-1": {
+    "credito": "Larissa Fraga · CC BY 3.0",
+    "autor": "Larissa Fraga",
+    "licenca": "CC BY 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_Grande_-_Arraial_do_Cabo_-_panoramio_(17).jpg",
+    "arquivo": "File:Praia Grande - Arraial do Cabo - panoramio (17).jpg",
+    "alt": {
+      "pt": "Areia branca e mar azul da Praia Grande de Arraial do Cabo",
+      "en": "White sand and blue sea at Praia Grande, Arraial do Cabo",
+      "es": "Arena blanca y mar azul de la Praia Grande de Arraial do Cabo"
+    }
+  },
+  "img/gal/arraial-do-cabo-2": {
+    "credito": "Wilfredor · CC0",
+    "autor": "Wilfredor",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Entrance_to_Gruta_Azul_on_Ilha_do_Cabo_Frio,_Arraial_do_Cabo,_Brazil.jpg",
+    "arquivo": "File:Entrance to Gruta Azul on Ilha do Cabo Frio, Arraial do Cabo, Brazil.jpg",
+    "alt": {
+      "pt": "Entrada da Gruta Azul sob o costão da Ilha do Cabo Frio",
+      "en": "Entrance to the Blue Grotto beneath the cliffs of Cabo Frio Island",
+      "es": "Entrada de la Gruta Azul bajo los acantilados de la Isla de Cabo Frío"
+    }
+  },
+  "img/gal/arraial-do-cabo-3": {
+    "credito": "Adriane Rado · CC BY-SA 4.0",
+    "autor": "Adriane Rado",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Arraial_do_Cabo-RJ_Trilha_do_Vigia_Praia_Grande_.jpg",
+    "arquivo": "File:Arraial do Cabo-RJ Trilha do Vigia Praia Grande .jpg",
+    "alt": {
+      "pt": "Sol refletido no mar visto da Trilha do Vigia, na Praia Grande",
+      "en": "Sun reflecting on the sea seen from the Vigia Trail, Praia Grande",
+      "es": "Sol reflejado en el mar visto desde el Sendero del Vigia, Praia Grande"
+    }
+  },
+  "img/gal/cabo-frio-1": {
+    "credito": "Arielom10 · CC BY-SA 4.0",
+    "autor": "Arielom10",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vista_da_Praia_das_Dunas,_Cabo_Frio_em_2015.jpg",
+    "arquivo": "File:Vista da Praia das Dunas, Cabo Frio em 2015.jpg",
+    "alt": {
+      "pt": "Dunas brancas da Praia das Dunas com ilhas ao fundo",
+      "en": "White dunes at Praia das Dunas with islands behind",
+      "es": "Dunas blancas de la Praia das Dunas con islas al fondo"
+    }
+  },
+  "img/gal/cabo-frio-2": {
+    "credito": "Anabel Kovacs · CC BY-SA 4.0",
+    "autor": "Anabel Kovacs",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:O_caminho_do_azul.jpg",
+    "arquivo": "File:O caminho do azul.jpg",
+    "alt": {
+      "pt": "Passarela de madeira entre a vegetação rumo à Praia do Forte",
+      "en": "Wooden boardwalk through vegetation toward Praia do Forte",
+      "es": "Pasarela de madera entre la vegetación hacia la Praia do Forte"
+    }
+  },
+  "img/gal/cabo-frio-3": {
+    "credito": "Marinelson Almeida · CC BY 2.0",
+    "autor": "Marinelson Almeida",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:The_fort_beach._Cabo_Frio_-_Rio_de_Janeiro_(24484464950).jpg",
+    "arquivo": "File:The fort beach. Cabo Frio - Rio de Janeiro (24484464950).jpg",
+    "alt": {
+      "pt": "Costão rochoso e ilha junto à Praia do Forte",
+      "en": "Rocky shore and island next to Praia do Forte",
+      "es": "Costa rocosa e isla junto a la Praia do Forte"
+    }
+  },
+  "img/gal/casimiro-de-abreu-1": {
+    "credito": "alfredo.figueiredo · CC BY-SA 3.0",
+    "autor": "alfredo.figueiredo",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:P%C3%B4r_do_Sol3_-_Beira_Rio_-_Barra_de_S%C3%A3o_Jo%C3%A3o_-_Rio_de_Janeiro.JPG",
+    "arquivo": "File:Pôr do Sol3 - Beira Rio - Barra de São João - Rio de Janeiro.JPG",
+    "alt": {
+      "pt": "Pôr do sol sobre o Rio São João, em Barra de São João",
+      "en": "Sunset over the São João River in Barra de São João",
+      "es": "Puesta de sol sobre el río São João, en Barra de São João"
+    }
+  },
+  "img/gal/casimiro-de-abreu-2": {
+    "credito": "TMbux · CC BY-SA 3.0",
+    "autor": "TMbux",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cachoeira_da_Fuma%C3%A7a_-_Rio_Maca%C3%A9_-_panoramio_(1).jpg",
+    "arquivo": "File:Cachoeira da Fumaça - Rio Macaé - panoramio (1).jpg",
+    "alt": {
+      "pt": "Cachoeira da Fumaça no Rio Macaé, na serra de Casimiro de Abreu",
+      "en": "Fumaça Waterfall on the Macaé River, in the Casimiro de Abreu highlands",
+      "es": "Cascada da Fumaça en el río Macaé, en la sierra de Casimiro de Abreu"
+    }
+  },
+  "img/gal/casimiro-de-abreu-3": {
+    "credito": "Raku90 · CC BY-SA 3.0",
+    "autor": "Raku90",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Embarca%C3%A7%C3%B5es.JPG",
+    "arquivo": "File:Embarcações.JPG",
+    "alt": {
+      "pt": "Barcos de pesca na foz do Rio São João ao entardecer",
+      "en": "Fishing boats at the mouth of the São João River at dusk",
+      "es": "Barcas de pesca en la desembocadura del río São João al atardecer"
+    }
+  },
+  "img/gal/iguaba-grande-1": {
+    "credito": "Marinelson Almeida · CC BY 2.0",
+    "autor": "Marinelson Almeida",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Capela_N._Senhora_da_Concei%C3%A7%C3%A3o_em_Iguaba_Grande_-_Rj._(8700509490).jpg",
+    "arquivo": "File:Capela N. Senhora da Conceição em Iguaba Grande - Rj. (8700509490).jpg",
+    "alt": {
+      "pt": "Capela de Nossa Senhora da Conceição, branca com detalhes azuis, entre palmeiras",
+      "en": "Chapel of Our Lady of the Conception, white with blue trim, among palm trees",
+      "es": "Capilla de Nuestra Señora de la Concepción, blanca con detalles azules, entre palmeras"
+    }
+  },
+  "img/gal/iguaba-grande-2": {
+    "credito": "Marinelson Almeida · CC BY 2.0",
+    "autor": "Marinelson Almeida",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Iguaba_Grande_-_Rio_de_Janeiro_-_Brasil_(24686778401).jpg",
+    "arquivo": "File:Iguaba Grande - Rio de Janeiro - Brasil (24686778401).jpg",
+    "alt": {
+      "pt": "Margem da Lagoa de Araruama com água rasa e transparente, pedras e casuarinas",
+      "en": "Araruama Lagoon edge with clear shallow water, rocks and casuarina trees",
+      "es": "Orilla de la Laguna de Araruama con agua clara y poco profunda, rocas y casuarinas"
+    }
+  },
+  "img/gal/iguaba-grande-3": {
+    "credito": "Newton paz peres · CC BY-SA 3.0",
+    "autor": "Newton paz peres",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ubas,_Iguaba_Grande_-_RJ,_Brazil_-_panoramio_(3).jpg",
+    "arquivo": "File:Ubas, Iguaba Grande - RJ, Brazil - panoramio (3).jpg",
+    "alt": {
+      "pt": "Pôr do sol sobre a lagoa em Ubás, com um barco de madeira encalhado na areia",
+      "en": "Sunset over the lagoon at Ubás, with a wooden boat resting on the sand",
+      "es": "Atardecer sobre la laguna en Ubás, con un barco de madera varado en la arena"
+    }
+  },
+  "img/gal/rio-das-ostras-1": {
+    "credito": "Thiago Freitas / MTur Destinos · Public domain",
+    "autor": "Thiago Freitas / MTur Destinos",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:ThiagoFreitas_Ilha_dos_Trinta_Reis_Rio_das_Ostras_RJ_(39244159820).jpg",
+    "arquivo": "File:ThiagoFreitas Ilha dos Trinta Reis Rio das Ostras RJ (39244159820).jpg",
+    "alt": {
+      "pt": "Escuna de passeio ancorada diante da Ilha dos Trinta Reis, coberta de mata",
+      "en": "Tour schooner anchored off the forested Ilha dos Trinta Reis",
+      "es": "Goleta de paseo anclada frente a la Ilha dos Trinta Reis, cubierta de bosque"
+    }
+  },
+  "img/gal/rio-das-ostras-2": {
+    "credito": "Thiago Freitas / MTur Destinos · Public domain",
+    "autor": "Thiago Freitas / MTur Destinos",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:ThiagoFreitas_Casa_de_Cultura_Doutor_Bento_Costa_Junior_Rio_das_Ostras_RJ_(39244163560).jpg",
+    "arquivo": "File:ThiagoFreitas Casa de Cultura Doutor Bento Costa Junior Rio das Ostras RJ (39244163560).jpg",
+    "alt": {
+      "pt": "Casarão colonial branco com janelas azuis da Casa de Cultura Bento Costa Júnior",
+      "en": "White colonial house with blue windows, Bento Costa Júnior Culture House",
+      "es": "Casona colonial blanca con ventanas azules de la Casa de Cultura Bento Costa Júnior"
+    }
+  },
+  "img/gal/rio-das-ostras-3": {
+    "credito": "Rômulo Gama Ferreira · CC BY 2.0",
+    "autor": "Rômulo Gama Ferreira",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Rio_das_Ostras_-_RJ_(50977149798).jpg",
+    "arquivo": "File:Rio das Ostras - RJ (50977149798).jpg",
+    "alt": {
+      "pt": "Posto de salva-vidas de madeira sobre a restinga ao entardecer, com mar ao fundo",
+      "en": "Wooden lifeguard tower on the coastal scrub at dusk, with sea behind",
+      "es": "Puesto de socorrista de madera sobre la vegetación costera al atardecer, con el mar al fondo"
+    }
+  },
+  "img/gal/sao-pedro-da-aldeia-1": {
+    "credito": "Tiagosilvaphotography · CC BY-SA 4.0",
+    "autor": "Tiagosilvaphotography",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_do_centro_de_S%C3%A3o_Pedro.jpg",
+    "arquivo": "File:Praia do centro de São Pedro.jpg",
+    "alt": {
+      "pt": "Pôr do sol sobre a lagoa na praia do centro, com barco e píer ao fundo",
+      "en": "Sunset over the lagoon at the town beach, with a boat and pier behind",
+      "es": "Atardecer sobre la laguna en la playa del centro, con barco y muelle al fondo"
+    }
+  },
+  "img/gal/sao-pedro-da-aldeia-2": {
+    "credito": "Edwiges Lopes Tavares · CC BY-SA 4.0",
+    "autor": "Edwiges Lopes Tavares",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Tons_de_Azul.jpg",
+    "arquivo": "File:Tons de Azul.jpg",
+    "alt": {
+      "pt": "Deque de madeira sobre água azul da lagoa, areia clara e céu sem nuvens",
+      "en": "Wooden deck over the lagoon's blue water, pale sand and cloudless sky",
+      "es": "Muelle de madera sobre el agua azul de la laguna, arena clara y cielo despejado"
+    }
+  },
+  "img/gal/sao-pedro-da-aldeia-3": {
+    "credito": "Túllio F · CC BY-SA 4.0",
+    "autor": "Túllio F",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Conjunto_Arquitet%C3%B4nico,_Urban%C3%ADstico_e_Paisag%C3%ADstico_do_S%C3%ADtio_Hist%C3%B3rico_-_S%C3%A3o_Pedro_da_Aldeia_-_20260909111755.jpg",
+    "arquivo": "File:Conjunto Arquitetônico, Urbanístico e Paisagístico do Sítio Histórico - São Pedro da Aldeia - 20260909111755.jpg",
+    "alt": {
+      "pt": "Sítio histórico tombado: igreja branca com torre e casario ao redor da praça",
+      "en": "Listed historic district: white church with bell tower and surrounding square",
+      "es": "Sitio histórico protegido: iglesia blanca con torre y casas alrededor de la plaza"
+    }
+  },
+  "img/gal/saquarema-1": {
+    "credito": "JORGE PAQUETA · CC BY-SA 3.0",
+    "autor": "JORGE PAQUETA",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:SAQUAREMA_05.JPG",
+    "arquivo": "File:SAQUAREMA 05.JPG",
+    "alt": {
+      "pt": "Praia lotada de água verde-clara em Saquarema, com a cidade e morros ao fundo",
+      "en": "Crowded beach with pale green water in Saquarema, town and hills behind",
+      "es": "Playa concurrida de agua verde claro en Saquarema, con la ciudad y cerros al fondo"
+    }
+  },
+  "img/gal/saquarema-2": {
+    "credito": "Cesar Cardoso · CC BY 2.0",
+    "autor": "Cesar Cardoso",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Saquarema_do_alto_da_Igreja_N._Sra._de_Nazar%C3%A9_(6372010401).jpg",
+    "arquivo": "File:Saquarema do alto da Igreja N. Sra. de Nazaré (6372010401).jpg",
+    "alt": {
+      "pt": "Centro de Saquarema e a praia vistos do alto do morro da igreja de Nazareth",
+      "en": "Saquarema town centre and beach seen from the Nazareth church hill",
+      "es": "Centro de Saquarema y la playa vistos desde lo alto del morro de la iglesia"
+    }
+  },
+  "img/gal/saquarema-3": {
+    "credito": "Rodrigo Alves · CC BY-SA 4.0",
+    "autor": "Rodrigo Alves",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Igreja_de_Saquarema.jpg",
+    "arquivo": "File:Igreja de Saquarema.jpg",
+    "alt": {
+      "pt": "Igreja de Nazareth no alto do costão, com ondas quebrando nas pedras",
+      "en": "Nazareth church atop the rocky headland, with waves breaking on the rocks",
+      "es": "Iglesia de Nazareth en lo alto del promontorio, con olas rompiendo en las rocas"
+    }
+  },
+  "img/gal/silva-jardim-1": {
+    "credito": "Rafael Deminicis · CC BY-SA 4.0",
+    "autor": "Rafael Deminicis",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:RPPN_Aldeia_Velha6.jpg",
+    "arquivo": "File:RPPN Aldeia Velha6.jpg",
+    "alt": {
+      "pt": "Interior de Mata Atlântica densa, com troncos finos e folhagem verde",
+      "en": "Dense Atlantic Forest interior with slender trunks and green foliage",
+      "es": "Interior de Mata Atlántica densa, con troncos finos y follaje verde"
+    }
+  },
+  "img/gal/silva-jardim-2": {
+    "credito": "Bart van Dorp · CC BY 2.0",
+    "autor": "Bart van Dorp",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Golden_Lion_Tamarin_Poco_das_Antas.jpg",
+    "arquivo": "File:Golden Lion Tamarin Poco das Antas.jpg",
+    "alt": {
+      "pt": "Mico-leão-dourado vocalizando num galho, fotografado na REBIO Poço das Antas",
+      "en": "Golden lion tamarin calling from a branch, photographed at Poço das Antas reserve",
+      "es": "Tití león dorado vocalizando en una rama, fotografiado en la reserva Poço das Antas"
+    }
+  },
+  "img/gal/silva-jardim-3": {
+    "credito": "Karen Campbell Tyler-Williams · CC BY-SA 4.0",
+    "autor": "Karen Campbell Tyler-Williams",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Lonely_donkey.jpg",
+    "arquivo": "File:Lonely donkey.jpg",
+    "alt": {
+      "pt": "Jumento à sombra de árvore em pasto verde com morros ao fundo, em Aldeia Velha",
+      "en": "Donkey in the shade of a tree on green pasture with hills behind, Aldeia Velha",
+      "es": "Burro a la sombra de un árbol en un prado verde con cerros al fondo, Aldeia Velha"
+    }
+  },
+  "img/mun/araruama": {
+    "credito": "Marinelson Almeida · CC BY 2.0",
+    "autor": "Marinelson Almeida",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:A_praia_da_lagoa_salgada_de_Araruama_-_Rj._(8700515282).jpg",
+    "arquivo": "File:A praia da lagoa salgada de Araruama - Rj. (8700515282).jpg",
+    "alt": {
+      "pt": "Praia de areia branca com coqueiros às margens da Lagoa de Araruama",
+      "en": "White-sand beach with coconut palms on the shore of Araruama Lagoon",
+      "es": "Playa de arena blanca con cocoteros a orillas de la Laguna de Araruama"
+    }
   },
   "img/mun/armacao-dos-buzios": {
     "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0",
     "autor": "Halley Pacheco de Oliveira",
     "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Igreja_de_Santana_em_B%C3%BAzios_01.jpg",
-    "arquivo": "File:Igreja de Santana em Búzios 01.jpg"
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_de_Jo%C3%A3o_Fernandes_03.jpg",
+    "arquivo": "File:Praia de João Fernandes 03.jpg",
+    "alt": {
+      "pt": "Enseada da Praia de João Fernandes vista do alto do morro, em Búzios",
+      "en": "João Fernandes Beach cove seen from the hilltop in Búzios",
+      "es": "Ensenada de la Playa de João Fernandes vista desde lo alto del cerro, Búzios"
+    }
   },
   "img/mun/arraial-do-cabo": {
-    "credito": "Eduardo P · Public domain",
-    "autor": "Eduardo P",
-    "licenca": "Public domain",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_do_Pontal_(Arraial_do_Cabo).JPG",
-    "arquivo": "File:Praia do Pontal (Arraial do Cabo).JPG"
+    "credito": "Antônio André Lopes de Oliveira · CC BY-SA 4.0",
+    "autor": "Antônio André Lopes de Oliveira",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Costa_do_Sol_Pontal.jpg",
+    "arquivo": "File:Costa do Sol Pontal.jpg",
+    "alt": {
+      "pt": "Mar azul-turquesa do Pontal do Atalaia visto do alto, com ilhas ao fundo",
+      "en": "Turquoise sea at Pontal do Atalaia seen from above, islands behind",
+      "es": "Mar turquesa del Pontal do Atalaia visto desde lo alto, con islas al fondo"
+    }
   },
   "img/mun/cabo-frio": {
-    "credito": "Ezarate · CC BY-SA 3.0",
-    "autor": "Ezarate",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:PlayaForteSaoMateo-CaboFrio-Brasil-feb2016.jpg",
-    "arquivo": "File:PlayaForteSaoMateo-CaboFrio-Brasil-feb2016.jpg"
+    "credito": "Luiz Felipe Lage Levy · CC BY-SA 4.0",
+    "autor": "Luiz Felipe Lage Levy",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cabo_Frio_-_vista_a%C3%A9rea.jpg",
+    "arquivo": "File:Cabo Frio - vista aérea.jpg",
+    "alt": {
+      "pt": "Vista aérea de Cabo Frio com a Praia do Forte e o Canal do Itajuru",
+      "en": "Aerial view of Cabo Frio with Praia do Forte and the Itajuru Canal",
+      "es": "Vista aérea de Cabo Frío con la Praia do Forte y el Canal de Itajuru"
+    }
   },
   "img/mun/casimiro-de-abreu": {
-    "credito": "Junius · Public domain",
-    "autor": "Junius",
-    "licenca": "Public domain",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Casimiro_de_Abreu1.JPG",
-    "arquivo": "File:Casimiro de Abreu1.JPG"
+    "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0",
+    "autor": "Halley Pacheco de Oliveira",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Barra_de_S%C3%A3o_Jo%C3%A3o_08.jpg",
+    "arquivo": "File:Barra de São João 08.jpg",
+    "alt": {
+      "pt": "Praia de Barra de São João com pedras e mar azul",
+      "en": "Barra de São João beach with rocks and blue sea",
+      "es": "Playa de Barra de São João con rocas y mar azul"
+    }
   },
   "img/mun/iguaba-grande": {
-    "credito": "Carlos Luis M C da Cruz · Public domain",
-    "autor": "Carlos Luis M C da Cruz",
-    "licenca": "Public domain",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Estacao_meteorologica_iguaba_grande.JPG",
-    "arquivo": "File:Estacao meteorologica iguaba grande.JPG"
+    "credito": "Marinelson Almeida · CC BY 2.0",
+    "autor": "Marinelson Almeida",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Iguaba_Grande_-_Rio_de_Janeiro_-_Brasil_(24484689660).jpg",
+    "arquivo": "File:Iguaba Grande - Rio de Janeiro - Brasil (24484689660).jpg",
+    "alt": {
+      "pt": "Orla da Lagoa de Araruama em Iguaba Grande, com areia clara e coqueiros",
+      "en": "Araruama Lagoon shore in Iguaba Grande, with pale sand and palm trees",
+      "es": "Orilla de la Laguna de Araruama en Iguaba Grande, con arena clara y cocoteros"
+    }
   },
   "img/mun/rio-das-ostras": {
-    "credito": "Yasmin Rollemberg · CC BY-SA 3.0",
-    "autor": "Yasmin Rollemberg",
+    "credito": "Fulviusbsas · CC BY-SA 3.0",
+    "autor": "Fulviusbsas",
     "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_do_Mar_do_Norte,_Rio_das_Ostras,_RJ,_Brasil.jpg",
-    "arquivo": "File:Praia do Mar do Norte, Rio das Ostras, RJ, Brasil.jpg"
+    "pagina": "https://commons.wikimedia.org/wiki/File:RioOstras2.jpg",
+    "arquivo": "File:RioOstras2.jpg",
+    "alt": {
+      "pt": "Praia de Rio das Ostras vista do alto do costão, com orla, casas e mar com ondas",
+      "en": "Rio das Ostras beach seen from the headland, with seafront, houses and waves",
+      "es": "Playa de Rio das Ostras vista desde el promontorio, con malecón, casas y olas"
+    }
   },
   "img/mun/sao-pedro-da-aldeia": {
-    "credito": "Luis Francisco de Souza da Silveira · CC BY-SA 4.0",
-    "autor": "Luis Francisco de Souza da Silveira",
-    "licenca": "CC BY-SA 4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:SPA_RJ_Lagoa_01.jpg",
-    "arquivo": "File:SPA RJ Lagoa 01.jpg"
+    "credito": "Rômulo Gama Ferreira · CC BY 2.0",
+    "autor": "Rômulo Gama Ferreira",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:S%C3%A3o_Pedro_da_Aldeia_-_RJ_(51536048180).jpg",
+    "arquivo": "File:São Pedro da Aldeia - RJ (51536048180).jpg",
+    "alt": {
+      "pt": "Orla da lagoa em São Pedro da Aldeia com cata-vento, ciclovia e céu azul",
+      "en": "Lagoon waterfront in São Pedro da Aldeia with windmill, bike path and blue sky",
+      "es": "Malecón de la laguna en São Pedro da Aldeia con molino de viento, ciclovía y cielo azul"
+    }
   },
   "img/mun/saquarema": {
     "credito": "Roger Brock · CC BY-SA 4.0",
     "autor": "Roger Brock",
     "licenca": "CC BY-SA 4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SaquaremaFozLagoa.jpg",
-    "arquivo": "File:SaquaremaFozLagoa.jpg"
+    "arquivo": "File:SaquaremaFozLagoa.jpg",
+    "alt": {
+      "pt": "Foz da lagoa de Saquarema no mar",
+      "en": "Mouth of the Saquarema lagoon into the sea",
+      "es": "Desembocadura de la laguna de Saquarema en el mar"
+    }
   },
-  "img/poi/araruama-lagoa": {
-    "credito": "DeniseGiovana · CC BY-SA 3.0",
-    "autor": "DeniseGiovana",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:LagoaDeAraruama.JPG",
-    "arquivo": "File:LagoaDeAraruama.JPG"
-  },
-  "img/poi/araruama-praia-seca": {
-    "credito": "Gladstone at Portuguese Wikipedia · CC BY-SA 3.0",
-    "autor": "Gladstone at Portuguese Wikipedia",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_Seca_RJ_2.jpg",
-    "arquivo": "File:Praia Seca RJ 2.jpg"
-  },
-  "img/poi/araruama-massambaba": {
-    "credito": "Otrebor · Public domain",
-    "autor": "Otrebor",
-    "licenca": "Public domain",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Restinga_de_Massambaba.JPG",
-    "arquivo": "File:Restinga de Massambaba.JPG"
-  },
-  "img/poi/araruama-juturnaiba": {
-    "credito": "Secretaria de Estado de Defesa Civil do Rio de Janeiro · CC0",
-    "autor": "Secretaria de Estado de Defesa Civil do Rio de Janeiro",
-    "licenca": "CC0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Juturna%C3%ADba.jpg",
-    "arquivo": "File:Juturnaíba.jpg"
-  },
-  "img/poi/buzios-orla-bardot": {
-    "credito": "Josue Marinho · CC BY 3.0",
-    "autor": "Josue Marinho",
-    "licenca": "CC BY 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:B%C3%BAzios_RJ_Brasil_-_Est%C3%A1tua_de_Brigit_Bardot,_Orla_Bardot_-_panoramio.jpg",
-    "arquivo": "File:Búzios RJ Brasil - Estátua de Brigit Bardot, Orla Bardot - panoramio.jpg"
-  },
-  "img/poi/buzios-ferradura": {
-    "credito": "Msadp77 · CC BY-SA 3.0",
-    "autor": "Msadp77",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:PRAIA_DA_FERRADURA.B%C3%9AZIOS.JPG",
-    "arquivo": "File:PRAIA DA FERRADURA.BÚZIOS.JPG"
-  },
-  "img/poi/buzios-geriba": {
-    "credito": "Pedro Perales Ramalho · CC BY-SA 3.0",
-    "autor": "Pedro Perales Ramalho",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Anoitecer_na_praia_de_Gerib%C3%A1.JPG",
-    "arquivo": "File:Anoitecer na praia de Geribá.JPG"
-  },
-  "img/poi/buzios-rua-das-pedras": {
-    "credito": "Isadoraacrd · CC BY-SA 3.0",
-    "autor": "Isadoraacrd",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Rua_das_pedras.JPG",
-    "arquivo": "File:Rua das pedras.JPG"
-  },
-  "img/poi/arraial-prainhas": {
-    "credito": "Daniel Souza Lima · CC BY-SA 3.0",
-    "autor": "Daniel Souza Lima",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Pontal_do_Atalaia,_Parque_Estadual_da_Costa_do_Sol,_N%C3%BAcleo_Atalaia_-_Dama_Branca.JPG",
-    "arquivo": "File:Pontal do Atalaia, Parque Estadual da Costa do Sol, Núcleo Atalaia - Dama Branca.JPG"
-  },
-  "img/poi/arraial-farol": {
-    "credito": "Ezarate · CC BY-SA 3.0",
-    "autor": "Ezarate",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:VistaPraiadoFarol-Arraial_do_Cabo-feb2016.jpg",
-    "arquivo": "File:VistaPraiadoFarol-Arraial do Cabo-feb2016.jpg"
-  },
-  "img/poi/arraial-anjos": {
-    "credito": "Rafael Rabello de Barros · CC BY-SA 3.0",
-    "autor": "Rafael Rabello de Barros",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_dos_Anjos.JPG",
-    "arquivo": "File:Praia dos Anjos.JPG"
-  },
-  "img/poi/arraial-forno": {
-    "credito": "Eurico Zimbres · CC BY-SA 2.5",
-    "autor": "Eurico Zimbres",
-    "licenca": "CC BY-SA 2.5",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Forno_beach.jpg",
-    "arquivo": "File:Forno beach.jpg"
-  },
-  "img/poi/cabo-frio-forte": {
-    "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0",
-    "autor": "Halley Pacheco de Oliveira",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Forte_de_S%C3%A3o_Mateus_do_Cabo_Frio_01.jpg",
-    "arquivo": "File:Forte de São Mateus do Cabo Frio 01.jpg"
-  },
-  "img/poi/cabo-frio-praia-do-forte": {
-    "credito": "Eduardo P · CC BY-SA 3.0",
-    "autor": "Eduardo P",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_do_Forte_-_dunas.jpg",
-    "arquivo": "File:Praia do Forte - dunas.jpg"
-  },
-  "img/poi/cabo-frio-pero": {
-    "credito": "MTur Destinos · Public domain",
-    "autor": "MTur Destinos",
-    "licenca": "Public domain",
-    "pagina": "https://commons.wikimedia.org/wiki/File:CarlosErbsJr_Praia_do_Pero_Morro_do_Vigia_Cabo_Frio_RJ_(27169339728).jpg",
-    "arquivo": "File:CarlosErbsJr Praia do Pero Morro do Vigia Cabo Frio RJ (27169339728).jpg"
-  },
-  "img/poi/cabo-frio-itajuru": {
-    "credito": "Frenz 69 · CC BY-SA 3.0",
-    "autor": "Frenz 69",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:CaboFrio_Boats_at_Canal_do_Itajuru.JPG",
-    "arquivo": "File:CaboFrio Boats at Canal do Itajuru.JPG"
-  },
-  "img/poi/casimiro-rio-macae": {
-    "credito": "Maclapessoa · CC0",
-    "autor": "Maclapessoa",
-    "licenca": "CC0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Maca%C3%A9_River.jpg",
-    "arquivo": "File:Macaé River.jpg"
-  },
-  "img/poi/casimiro-barra-de-sao-joao": {
-    "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0",
-    "autor": "Halley Pacheco de Oliveira",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Barra_de_S%C3%A3o_Jo%C3%A3o_09.jpg",
-    "arquivo": "File:Barra de São João 09.jpg"
-  },
-  "img/poi/casimiro-museu": {
-    "credito": "Vamberto Oliveira · CC BY-SA 4.0",
-    "autor": "Vamberto Oliveira",
+  "img/mun/silva-jardim": {
+    "credito": "Rafael Deminicis · CC BY-SA 4.0",
+    "autor": "Rafael Deminicis",
     "licenca": "CC BY-SA 4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Rio_S%C3%A3o_Jo%C3%A3o,_Casimiro_de_Abreu,_RJ.jpg",
-    "arquivo": "File:Rio São João, Casimiro de Abreu, RJ.jpg"
+    "pagina": "https://commons.wikimedia.org/wiki/File:RPPN_Aldeia_Velha8.jpg",
+    "arquivo": "File:RPPN Aldeia Velha8.jpg",
+    "alt": {
+      "pt": "Serras cobertas de Mata Atlântica atrás de gramado e palmeiras em Silva Jardim",
+      "en": "Atlantic Forest-covered mountains behind a lawn and palm trees in Silva Jardim",
+      "es": "Sierras cubiertas de Mata Atlántica detrás de un prado y palmeras en Silva Jardim"
+    }
   },
-  "img/poi/iguaba-lagoa": {
-    "credito": "DELANO CAMPELLO · CC BY-SA 3.0",
-    "autor": "DELANO CAMPELLO",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:PRAIA_DA_FARINHA_IGUABA_GRANDE_RIO_DE_JANEIRO_BRAZIL.jpg",
-    "arquivo": "File:PRAIA DA FARINHA IGUABA GRANDE RIO DE JANEIRO BRAZIL.jpg"
-  },
-  "img/poi/ostras-praca-da-baleia": {
-    "credito": "Marcos Guerra · Public domain",
-    "autor": "Marcos Guerra",
-    "licenca": "Public domain",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_da_baleia.JPG",
-    "arquivo": "File:Praça da baleia.JPG"
-  },
-  "img/poi/ostras-costazul": {
-    "credito": "Nova Opção · CC BY-SA 3.0",
-    "autor": "Nova Opção",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Costazul,_Rio_das_Ostras_-_RJ,_Brazil_-_panoramio.jpg",
-    "arquivo": "File:Costazul, Rio das Ostras - RJ, Brazil - panoramio.jpg"
-  },
-  "img/poi/aldeia-casa-da-flor": {
-    "credito": "EPorto (WMB) · CC BY-SA 4.0",
-    "autor": "EPorto (WMB)",
-    "licenca": "CC BY-SA 4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Arte_de_divulga%C3%A7%C3%A3o_para_o_Wiki_Loves_Monuments_-_monumentos_sem_imagem_-_Casa_da_Flor_-_vers%C3%A3o_Post_Facebook.png",
-    "arquivo": "File:Arte de divulgação para o Wiki Loves Monuments - monumentos sem imagem - Casa da Flor - versão Post Facebook.png"
+  "img/poi/aldeia-aviacao-naval": {
+    "credito": "Marinha do Brasil · CC BY-SA 2.0",
+    "autor": "Marinha do Brasil",
+    "licenca": "CC BY-SA 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:SH-16_Seahawk_N-3035,_do_1%C2%BA_Esquadr%C3%A3o_de_Helic%C3%B3pteros_Antissubmarino_(HS-1)_(52747349324).png",
+    "arquivo": "File:SH-16 Seahawk N-3035, do 1º Esquadrão de Helicópteros Antissubmarino (HS-1) (52747349324).png",
+    "alt": {
+      "pt": "Helicópteros SH-16 Seahawk sobrevoando a Base Aérea Naval, com torre de controle",
+      "en": "SH-16 Seahawk helicopters flying over the Naval Air Base, with control tower",
+      "es": "Helicópteros SH-16 Seahawk sobrevolando la Base Aérea Naval, con torre de control"
+    }
   },
   "img/poi/aldeia-igreja-matriz": {
     "credito": "Fulviusbsas · Public domain",
     "autor": "Fulviusbsas",
     "licenca": "Public domain",
     "pagina": "https://commons.wikimedia.org/wiki/File:SPedroAldeia-JesuitChurch.jpg",
-    "arquivo": "File:SPedroAldeia-JesuitChurch.jpg"
+    "arquivo": "File:SPedroAldeia-JesuitChurch.jpg",
+    "alt": {
+      "pt": "Igreja Matriz de São Pedro, antiga igreja jesuíta",
+      "en": "Mother Church of São Pedro, a former Jesuit church",
+      "es": "Iglesia Matriz de São Pedro, antigua iglesia jesuita"
+    }
   },
   "img/poi/aldeia-sudoeste": {
-    "credito": "Newton paz peres · CC BY-SA 3.0",
-    "autor": "Newton paz peres",
+    "credito": "Msadp06 · CC BY-SA 4.0",
+    "autor": "Msadp06",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia.sudoeste1025.jpg",
+    "arquivo": "File:Praia.sudoeste1025.jpg",
+    "alt": {
+      "pt": "Faixa de areia da Praia do Sudoeste com árvores à direita e lagoa agitada",
+      "en": "Sudoeste beach sand strip with trees on the right and choppy lagoon",
+      "es": "Franja de arena de la Praia do Sudoeste con árboles a la derecha y laguna agitada"
+    }
+  },
+  "img/poi/araruama-juturnaiba": {
+    "credito": "Secretaria de Estado de Defesa Civil do Rio de Janeiro · CC0",
+    "autor": "Secretaria de Estado de Defesa Civil do Rio de Janeiro",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Juturna%C3%ADba.jpg",
+    "arquivo": "File:Juturnaíba.jpg",
+    "alt": {
+      "pt": "Vista aérea da barragem da Lagoa de Juturnaíba cercada de mata",
+      "en": "Aerial view of the Juturnaíba Lagoon dam surrounded by forest",
+      "es": "Vista aérea de la presa de la Laguna de Juturnaíba rodeada de bosque"
+    }
+  },
+  "img/poi/araruama-lagoa": {
+    "credito": "DeniseGiovana · CC BY-SA 3.0",
+    "autor": "DeniseGiovana",
     "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Boqueir%C3%A3o,_S%C3%A3o_Pedro_da_Aldeia_-_RJ,_Brazil_-_panoramio.jpg",
-    "arquivo": "File:Boqueirão, São Pedro da Aldeia - RJ, Brazil - panoramio.jpg"
+    "pagina": "https://commons.wikimedia.org/wiki/File:LagoaDeAraruama.JPG",
+    "arquivo": "File:LagoaDeAraruama.JPG",
+    "alt": {
+      "pt": "Águas azul-turquesa da Lagoa de Araruama com vegetação em primeiro plano",
+      "en": "Turquoise waters of Araruama Lagoon with vegetation in the foreground",
+      "es": "Aguas turquesa de la Laguna de Araruama con vegetación en primer plano"
+    }
+  },
+  "img/poi/araruama-massambaba": {
+    "credito": "Tamiresin · CC BY-SA 4.0",
+    "autor": "Tamiresin",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:APA_de_massambaba_Tarsila_Pimentel_(01).jpg",
+    "arquivo": "File:APA de massambaba Tarsila Pimentel (01).jpg",
+    "alt": {
+      "pt": "Pôr do sol na praia da APA de Massambaba, em Praia Seca",
+      "en": "Sunset on the beach of the Massambaba protected area, Praia Seca",
+      "es": "Puesta de sol en la playa del área protegida de Massambaba, Praia Seca"
+    }
+  },
+  "img/poi/araruama-praia-seca": {
+    "credito": "Gladstone at Portuguese Wikipedia · CC BY-SA 3.0",
+    "autor": "Gladstone at Portuguese Wikipedia",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_Seca_RJ_2.jpg",
+    "arquivo": "File:Praia Seca RJ 2.jpg",
+    "alt": {
+      "pt": "Pôr do sol sobre o mar aberto na Praia Seca",
+      "en": "Sunset over the open sea at Praia Seca",
+      "es": "Puesta de sol sobre el mar abierto en Praia Seca"
+    }
+  },
+  "img/poi/arraial-anjos": {
+    "credito": "Rafael Rabello de Barros · CC BY-SA 3.0",
+    "autor": "Rafael Rabello de Barros",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_dos_Anjos.JPG",
+    "arquivo": "File:Praia dos Anjos.JPG",
+    "alt": {
+      "pt": "Praia dos Anjos e porto de barcos vistos do alto",
+      "en": "Praia dos Anjos and its boat harbor seen from above",
+      "es": "Praia dos Anjos y su puerto de barcas vistos desde lo alto"
+    }
+  },
+  "img/poi/arraial-farol": {
+    "credito": "Ezarate · CC BY-SA 3.0",
+    "autor": "Ezarate",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:VistaPraiadoFarol-Arraial_do_Cabo-feb2016-3.jpg",
+    "arquivo": "File:VistaPraiadoFarol-Arraial do Cabo-feb2016-3.jpg",
+    "alt": {
+      "pt": "Águas turquesa da Praia do Farol entre os morros da Ilha do Cabo Frio",
+      "en": "Turquoise waters of Praia do Farol between the hills of Cabo Frio Island",
+      "es": "Aguas turquesa de la Praia do Farol entre los cerros de la Isla de Cabo Frío"
+    }
+  },
+  "img/poi/arraial-forno": {
+    "credito": "Eurico Zimbres · CC BY-SA 2.5",
+    "autor": "Eurico Zimbres",
+    "licenca": "CC BY-SA 2.5",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Forno_beach.jpg",
+    "arquivo": "File:Forno beach.jpg",
+    "alt": {
+      "pt": "Praia do Forno vista da trilha, com mata e água clara",
+      "en": "Praia do Forno seen from the trail, with forest and clear water",
+      "es": "Praia do Forno vista desde el sendero, con bosque y agua clara"
+    }
+  },
+  "img/poi/arraial-prainhas": {
+    "credito": "Daniel Souza Lima · CC BY-SA 3.0",
+    "autor": "Daniel Souza Lima",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pontal_do_Atalaia,_Parque_Estadual_da_Costa_do_Sol,_N%C3%BAcleo_Atalaia_-_Dama_Branca.JPG",
+    "arquivo": "File:Pontal do Atalaia, Parque Estadual da Costa do Sol, Núcleo Atalaia - Dama Branca.JPG",
+    "alt": {
+      "pt": "Enseada das Prainhas do Pontal do Atalaia vista entre cactos",
+      "en": "Prainhas do Pontal do Atalaia cove seen through cacti",
+      "es": "Ensenada de las Prainhas do Pontal do Atalaia vista entre cactus"
+    }
+  },
+  "img/poi/buzios-ferradura": {
+    "credito": "Alberto1939 · CC BY-SA 4.0",
+    "autor": "Alberto1939",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Praia_da_Ferradura_com_botes_de_pesca.jpg",
+    "arquivo": "File:Praia da Ferradura com botes de pesca.jpg",
+    "alt": {
+      "pt": "Barcos coloridos na areia da Praia da Ferradura, com a enseada ao fundo",
+      "en": "Colorful boats on the sand of Ferradura Beach, with the cove behind",
+      "es": "Barcas coloridas en la arena de la Playa de la Ferradura, con la ensenada al fondo"
+    }
+  },
+  "img/poi/buzios-geriba": {
+    "credito": "AnnaClGS · CC BY-SA 4.0",
+    "autor": "AnnaClGS",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parque_Estadual_da_Costa_do_Sol_-_Anna_Cl%C3%A1udia_Gouveia_Salomon_(33).jpg",
+    "arquivo": "File:Parque Estadual da Costa do Sol - Anna Cláudia Gouveia Salomon (33).jpg",
+    "alt": {
+      "pt": "Faixa de areia e ondas da Praia de Geribá em dia claro",
+      "en": "Sand and waves of Geribá Beach on a clear day",
+      "es": "Arena y olas de la Playa de Geribá en un día despejado"
+    }
+  },
+  "img/poi/buzios-orla-bardot": {
+    "credito": "Fulviusbsas · CC BY-SA 3.0",
+    "autor": "Fulviusbsas",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Buzios-OrlaBardot2.jpg",
+    "arquivo": "File:Buzios-OrlaBardot2.jpg",
+    "alt": {
+      "pt": "Calçadão de pedra da Orla Bardot à beira da Praia da Armação",
+      "en": "Stone promenade of Orla Bardot along Armação Beach",
+      "es": "Paseo de piedra de la Orla Bardot junto a la Playa de Armação"
+    }
+  },
+  "img/poi/buzios-rua-das-pedras": {
+    "credito": "Cesar Cardoso · CC BY 2.0",
+    "autor": "Cesar Cardoso",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:B%C3%BAzios_(6371922433).jpg",
+    "arquivo": "File:Búzios (6371922433).jpg",
+    "alt": {
+      "pt": "Rua das Pedras com calçamento de pedra, árvores e lojas",
+      "en": "Rua das Pedras with stone paving, trees and shops",
+      "es": "Rua das Pedras con empedrado, árboles y tiendas"
+    }
+  },
+  "img/poi/cabo-frio-forte": {
+    "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0",
+    "autor": "Halley Pacheco de Oliveira",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Forte_de_S%C3%A3o_Mateus_do_Cabo_Frio_01.jpg",
+    "arquivo": "File:Forte de São Mateus do Cabo Frio 01.jpg",
+    "alt": {
+      "pt": "Portal branco do Forte São Mateus sob céu azul",
+      "en": "White gate of São Mateus Fort under a blue sky",
+      "es": "Portal blanco del Fuerte São Mateus bajo cielo azul"
+    }
+  },
+  "img/poi/cabo-frio-itajuru": {
+    "credito": "Frenz 69 · CC BY-SA 3.0",
+    "autor": "Frenz 69",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:CaboFrio_Boats_at_Canal_do_Itajuru.JPG",
+    "arquivo": "File:CaboFrio Boats at Canal do Itajuru.JPG",
+    "alt": {
+      "pt": "Barcos de pesca atracados no Canal do Itajuru",
+      "en": "Fishing boats moored in the Itajuru Canal",
+      "es": "Barcas de pesca amarradas en el Canal de Itajuru"
+    }
+  },
+  "img/poi/cabo-frio-pero": {
+    "credito": "MTur Destinos · Public domain",
+    "autor": "MTur Destinos",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:CarlosErbsJr_Praia_do_Pero_Morro_do_Vigia_Cabo_Frio_RJ_(27169339728).jpg",
+    "arquivo": "File:CarlosErbsJr Praia do Pero Morro do Vigia Cabo Frio RJ (27169339728).jpg",
+    "alt": {
+      "pt": "Barco de pesca na areia da Praia do Peró",
+      "en": "Fishing boat on the sand at Praia do Peró",
+      "es": "Barca de pesca en la arena de la Praia do Peró"
+    }
+  },
+  "img/poi/cabo-frio-praia-do-forte": {
+    "credito": "Marinelson Almeida · CC BY 2.0",
+    "autor": "Marinelson Almeida",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:The_fort_beach._Cabo_Frio_-_Rio_de_Janeiro_(24779920845).jpg",
+    "arquivo": "File:The fort beach. Cabo Frio - Rio de Janeiro (24779920845).jpg",
+    "alt": {
+      "pt": "Praia do Forte com água turquesa e a orla de prédios ao fundo",
+      "en": "Praia do Forte with turquoise water and the waterfront buildings behind",
+      "es": "Praia do Forte con agua turquesa y los edificios de la costanera al fondo"
+    }
+  },
+  "img/poi/casimiro-barra-de-sao-joao": {
+    "credito": "Raku90 · CC BY-SA 3.0",
+    "autor": "Raku90",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ponte_ca%C3%ADda.JPG",
+    "arquivo": "File:Ponte caída.JPG",
+    "alt": {
+      "pt": "Ruínas da antiga ponte de arcos na foz do Rio São João",
+      "en": "Ruins of the old arched bridge at the mouth of the São João River",
+      "es": "Ruinas del antiguo puente de arcos en la desembocadura del río São João"
+    }
+  },
+  "img/poi/casimiro-morro-sao-joao": {
+    "credito": "Raku90 · CC BY-SA 3.0",
+    "autor": "Raku90",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Sombras_na_areia.JPG",
+    "arquivo": "File:Sombras na areia.JPG",
+    "alt": {
+      "pt": "Morro de São João visto da Prainha de Barra de São João ao entardecer",
+      "en": "Morro de São João seen from Prainha beach, Barra de São João, at dusk",
+      "es": "Morro de São João visto desde la Prainha de Barra de São João al atardecer"
+    }
+  },
+  "img/poi/casimiro-museu": {
+    "credito": "Ariguimmares · CC BY-SA 3.0",
+    "autor": "Ariguimmares",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Capela_S%C3%A3o_Jo%C3%A3o_Batista.jpg",
+    "arquivo": "File:Capela São João Batista.jpg",
+    "alt": {
+      "pt": "Capela de São João Batista junto à praia, em Barra de São João",
+      "en": "São João Batista Chapel by the beach in Barra de São João",
+      "es": "Capilla de São João Batista junto a la playa, en Barra de São João"
+    }
+  },
+  "img/poi/casimiro-rio-macae": {
+    "credito": "TMbux · CC BY-SA 3.0",
+    "autor": "TMbux",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Rio_Maca%C3%A9_-_Cascata_-_panoramio_(7).jpg",
+    "arquivo": "File:Rio Macaé - Cascata - panoramio (7).jpg",
+    "alt": {
+      "pt": "Corredeira do Rio Macaé entre pedras e mata",
+      "en": "Rapids of the Macaé River among rocks and forest",
+      "es": "Rápidos del río Macaé entre rocas y bosque"
+    }
+  },
+  "img/poi/iguaba-lagoa": {
+    "credito": "DELANO CAMPELLO · CC BY-SA 3.0",
+    "autor": "DELANO CAMPELLO",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:PRAIA_DA_FARINHA_IGUABA_GRANDE_RIO_DE_JANEIRO_BRAZIL.jpg",
+    "arquivo": "File:PRAIA DA FARINHA IGUABA GRANDE RIO DE JANEIRO BRAZIL.jpg",
+    "alt": {
+      "pt": "Praia da Farinha, na margem da lagoa em Iguaba Grande",
+      "en": "Praia da Farinha, on the lagoon shore in Iguaba Grande",
+      "es": "Praia da Farinha, a orillas de la laguna en Iguaba Grande"
+    }
+  },
+  "img/poi/ostras-costazul": {
+    "credito": "Mateus Berteges · CC BY-SA 4.0",
+    "autor": "Mateus Berteges",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Costa_Azul_Rio_das_Ostras.jpg",
+    "arquivo": "File:Costa Azul Rio das Ostras.jpg",
+    "alt": {
+      "pt": "Formações rochosas e mar azul-turquesa na Praia de Costazul",
+      "en": "Rock formations and turquoise sea at Costazul beach",
+      "es": "Formaciones rocosas y mar turquesa en la playa de Costazul"
+    }
+  },
+  "img/poi/ostras-costoes": {
+    "credito": "Alexandre Machado Ferreira Junior · CC0",
+    "autor": "Alexandre Machado Ferreira Junior",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cost%C3%B5es_rochosos_1.jpg",
+    "arquivo": "File:Costões rochosos 1.jpg",
+    "alt": {
+      "pt": "Trilha entre vegetação de restinga até os costões rochosos à beira-mar",
+      "en": "Trail through coastal scrub down to the rocky shore",
+      "es": "Sendero entre vegetación costera hasta los acantilados rocosos junto al mar"
+    }
+  },
+  "img/poi/ostras-pier": {
+    "credito": "Fulviusbsas · CC BY-SA 3.0",
+    "autor": "Fulviusbsas",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:RioOstras3.jpg",
+    "arquivo": "File:RioOstras3.jpg",
+    "alt": {
+      "pt": "Píer avançando sobre o mar, praia com guarda-sóis e quiosques em primeiro plano",
+      "en": "Pier reaching into the sea, beach with umbrellas and kiosks in the foreground",
+      "es": "Muelle que se adentra en el mar, playa con sombrillas y quioscos en primer plano"
+    }
+  },
+  "img/poi/ostras-praca-da-baleia": {
+    "credito": "Thiago Freitas / MTur Destinos · Public domain",
+    "autor": "Thiago Freitas / MTur Destinos",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:ThiagoFreitas_Praca_da_Baleia_Rio_das_Ostras_RJ_(40160022185).jpg",
+    "arquivo": "File:ThiagoFreitas Praca da Baleia Rio das Ostras RJ (40160022185).jpg",
+    "alt": {
+      "pt": "Escultura de baleia jubarte em tamanho real na Praça da Baleia, sob céu azul",
+      "en": "Life-size humpback whale sculpture at Praça da Baleia, under blue sky",
+      "es": "Escultura de ballena jorobada a tamaño real en la Praça da Baleia, bajo cielo azul"
+    }
+  },
+  "img/poi/saquarema-itauna": {
+    "credito": "gspr · CC BY-SA 3.0",
+    "autor": "gspr",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ita%C3%BAna_Beach.jpg",
+    "arquivo": "File:Itaúna Beach.jpg",
+    "alt": {
+      "pt": "Praia de Itaúna em manhã de névoa, com o morro da igreja de Nazareth ao fundo",
+      "en": "Itaúna beach on a misty morning, with the Nazareth church hill in the distance",
+      "es": "Playa de Itaúna en una mañana con bruma, con el morro de la iglesia de Nazareth al fondo"
+    }
+  },
+  "img/poi/saquarema-lagoa": {
+    "credito": "Jessicathehuman · CC BY-SA 3.0",
+    "autor": "Jessicathehuman",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vista_de_Saquarema_-_Igreja_Nossa_Senhora_de_Nazareth.jpg",
+    "arquivo": "File:Vista de Saquarema - Igreja Nossa Senhora de Nazareth.jpg",
+    "alt": {
+      "pt": "Lagoa de Saquarema e a cidade vistas do morro da igreja, com serras ao fundo",
+      "en": "Saquarema Lagoon and town seen from the church hill, with mountains behind",
+      "es": "Laguna de Saquarema y la ciudad vistas desde el morro de la iglesia, con sierras al fondo"
+    }
   },
   "img/poi/saquarema-nazareth": {
     "credito": "Cleo Fernando Martins Machado · CC BY-SA 3.0",
     "autor": "Cleo Fernando Martins Machado",
     "licenca": "CC BY-SA 3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Igreja_de_N%C2%AA_Sra_de_Nazareth,_Saquarema_-_Entardecer.jpg",
-    "arquivo": "File:Igreja de Nª Sra de Nazareth, Saquarema - Entardecer.jpg"
-  },
-  "img/poi/saquarema-lagoa": {
-    "credito": "Otrebor · Public domain",
-    "autor": "Otrebor",
-    "licenca": "Public domain",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Barra_da_Lagoa_de_Saquarema.JPG",
-    "arquivo": "File:Barra da Lagoa de Saquarema.JPG"
+    "arquivo": "File:Igreja de Nª Sra de Nazareth, Saquarema - Entardecer.jpg",
+    "alt": {
+      "pt": "Igreja de Nossa Senhora de Nazareth ao entardecer",
+      "en": "Our Lady of Nazareth Church at dusk",
+      "es": "Iglesia de Nuestra Señora de Nazareth al atardecer"
+    }
   },
   "img/poi/saquarema-vila": {
     "credito": "Cleo Fernando Martins Machado · CC BY-SA 3.0",
     "autor": "Cleo Fernando Martins Machado",
     "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Saquarema009.jpg",
-    "arquivo": "File:Saquarema009.jpg"
-  },
-  "img/poi/silva-jardim-poco-das-antas": {
-    "credito": "Wilfredor · CC BY-SA 4.0",
-    "autor": "Wilfredor",
-    "licenca": "CC BY-SA 4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Leontopithecus_rosalia_in_S%C3%A3o_Paulo_Zoo.jpg",
-    "arquivo": "File:Leontopithecus rosalia in São Paulo Zoo.jpg"
+    "pagina": "https://commons.wikimedia.org/wiki/File:P%C3%B4r_do_Sol_rochedos_de_Saquarema.jpg",
+    "arquivo": "File:Pôr do Sol rochedos de Saquarema.jpg",
+    "alt": {
+      "pt": "Rochedos da Praia da Vila ao pôr do sol, com ondas e nuvens alaranjadas",
+      "en": "Praia da Vila rocks at sunset, with waves and orange-lit clouds",
+      "es": "Rocas de la Praia da Vila al atardecer, con olas y nubes anaranjadas"
+    }
   },
   "img/poi/silva-jardim-aldeia-velha": {
-    "credito": "Maragato1976 · CC BY-SA 3.0",
-    "autor": "Maragato1976",
-    "licenca": "CC BY-SA 3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Aldeia_Velha_de_Monsanto_.jpg",
-    "arquivo": "File:Aldeia Velha de Monsanto .jpg"
+    "credito": "Rafael Deminicis · CC BY-SA 4.0",
+    "autor": "Rafael Deminicis",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:RPPN_Aldeia_Velha2.jpg",
+    "arquivo": "File:RPPN Aldeia Velha2.jpg",
+    "alt": {
+      "pt": "Rio de água clara correndo entre pedras arredondadas em Aldeia Velha",
+      "en": "Clear river flowing between rounded boulders in Aldeia Velha",
+      "es": "Río de agua clara corriendo entre piedras redondeadas en Aldeia Velha"
+    }
+  },
+  "img/poi/silva-jardim-poco-das-antas": {
+    "credito": "Julio Morais Fine Art · CC BY-SA 4.0",
+    "autor": "Julio Morais Fine Art",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mico-le%C3%A3o-dourado-REBIO_de_Po%C3%A7o_das_Antas-Julio_Morais_Fine_Art(004).jpg",
+    "arquivo": "File:Mico-leão-dourado-REBIO de Poço das Antas-Julio Morais Fine Art(004).jpg",
+    "alt": {
+      "pt": "Mico-leão-dourado num galho na mata da Reserva Biológica de Poço das Antas",
+      "en": "Golden lion tamarin on a branch in the Poço das Antas Biological Reserve",
+      "es": "Tití león dorado en una rama en la Reserva Biológica de Poço das Antas"
+    }
   }
 }

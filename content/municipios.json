@@ -20,11 +20,11 @@
     "hero": {
       "src": "/img/mun/araruama",
       "alt": {
-        "pt": "Vista de Araruama",
-        "en": "View of Araruama",
-        "es": "Vista de Araruama"
+        "pt": "Praia de areia branca com coqueiros às margens da Lagoa de Araruama",
+        "en": "White-sand beach with coconut palms on the shore of Araruama Lagoon",
+        "es": "Playa de arena blanca con cocoteros a orillas de la Laguna de Araruama"
       },
-      "credito": "Vinícius Agner · CC BY-SA 3.0"
+      "credito": "Marinelson Almeida · CC BY 2.0"
     },
     "audio": {
       "pt": {
@@ -73,9 +73,9 @@
     "hero": {
       "src": "/img/mun/armacao-dos-buzios",
       "alt": {
-        "pt": "Vista de Armação dos Búzios",
-        "en": "View of Armação dos Búzios",
-        "es": "Vista de Armação dos Búzios"
+        "pt": "Enseada da Praia de João Fernandes vista do alto do morro, em Búzios",
+        "en": "João Fernandes Beach cove seen from the hilltop in Búzios",
+        "es": "Ensenada de la Playa de João Fernandes vista desde lo alto del cerro, Búzios"
       },
       "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0"
     },
@@ -126,11 +126,11 @@
     "hero": {
       "src": "/img/mun/arraial-do-cabo",
       "alt": {
-        "pt": "Vista de Arraial do Cabo",
-        "en": "View of Arraial do Cabo",
-        "es": "Vista de Arraial do Cabo"
+        "pt": "Mar azul-turquesa do Pontal do Atalaia visto do alto, com ilhas ao fundo",
+        "en": "Turquoise sea at Pontal do Atalaia seen from above, islands behind",
+        "es": "Mar turquesa del Pontal do Atalaia visto desde lo alto, con islas al fondo"
       },
-      "credito": "Eduardo P · Public domain"
+      "credito": "Antônio André Lopes de Oliveira · CC BY-SA 4.0"
     },
     "audio": {
       "pt": {
@@ -179,11 +179,11 @@
     "hero": {
       "src": "/img/mun/cabo-frio",
       "alt": {
-        "pt": "Vista de Cabo Frio",
-        "en": "View of Cabo Frio",
-        "es": "Vista de Cabo Frio"
+        "pt": "Vista aérea de Cabo Frio com a Praia do Forte e o Canal do Itajuru",
+        "en": "Aerial view of Cabo Frio with Praia do Forte and the Itajuru Canal",
+        "es": "Vista aérea de Cabo Frío con la Praia do Forte y el Canal de Itajuru"
       },
-      "credito": "Ezarate · CC BY-SA 3.0"
+      "credito": "Luiz Felipe Lage Levy · CC BY-SA 4.0"
     },
     "audio": {
       "pt": {
@@ -230,13 +230,13 @@
       "es": "Un volcán extinto de 800 metros, dos ríos y el nombre de un poeta."
     },
     "hero": {
-      "src": "/img/pendente",
+      "src": "/img/mun/casimiro-de-abreu",
       "alt": {
-        "pt": "Vista de Casimiro de Abreu",
-        "en": "View of Casimiro de Abreu",
-        "es": "Vista de Casimiro de Abreu"
+        "pt": "Praia de Barra de São João com pedras e mar azul",
+        "en": "Barra de São João beach with rocks and blue sea",
+        "es": "Playa de Barra de São João con rocas y mar azul"
       },
-      "credito": "Foto ainda não disponível"
+      "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0"
     },
     "audio": {
       "pt": {
@@ -283,13 +283,13 @@
       "es": "Cinco senderos, una sierra y la piedra donde se salaba el pescado antes de que hubiera neveras."
     },
     "hero": {
-      "src": "/img/pendente",
+      "src": "/img/mun/iguaba-grande",
       "alt": {
-        "pt": "Vista de Iguaba Grande",
-        "en": "View of Iguaba Grande",
-        "es": "Vista de Iguaba Grande"
+        "pt": "Orla da Lagoa de Araruama em Iguaba Grande, com areia clara e coqueiros",
+        "en": "Araruama Lagoon shore in Iguaba Grande, with pale sand and palm trees",
+        "es": "Orilla de la Laguna de Araruama en Iguaba Grande, con arena clara y cocoteros"
       },
-      "credito": "Foto ainda não disponível"
+      "credito": "Marinelson Almeida · CC BY 2.0"
     },
     "audio": {
       "pt": {
@@ -338,11 +338,11 @@
     "hero": {
       "src": "/img/mun/rio-das-ostras",
       "alt": {
-        "pt": "Vista de Rio das Ostras",
-        "en": "View of Rio das Ostras",
-        "es": "Vista de Rio das Ostras"
+        "pt": "Praia de Rio das Ostras vista do alto do costão, com orla, casas e mar com ondas",
+        "en": "Rio das Ostras beach seen from the headland, with seafront, houses and waves",
+        "es": "Playa de Rio das Ostras vista desde el promontorio, con malecón, casas y olas"
       },
-      "credito": "Yasmin Rollemberg · CC BY-SA 3.0"
+      "credito": "Fulviusbsas · CC BY-SA 3.0"
     },
     "audio": {
       "pt": {
@@ -391,11 +391,11 @@
     "hero": {
       "src": "/img/mun/sao-pedro-da-aldeia",
       "alt": {
-        "pt": "Vista de São Pedro da Aldeia",
-        "en": "View of São Pedro da Aldeia",
-        "es": "Vista de São Pedro da Aldeia"
+        "pt": "Orla da lagoa em São Pedro da Aldeia com cata-vento, ciclovia e céu azul",
+        "en": "Lagoon waterfront in São Pedro da Aldeia with windmill, bike path and blue sky",
+        "es": "Malecón de la laguna en São Pedro da Aldeia con molino de viento, ciclovía y cielo azul"
       },
-      "credito": "Luis Francisco de Souza da Silveira · CC BY-SA 4.0"
+      "credito": "Rômulo Gama Ferreira · CC BY 2.0"
     },
     "audio": {
       "pt": {
@@ -444,9 +444,9 @@
     "hero": {
       "src": "/img/mun/saquarema",
       "alt": {
-        "pt": "Vista de Saquarema",
-        "en": "View of Saquarema",
-        "es": "Vista de Saquarema"
+        "pt": "Foz da lagoa de Saquarema no mar",
+        "en": "Mouth of the Saquarema lagoon into the sea",
+        "es": "Desembocadura de la laguna de Saquarema en el mar"
       },
       "credito": "Roger Brock · CC BY-SA 4.0"
     },
@@ -495,13 +495,13 @@
       "es": "Ningún otro municipio del estado tiene tantas reservas privadas de patrimonio natural."
     },
     "hero": {
-      "src": "/img/pendente",
+      "src": "/img/mun/silva-jardim",
       "alt": {
-        "pt": "Vista de Silva Jardim",
-        "en": "View of Silva Jardim",
-        "es": "Vista de Silva Jardim"
+        "pt": "Serras cobertas de Mata Atlântica atrás de gramado e palmeiras em Silva Jardim",
+        "en": "Atlantic Forest-covered mountains behind a lawn and palm trees in Silva Jardim",
+        "es": "Sierras cubiertas de Mata Atlántica detrás de un prado y palmeras en Silva Jardim"
       },
-      "credito": "Foto ainda não disponível"
+      "credito": "Rafael Deminicis · CC BY-SA 4.0"
     },
     "audio": {
       "pt": {

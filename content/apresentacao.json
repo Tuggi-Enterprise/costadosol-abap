@@ -1,0 +1,407 @@
+[
+  {
+    "municipio": "araruama",
+    "descricao": {
+      "pt": "Araruama fica na margem da Lagoa de Araruama, a maior lagoa de água salgada da América Latina. Nas praias da lagoa a água é morna e transparente, procurada para kitesurf, windsurf e jet-ski. No distrito de Praia Seca, lagoa e oceano correm lado a lado, e no Corpus Christi os moradores cobrem as ruas do centro com tapetes de sal.",
+      "en": "Araruama sits on the shore of the Araruama Lagoon, the largest saltwater lagoon in Latin America. Its lagoon beaches have warm, clear water, sought out for kitesurfing, windsurfing and jet-skiing. In the district of Praia Seca, lagoon and ocean run side by side, and at Corpus Christi residents cover the streets of the centre with carpets of salt.",
+      "es": "Araruama está a orillas de la Laguna de Araruama, la mayor laguna de agua salada de América Latina. En sus playas de laguna el agua es tibia y transparente, buscada para kitesurf, windsurf y moto de agua. En el distrito de Praia Seca, laguna y océano corren lado a lado, y en Corpus Christi los vecinos cubren las calles del centro con alfombras de sal."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/araruama/",
+      "https://www.turismo.rj.gov.br/destino/iguaba-grande/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/araruama-1",
+        "alt": {
+          "pt": "Faixa de areia avançando sobre a Lagoa de Araruama",
+          "en": "Sandbar stretching into Araruama Lagoon",
+          "es": "Franja de arena que avanza sobre la Laguna de Araruama"
+        },
+        "credito": "Rômulo Gama Ferreira · CC BY 2.0"
+      },
+      {
+        "src": "/img/gal/araruama-2",
+        "alt": {
+          "pt": "Pôr do sol na Lagoa de Araruama emoldurado por folhas de coqueiro",
+          "en": "Sunset over Araruama Lagoon framed by palm fronds",
+          "es": "Puesta de sol en la Laguna de Araruama enmarcada por hojas de cocotero"
+        },
+        "credito": "Juh oliveira87 · CC BY-SA 3.0"
+      },
+      {
+        "src": "/img/gal/araruama-3",
+        "alt": {
+          "pt": "Pescador caminhando nas águas rasas da Lagoa de Araruama",
+          "en": "Fisherman wading in the shallow waters of Araruama Lagoon",
+          "es": "Pescador caminando en las aguas bajas de la Laguna de Araruama"
+        },
+        "credito": "Ebengtso · CC BY-SA 3.0"
+      }
+    ]
+  },
+  {
+    "municipio": "armacao-dos-buzios",
+    "descricao": {
+      "pt": "Armação dos Búzios é uma península com 23 praias ao redor. Era uma vila de pescadores até a visita de Brigitte Bardot, nos anos 1960, e os barcos de pesca seguem na orla que leva o nome dela. Há enseada calma na Ferradura, mar de surfe em Geribá, e lojas, bares e restaurantes na Rua das Pedras.",
+      "en": "Armação dos Búzios is a peninsula ringed by 23 beaches. It was a fishing village until Brigitte Bardot’s visit in the 1960s, and fishing boats still line the waterfront named after her. There is a sheltered cove at Ferradura, surf at Geribá, and shops, bars and restaurants along Rua das Pedras.",
+      "es": "Armação dos Búzios es una península rodeada de 23 playas. Era un pueblo de pescadores hasta la visita de Brigitte Bardot en los años 1960, y los barcos de pesca siguen en el paseo que lleva su nombre. Hay una ensenada tranquila en Ferradura, olas para surf en Geribá, y tiendas, bares y restaurantes en la Rua das Pedras."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/armacao-dos-buzios/",
+      "https://turismo.buzios.rj.gov.br/praias/praia-da-armacao/",
+      "https://turismo.buzios.rj.gov.br/praias/praia-da-ferradura/",
+      "https://turismo.buzios.rj.gov.br/praias/praia-de-geriba/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/armacao-dos-buzios-1",
+        "alt": {
+          "pt": "Praia Brava de Búzios vista do alto, com casas na encosta",
+          "en": "Praia Brava in Búzios seen from above, with houses on the hillside",
+          "es": "Praia Brava de Búzios vista desde lo alto, con casas en la ladera"
+        },
+        "credito": "Juh oliveira87 · CC BY-SA 3.0"
+      },
+      {
+        "src": "/img/gal/armacao-dos-buzios-2",
+        "alt": {
+          "pt": "Barcos de pesca na Praia da Armação com o casario de Búzios ao fundo",
+          "en": "Fishing boats at Armação Beach with Búzios houses behind",
+          "es": "Barcas de pesca en la Playa de Armação con el caserío de Búzios al fondo"
+        },
+        "credito": "Leandrobarr · CC BY-SA 3.0"
+      },
+      {
+        "src": "/img/gal/armacao-dos-buzios-3",
+        "alt": {
+          "pt": "Panorama da Praia de Manguinhos com barcos ancorados",
+          "en": "Panorama of Manguinhos Beach with anchored boats",
+          "es": "Panorama de la Playa de Manguinhos con barcas fondeadas"
+        },
+        "credito": "Patrick Montenegro · CC BY-SA 4.0"
+      }
+    ]
+  },
+  {
+    "municipio": "arraial-do-cabo",
+    "descricao": {
+      "pt": "Arraial do Cabo é conhecida como Capital do Mergulho: são cerca de 30 pontos de mergulho em águas frias e transparentes. Da Praia dos Anjos, onde fica o Museu Oceanográfico, saem os barcos para a Praia do Farol, na Ilha do Cabo Frio, com desembarque controlado. Outras praias só se alcançam a pé ou pelo mar, como a do Forno.",
+      "en": "Arraial do Cabo is known as the Diving Capital, with around 30 dive sites in cold, clear water. Boats leave from Praia dos Anjos, home to the Oceanographic Museum, for Praia do Farol on Cabo Frio Island, where landings are controlled. Other beaches can only be reached on foot or by sea, such as Praia do Forno.",
+      "es": "Arraial do Cabo es conocida como la Capital del Buceo, con cerca de 30 puntos de buceo en aguas frías y transparentes. Desde la Praia dos Anjos, donde está el Museo Oceanográfico, salen los barcos hacia la Praia do Farol, en la Isla de Cabo Frio, con desembarco controlado. Otras playas solo se alcanzan a pie o por mar, como la Praia do Forno."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/arraial-do-cabo/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/arraial-do-cabo-1",
+        "alt": {
+          "pt": "Areia branca e mar azul da Praia Grande de Arraial do Cabo",
+          "en": "White sand and blue sea at Praia Grande, Arraial do Cabo",
+          "es": "Arena blanca y mar azul de la Praia Grande de Arraial do Cabo"
+        },
+        "credito": "Larissa Fraga · CC BY 3.0"
+      },
+      {
+        "src": "/img/gal/arraial-do-cabo-2",
+        "alt": {
+          "pt": "Entrada da Gruta Azul sob o costão da Ilha do Cabo Frio",
+          "en": "Entrance to the Blue Grotto beneath the cliffs of Cabo Frio Island",
+          "es": "Entrada de la Gruta Azul bajo los acantilados de la Isla de Cabo Frío"
+        },
+        "credito": "Wilfredor · CC0"
+      },
+      {
+        "src": "/img/gal/arraial-do-cabo-3",
+        "alt": {
+          "pt": "Sol refletido no mar visto da Trilha do Vigia, na Praia Grande",
+          "en": "Sun reflecting on the sea seen from the Vigia Trail, Praia Grande",
+          "es": "Sol reflejado en el mar visto desde el Sendero del Vigia, Praia Grande"
+        },
+        "credito": "Adriane Rado · CC BY-SA 4.0"
+      }
+    ]
+  },
+  {
+    "municipio": "cabo-frio",
+    "descricao": {
+      "pt": "Cabo Frio é a sétima cidade mais antiga do Brasil. O Forte São Mateus, na entrada do Canal do Itajuru, é o monumento histórico mais antigo da região. A Praia do Forte tem sete quilômetros de areia branca e fina, e o Peró, com certificação Bandeira Azul, tem dunas abertas ao vento. A cidade tem aeroporto e rodoviária.",
+      "en": "Cabo Frio is the seventh oldest city in Brazil. São Mateus Fort, at the mouth of the Itajuru Channel, is the region’s oldest historic monument. Praia do Forte has seven kilometres of fine white sand, and Peró, a Blue Flag beach, has dunes open to the wind. The city has an airport and a bus terminal.",
+      "es": "Cabo Frio es la séptima ciudad más antigua de Brasil. El Fuerte São Mateus, en la entrada del Canal do Itajuru, es el monumento histórico más antiguo de la región. La Praia do Forte tiene siete kilómetros de arena blanca y fina, y Peró, con certificación Bandera Azul, tiene dunas abiertas al viento. La ciudad cuenta con aeropuerto y terminal de autobuses."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/cabo-frio/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/cabo-frio-1",
+        "alt": {
+          "pt": "Dunas brancas da Praia das Dunas com ilhas ao fundo",
+          "en": "White dunes at Praia das Dunas with islands behind",
+          "es": "Dunas blancas de la Praia das Dunas con islas al fondo"
+        },
+        "credito": "Arielom10 · CC BY-SA 4.0"
+      },
+      {
+        "src": "/img/gal/cabo-frio-2",
+        "alt": {
+          "pt": "Passarela de madeira entre a vegetação rumo à Praia do Forte",
+          "en": "Wooden boardwalk through vegetation toward Praia do Forte",
+          "es": "Pasarela de madera entre la vegetación hacia la Praia do Forte"
+        },
+        "credito": "Anabel Kovacs · CC BY-SA 4.0"
+      },
+      {
+        "src": "/img/gal/cabo-frio-3",
+        "alt": {
+          "pt": "Costão rochoso e ilha junto à Praia do Forte",
+          "en": "Rocky shore and island next to Praia do Forte",
+          "es": "Costa rocosa e isla junto a la Praia do Forte"
+        },
+        "credito": "Marinelson Almeida · CC BY 2.0"
+      }
+    ]
+  },
+  {
+    "municipio": "casimiro-de-abreu",
+    "descricao": {
+      "pt": "Casimiro de Abreu leva o nome do poeta romântico Casimiro José Marques de Abreu, cuja memória é preservada em museu. O Morro de São João, vulcão extinto de 800 metros, domina a paisagem, e o Rio Macaé, com quedas d’água e corredeiras, recebe rafting. Na foz do Rio São João, a vila de Barra de São João guarda uma capela da primeira metade do século XVII.",
+      "en": "Casimiro de Abreu is named after the Romantic poet Casimiro José Marques de Abreu, whose memory is kept in a museum. Morro de São João, an extinct volcano 800 metres high, dominates the landscape, and the Macaé River, with its waterfalls and rapids, is used for rafting. At the mouth of the São João River, the village of Barra de São João keeps a chapel from the first half of the 17th century.",
+      "es": "Casimiro de Abreu lleva el nombre del poeta romántico Casimiro José Marques de Abreu, cuya memoria se conserva en un museo. El Morro de São João, volcán extinto de 800 metros, domina el paisaje, y el río Macaé, con cascadas y rápidos, recibe rafting. En la desembocadura del río São João, el pueblo de Barra de São João conserva una capilla de la primera mitad del siglo XVII."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/casimiro-de-abreu/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/casimiro-de-abreu-1",
+        "alt": {
+          "pt": "Pôr do sol sobre o Rio São João, em Barra de São João",
+          "en": "Sunset over the São João River in Barra de São João",
+          "es": "Puesta de sol sobre el río São João, en Barra de São João"
+        },
+        "credito": "alfredo.figueiredo · CC BY-SA 3.0"
+      },
+      {
+        "src": "/img/gal/casimiro-de-abreu-2",
+        "alt": {
+          "pt": "Cachoeira da Fumaça no Rio Macaé, na serra de Casimiro de Abreu",
+          "en": "Fumaça Waterfall on the Macaé River, in the Casimiro de Abreu highlands",
+          "es": "Cascada da Fumaça en el río Macaé, en la sierra de Casimiro de Abreu"
+        },
+        "credito": "TMbux · CC BY-SA 3.0"
+      },
+      {
+        "src": "/img/gal/casimiro-de-abreu-3",
+        "alt": {
+          "pt": "Barcos de pesca na foz do Rio São João ao entardecer",
+          "en": "Fishing boats at the mouth of the São João River at dusk",
+          "es": "Barcas de pesca en la desembocadura del río São João al atardecer"
+        },
+        "credito": "Raku90 · CC BY-SA 3.0"
+      }
+    ]
+  },
+  {
+    "municipio": "iguaba-grande",
+    "descricao": {
+      "pt": "Iguaba Grande fica na margem da Lagoa de Araruama, com águas calmas para stand-up paddle, canoagem e jet-ski. O município tem cinco trilhas, e a da Serra de Sapeatiba chega a cerca de 350 metros de altitude. Na Pedra da Salga, salina natural, o peixe era limpo, secado e salgado, e a Ilha de Santa Rita guarda um oratório de 1917.",
+      "en": "Iguaba Grande sits on the shore of the Araruama Lagoon, with calm water for stand-up paddle, canoeing and jet-skiing. The municipality has five trails, and the one up the Sapeatiba range reaches about 350 metres. On Pedra da Salga, a natural salt flat, fish was once cleaned, dried and salted, and Santa Rita Island holds an oratory from 1917.",
+      "es": "Iguaba Grande está a orillas de la Laguna de Araruama, con aguas tranquilas para stand-up paddle, canotaje y moto de agua. El municipio tiene cinco senderos, y el de la Sierra de Sapeatiba llega a unos 350 metros de altitud. En la Pedra da Salga, salina natural, el pescado se limpiaba, secaba y salaba, y la Isla de Santa Rita guarda un oratorio de 1917."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/iguaba-grande/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/iguaba-grande-1",
+        "alt": {
+          "pt": "Capela de Nossa Senhora da Conceição, branca com detalhes azuis, entre palmeiras",
+          "en": "Chapel of Our Lady of the Conception, white with blue trim, among palm trees",
+          "es": "Capilla de Nuestra Señora de la Concepción, blanca con detalles azules, entre palmeras"
+        },
+        "credito": "Marinelson Almeida · CC BY 2.0"
+      },
+      {
+        "src": "/img/gal/iguaba-grande-2",
+        "alt": {
+          "pt": "Margem da Lagoa de Araruama com água rasa e transparente, pedras e casuarinas",
+          "en": "Araruama Lagoon edge with clear shallow water, rocks and casuarina trees",
+          "es": "Orilla de la Laguna de Araruama con agua clara y poco profunda, rocas y casuarinas"
+        },
+        "credito": "Marinelson Almeida · CC BY 2.0"
+      },
+      {
+        "src": "/img/gal/iguaba-grande-3",
+        "alt": {
+          "pt": "Pôr do sol sobre a lagoa em Ubás, com um barco de madeira encalhado na areia",
+          "en": "Sunset over the lagoon at Ubás, with a wooden boat resting on the sand",
+          "es": "Atardecer sobre la laguna en Ubás, con un barco de madera varado en la arena"
+        },
+        "credito": "Newton paz peres · CC BY-SA 3.0"
+      }
+    ]
+  },
+  {
+    "municipio": "rio-das-ostras",
+    "descricao": {
+      "pt": "Rio das Ostras tem 28 quilômetros de litoral e 15 praias de águas calmas, separadas por costões rochosos. Costazul, com 2,3 quilômetros, reúne surfistas e pescadores e tem píer próprio. Na Praça da Baleia, uma jubarte de 20 metros revestida de bronze homenageia os cetáceos, e a cidade recebe o Rio das Ostras Jazz & Blues Festival.",
+      "en": "Rio das Ostras has 28 kilometres of coastline and 15 calm-water beaches, divided by rocky headlands. Costazul, 2.3 kilometres long, draws surfers and anglers and has its own pier. In Praça da Baleia, a 20-metre bronze-clad humpback whale pays tribute to cetaceans, and the city hosts the Rio das Ostras Jazz & Blues Festival.",
+      "es": "Rio das Ostras tiene 28 kilómetros de litoral y 15 playas de aguas tranquilas, separadas por costas rocosas. Costazul, de 2,3 kilómetros, reúne a surfistas y pescadores y tiene muelle propio. En la Praça da Baleia, una ballena jorobada de 20 metros revestida de bronce rinde homenaje a los cetáceos, y la ciudad acoge el Rio das Ostras Jazz & Blues Festival."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/rio-das-ostras/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/rio-das-ostras-1",
+        "alt": {
+          "pt": "Escuna de passeio ancorada diante da Ilha dos Trinta Reis, coberta de mata",
+          "en": "Tour schooner anchored off the forested Ilha dos Trinta Reis",
+          "es": "Goleta de paseo anclada frente a la Ilha dos Trinta Reis, cubierta de bosque"
+        },
+        "credito": "Thiago Freitas / MTur Destinos · Public domain"
+      },
+      {
+        "src": "/img/gal/rio-das-ostras-2",
+        "alt": {
+          "pt": "Casarão colonial branco com janelas azuis da Casa de Cultura Bento Costa Júnior",
+          "en": "White colonial house with blue windows, Bento Costa Júnior Culture House",
+          "es": "Casona colonial blanca con ventanas azules de la Casa de Cultura Bento Costa Júnior"
+        },
+        "credito": "Thiago Freitas / MTur Destinos · Public domain"
+      },
+      {
+        "src": "/img/gal/rio-das-ostras-3",
+        "alt": {
+          "pt": "Posto de salva-vidas de madeira sobre a restinga ao entardecer, com mar ao fundo",
+          "en": "Wooden lifeguard tower on the coastal scrub at dusk, with sea behind",
+          "es": "Puesto de socorrista de madera sobre la vegetación costera al atardecer, con el mar al fondo"
+        },
+        "credito": "Rômulo Gama Ferreira · CC BY 2.0"
+      }
+    ]
+  },
+  {
+    "municipio": "sao-pedro-da-aldeia",
+    "descricao": {
+      "pt": "São Pedro da Aldeia fica na margem da lagoa, onde vento forte e água calma favorecem kitesurf, windsurf e vela, sobretudo na Praia do Sudoeste. A Igreja Matriz de São Pedro, inaugurada em 1783, serviu como colégio jesuíta. A Casa da Flor foi erguida a partir de 1912 por Gabriel Joaquim dos Santos com objetos achados, e o Museu da Aviação Naval fica na cidade.",
+      "en": "São Pedro da Aldeia lies on the lagoon shore, where strong wind and calm water suit kitesurfing, windsurfing and sailing, especially at Praia do Sudoeste. The São Pedro Mother Church, opened in 1783, once served as a Jesuit school. Casa da Flor was built from 1912 onwards by Gabriel Joaquim dos Santos out of found objects, and the city is home to the Naval Aviation Museum.",
+      "es": "São Pedro da Aldeia está a orillas de la laguna, donde el viento fuerte y el agua tranquila favorecen el kitesurf, el windsurf y la vela, sobre todo en la Praia do Sudoeste. La Iglesia Matriz de São Pedro, inaugurada en 1783, fue colegio jesuita. La Casa da Flor fue construida desde 1912 por Gabriel Joaquim dos Santos con objetos encontrados, y la ciudad alberga el Museo de Aviación Naval."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/sao-pedro-da-aldeia/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/sao-pedro-da-aldeia-1",
+        "alt": {
+          "pt": "Pôr do sol sobre a lagoa na praia do centro, com barco e píer ao fundo",
+          "en": "Sunset over the lagoon at the town beach, with a boat and pier behind",
+          "es": "Atardecer sobre la laguna en la playa del centro, con barco y muelle al fondo"
+        },
+        "credito": "Tiagosilvaphotography · CC BY-SA 4.0"
+      },
+      {
+        "src": "/img/gal/sao-pedro-da-aldeia-2",
+        "alt": {
+          "pt": "Deque de madeira sobre água azul da lagoa, areia clara e céu sem nuvens",
+          "en": "Wooden deck over the lagoon's blue water, pale sand and cloudless sky",
+          "es": "Muelle de madera sobre el agua azul de la laguna, arena clara y cielo despejado"
+        },
+        "credito": "Edwiges Lopes Tavares · CC BY-SA 4.0"
+      },
+      {
+        "src": "/img/gal/sao-pedro-da-aldeia-3",
+        "alt": {
+          "pt": "Sítio histórico tombado: igreja branca com torre e casario ao redor da praça",
+          "en": "Listed historic district: white church with bell tower and surrounding square",
+          "es": "Sitio histórico protegido: iglesia blanca con torre y casas alrededor de la plaza"
+        },
+        "credito": "Túllio F · CC BY-SA 4.0"
+      }
+    ]
+  },
+  {
+    "municipio": "saquarema",
+    "descricao": {
+      "pt": "Saquarema é conhecida como Capital Nacional do Surf e é a única cidade do mundo a receber as três divisões do circuito da WSL; a etapa principal, na Praia de Itaúna, está garantida até 2028. Na rocha entre a praia e a lagoa fica a Igreja Nossa Senhora de Nazareth, cujo Círio é o mais antigo do Brasil. São cerca de 30 quilômetros de praias e três lagoas.",
+      "en": "Saquarema is known as Brazil’s National Surf Capital and is the only city in the world to host all three divisions of the WSL tour; the main event, at Itaúna Beach, is secured until 2028. On the rock between beach and lagoon stands the Church of Nossa Senhora de Nazareth, whose Círio is the oldest in Brazil. The city has some 30 kilometres of beaches and three lagoons.",
+      "es": "Saquarema es conocida como la Capital Nacional del Surf y es la única ciudad del mundo que recibe las tres divisiones del circuito de la WSL; la etapa principal, en la Playa de Itaúna, está garantizada hasta 2028. Sobre la roca entre la playa y la laguna está la Iglesia de Nossa Senhora de Nazareth, cuyo Círio es el más antiguo de Brasil. Son unos 30 kilómetros de playas y tres lagunas."
+    },
+    "fontes": [
+      "https://www.saquarema.rj.gov.br/turismo/",
+      "https://www.saquarema.rj.gov.br/saquarema-garante-etapa-do-mundial-de-surfe-ate-2028/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/saquarema-1",
+        "alt": {
+          "pt": "Praia lotada de água verde-clara em Saquarema, com a cidade e morros ao fundo",
+          "en": "Crowded beach with pale green water in Saquarema, town and hills behind",
+          "es": "Playa concurrida de agua verde claro en Saquarema, con la ciudad y cerros al fondo"
+        },
+        "credito": "JORGE PAQUETA · CC BY-SA 3.0"
+      },
+      {
+        "src": "/img/gal/saquarema-2",
+        "alt": {
+          "pt": "Centro de Saquarema e a praia vistos do alto do morro da igreja de Nazareth",
+          "en": "Saquarema town centre and beach seen from the Nazareth church hill",
+          "es": "Centro de Saquarema y la playa vistos desde lo alto del morro de la iglesia"
+        },
+        "credito": "Cesar Cardoso · CC BY 2.0"
+      },
+      {
+        "src": "/img/gal/saquarema-3",
+        "alt": {
+          "pt": "Igreja de Nazareth no alto do costão, com ondas quebrando nas pedras",
+          "en": "Nazareth church atop the rocky headland, with waves breaking on the rocks",
+          "es": "Iglesia de Nazareth en lo alto del promontorio, con olas rompiendo en las rocas"
+        },
+        "credito": "Rodrigo Alves · CC BY-SA 4.0"
+      }
+    ]
+  },
+  {
+    "municipio": "silva-jardim",
+    "descricao": {
+      "pt": "Silva Jardim é o município do estado com mais Reservas Particulares do Patrimônio Natural e abriga a Reserva Biológica Poço das Antas, conhecida pela preservação do mico-leão-dourado. O distrito de Aldeia Velha, ao pé da Serra do Mar e a menos de três horas do centro do Rio, é cortado por dois rios cristalinos. Há cachoeiras, trilhas, rapel e cavalgada.",
+      "en": "Silva Jardim is the municipality with the most private natural heritage reserves in the state, and home to the Poço das Antas Biological Reserve, known for protecting the golden lion tamarin. The district of Aldeia Velha, at the foot of the Serra do Mar and less than three hours from central Rio, is crossed by two crystal-clear rivers. There are waterfalls, trails, rappelling and horseback riding.",
+      "es": "Silva Jardim es el municipio del estado con más reservas privadas de patrimonio natural y alberga la Reserva Biológica Poço das Antas, conocida por la preservación del tití león dorado. El distrito de Aldeia Velha, al pie de la Serra do Mar y a menos de tres horas del centro de Río, está atravesado por dos ríos cristalinos. Hay cascadas, senderos, rapel y cabalgatas."
+    },
+    "fontes": [
+      "https://www.turismo.rj.gov.br/destino/silva-jardim/"
+    ],
+    "galeria": [
+      {
+        "src": "/img/gal/silva-jardim-1",
+        "alt": {
+          "pt": "Interior de Mata Atlântica densa, com troncos finos e folhagem verde",
+          "en": "Dense Atlantic Forest interior with slender trunks and green foliage",
+          "es": "Interior de Mata Atlántica densa, con troncos finos y follaje verde"
+        },
+        "credito": "Rafael Deminicis · CC BY-SA 4.0"
+      },
+      {
+        "src": "/img/gal/silva-jardim-2",
+        "alt": {
+          "pt": "Mico-leão-dourado vocalizando num galho, fotografado na REBIO Poço das Antas",
+          "en": "Golden lion tamarin calling from a branch, photographed at Poço das Antas reserve",
+          "es": "Tití león dorado vocalizando en una rama, fotografiado en la reserva Poço das Antas"
+        },
+        "credito": "Bart van Dorp · CC BY 2.0"
+      },
+      {
+        "src": "/img/gal/silva-jardim-3",
+        "alt": {
+          "pt": "Jumento à sombra de árvore em pasto verde com morros ao fundo, em Aldeia Velha",
+          "en": "Donkey in the shade of a tree on green pasture with hills behind, Aldeia Velha",
+          "es": "Burro a la sombra de un árbol en un prado verde con cerros al fondo, Aldeia Velha"
+        },
+        "credito": "Karen Campbell Tyler-Williams · CC BY-SA 4.0"
+      }
+    ]
+  }
+]

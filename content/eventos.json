@@ -1,0 +1,271 @@
+[
+  {
+    "id": "festival-sabores-cabo-frio-2026",
+    "municipio": "cabo-frio",
+    "inicio": "2026-09-04",
+    "fim": "2026-10-04",
+    "data_confirmada": true,
+    "tipo": "gastronomia",
+    "nome": {
+      "pt": "Festival Sabores de Cabo Frio",
+      "en": "Festival Sabores de Cabo Frio",
+      "es": "Festival Sabores de Cabo Frio"
+    },
+    "resumo": {
+      "pt": "Festival gastronômico da programação oficial Inverno Cabo Frio 2026 da Prefeitura.",
+      "en": "Food festival on City Hall's official Inverno Cabo Frio 2026 program.",
+      "es": "Festival gastronómico de la programación oficial Inverno Cabo Frio 2026 de la Prefectura."
+    },
+    "fonte_nome": "Prefeitura de Cabo Frio",
+    "fonte_url": "https://noticias.cabofrio.rj.gov.br/prefeitura-lanca-programacao-de-eventos-para-o-inverno-cabo-frio-2026/",
+    "destaque": true
+  },
+  {
+    "id": "buzios-cafe-e-chocolate-2026",
+    "municipio": "armacao-dos-buzios",
+    "inicio": "2026-09-25",
+    "fim": "2026-09-27",
+    "data_confirmada": true,
+    "tipo": "gastronomia",
+    "nome": {
+      "pt": "Búzios Café e Chocolate",
+      "en": "Búzios Café e Chocolate",
+      "es": "Búzios Café e Chocolate"
+    },
+    "resumo": {
+      "pt": "Primeira edição, com circuito de cafeterias e confeitarias no Centro, entre a Praça Santos Dumont e a Rua das Pedras.",
+      "en": "First edition, with a circuit of coffee shops and pastry shops downtown, from Praça Santos Dumont to Rua das Pedras.",
+      "es": "Primera edición, con circuito de cafeterías y confiterías en el Centro, de la Praça Santos Dumont a la Rua das Pedras."
+    },
+    "fonte_nome": "Calendário de Eventos 2026 — Costa do Sol, Região Turística do RJ",
+    "fonte_url": ""
+  },
+  {
+    "id": "festival-palmito-pupunha-silva-jardim-2026",
+    "municipio": "silva-jardim",
+    "inicio": "2026-09-26",
+    "fim": "2026-09-27",
+    "data_confirmada": true,
+    "tipo": "gastronomia",
+    "nome": {
+      "pt": "Festival de Palmito Pupunha e Cerveja Artesanal",
+      "en": "Peach Palm Heart and Craft Beer Festival (Festival de Palmito Pupunha e Cerveja Artesanal)",
+      "es": "Festival de Palmito de Pijuayo y Cerveza Artesanal (Festival de Palmito Pupunha e Cerveja Artesanal)"
+    },
+    "resumo": {
+      "pt": "Festival com pratos de palmito pupunha, cerveja produzida no local e shows de rock e blues em Aldeia Velha.",
+      "en": "Festival with peach palm heart dishes, beer brewed on site and rock and blues shows in Aldeia Velha.",
+      "es": "Festival con platos de palmito de pijuayo, cerveza producida en el lugar y shows de rock y blues en Aldeia Velha."
+    },
+    "fonte_nome": "Rotas RJ",
+    "fonte_url": "https://www.rotasrj.com/2026/09/22/festival-de-palmito-pupunha-e-cerveja-artesanal-garante-boa-gastronomia-e-recebe-chefs-convidadas-em-aldeia-velha/"
+  },
+  {
+    "id": "festa-colheita-feijao-rio-das-ostras-2026",
+    "municipio": "rio-das-ostras",
+    "inicio": "2026-10-09",
+    "fim": "2026-10-11",
+    "data_confirmada": true,
+    "tipo": "gastronomia",
+    "nome": {
+      "pt": "Festa da Colheita do Feijão",
+      "en": "Bean Harvest Festival (Festa da Colheita do Feijão)",
+      "es": "Fiesta de la Cosecha del Frijol (Festa da Colheita do Feijão)"
+    },
+    "resumo": {
+      "pt": "Festa da colheita do Projeto Feijão, de agricultura familiar, em Cantagalo, zona rural do município.",
+      "en": "Harvest celebration of Projeto Feijão, a family-farming project, in Cantagalo, the town's rural area.",
+      "es": "Fiesta de la cosecha del Projeto Feijão, de agricultura familiar, en Cantagalo, zona rural del municipio."
+    },
+    "fonte_nome": "Calendário de Eventos 2026 — Costa do Sol, Região Turística do RJ",
+    "fonte_url": ""
+  },
+  {
+    "id": "mpbuzios-2026",
+    "municipio": "armacao-dos-buzios",
+    "inicio": "2026-10-09",
+    "fim": "2026-10-11",
+    "data_confirmada": true,
+    "tipo": "festival",
+    "nome": {
+      "pt": "MPBúzios",
+      "en": "MPBúzios",
+      "es": "MPBúzios"
+    },
+    "resumo": {
+      "pt": "Festival de música popular brasileira do calendário oficial de eventos de Búzios.",
+      "en": "Brazilian popular music festival on the official Búzios events calendar.",
+      "es": "Festival de música popular brasileña del calendario oficial de eventos de Búzios."
+    },
+    "fonte_nome": "Prefeitura de Armação dos Búzios — Calendário de Eventos 2026",
+    "fonte_url": "https://buzios.rj.gov.br/calendario-de-buzios-de-2026-inova-com-festival-de-cafe-e-chocolate-e-mais-53-eventos/"
+  },
+  {
+    "id": "mpb-in-iguaba-2026",
+    "municipio": "iguaba-grande",
+    "inicio": "2026-10-30",
+    "fim": "2026-10-31",
+    "data_confirmada": true,
+    "tipo": "festival",
+    "nome": {
+      "pt": "MPB in Iguaba",
+      "en": "MPB in Iguaba",
+      "es": "MPB in Iguaba"
+    },
+    "resumo": {
+      "pt": "Festival de música popular brasileira com shows na orla; a primeira edição foi em 2025, na Praia do Popeye.",
+      "en": "Brazilian popular music (MPB) festival with shows on the waterfront; the first edition was in 2025 at Praia do Popeye.",
+      "es": "Festival de música popular brasileña con shows en la costanera; la primera edición fue en 2025, en la Praia do Popeye."
+    },
+    "fonte_nome": "Calendário de Eventos 2026 — Costa do Sol, Região Turística do RJ",
+    "fonte_url": ""
+  },
+  {
+    "id": "festa-da-cidade-buzios-2026",
+    "municipio": "armacao-dos-buzios",
+    "inicio": "2026-11-12",
+    "fim": "2026-11-14",
+    "data_confirmada": true,
+    "tipo": "institucional",
+    "nome": {
+      "pt": "Festa da Cidade",
+      "en": "City Festival (Festa da Cidade)",
+      "es": "Fiesta de la Ciudad (Festa da Cidade)"
+    },
+    "resumo": {
+      "pt": "Festa do município no calendário oficial de eventos de Búzios.",
+      "en": "Municipal celebration on the official Búzios events calendar.",
+      "es": "Fiesta del municipio en el calendario oficial de eventos de Búzios."
+    },
+    "fonte_nome": "Prefeitura de Armação dos Búzios — Calendário de Eventos 2026",
+    "fonte_url": "https://buzios.rj.gov.br/calendario-de-buzios-de-2026-inova-com-festival-de-cafe-e-chocolate-e-mais-53-eventos/"
+  },
+  {
+    "id": "festival-frutos-do-mar-arraial-2026",
+    "municipio": "arraial-do-cabo",
+    "inicio": "2026-11-13",
+    "fim": "2026-11-15",
+    "data_confirmada": true,
+    "tipo": "gastronomia",
+    "nome": {
+      "pt": "Festival de Frutos do Mar e Chopp",
+      "en": "Seafood and Draft Beer Festival (Festival de Frutos do Mar e Chopp)",
+      "es": "Festival de Mariscos y Chopp (Festival de Frutos do Mar e Chopp)"
+    },
+    "resumo": {
+      "pt": "Festival com pratos de frutos do mar de restaurantes locais, chope e música ao vivo na orla da Praia Grande.",
+      "en": "Festival with seafood dishes from local restaurants, draft beer and live music on the Praia Grande waterfront.",
+      "es": "Festival con platos de mariscos de restaurantes locales, chopp y música en vivo en la costanera de Praia Grande."
+    },
+    "fonte_nome": "Calendário de Eventos 2026 — Costa do Sol, Região Turística do RJ",
+    "fonte_url": ""
+  },
+  {
+    "id": "aniversario-cabo-frio-411-anos",
+    "municipio": "cabo-frio",
+    "inicio": "2026-11-13",
+    "fim": "2026-11-13",
+    "data_confirmada": true,
+    "tipo": "institucional",
+    "nome": {
+      "pt": "Aniversário de 411 anos de Cabo Frio",
+      "en": "Cabo Frio 411th anniversary",
+      "es": "411.º aniversario de Cabo Frio"
+    },
+    "resumo": {
+      "pt": "Aniversário de fundação da cidade; em anos anteriores, com desfile cívico e shows na Praia do Forte.",
+      "en": "Anniversary of the city's founding; in past years, with a civic parade and shows at Praia do Forte.",
+      "es": "Aniversario de fundación de la ciudad; en años anteriores, con desfile cívico y shows en Praia do Forte."
+    },
+    "fonte_nome": "Prefeitura de Cabo Frio",
+    "fonte_url": "https://cabofrio.rj.gov.br/cabo-frio-comemora-408-anos-com-desfile-civico-e-shows/",
+    "destaque": true
+  },
+  {
+    "id": "natal-de-luz-saquarema-2026",
+    "municipio": "saquarema",
+    "inicio": "2026-11-14",
+    "fim": "2026-11-14",
+    "data_confirmada": true,
+    "tipo": "cultura",
+    "nome": {
+      "pt": "Abertura do Natal de Luz",
+      "en": "Natal de Luz Opening",
+      "es": "Apertura del Natal de Luz"
+    },
+    "resumo": {
+      "pt": "Abertura oficial da programação de Natal da Prefeitura de Saquarema.",
+      "en": "Official opening of the Saquarema City Hall Christmas program.",
+      "es": "Apertura oficial de la programación navideña de la Prefectura de Saquarema."
+    },
+    "fonte_nome": "Calendário de Eventos 2026 — Costa do Sol, Região Turística do RJ",
+    "fonte_url": "",
+    "destaque": true
+  },
+  {
+    "id": "festival-da-lagoa-arraial-2026",
+    "municipio": "arraial-do-cabo",
+    "inicio": "2026-12-04",
+    "fim": "2026-12-06",
+    "data_confirmada": true,
+    "tipo": "festival",
+    "nome": {
+      "pt": "Festival da Lagoa",
+      "en": "Festival da Lagoa",
+      "es": "Festival da Lagoa"
+    },
+    "resumo": {
+      "pt": "Festival do calendário oficial de eventos de Arraial do Cabo.",
+      "en": "Festival on the official Arraial do Cabo events calendar.",
+      "es": "Festival del calendario oficial de eventos de Arraial do Cabo."
+    },
+    "fonte_nome": "Calendário de Eventos 2026 — Costa do Sol, Região Turística do RJ",
+    "fonte_url": ""
+  },
+  {
+    "id": "festival-do-peixe-sao-pedro-2026",
+    "municipio": "sao-pedro-da-aldeia",
+    "inicio": "2026-12-05",
+    "fim": "2026-12-06",
+    "data_confirmada": true,
+    "tipo": "gastronomia",
+    "nome": {
+      "pt": "Festival do Peixe",
+      "en": "Fish Festival (Festival do Peixe)",
+      "es": "Festival del Pescado (Festival do Peixe)"
+    },
+    "resumo": {
+      "pt": "Festa com pratos de pescado da Laguna de Araruama, organizada com a associação de pescadores da Praia da Baleia.",
+      "en": "Festival of fish dishes from the Araruama Lagoon, organized with the Praia da Baleia fishermen's association.",
+      "es": "Fiesta con platos de pescado de la Laguna de Araruama, organizada con la asociación de pescadores de Praia da Baleia."
+    },
+    "fonte_nome": "Calendário de Eventos 2026 — Costa do Sol, Região Turística do RJ",
+    "fonte_url": ""
+  },
+  {
+    "id": "ilha-dos-dinossauros-inauguracao",
+    "municipio": "iguaba-grande",
+    "inicio": "2026-09-23",
+    "fim": "2027-06-30",
+    "data_confirmada": false,
+    "data_texto": {
+      "pt": "Em breve",
+      "en": "Coming soon",
+      "es": "Próximamente"
+    },
+    "tipo": "inauguracao",
+    "nome": {
+      "pt": "Inauguração da Ilha dos Dinossauros",
+      "en": "Ilha dos Dinossauros opening",
+      "es": "Inauguración de la Ilha dos Dinossauros"
+    },
+    "resumo": {
+      "pt": "Parque temático com mais de 120 réplicas de dinossauros em tamanho real. Obras em fase final, segundo a Prefeitura.",
+      "en": "Theme park with over 120 life-size dinosaur replicas. Works in the final phase, according to City Hall.",
+      "es": "Parque temático con más de 120 réplicas de dinosaurios a tamaño real. Obras en fase final, según la Prefectura."
+    },
+    "fonte_nome": "Prefeitura de Iguaba Grande",
+    "fonte_url": "https://iguaba.rj.gov.br/eduardo-paes-visita-iguaba-grande-e-acompanha-obras-da-futura-ilha-dos-dinossauros/",
+    "destaque": true
+  }
+]

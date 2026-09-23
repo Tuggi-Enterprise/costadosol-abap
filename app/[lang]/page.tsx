@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import { Agenda, paraExibir } from '../../componentes/Agenda.tsx'
 import { Fatos } from '../../componentes/Fatos.tsx'
 import { GradeDeMunicipios } from '../../componentes/GradeDeMunicipios.tsx'
 import { Hero } from '../../componentes/Hero.tsx'
 import { Audio } from '../../componentes/Audio.tsx'
 import { LugaresDaHome, type LugarDeCidade } from '../../componentes/LugaresDaHome.tsx'
 import { classesDeAcao } from '../../componentes/acao.ts'
-import { conteudo, municipios, pontosDo } from '../../lib/conteudo.ts'
+import { conteudo, eventosFuturos, municipios, pontosDo } from '../../lib/conteudo.ts'
 import { rotulos } from '../../lib/interface.ts'
 import { IDIOMAS_INTERFACE, servir, texto } from '../../lib/idioma.ts'
 
@@ -74,11 +75,27 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Fatos
         itens={fatos.map((fato) => ({
           id: fato.id,
+          titulo: texto(fato.titulo, lang),
           numero: fato.numero,
           texto: texto(fato.texto, lang),
           fonte_url: fato.fonte_url,
           fonte_nome: fato.fonte_nome,
         }))}
+        titulo={r.fatosTitulo}
+      />
+
+      {/* Agenda, pedida pelo operador em 23/09/2026 para a feira: logo depois dos fatos,
+          porque é o que o profissional leva para montar a próxima temporada. Só os
+          destaques; o resto está em /agenda. */}
+      <Agenda
+        itens={eventosFuturos()
+          .filter((e) => e.destaque)
+          .map((e) => paraExibir(e, lang))}
+        lang={lang}
+        titulo={r.agendaTitulo}
+        chamada={r.agendaChamada}
+        rotuloFonte={r.fonte}
+        rotuloCompleta={r.agendaCompleta}
       />
 
       {/* CS-HOME-006: nove cards, um ponto por município, sempre. */}

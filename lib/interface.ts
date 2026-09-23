@@ -67,6 +67,19 @@ export type Rotulos = {
   leituraMovimento: string
   leituraMovimentoSistema: string
   leituraMovimentoReduzido: string
+  /** Agenda da home (eventos.json). */
+  /** CS-HOME-005 — o rótulo do bloco dos três fatos. */
+  fatosTitulo: string
+  agendaTitulo: string
+  agendaChamada: string
+  fonte: string
+  agendaCompleta: string
+  agendaPaginaChamada: string
+  /** Evento sem data fechada pela fonte. */
+  emBreve: string
+  navAgenda: string
+  /** Galeria da pagina do municipio. Leva `{cidade}`. */
+  fotosDaCidade: string
 }
 
 const DICIONARIO: Record<string, Rotulos> = {
@@ -107,6 +120,15 @@ const DICIONARIO: Record<string, Rotulos> = {
     leituraMovimento: 'Movimento',
     leituraMovimentoSistema: 'Como está',
     leituraMovimentoReduzido: 'Reduzido',
+    fatosTitulo: 'O Conderlagos em números',
+    agendaTitulo: 'Agenda',
+    agendaChamada: 'Próximos eventos nas cidades do Conderlagos.',
+    fonte: 'Fonte',
+    agendaCompleta: 'Ver a agenda completa',
+    agendaPaginaChamada: 'Festivais, inaugurações e datas das cidades do Conderlagos, mês a mês.',
+    emBreve: 'Em breve',
+    navAgenda: 'Agenda',
+    fotosDaCidade: 'Mais de {cidade}',
   },
   en: {
     ouvirCidade: 'Listen to the city',
@@ -145,6 +167,15 @@ const DICIONARIO: Record<string, Rotulos> = {
     leituraMovimento: 'Motion',
     leituraMovimentoSistema: 'As is',
     leituraMovimentoReduzido: 'Reduced',
+    fatosTitulo: 'Conderlagos in numbers',
+    agendaTitulo: 'Events',
+    agendaChamada: 'Upcoming events in the Conderlagos cities.',
+    fonte: 'Source',
+    agendaCompleta: 'See the full calendar',
+    agendaPaginaChamada: 'Festivals, openings and dates in the Conderlagos cities, month by month.',
+    emBreve: 'Coming soon',
+    navAgenda: 'Events',
+    fotosDaCidade: 'More of {cidade}',
   },
   es: {
     ouvirCidade: 'Escuchar la ciudad',
@@ -183,6 +214,15 @@ const DICIONARIO: Record<string, Rotulos> = {
     leituraMovimento: 'Movimiento',
     leituraMovimentoSistema: 'Como está',
     leituraMovimentoReduzido: 'Reducido',
+    fatosTitulo: 'Conderlagos en cifras',
+    agendaTitulo: 'Agenda',
+    agendaChamada: 'Próximos eventos en las ciudades de Conderlagos.',
+    fonte: 'Fuente',
+    agendaCompleta: 'Ver la agenda completa',
+    agendaPaginaChamada: 'Festivales, inauguraciones y fechas de las ciudades de Conderlagos, mes a mes.',
+    emBreve: 'Próximamente',
+    navAgenda: 'Agenda',
+    fotosDaCidade: 'Más de {cidade}',
   },
 }
 

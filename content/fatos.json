@@ -6,11 +6,11 @@
       "en": "Direct international flights",
       "es": "Vuelo internacional directo"
     },
-    "numero": "2026",
+    "numero": "54",
     "texto": {
-      "pt": "Os voos internacionais regulares entre Cabo Frio e a Argentina foram retomados em 2026, depois de cinco anos de interrupção.",
-      "en": "Regular international flights between Cabo Frio and Argentina resumed in 2026, after a five-year gap.",
-      "es": "Los vuelos internacionales regulares entre Cabo Frio y Argentina se reanudaron en 2026, tras cinco años de interrupción."
+      "pt": "Voos diretos de Buenos Aires e Rosário para Cabo Frio entre janeiro e abril de 2026, que retomaram a rota internacional depois de cinco anos.",
+      "en": "Direct flights from Buenos Aires and Rosario to Cabo Frio between January and April 2026, resuming the international route after five years.",
+      "es": "Vuelos directos de Buenos Aires y Rosario a Cabo Frio entre enero y abril de 2026, que retomaron la ruta internacional tras cinco años."
     },
     "fonte_url": "https://noticias.cabofrio.rj.gov.br/primeiros-turistas-argentinos-desembarcam-em-cabo-frio-e-marcam-retomada-dos-voos-internacionais-em-2026/",
     "fonte_nome": "Prefeitura de Cabo Frio",
@@ -25,26 +25,26 @@
     },
     "numero": "3",
     "texto": {
-      "pt": "Saquarema é a única cidade do mundo a receber as três divisões do circuito mundial de surfe, com a etapa principal renovada até 2028.",
-      "en": "Saquarema is the only city in the world to host all three divisions of the world surfing tour, with the main stop renewed through 2028.",
-      "es": "Saquarema es la única ciudad del mundo que recibe las tres divisiones del circuito mundial de surf, con la etapa principal renovada hasta 2028."
+      "pt": "Saquarema é a única cidade do mundo que recebe as três divisões do circuito mundial de surfe da WSL.",
+      "en": "Saquarema is the only city in the world that hosts all three divisions of the WSL world surfing tour.",
+      "es": "Saquarema es la única ciudad del mundo que recibe las tres divisiones del circuito mundial de surf de la WSL."
     },
-    "fonte_url": "https://www.saquarema.rj.gov.br/saquarema-garante-etapa-do-mundial-de-surfe-ate-2028/",
+    "fonte_url": "https://www.saquarema.rj.gov.br/turismo/",
     "fonte_nome": "Prefeitura de Saquarema",
     "confianca": "alta"
   },
   {
     "id": "natureza",
     "titulo": {
-      "pt": "Um parque estadual com o nome da região",
-      "en": "A state park named after the region",
-      "es": "Un parque estatal con el nombre de la región"
+      "pt": "Um parque estadual de ponta a ponta",
+      "en": "A state park across the region",
+      "es": "Un parque estatal de punta a punta"
     },
-    "numero": "9 790 ha",
+    "numero": "9 790 ha",
     "texto": {
-      "pt": "O Parque Estadual da Costa do Sol foi criado em 2011 e protege 9.790 hectares distribuídos por seis municípios da região.",
-      "en": "Costa do Sol State Park was created in 2011 and protects 9,790 hectares across six municipalities in the region.",
-      "es": "El Parque Estadual da Costa do Sol fue creado en 2011 y protege 9.790 hectáreas en seis municipios de la región."
+      "pt": "O Parque Estadual da Costa do Sol, criado em 2011, protege 9.790 hectares distribuídos por seis municípios.",
+      "en": "Costa do Sol State Park, created in 2011, protects 9,790 hectares across six municipalities.",
+      "es": "El Parque Estadual da Costa do Sol, creado en 2011, protege 9.790 hectáreas en seis municipios."
     },
     "fonte_url": "https://www.saquarema.rj.gov.br/wp-content/uploads/2020/07/DECRETO-N%C2%B0-42.929-11-PCSOL.pdf",
     "fonte_nome": "Decreto Estadual 42.929/2011",

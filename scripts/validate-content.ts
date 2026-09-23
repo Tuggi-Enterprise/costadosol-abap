@@ -12,8 +12,12 @@ import { resolve } from 'node:path'
 import { z } from 'zod'
 import {
   conteudoSchema,
+  apresentacaoSchema,
+  eventoSchema,
   fatoSchema,
   municipioSchema,
+  palavrasProibidasEm,
+  paridadeDeApresentacao,
   pontoSchema,
   rotaSchema,
   verificarConteudo,
@@ -79,7 +83,44 @@ export async function lerEValidar(diretorio: string): Promise<Resultado> {
   if (falhas.length > 0) return { conteudo: null, falhas }
 
   const conteudo = conteudoSchema.parse(bruto)
-  return { conteudo, falhas: verificarConteudo(conteudo) }
+  return { conteudo, falhas: [...verificarConteudo(conteudo), ...(await validarExtras(diretorio))] }
+}
+
+/**
+ * `apresentacao.json` e `eventos.json` (ver content-schema, "fora do espelho do banco").
+ * Arquivo ausente e secao que nao aparece, nao falha: os fixtures nao os trazem.
+ */
+async function validarExtras(diretorio: string): Promise<Falha[]> {
+  const falhas: Falha[] = []
+  const extras = [
+    { nome: 'apresentacao.json', schema: apresentacaoSchema },
+    { nome: 'eventos.json', schema: eventoSchema },
+  ] as const
+  for (const arquivo of extras) {
+    let dados: unknown
+    try {
+      dados = JSON.parse(await readFile(resolve(diretorio, arquivo.nome), 'utf8'))
+    } catch (erro) {
+      if ((erro as NodeJS.ErrnoException).code === 'ENOENT') continue
+      falhas.push({ regra: 'CS-VAL-002', onde: arquivo.nome, mensagem: `JSON invalido: ${(erro as Error).message}` })
+      continue
+    }
+    if (!Array.isArray(dados)) {
+      falhas.push({ regra: 'CS-VAL-002', onde: arquivo.nome, mensagem: 'o arquivo precisa ser uma lista' })
+      continue
+    }
+    const validos = []
+    for (const [indice, item] of dados.entries()) {
+      const resultado = arquivo.schema.safeParse(item)
+      if (resultado.success) validos.push(resultado.data)
+      else falhas.push(...falhasDoZod(resultado.error, arquivo.nome, indice))
+    }
+    falhas.push(...palavrasProibidasEm(validos, arquivo.nome))
+    if (arquivo.nome === 'apresentacao.json' && validos.length === dados.length) {
+      falhas.push(...paridadeDeApresentacao(validos as z.infer<typeof apresentacaoSchema>[]))
+    }
+  }
+  return falhas
 }
 
 const executadoDiretamente = process.argv[1]?.endsWith('validate-content.ts')

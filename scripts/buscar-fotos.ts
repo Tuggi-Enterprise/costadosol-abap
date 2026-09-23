@@ -34,6 +34,8 @@ export type FotoEncontrada = {
   licenca: string
   paginaDaFoto: string
   urlOriginal: string
+  /** O arquivo inteiro. So se usa quando a miniatura nao sai: ver baixarEConverter. */
+  urlCheia?: string
   largura: number
   altura: number
 }
@@ -48,6 +50,19 @@ type Busca = {
    */
   exigir: string[]
   excluir?: string[]
+}
+
+/**
+ * Foto escolhida a olho, pelo titulo exato no Commons. A busca por palavra-chave escolheu
+ * a estacao meteorologica para Iguaba Grande; desde 23/09/2026 toda foto publicada e
+ * fixada assim, depois de alguem abrir a imagem e conferir o lugar.
+ */
+type Fixa = {
+  destino: string
+  arquivo: string
+  /** Nome como vai no credito, quando o do Commons e o nome inteiro da conta do Flickr. */
+  autor?: string
+  alt?: { pt: string; en: string; es: string }
 }
 
 /** Compara sem acento e sem caixa: "Itaúna" casa com "itauna". */
@@ -72,7 +87,46 @@ function licencaAceita(licenca: string): boolean {
   return LICENCAS_ACEITAS.some((aceita) => l.includes(aceita))
 }
 
-async function buscar(busca: Busca): Promise<FotoEncontrada | null> {
+async function buscarFixa(fixa: Fixa): Promise<FotoEncontrada | null> {
+  const url = new URL(API)
+  url.search = new URLSearchParams({
+    action: 'query',
+    format: 'json',
+    titles: fixa.arquivo,
+    prop: 'imageinfo',
+    iiprop: 'url|size|extmetadata',
+    iiurlwidth: '1600',
+    iiextmetadatafilter: 'LicenseShortName|Artist|Credit',
+  }).toString()
+  const dados = (await (await pedirComRitmo(url)).json()) as {
+    query?: { pages?: Record<string, { title: string; imageinfo?: [{ url: string; thumburl?: string; descriptionurl: string
+      width: number; height: number; extmetadata?: Record<string, { value?: string }> }] }> }
+  }
+  const pagina = Object.values(dados.query?.pages ?? {})[0]
+  const info = pagina?.imageinfo?.[0]
+  if (!pagina || !info) return null
+  // A escolha foi a olho, mas licenca e autor continuam sendo conferidos aqui: e isso que
+  // torna o credito verdadeiro, e a licenca pode ter mudado desde a escolha.
+  const licenca = limparHtml(info.extmetadata?.['LicenseShortName']?.value)
+  if (!licencaAceita(licenca)) throw new Error(`licenca fora da lista: ${licenca}`)
+  const autor = limparHtml(info.extmetadata?.['Artist']?.value) || limparHtml(info.extmetadata?.['Credit']?.value)
+  if (!autor) throw new Error('sem autor identificado')
+  return {
+    destino: fixa.destino,
+    titulo: pagina.title,
+    autor,
+    licenca,
+    paginaDaFoto: info.descriptionurl,
+    urlOriginal: info.thumburl ?? info.url,
+    urlCheia: info.url,
+    largura: info.width,
+    altura: info.height,
+  }
+}
+
+async function buscar(busca: Busca | Fixa): Promise<FotoEncontrada | null> {
+  if ('arquivo' in busca) return buscarFixa(busca)
+
   const url = new URL(API)
   url.search = new URLSearchParams({
     action: 'query',
@@ -167,7 +221,12 @@ async function baixarComRitmo(url: string, tentativas = 4): Promise<Buffer> {
 }
 
 async function baixarEConverter(foto: FotoEncontrada): Promise<void> {
-  const original = await baixarComRitmo(foto.urlOriginal)
+  // O Commons responde 503 para miniatura que ainda nao foi gerada, e insistir nao a gera.
+  // O arquivo inteiro e maior, mas existe.
+  const original = await baixarComRitmo(foto.urlOriginal).catch((erro: Error) => {
+    if (!foto.urlCheia) throw erro
+    return baixarComRitmo(foto.urlCheia)
+  })
 
   const caminho = resolve('public', `${foto.destino}`)
   await mkdir(dirname(caminho), { recursive: true })
@@ -179,7 +238,7 @@ async function baixarEConverter(foto: FotoEncontrada): Promise<void> {
   await base.clone().avif({ quality: 55 }).toFile(`${caminho}.avif`)
 }
 
-export async function executar(buscas: Busca[]): Promise<FotoEncontrada[]> {
+export async function executar(buscas: (Busca | Fixa)[]): Promise<FotoEncontrada[]> {
   const encontradas: FotoEncontrada[] = []
   for (const busca of buscas) {
     // Uma foto que falha nao derruba as outras 44: o que falta vira marcador de foto
@@ -187,7 +246,7 @@ export async function executar(buscas: Busca[]): Promise<FotoEncontrada[]> {
     try {
       const foto = await buscar(busca)
       if (!foto) {
-        console.warn(`  sem foto com licenca aceita: ${busca.destino} (${busca.termos})`)
+        console.warn(`  sem foto com licenca aceita: ${busca.destino}`)
         continue
       }
       await baixarEConverter(foto)
@@ -209,4 +268,4 @@ export function credito(foto: FotoEncontrada): string {
   return `${foto.autor} · ${foto.licenca}`
 }
 
-export type { Busca }
+export type { Busca, Fixa }

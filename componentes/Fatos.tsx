@@ -16,13 +16,14 @@ import { track } from '../lib/track.ts'
 
 export type FatoExibido = {
   id: string
+  titulo: string
   numero: string
   texto: string
   fonte_url: string
   fonte_nome: string
 }
 
-export function Fatos({ itens }: { itens: FatoExibido[] }) {
+export function Fatos({ itens, titulo }: { itens: FatoExibido[]; titulo: string }) {
   const bloco = useRef<HTMLUListElement | null>(null)
 
   useEffect(() => {
@@ -47,19 +48,24 @@ export function Fatos({ itens }: { itens: FatoExibido[] }) {
     return () => observador.disconnect()
   }, [itens])
 
+  // Coluna do número com largura fixa no telefone: com `auto` cada linha media o próprio
+  // número, e "3" e "9 790 ha" empurravam o texto para alturas diferentes. No desktop os três
+  // viram colunas, número em cima.
   return (
-    <section className="bg-oceano-fundo px-4 py-7 text-white">
-      <ul ref={bloco} className="grid gap-6">
+    <section className="bg-oceano-fundo px-4 py-8 text-white">
+      <h2 className="mb-5 text-[0.75rem] font-semibold tracking-widest text-white/70 uppercase">{titulo}</h2>
+      <ul ref={bloco} className="grid gap-6 md:grid-cols-3 md:gap-8">
         {itens.map((fato) => (
           <li
             key={fato.id}
             data-fato={fato.id}
-            className="grid grid-cols-[auto_1fr] items-baseline gap-x-4"
+            className="grid grid-cols-[6.5rem_1fr] items-start gap-x-4 border-t border-white/15 pt-4 md:grid-cols-1 md:gap-y-2"
           >
-            <p className="text-secao font-semibold tabular-nums text-lagoa">{fato.numero}</p>
+            <p className="text-secao font-semibold whitespace-nowrap tabular-nums text-lagoa">{fato.numero}</p>
             <div>
-              <p className="max-w-[46ch] text-[0.95rem] leading-snug text-white/90">{fato.texto}</p>
-              <p className="mt-1 text-[0.7rem] tracking-wide text-white/70 uppercase">
+              <h3 className="text-[1rem] leading-snug font-semibold">{fato.titulo}</h3>
+              <p className="mt-1 max-w-[46ch] text-[0.9rem] leading-snug text-white/85">{fato.texto}</p>
+              <p className="mt-2 text-[0.7rem] tracking-wide text-white/70 uppercase">
                 <a
                   href={fato.fonte_url}
                   target="_blank"

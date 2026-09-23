@@ -3,13 +3,14 @@ import { notFound } from 'next/navigation'
 import { Audio } from '../../../componentes/Audio.tsx'
 import { CardDePonto } from '../../../componentes/CardDePonto.tsx'
 import { Compartilhar } from '../../../componentes/Compartilhar.tsx'
+import { Galeria } from '../../../componentes/Galeria.tsx'
 import { Hero } from '../../../componentes/Hero.tsx'
 import { GradeDeMunicipios } from '../../../componentes/GradeDeMunicipios.tsx'
 import { RegistrarAberturaDeMunicipio } from '../../../componentes/RegistrarAbertura.tsx'
 import { FOTO_PENDENTE } from '../../../componentes/Foto.tsx'
 import { classesDeAcao } from '../../../componentes/acao.ts'
 import { RedesDoMunicipio } from '../../../componentes/RedesDoMunicipio.tsx'
-import { municipios, outrasCidades, pontosDo } from '../../../lib/conteudo.ts'
+import { apresentacaoDo, municipios, outrasCidades, pontosDo } from '../../../lib/conteudo.ts'
 import { IDIOMAS_INTERFACE, ehIdiomaDeInterface, servir, texto } from '../../../lib/idioma.ts'
 import { rotulos } from '../../../lib/interface.ts'
 
@@ -32,7 +33,7 @@ export async function generateMetadata({
   const m = municipios().find((x) => x.slug === slug)
   if (!m) return {}
   const linha = servir(m.linha, lang)
-  // Três municípios ainda esperam foto (P-05), e apontar a og:image para o marcador de
+  // Município sem foto no catálogo (content/fotos.json), e apontar a og:image para o marcador de
   // ausência publica um cartão com imagem quebrada. Sem foto, sem imagem — o cartão cai
   // para título e descrição, que existem.
   const temFoto = m.hero.src !== FOTO_PENDENTE
@@ -64,6 +65,7 @@ export default async function PaginaDoMunicipio({
   const r = rotulos(lang)
   const pontos = pontosDo(slug)
   const faixa = servir(m.audio, lang)
+  const apresentacao = apresentacaoDo(slug)
 
   return (
     <main>
@@ -91,6 +93,15 @@ export default async function PaginaDoMunicipio({
           largo
         />
       </Hero>
+
+      {apresentacao && (
+        <p
+          lang={servir(apresentacao.descricao, lang).idiomaServido}
+          className="max-w-[62ch] px-4 pt-6 text-[1rem] leading-relaxed"
+        >
+          {texto(apresentacao.descricao, lang)}
+        </p>
+      )}
 
       <section>
         {pontos.map((ponto, indice) => {
@@ -121,6 +132,13 @@ export default async function PaginaDoMunicipio({
           )
         })}
       </section>
+
+      {apresentacao && (
+        <Galeria
+          titulo={r.fotosDaCidade.replace('{cidade}', m.nome)}
+          fotos={apresentacao.galeria.map((f) => ({ src: f.src, alt: texto(f.alt, lang), credito: f.credito }))}
+        />
+      )}
 
       {/*
         O CTA "Receber o material de [cidade]" (CS-LEAD-001) SAIU da tela até o formulário

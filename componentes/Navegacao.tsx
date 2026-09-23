@@ -1,12 +1,13 @@
 'use client'
 
 /**
- * Navegação fixa no rodapé, quatro destinos, sempre visível.
+ * Navegação fixa no rodapé, cinco destinos, sempre visível. O quinto, Agenda, entrou em
+ * 23/09/2026 por decisão do operador.
  *
  * **Por que não é menu hambúrguer.** CS-HOME-001 já proíbe hambúrguer na primeira dobra, e
  * a razão vale para o site inteiro: quem entra por QR tem cerca de 60 segundos em pé,
  * segurando o telefone com uma mão. Navegação escondida atrás de um ícone é navegação que
- * não existe para essa pessoa — ela não vai procurar. Quatro destinos cabem no rodapé, e o
+ * não existe para essa pessoa — ela não vai procurar. Cinco destinos cabem no rodapé, e o
  * rodapé é a única faixa da tela que o polegar alcança sem trocar a mão de posição.
  *
  * No desktop (≥46rem) ela para de flutuar e vira uma linha logo abaixo da barra de idioma:
@@ -76,6 +77,17 @@ export function Navegacao({ lang }: { lang: string }) {
       ),
     },
     {
+      href: `/${lang}/agenda/`,
+      titulo: r.navAgenda,
+      ativo: (c: string) => c.startsWith(`/${lang}/agenda`),
+      icone: (
+        <Icone>
+          <rect x="3" y="5" width="18" height="16" rx="2" />
+          <path d="M3 10h18M8 3v4M16 3v4" />
+        </Icone>
+      ),
+    },
+    {
       href: `/${lang}/para-quem-vende/`,
       titulo: r.navProfissional,
       ativo: (c: string) => c.startsWith(`/${lang}/para-quem-vende`),
@@ -90,13 +102,13 @@ export function Navegacao({ lang }: { lang: string }) {
 
   return (
     <nav
-      // O landmark inteiro chamava "Cidades", que é o nome de UM dos quatro destinos: em
+      // O landmark inteiro chamava "Cidades", que é o nome de UM dos destinos: em
       // leitor de tela a lista de marcos anunciava dois navs e nenhum dizia o que era.
       aria-label={r.navPrincipal}
       className="fixed inset-x-0 bottom-0 z-30 mx-auto max-w-[46rem] border-t border-borda/70 bg-papel/95 backdrop-blur-sm md:static md:border-t-0 md:border-b"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
-      <ul className="grid grid-cols-4">
+      <ul className="grid grid-cols-5">
         {destinos.map((destino) => {
           const ativo = destino.ativo(caminho)
           return (

@@ -5,11 +5,21 @@
  * do que a pagina renderizada usa. O tipo vem do schema, nao de uma interface escrita a
  * mao — o schema e a fonte (docs/02-arquitetura.md §6).
  */
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { conteudoSchema, type Conteudo, type Municipio, type Ponto, type Rota } from '../scripts/content-schema.ts'
+import {
+  apresentacaoSchema,
+  conteudoSchema,
+  eventoSchema,
+  type Apresentacao,
+  type Conteudo,
+  type Evento,
+  type Municipio,
+  type Ponto,
+  type Rota,
+} from '../scripts/content-schema.ts'
 
-export type { Conteudo, Municipio, Ponto, Rota }
+export type { Apresentacao, Conteudo, Evento, Municipio, Ponto, Rota }
 
 const DIRETORIO = process.env['CONTENT_DIR'] ?? 'content'
 
@@ -66,4 +76,32 @@ export function outrasCidades(slug: string): Municipio[] {
 
 export function rotas(): Rota[] {
   return conteudo().rotas
+}
+
+/** Arquivo fora do espelho do banco: ausente vira lista vazia (ver content-schema). */
+function lerLista<T>(arquivo: string, schema: { parse: (v: unknown) => T }): T[] {
+  const caminho = resolve(DIRETORIO, arquivo)
+  if (!existsSync(/* turbopackIgnore: true */ caminho)) return []
+  const dados = JSON.parse(readFileSync(/* turbopackIgnore: true */ caminho, 'utf8')) as unknown[]
+  return dados.map((item) => schema.parse(item))
+}
+
+let apresentacoes: Apresentacao[] | null = null
+let agenda: Evento[] | null = null
+
+/** Descricao e galeria do municipio; `null` quando o arquivo ainda nao existe. */
+export function apresentacaoDo(slug: string): Apresentacao | null {
+  apresentacoes ??= lerLista('apresentacao.json', apresentacaoSchema)
+  return apresentacoes.find((a) => a.municipio === slug) ?? null
+}
+
+/**
+ * Eventos que ainda nao acabaram na data do build, em ordem de inicio. O site e estatico:
+ * o corte e o dia do build, e evento vencido some no build seguinte.
+ */
+export function eventosFuturos(hoje = new Date().toISOString().slice(0, 10)): Evento[] {
+  agenda ??= lerLista('eventos.json', eventoSchema)
+  return agenda
+    .filter((e) => e.fim >= hoje)
+    .sort((a, b) => a.inicio.localeCompare(b.inicio) || a.municipio.localeCompare(b.municipio))
 }

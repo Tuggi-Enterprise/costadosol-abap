@@ -254,6 +254,92 @@ export const fatoSchema = z.strictObject({
   confianca: z.enum(['alta', 'media', 'baixa']),
 })
 
+// ---------------------------------------------------------------------------
+// Arquivos fora do espelho do banco
+// ---------------------------------------------------------------------------
+//
+// `apresentacao.json` e `eventos.json` entraram em 23/09/2026, a pedido do operador, uma
+// semana antes da feira. Ficam FORA de `conteudoSchema` de proposito: o conteudo de la tem
+// espelho no banco (migrations de costadosol, export-content), e acrescentar campo ali exige
+// migration. Enquanto P-27 nao fecha, estes dois vivem so em JSON versionado.
+
+/** Foto de galeria do municipio. Mesma regra de credito de toda foto (CS-OURO-006). */
+const fotoDeGaleria = z.strictObject({
+  src: z.string().min(1),
+  alt: textoMultilingue(),
+  credito,
+})
+
+/**
+ * A descricao do municipio, abaixo do hero, e a galeria. A `linha` continua sendo a
+ * frase do hero; isto e o paragrafo que a pagina nao tinha.
+ */
+export const apresentacaoSchema = z.strictObject({
+  municipio: z.enum(SLUGS as [string, ...string[]]),
+  descricao: textoMultilingue(),
+  /** CS-OURO-006: toda afirmacao da descricao sai de uma destas. */
+  fontes: z.array(z.url()).min(1, 'CS-OURO-006: descricao sem fonte nao vai ao ar'),
+  galeria: z.array(fotoDeGaleria),
+})
+
+/** Agenda da home. Data que a fonte nao fecha vai como texto da fonte, nunca como chute. */
+export const eventoSchema = z
+  .strictObject({
+    id: z.string().regex(/^[a-z0-9-]+$/),
+    municipio: z.enum(SLUGS as [string, ...string[]]),
+    inicio: z.iso.date(),
+    fim: z.iso.date(),
+    data_confirmada: z.boolean(),
+    /** Obrigatorio quando a data nao e confirmada: e o que vai a tela no lugar dela. */
+    data_texto: textoMultilingue().optional(),
+    tipo: z.enum(['festival', 'inauguracao', 'esporte', 'cultura', 'institucional', 'gastronomia']),
+    nome: textoMultilingue(),
+    resumo: textoMultilingue(140),
+    fonte_nome: z.string().min(1),
+    fonte_url: z.union([z.url(), z.literal('')]),
+    /** Vai para a agenda da home. Escolha editorial do operador; o resto fica em /agenda. */
+    destaque: z.boolean().optional(),
+  })
+  .refine((e) => e.fim >= e.inicio, { message: 'fim antes do inicio' })
+  .refine((e) => e.data_confirmada || e.data_texto, {
+    message: 'CS-OURO-006: data nao confirmada precisa de data_texto',
+  })
+
+export type Apresentacao = z.infer<typeof apresentacaoSchema>
+export type Evento = z.infer<typeof eventoSchema>
+
+/**
+ * CS-OURO-004 aplicado a apresentacao: os dez, cada um uma vez, e a MESMA quantidade de
+ * fotos na galeria. Tres fotos numa cidade e uma na outra e destaque visual.
+ */
+export function paridadeDeApresentacao(lista: Apresentacao[]): Falha[] {
+  const falhas: Falha[] = []
+  for (const slug of SLUGS) {
+    const quantas = lista.filter((a) => a.municipio === slug).length
+    if (quantas !== 1) {
+      falhas.push({ regra: 'CS-OURO-004', onde: `apresentacao.json/${slug}`, mensagem: `${quantas} entradas; e uma` })
+    }
+  }
+  const tamanhos = new Set(lista.map((a) => a.galeria.length))
+  if (tamanhos.size > 1) {
+    const resumo = lista.map((a) => `${a.municipio}=${a.galeria.length}`).join(', ')
+    falhas.push({ regra: 'CS-OURO-004', onde: 'apresentacao.json', mensagem: `galerias de tamanho desigual: ${resumo}` })
+  }
+  return falhas
+}
+
+/** CS-VAL-001.4 vale para os arquivos novos igual. */
+export function palavrasProibidasEm(valor: unknown, arquivo: string): Falha[] {
+  const falhas: Falha[] = []
+  for (const [caminho, texto] of textos(valor, arquivo)) {
+    if (/^https?:\/\//.test(texto) || texto.startsWith('/')) continue
+    for (const { padrao, regra, motivo } of PROIBIDAS) {
+      if (padrao.test(texto)) falhas.push({ regra, onde: caminho, mensagem: `"${padrao.source}" — ${motivo}` })
+    }
+  }
+  return falhas
+}
+
 export const conteudoSchema = z.strictObject({
   municipios: z.array(municipioSchema),
   pontos: z.array(pontoSchema),
@@ -286,17 +372,7 @@ function* textos(valor: unknown, caminho: string): Generator<[string, string]> {
 
 /** CS-VAL-001.4 e .9 — palavra proibida em qualquer campo de qualquer arquivo. */
 export function palavrasProibidas(conteudo: Conteudo): Falha[] {
-  const falhas: Falha[] = []
-  for (const [caminho, texto] of textos(conteudo, 'conteudo')) {
-    // URL de fonte e caminho de arquivo nao sao copy; a regra e sobre o que se le na tela.
-    if (/^https?:\/\//.test(texto) || texto.startsWith('/')) continue
-    for (const { padrao, regra, motivo } of PROIBIDAS) {
-      if (padrao.test(texto)) {
-        falhas.push({ regra, onde: caminho, mensagem: `"${padrao.source}" — ${motivo}` })
-      }
-    }
-  }
-  return falhas
+  return palavrasProibidasEm(conteudo, 'conteudo')
 }
 
 /** CS-OURO-003 — os municipios de MUNICIPIOS, todos, so eles, com a grafia oficial. */

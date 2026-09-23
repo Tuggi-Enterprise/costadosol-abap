@@ -139,7 +139,7 @@ test('CS-OURO-006: nenhum marcador interno do time chega a tela', () => {
  * substitui esta em `app/[lang]/[municipio]/page.tsx`; acrescentar uma chave aqui sem
  * acrescentar o `.replace()` la publica `{cidade}` na tela do visitante.
  */
-const ROTULOS_COM_CIDADE = ['secretariaDaCidade', 'redesDaCidade'] as const
+const ROTULOS_COM_CIDADE = ['secretariaDaCidade', 'redesDaCidade', 'fotosDaCidade'] as const
 
 test('CS-CONT-007: o rotulo que recebe nome de cidade traz o lugar do nome', () => {
   for (const idioma of IDIOMAS_INTERFACE) {

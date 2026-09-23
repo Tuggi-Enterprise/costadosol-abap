@@ -244,13 +244,15 @@ script, o rodapé traz os três idiomas como links.
 
 ### 6.1 Home
 
-**CS-NAV-011 · Navegação** — barra fixa no rodapé com quatro destinos (Cidades · Rotas ·
-Lugares · Profissional), visível em toda página, alvos de 54 px. **Não existe menu hambúrguer
+**CS-NAV-011 · Navegação** — barra fixa no rodapé com cinco destinos (Cidades · Rotas ·
+Lugares · Agenda · Profissional), visível em toda página, alvos de 54 px. **Não existe menu hambúrguer
 em lugar nenhum** — CS-HOME-001 já o proíbe na primeira dobra, e a razão vale para o site
 inteiro: quem entra por QR tem cerca de 60 segundos em pé, com uma mão no telefone, e não
 procura navegação escondida atrás de um ícone. O rodapé é a única faixa que o polegar alcança
 sem trocar a mão de posição. No desktop a mesma lista vira uma linha no topo.
-*Decidido pelo operador em 13/08/2026.*
+*Decidido pelo operador em 13/08/2026. Agenda entrou como quinto destino em 23/09/2026, também
+por decisão do operador: a home mostra só os eventos em destaque, e `/[lang]/agenda` traz o
+calendário inteiro.*
 
 **CS-HOME-001 · Hero** — vídeo institucional full-bleed, "Conderlagos", uma linha, botão de play (45 s)
 ocupando ≥30% da largura da tela. Sem menu hambúrguer na primeira dobra, sem carrossel.

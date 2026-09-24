@@ -11,6 +11,7 @@ import {
   apresentacaoSchema,
   conteudoSchema,
   eventoSchema,
+  paragrafos,
   type Apresentacao,
   type Conteudo,
   type Evento,
@@ -20,6 +21,7 @@ import {
 } from '../scripts/content-schema.ts'
 
 export type { Apresentacao, Conteudo, Evento, Municipio, Ponto, Rota }
+export { paragrafos }
 
 const DIRETORIO = process.env['CONTENT_DIR'] ?? 'content'
 

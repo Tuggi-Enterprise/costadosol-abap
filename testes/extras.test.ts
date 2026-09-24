@@ -47,6 +47,11 @@ test('CS-OURO-004: galeria maior numa cidade é destaque visual e falha', () => 
   assert.equal(paridadeDeApresentacao(lista)[0]?.regra, 'CS-OURO-004')
 })
 
+test('CS-OURO-004: descrição com mais parágrafos numa cidade é destaque e falha', () => {
+  const lista = SLUGS.map((s, i) => ({ ...apresentacao(s), ...(i === 0 && { descricao: tres('Um.\n\nDois.') }) }))
+  assert.match(paridadeDeApresentacao(lista)[0]?.mensagem ?? '', /paragrafos/)
+})
+
 test('CS-OURO-004: cidade sem apresentação falha', () => {
   const falhas = paridadeDeApresentacao(SLUGS.slice(1).map((s) => apresentacao(s)))
   assert.ok(falhas.some((f) => f.onde.endsWith(SLUGS[0]!)))

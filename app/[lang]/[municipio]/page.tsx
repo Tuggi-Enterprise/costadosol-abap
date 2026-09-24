@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Audio } from '../../../componentes/Audio.tsx'
+import { Descricao } from '../../../componentes/Descricao.tsx'
 import { CardDePonto } from '../../../componentes/CardDePonto.tsx'
 import { Compartilhar } from '../../../componentes/Compartilhar.tsx'
 import { Galeria } from '../../../componentes/Galeria.tsx'
@@ -10,7 +11,7 @@ import { RegistrarAberturaDeMunicipio } from '../../../componentes/RegistrarAber
 import { FOTO_PENDENTE } from '../../../componentes/Foto.tsx'
 import { classesDeAcao } from '../../../componentes/acao.ts'
 import { RedesDoMunicipio } from '../../../componentes/RedesDoMunicipio.tsx'
-import { apresentacaoDo, municipios, outrasCidades, pontosDo } from '../../../lib/conteudo.ts'
+import { apresentacaoDo, municipios, outrasCidades, paragrafos, pontosDo } from '../../../lib/conteudo.ts'
 import { IDIOMAS_INTERFACE, ehIdiomaDeInterface, servir, texto } from '../../../lib/idioma.ts'
 import { rotulos } from '../../../lib/interface.ts'
 
@@ -95,15 +96,15 @@ export default async function PaginaDoMunicipio({
       </Hero>
 
       {apresentacao && (
-        <p
+        <Descricao
+          paragrafos={paragrafos(texto(apresentacao.descricao, lang))}
           lang={servir(apresentacao.descricao, lang).idiomaServido}
-          className="max-w-[62ch] px-4 pt-6 text-[1rem] leading-relaxed"
-        >
-          {texto(apresentacao.descricao, lang)}
-        </p>
+          rotulos={{ lerMais: r.lerMais, lerMenos: r.lerMenos }}
+        />
       )}
 
-      <section>
+      {/* Grade 2x2 do tablet para cima: empilhados, cada card passava da altura da janela. */}
+      <section className="md:grid md:grid-cols-2">
         {pontos.map((ponto, indice) => {
           // O recorte é montado aqui: o card é componente de cliente, e o `Ponto` inteiro
           // levava `fonte_verificacao` — afirmação apurada, data e revisor — ao navegador.

@@ -111,7 +111,7 @@ export default async function PaginaDoPonto({
       <p
         // CS-CONT-008: o idioma declarado é o servido, não o escolhido.
         lang={servir(ponto.texto, lang).idiomaServido}
-        className="max-w-[62ch] px-4 pt-4 text-[1rem] leading-relaxed"
+        className="px-4 pt-4 text-[1rem] leading-relaxed"
       >
         {texto(ponto.texto, lang)}
       </p>

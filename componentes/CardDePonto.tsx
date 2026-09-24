@@ -46,17 +46,18 @@ export function CardDePonto({
   const [aberto, setAberto] = useState(false)
 
   return (
-    <article className="px-4 py-7 [&+&]:border-t [&+&]:border-borda/50">
+    <article className="px-4 py-7 [&+&]:border-t [&+&]:border-borda/50 md:[&+&]:border-t-0">
       <Foto
         src={ponto.foto.src}
         alt={ponto.foto.alt}
         credito={ponto.foto.credito}
         proporcao="h"
+        credito_em="sobre"
         // A ausência de foto é desenhada do mesmo jeito nas quatro telas que a mostram
         // (P-05). Aqui ela sumia e nas listas virava bloco: na mesma sessão, a mesma falta
         // aparecia de duas formas, e a segunda parecia defeito da primeira.
         pendente_em="proporcao"
-        sizes="(min-width: 46rem) 44rem, 100vw"
+        sizes="(min-width: 48rem) 50vw, 100vw"
       />
 
       <div className="mt-3 flex items-baseline gap-2">
@@ -71,7 +72,7 @@ export function CardDePonto({
         </h3>
       </div>
 
-      <p className="mt-1.5 max-w-[46ch] text-[0.95rem] leading-snug text-tinta-suave">
+      <p className="mt-1.5 text-[0.95rem] leading-snug text-tinta-suave">
         {ponto.teaser}
       </p>
 
@@ -103,7 +104,7 @@ export function CardDePonto({
         // leitor de tela pronuncia errado se mentirmos.
         <p
           lang={ponto.idiomaDoTexto}
-          className="mt-3 max-w-[62ch] text-[0.95rem] leading-relaxed"
+          className="mt-3 text-[0.95rem] leading-relaxed"
         >
           {ponto.texto}
         </p>

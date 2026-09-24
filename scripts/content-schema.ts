@@ -312,6 +312,10 @@ export type Evento = z.infer<typeof eventoSchema>
  * CS-OURO-004 aplicado a apresentacao: os dez, cada um uma vez, e a MESMA quantidade de
  * fotos na galeria. Tres fotos numa cidade e uma na outra e destaque visual.
  */
+/** Parágrafos da descrição: separados por linha em branco no JSON, um `<p>` cada na página. */
+export const paragrafos = (texto: string): string[] =>
+  texto.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+
 export function paridadeDeApresentacao(lista: Apresentacao[]): Falha[] {
   const falhas: Falha[] = []
   for (const slug of SLUGS) {
@@ -324,6 +328,13 @@ export function paridadeDeApresentacao(lista: Apresentacao[]): Falha[] {
   if (tamanhos.size > 1) {
     const resumo = lista.map((a) => `${a.municipio}=${a.galeria.length}`).join(', ')
     falhas.push({ regra: 'CS-OURO-004', onde: 'apresentacao.json', mensagem: `galerias de tamanho desigual: ${resumo}` })
+  }
+  const blocos = new Set(lista.flatMap((a) => Object.values(a.descricao).map((t) => paragrafos(t).length)))
+  if (blocos.size > 1) {
+    const resumo = lista
+      .map((a) => `${a.municipio}=${Object.values(a.descricao).map((t) => paragrafos(t).length).join('/')}`)
+      .join(', ')
+    falhas.push({ regra: 'CS-OURO-004', onde: 'apresentacao.json', mensagem: `descricoes com numero desigual de paragrafos: ${resumo}` })
   }
   return falhas
 }

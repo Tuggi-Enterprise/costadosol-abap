@@ -869,20 +869,24 @@ const DADOS: MunicipioBruto[] = [
         fonte: SETUR('silva-jardim'),
       },
       {
-        id: 'silva-jardim-sete-quedas', foto: 'img/poi/silva-jardim-sete-quedas', tipo: 'inesperado', categoria: 'natureza',
-        coords: [-22.5250, -42.4300],
-        nome: { pt: 'Cachoeira das Sete Quedas', en: 'Sete Quedas Waterfall', es: 'Cascada de Sete Quedas' },
+        // Troca de 24/09/2026, decidida pelo operador: a Cachoeira das Sete Quedas nao tinha
+        // foto com licenca, e a das Andorinhas tem foto oficial da Setur-RJ ("Divulgacao").
+        id: 'silva-jardim-andorinhas', foto: 'img/poi/silva-jardim-andorinhas', tipo: 'inesperado', categoria: 'natureza',
+        // Aproximada: a fonte da o endereco (Estrada do Macharet, em Aldeia Velha), nao a
+        // coordenada.
+        coords: [-22.5200, -42.4100],
+        nome: { pt: 'Cachoeira das Andorinhas', en: 'Andorinhas Waterfall', es: 'Cascada de las Andorinhas' },
         teaser: {
-          pt: 'Uma das duas cachoeiras do município, ao lado da Cachoeira das Andorinhas.',
-          en: 'One of the two waterfalls in the municipality, alongside Cachoeira das Andorinhas.',
-          es: 'Una de las dos cascadas del municipio, junto a la Cachoeira das Andorinhas.',
+          pt: 'Uma queda de 19 metros em Aldeia Velha, com poço fundo aos pés e paredão para rapel.',
+          en: 'A 19-metre waterfall in Aldeia Velha, with a deep pool at its foot and a rock face for rappelling.',
+          es: 'Una caída de 19 metros en Aldeia Velha, con una poza profunda al pie y una pared para rapel.',
         },
         texto: {
-          pt: 'Fica em Silva Jardim, o município do estado com mais reservas particulares de patrimônio natural.',
-          en: 'It is in Silva Jardim, the municipality with the most private natural heritage reserves in the state.',
-          es: 'Está en Silva Jardim, el municipio con más reservas privadas de patrimonio natural del estado.',
+          pt: 'Do portão até a primeira cachoeira são 365 metros, de 5 a 10 minutos de caminhada. O poço tem 7 metros de profundidade, e o paredão recebe rapel de 25 metros de altura.',
+          en: 'From the gate to the first waterfall is 365 metres, a 5 to 10 minute walk. The pool is 7 metres deep, and the rock face hosts 25-metre rappelling.',
+          es: 'Desde el portón hasta la primera cascada hay 365 metros, de 5 a 10 minutos de caminata. La poza tiene 7 metros de profundidad, y la pared recibe rapel de 25 metros de altura.',
         },
-        afirmacao: 'A Cachoeira das Sete Quedas consta da lista oficial de atrações de Silva Jardim.',
+        afirmacao: 'A Cachoeira das Andorinhas tem queda de 19 metros e poço de 7 metros de profundidade, fica a 365 metros do portão e recebe rapel de 25 metros.',
         fonte: SETUR('silva-jardim'),
       },
       {

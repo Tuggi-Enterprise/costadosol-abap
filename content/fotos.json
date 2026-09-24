@@ -946,5 +946,17 @@
       "en": "Golden lion tamarin on a branch in the Poço das Antas Biological Reserve",
       "es": "Tití león dorado en una rama en la Reserva Biológica de Poço das Antas"
     }
+  },
+  "img/poi/silva-jardim-andorinhas": {
+    "credito": "Divulgação · Setur-RJ",
+    "autor": "Divulgação",
+    "licenca": "Divulgação — Secretaria de Estado de Turismo do Rio de Janeiro",
+    "pagina": "https://www.turismo.rj.gov.br/cidades/silva-jardim/",
+    "arquivo": "https://www.turismo.rj.gov.br/wp-content/uploads/2020/03/CAPA-andorinhas.jpg",
+    "alt": {
+      "pt": "Cachoeira das Andorinhas caindo entre pedras cobertas de musgo, com um visitante de braços abertos no alto do paredão",
+      "en": "Andorinhas Waterfall falling between moss-covered rocks, with a visitor standing arms outstretched on the rock face",
+      "es": "Cascada de las Andorinhas cayendo entre rocas cubiertas de musgo, con un visitante de brazos abiertos en lo alto de la pared"
+    }
   }
 }

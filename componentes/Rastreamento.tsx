@@ -6,7 +6,7 @@
  * - `scroll_depth` — quanto da página a pessoa viu, em 25/50/75/100%, uma vez por marco
  *   em cada página. O GA4 sozinho só mede 90%.
  * - `ui_click` — todo toque em link ou botão, com o texto e o destino. Os eventos de
- *   negócio (`audio_play`, `poi_open`…) continuam saindo de onde saem; este é a rede que
+ *   negócio (`poi_open`, `municipio_open`…) continuam saindo de onde saem; este é a rede que
  *   pega o resto, para nenhum clique ficar sem registro.
  *
  * Página vista, tempo de engajamento e origem do tráfego o GA4 coleta sozinho, inclusive

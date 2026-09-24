@@ -19,12 +19,11 @@
  * **Som.** Pedido do consórcio em 24/09/2026. O vídeo sempre começa mudo: nenhum navegador
  * deixa tocar som sozinho antes de a pessoa tocar no site ("Muted autoplay is always
  * allowed", developer.chrome.com/blog/autoplay). O botão no canto liga e desliga, e o som
- * desliga sozinho quando atrapalharia: quando um "Ouvir" começa, ou quando o vídeo sai da
- * tela. A escolha vale para a sessão, como o resto do estado do site.
+ * desliga sozinho quando o vídeo sai da tela. A escolha vale para a sessão, como o resto do
+ * estado do site.
  */
 import { useEffect, useRef, useState } from 'react'
 import { EVENTO_MUDOU, movimentoReduzido } from '../lib/preferencias.ts'
-import { EVENTO_AUDIO_TOCOU, pausarAudioAtual } from './Audio.tsx'
 
 const CHAVE_DO_SOM = 'video_capa_som'
 
@@ -64,7 +63,6 @@ export function VideoDeCapa({
     if (!video) return
     video.muted = !ligado
     setComSom(ligado)
-    if (ligado) pausarAudioAtual()
   }
 
   useEffect(() => {
@@ -115,8 +113,6 @@ export function VideoDeCapa({
       video.muted = true
       setComSom(false)
     }
-    window.addEventListener(EVENTO_AUDIO_TOCOU, silenciar)
-
     // Som de vídeo que ninguém vê é ruído. Emudece sem gravar a escolha: quem ligou e
     // rolou continua sendo alguém que quer som, se voltar à home depois.
     const observador = new IntersectionObserver(
@@ -128,7 +124,6 @@ export function VideoDeCapa({
     observador.observe(video)
 
     return () => {
-      window.removeEventListener(EVENTO_AUDIO_TOCOU, silenciar)
       observador.disconnect()
     }
   }, [])

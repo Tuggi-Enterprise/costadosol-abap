@@ -16,20 +16,6 @@
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-araruama.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-araruama.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-araruama.mp3",
-        "dur": 45
-      }
-    },
     "redes": [
       {
         "rede": "instagram",
@@ -68,20 +54,6 @@
         "es": "[es] Marcador de descricao da foto de Armação dos Búzios."
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-armacao-dos-buzios.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-armacao-dos-buzios.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-armacao-dos-buzios.mp3",
-        "dur": 45
-      }
     },
     "redes": [
       {
@@ -122,20 +94,6 @@
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-arraial-do-cabo.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-arraial-do-cabo.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-arraial-do-cabo.mp3",
-        "dur": 45
-      }
-    },
     "redes": [
       {
         "rede": "instagram",
@@ -174,20 +132,6 @@
         "es": "[es] Marcador de descricao da foto de Cabo Frio."
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-cabo-frio.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-cabo-frio.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-cabo-frio.mp3",
-        "dur": 45
-      }
     },
     "redes": [
       {
@@ -228,20 +172,6 @@
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-casimiro-de-abreu.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-casimiro-de-abreu.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-casimiro-de-abreu.mp3",
-        "dur": 45
-      }
-    },
     "redes": [
       {
         "rede": "instagram",
@@ -280,20 +210,6 @@
         "es": "[es] Marcador de descricao da foto de Iguaba Grande."
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-iguaba-grande.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-iguaba-grande.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-iguaba-grande.mp3",
-        "dur": 45
-      }
     },
     "redes": [
       {
@@ -334,20 +250,6 @@
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-rio-das-ostras.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-rio-das-ostras.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-rio-das-ostras.mp3",
-        "dur": 45
-      }
-    },
     "redes": [
       {
         "rede": "instagram",
@@ -386,20 +288,6 @@
         "es": "[es] Marcador de descricao da foto de São Pedro da Aldeia."
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-sao-pedro-da-aldeia.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-sao-pedro-da-aldeia.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-sao-pedro-da-aldeia.mp3",
-        "dur": 45
-      }
     },
     "redes": [
       {
@@ -440,20 +328,6 @@
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-saquarema.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-saquarema.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-saquarema.mp3",
-        "dur": 45
-      }
-    },
     "redes": [
       {
         "rede": "instagram",
@@ -492,20 +366,6 @@
         "es": "[es] Marcador de descricao da foto de Silva Jardim."
       },
       "credito": "EXEMPLO — credito pendente (P-05)"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-silva-jardim.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-silva-jardim.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-silva-jardim.mp3",
-        "dur": 45
-      }
     },
     "redes": [
       {

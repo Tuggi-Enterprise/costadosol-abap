@@ -15,9 +15,6 @@ import { COBERTURA_ROTAS, IDIOMAS_CONTEUDO, MUNICIPIOS, PONTOS_POR_MUNICIPIO } f
 const idiomas = <T,>(fabrica: (idioma: string) => T): Record<string, T> =>
   Object.fromEntries(IDIOMAS_CONTEUDO.map((idioma) => [idioma, fabrica(idioma)]))
 
-const audio = (arquivo: string, dur: number) =>
-  idiomas((idioma) => ({ url: `/audio/${idioma}/${arquivo}.mp3`, dur }))
-
 const municipios = MUNICIPIOS.map((m) => ({
   slug: m.slug,
   nome: m.nome,
@@ -27,7 +24,6 @@ const municipios = MUNICIPIOS.map((m) => ({
     alt: idiomas((idioma) => `[${idioma}] Marcador de descricao da foto de ${m.nome}.`),
     credito: 'EXEMPLO — credito pendente (P-05)',
   },
-  audio: audio(`mun-${m.slug}`, 45),
   // CS-MUN-005: perfil de exemplo, nunca o real. Fixture que aponta para conta de verdade
   // vira link publicado por engano no dia em que alguem servir fixtures em producao.
   redes: [
@@ -61,7 +57,6 @@ const pontos = MUNICIPIOS.flatMap((m, indiceMunicipio) =>
     coords: [-22.5 - indiceMunicipio * 0.1, -42.0 - i * 0.05],
     teaser: idiomas((idioma) => `[${idioma}] Marcador de chamada do lugar ${i + 1} de ${m.nome}, dentro do limite de 180 caracteres.`),
     texto: idiomas((idioma) => `[${idioma}] Marcador de texto completo do lugar ${i + 1} de ${m.nome}.`),
-    audio: audio(`${m.slug}-${i + 1}`, 50),
     foto: {
       v: `/img/poi/${m.slug}-${i + 1}-v`,
       h: `/img/poi/${m.slug}-${i + 1}-h`,

@@ -26,20 +26,6 @@
       },
       "credito": "Marinelson Almeida · CC BY 2.0"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-araruama.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-araruama.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-araruama.mp3",
-        "dur": 45
-      }
-    },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://www.turismo.rj.gov.br/destino/araruama/",
@@ -78,20 +64,6 @@
         "es": "Ensenada de la Playa de João Fernandes vista desde lo alto del cerro, Búzios"
       },
       "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-armacao-dos-buzios.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-armacao-dos-buzios.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-armacao-dos-buzios.mp3",
-        "dur": 45
-      }
     },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
@@ -132,20 +104,6 @@
       },
       "credito": "Antônio André Lopes de Oliveira · CC BY-SA 4.0"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-arraial-do-cabo.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-arraial-do-cabo.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-arraial-do-cabo.mp3",
-        "dur": 45
-      }
-    },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://www.turismo.rj.gov.br/destino/arraial-do-cabo/",
@@ -184,20 +142,6 @@
         "es": "Vista aérea de Cabo Frío con la Praia do Forte y el Canal de Itajuru"
       },
       "credito": "Luiz Felipe Lage Levy · CC BY-SA 4.0"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-cabo-frio.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-cabo-frio.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-cabo-frio.mp3",
-        "dur": 45
-      }
     },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
@@ -238,20 +182,6 @@
       },
       "credito": "Halley Pacheco de Oliveira · CC BY-SA 3.0"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-casimiro-de-abreu.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-casimiro-de-abreu.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-casimiro-de-abreu.mp3",
-        "dur": 45
-      }
-    },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://www.turismo.rj.gov.br/destino/casimiro-de-abreu/",
@@ -290,20 +220,6 @@
         "es": "Orilla de la Laguna de Araruama en Iguaba Grande, con arena clara y cocoteros"
       },
       "credito": "Marinelson Almeida · CC BY 2.0"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-iguaba-grande.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-iguaba-grande.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-iguaba-grande.mp3",
-        "dur": 45
-      }
     },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
@@ -344,20 +260,6 @@
       },
       "credito": "Fulviusbsas · CC BY-SA 3.0"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-rio-das-ostras.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-rio-das-ostras.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-rio-das-ostras.mp3",
-        "dur": 45
-      }
-    },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://www.turismo.rj.gov.br/destino/rio-das-ostras/",
@@ -396,20 +298,6 @@
         "es": "Malecón de la laguna en São Pedro da Aldeia con molino de viento, ciclovía y cielo azul"
       },
       "credito": "Rômulo Gama Ferreira · CC BY 2.0"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-sao-pedro-da-aldeia.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-sao-pedro-da-aldeia.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-sao-pedro-da-aldeia.mp3",
-        "dur": 45
-      }
     },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
@@ -450,20 +338,6 @@
       },
       "credito": "Roger Brock · CC BY-SA 4.0"
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-saquarema.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-saquarema.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-saquarema.mp3",
-        "dur": 45
-      }
-    },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",
       "url": "https://www.saquarema.rj.gov.br/turismo/",
@@ -502,20 +376,6 @@
         "es": "Sierras cubiertas de Mata Atlántica detrás de un prado y palmeras en Silva Jardim"
       },
       "credito": "Rafael Deminicis · CC BY-SA 4.0"
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/mun-silva-jardim.mp3",
-        "dur": 45
-      },
-      "en": {
-        "url": "/audio/en/mun-silva-jardim.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/mun-silva-jardim.mp3",
-        "dur": 45
-      }
     },
     "secretaria": {
       "nome": "Secretaria Municipal de Turismo",

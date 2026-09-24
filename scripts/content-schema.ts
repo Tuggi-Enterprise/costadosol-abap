@@ -57,7 +57,7 @@ export const SLUGS = MUNICIPIOS.map((m) => m.slug)
  */
 export const IDIOMAS_INTERFACE = ['pt', 'en', 'es'] as const
 
-/** CS-CONT-007 — conteudo e audio existem em tres. */
+/** CS-CONT-007 — conteudo existe em tres. */
 export const IDIOMAS_CONTEUDO = ['pt', 'en', 'es'] as const
 
 /** CS-CONT-007 — fallback e `en`, nunca `pt`: quem cai aqui e publico internacional. */
@@ -137,21 +137,6 @@ export const textoMultilingue = (max?: number) =>
       }
     })
 
-const faixaDeAudio = z.strictObject({
-  url: z.string().min(1),
-  dur: z.number().positive(),
-})
-
-const audioMultilingue = z
-  .record(z.string(), faixaDeAudio)
-  .superRefine((valor, ctx) => {
-    for (const idioma of IDIOMAS_CONTEUDO) {
-      if (!valor[idioma]) {
-        ctx.addIssue({ code: 'custom', message: `CS-CONT-007: falta o audio em "${idioma}"` })
-      }
-    }
-  })
-
 /** CS-OURO-006 / CS-VAL-001.5 — foto sem credito nao existe. */
 const credito = z.string().min(1, 'CS-VAL-001: credito de foto obrigatorio')
 
@@ -191,7 +176,6 @@ export const municipioSchema = z.strictObject({
     alt: textoMultilingue(),
     credito,
   }),
-  audio: audioMultilingue,
   secretaria: z.strictObject({
     nome: z.string().min(1),
     url: z.url(),
@@ -209,7 +193,6 @@ export const pontoSchema = z.strictObject({
   coords: z.tuple([z.number().min(-90).max(90), z.number().min(-180).max(180)]),
   teaser: textoMultilingue(TEASER_MAX),
   texto: textoMultilingue(),
-  audio: audioMultilingue,
   foto: z.strictObject({
     v: z.string().min(1),
     h: z.string().min(1),
@@ -554,7 +537,7 @@ export function nomeDeRota(conteudo: Conteudo): Falha[] {
 
 /**
  * CS-CONT-009 / CS-VAL-001.11 — meio idioma e pior que nenhum.
- * Um idioma fora do trio so vale se estiver em TODO campo multilingue e em todo audio.
+ * Um idioma fora do trio so vale se estiver em TODO campo multilingue.
  */
 export function idiomasParciais(conteudo: Conteudo): Falha[] {
   const falhas: Falha[] = []
@@ -573,13 +556,11 @@ export function idiomasParciais(conteudo: Conteudo): Falha[] {
   for (const m of conteudo.municipios) {
     coletar(`municipios/${m.slug}/linha`, m.linha)
     coletar(`municipios/${m.slug}/hero.alt`, m.hero.alt)
-    coletar(`municipios/${m.slug}/audio`, m.audio)
   }
   for (const p of conteudo.pontos) {
     coletar(`pontos/${p.id}/nome`, p.nome)
     coletar(`pontos/${p.id}/teaser`, p.teaser)
     coletar(`pontos/${p.id}/texto`, p.texto)
-    coletar(`pontos/${p.id}/audio`, p.audio)
     coletar(`pontos/${p.id}/foto.alt`, p.foto.alt)
   }
   for (const r of conteudo.rotas) {

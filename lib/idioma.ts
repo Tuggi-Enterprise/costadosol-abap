@@ -1,7 +1,7 @@
 /**
  * CS-CONT-007 inteiro mora aqui, e em nenhum outro lugar.
  *
- * A interface existe nos oito idiomas; conteudo e audio existem em tres. Todo componente
+ * A interface existe nos oito idiomas; conteudo existe em tres. Todo componente
  * que mostra conteudo passa por `servir()`. Segunda implementacao disto e defeito: e a
  * decisao "qual idioma estou servindo" duplicada, e e assim que um bloco fica em ingles
  * e o irmao ao lado em portugues.

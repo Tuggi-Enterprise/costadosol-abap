@@ -21,7 +21,7 @@ export const TETO_BYTES = 2048
  * Segmentos que ja existem na raiz do site. Um slug que colidisse com um destes faria o
  * QR da mesa abrir outra coisa — e so daria para descobrir na feira.
  */
-export const SEGMENTOS_RESERVADOS = [...IDIOMAS_INTERFACE, 'painel', '_next', 'img', 'audio', 'pdf', 'mapa', 'api']
+export const SEGMENTOS_RESERVADOS = [...IDIOMAS_INTERFACE, 'painel', '_next', 'img', 'pdf', 'mapa', 'api']
 
 export function paginaDeRedirecionamento(slug: string, nome: string): string {
   const idiomas = IDIOMAS_INTERFACE.map((i) => `"${i}"`).join(',')

@@ -23,20 +23,6 @@
       "en": "The lagoon borders seven municipalities and draws kitesurfers, windsurfers and jet-ski riders. Its saltwater beaches have short waves and a shallow bottom for hundreds of metres.",
       "es": "La laguna baña siete municipios y atrae a practicantes de kitesurf, windsurf y jet-ski. Sus playas de agua salada tienen olas cortas y fondo bajo por cientos de metros."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-lagoa.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-lagoa.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/araruama-lagoa.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/araruama-lagoa",
       "h": "/img/poi/araruama-lagoa",
@@ -80,20 +66,6 @@
       "pt": "Praia Seca fica entre a Lagoa de Araruama e o mar aberto. De um lado, água parada e morna. Do outro, arrebentação.",
       "en": "Praia Seca sits between the Araruama Lagoon and the open sea. Still, warm water on one side. Surf on the other.",
       "es": "Praia Seca está entre la Laguna de Araruama y el mar abierto. De un lado, agua quieta y templada. Del otro, rompiente."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-praia-seca.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-praia-seca.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/araruama-praia-seca.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/araruama-praia-seca",
@@ -139,20 +111,6 @@
       "en": "The sandbank separates the lagoon from the ocean for dozens of kilometres. More than half of Costa do Sol State Park lies within the Massambaba protected area.",
       "es": "La restinga separa la laguna del océano por decenas de kilómetros. Más de la mitad del Parque Estadual da Costa do Sol está en el área de protección ambiental de Massambaba."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-massambaba.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-massambaba.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/araruama-massambaba.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/araruama-massambaba",
       "h": "/img/poi/araruama-massambaba",
@@ -196,20 +154,6 @@
       "pt": "Juturnaíba abastece de água boa parte da região e contrasta com as lagoas salgadas do litoral.",
       "en": "Juturnaíba supplies water to much of the region and stands in contrast to the saltwater lagoons on the coast.",
       "es": "Juturnaíba abastece de agua a buena parte de la región y contrasta con las lagunas saladas del litoral."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-juturnaiba.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-juturnaiba.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/araruama-juturnaiba.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/araruama-juturnaiba",
@@ -255,20 +199,6 @@
       "en": "The sculptures honour Brigitte Bardot, the local fishermen and Juscelino Kubitschek. The same stretch holds the Centro pier, where boat tours depart, and the fishermen’s pier, still used by fishing families today.",
       "es": "Las esculturas homenajean a Brigitte Bardot, a los pescadores y a Juscelino Kubitschek. En el mismo tramo están el muelle del Centro, de donde salen los paseos en barco, y el muelle de los pescadores, todavía usado por familias de pescadores."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/buzios-orla-bardot.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/buzios-orla-bardot.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/buzios-orla-bardot.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/buzios-orla-bardot",
       "h": "/img/poi/buzios-orla-bardot",
@@ -312,20 +242,6 @@
       "pt": "O formato da enseada protege a praia dos ventos e das correntes marítimas, e é o que a torna procurada por quem viaja com crianças. A água calma e fria recebe mergulho, caiaque, pedalinho e wakeboard.",
       "en": "The shape of the cove shelters the beach from wind and sea currents, which is what makes it a favourite for families with children. The calm, cold water is used for diving, kayaking, pedal boats and wakeboarding.",
       "es": "La forma de la ensenada protege la playa del viento y de las corrientes marinas, y es lo que la hace buscada por quienes van con niños. El agua tranquila y fría recibe buceo, kayak, hidropedales y wakeboard."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/buzios-ferradura.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/buzios-ferradura.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/buzios-ferradura.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/buzios-ferradura",
@@ -371,20 +287,6 @@
       "en": "At the right end sits Ponta do Marisco, whose rocks are more than two billion years old and record the opening of the Atlantic Ocean, when America split from Africa. The left end has an area set aside for beach sports.",
       "es": "En el extremo derecho está la Ponta do Marisco, cuyas rocas tienen más de dos mil millones de años y registran la apertura del océano Atlántico, cuando América se separó de África. El lado izquierdo tiene un espacio delimitado para deportes en la arena."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/buzios-geriba.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/buzios-geriba.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/buzios-geriba.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/buzios-geriba",
       "h": "/img/poi/buzios-geriba",
@@ -428,20 +330,6 @@
       "pt": "A pedreira que existiu na Ponta do Marisco forneceu as pedras que dão nome à rua. Hoje ela concentra lojas, bares e restaurantes, e é onde a cidade se encontra depois que o sol se põe.",
       "en": "The quarry that once operated at Ponta do Marisco supplied the stones that give the street its name. Today it gathers shops, bars and restaurants, and it is where the town meets once the sun goes down.",
       "es": "La cantera que existió en la Ponta do Marisco proveyó las piedras que dan nombre a la calle. Hoy reúne tiendas, bares y restaurantes, y es donde la ciudad se encuentra después de la puesta del sol."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/buzios-rua-das-pedras.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/buzios-rua-das-pedras.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/buzios-rua-das-pedras.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/buzios-rua-das-pedras",
@@ -487,20 +375,6 @@
       "en": "Access is by staircase from the Pontal do Atalaia lookout. The area is part of Costa do Sol State Park.",
       "es": "El acceso es por escalera desde el mirador de Pontal do Atalaia. El área integra el Parque Estadual da Costa do Sol."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-prainhas.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-prainhas.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/arraial-prainhas.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/arraial-prainhas",
       "h": "/img/poi/arraial-prainhas",
@@ -544,20 +418,6 @@
       "pt": "A ilha é área militar e o desembarque é regulado. As águas transparentes são o motivo pelo qual a cidade é conhecida pelo mergulho.",
       "en": "The island is military ground and landing is regulated. Its transparent water is why the town is known for diving.",
       "es": "La isla es área militar y el desembarco está regulado. Sus aguas transparentes explican la fama de buceo de la ciudad."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-farol.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-farol.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/arraial-farol.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/arraial-farol",
@@ -603,20 +463,6 @@
       "en": "The cove holds the harbour where the boat trips leave from, and the Oceanographic Museum.",
       "es": "La ensenada alberga el puerto de donde salen los paseos en barco y el Museo Oceanográfico."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-anjos.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-anjos.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/arraial-anjos.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/arraial-anjos",
       "h": "/img/poi/arraial-anjos",
@@ -660,20 +506,6 @@
       "pt": "A trilha parte da Praia dos Anjos. A enseada é fechada por costões dos dois lados.",
       "en": "The trail starts at Anjos Beach. The cove is closed off by rocky outcrops on both sides.",
       "es": "El sendero parte de la Praia dos Anjos. La ensenada está cerrada por peñascos a ambos lados."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-forno.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-forno.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/arraial-forno.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/arraial-forno",
@@ -719,20 +551,6 @@
       "en": "This is the town’s urban beach, with Forte São Mateus at one end and the dune field at the other.",
       "es": "Es la playa urbana de la ciudad, con el Forte São Mateus en un extremo y las dunas en el otro."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-praia-do-forte.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-praia-do-forte.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-praia-do-forte.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/cabo-frio-praia-do-forte",
       "h": "/img/poi/cabo-frio-praia-do-forte",
@@ -776,20 +594,6 @@
       "pt": "O forte guarda a entrada do Canal do Itajuru, por onde o mar entra e alimenta a Lagoa de Araruama.",
       "en": "The fort guards the mouth of the Itajuru Channel, through which the sea feeds the Araruama Lagoon.",
       "es": "El fuerte vigila la entrada del Canal do Itajuru, por donde el mar alimenta la Laguna de Araruama."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-forte.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-forte.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-forte.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/cabo-frio-forte",
@@ -835,20 +639,6 @@
       "en": "Peró has open sea and steady wind, sought out by board-sport riders.",
       "es": "Peró tiene mar abierto y viento constante, buscado por quienes practican deportes de tabla."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-pero.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-pero.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-pero.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/cabo-frio-pero",
       "h": "/img/poi/cabo-frio-pero",
@@ -892,20 +682,6 @@
       "pt": "É por este canal estreito que a água do mar entra e mantém a salinidade da Lagoa de Araruama.",
       "en": "It is through this narrow channel that seawater enters and keeps the Araruama Lagoon salty.",
       "es": "Por este canal estrecho entra el agua de mar que mantiene la salinidad de la laguna."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-itajuru.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-itajuru.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-itajuru.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/cabo-frio-itajuru",
@@ -951,20 +727,6 @@
       "en": "The hill is an extinct volcano and dominates the landscape between Casimiro de Abreu and the coast.",
       "es": "El morro es un volcán extinto y domina el paisaje entre Casimiro de Abreu y el litoral."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-morro-sao-joao.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-morro-sao-joao.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/casimiro-morro-sao-joao.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/casimiro-morro-sao-joao",
       "h": "/img/poi/casimiro-morro-sao-joao",
@@ -1008,20 +770,6 @@
       "pt": "O rio tem grande número de quedas d’água e corredeiras, e é onde a região oferece rafting.",
       "en": "The river has a large number of waterfalls and rapids, and is where the region offers rafting.",
       "es": "El río tiene gran número de cascadas y rápidos, y es donde la región ofrece rafting."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-rio-macae.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-rio-macae.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/casimiro-rio-macae.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/casimiro-rio-macae",
@@ -1067,20 +815,6 @@
       "en": "The chapel of São João dates from the 17th century. The village sits where the São João River meets the sea.",
       "es": "La capilla de São João es del siglo XVII. La villa está donde el río São João encuentra el mar."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-barra-de-sao-joao.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-barra-de-sao-joao.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/casimiro-barra-de-sao-joao.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/casimiro-barra-de-sao-joao",
       "h": "/img/poi/casimiro-barra-de-sao-joao",
@@ -1124,20 +858,6 @@
       "pt": "O nome da cidade homenageia o poeta Casimiro José Marques de Abreu, com memória preservada em museu.",
       "en": "The town’s name honours the poet Casimiro José Marques de Abreu, remembered in a local museum.",
       "es": "El nombre de la ciudad honra al poeta Casimiro José Marques de Abreu, recordado en un museo local."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-museu.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-museu.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/casimiro-museu.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/casimiro-museu",
@@ -1183,20 +903,6 @@
       "en": "Setur-RJ describes the Araruama Lagoon as the largest saltwater lagoon in Latin America, about 200 km around.",
       "es": "Setur-RJ describe la Laguna de Araruama como la mayor laguna de agua salada de América Latina, con unos 200 km de perímetro."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-lagoa.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-lagoa.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/iguaba-lagoa.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/iguaba-lagoa",
       "h": "/img/poi/iguaba-lagoa",
@@ -1240,20 +946,6 @@
       "pt": "A capela, a casa paroquial e o coreto foram tombados juntos em 1979. A casa e o coreto foram demolidos no fim dos anos 1980, e só a capela ficou de pé.",
       "en": "The chapel, parish house and bandstand were listed together as heritage in 1979. The house and bandstand were torn down in the late 1980s, and only the chapel still stands.",
       "es": "La capilla, la casa parroquial y el quiosco fueron declarados patrimonio juntos en 1979. La casa y el quiosco fueron demolidos a fines de los años 80, y solo quedó en pie la capilla."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-capela.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-capela.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/iguaba-capela.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/iguaba-capela",
@@ -1299,20 +991,6 @@
       "en": "They are the Centro pier, the Cidade Nova pier, the old City Hall pier, the old Quay pier and the Popeye pier.",
       "es": "Son el muelle del Centro, el de Cidade Nova, el de la antigua Prefectura, el del antiguo Muelle y el del Popeye."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-pieres.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-pieres.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/iguaba-pieres.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/iguaba-pieres",
       "h": "/img/poi/iguaba-pieres",
@@ -1356,20 +1034,6 @@
       "pt": "Do caminho se avista toda a orla de Iguaba. A visita é recomendada pela manhã, por causa da maré.",
       "en": "The whole Iguaba shoreline can be seen from the path. Morning visits are recommended because of the tide.",
       "es": "Desde el camino se ve toda la orilla de Iguaba. Se recomienda la visita por la mañana, a causa de la marea."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-ponta-da-farinha.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-ponta-da-farinha.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/iguaba-ponta-da-farinha.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/iguaba-ponta-da-farinha",
@@ -1415,20 +1079,6 @@
       "en": "Setur-RJ records the work as the largest tribute to a cetacean in the world.",
       "es": "Setur-RJ registra la obra como el mayor homenaje a un cetáceo del mundo."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/ostras-praca-da-baleia.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/ostras-praca-da-baleia.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/ostras-praca-da-baleia.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/ostras-praca-da-baleia",
       "h": "/img/poi/ostras-praca-da-baleia",
@@ -1472,20 +1122,6 @@
       "pt": "Costazul é a maior praia oceânica da cidade e tem píer próprio.",
       "en": "Costazul is the town’s longest ocean beach and has its own pier.",
       "es": "Costazul es la mayor playa oceánica de la ciudad y tiene su propio muelle."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/ostras-costazul.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/ostras-costazul.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/ostras-costazul.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/ostras-costazul",
@@ -1531,20 +1167,6 @@
       "en": "The pier reaches out over the sea at the end of Costazul, the town’s longest ocean beach.",
       "es": "El muelle se adentra en el mar al final de Costazul, la mayor playa oceánica de la ciudad."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/ostras-pier.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/ostras-pier.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/ostras-pier.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/ostras-pier",
       "h": "/img/poi/ostras-pier",
@@ -1588,20 +1210,6 @@
       "pt": "Os costões dividem as quinze praias da cidade e dão a elas águas calmas.",
       "en": "The outcrops divide the town’s fifteen beaches and give them calm water.",
       "es": "Los peñascos dividen las quince playas de la ciudad y les dan aguas calmas."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/ostras-costoes.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/ostras-costoes.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/ostras-costoes.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/ostras-costoes",
@@ -1647,20 +1255,6 @@
       "en": "The house was raised from broken china, shells and leftover material. Setur-RJ compares its architecture to Antoni Gaudí’s work.",
       "es": "La casa se levantó con fragmentos de loza, conchas y restos de material. Setur-RJ compara su arquitectura con la obra de Gaudí."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/aldeia-casa-da-flor.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/aldeia-casa-da-flor.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/aldeia-casa-da-flor.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/aldeia-casa-da-flor",
       "h": "/img/poi/aldeia-casa-da-flor",
@@ -1704,20 +1298,6 @@
       "pt": "A igreja está no ponto alto do centro e é o edifício mais antigo em uso da cidade.",
       "en": "The church stands on the high point of the town centre and is its oldest building still in use.",
       "es": "La iglesia está en el punto alto del centro y es el edificio más antiguo en uso de la ciudad."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/aldeia-igreja-matriz.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/aldeia-igreja-matriz.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/aldeia-igreja-matriz.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/aldeia-igreja-matriz",
@@ -1763,20 +1343,6 @@
       "en": "The water is warm and clear, and this is where the region’s sunset is watched from.",
       "es": "El agua es templada y transparente, y desde aquí se ve el atardecer de la región."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/aldeia-sudoeste.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/aldeia-sudoeste.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/aldeia-sudoeste.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/aldeia-sudoeste",
       "h": "/img/poi/aldeia-sudoeste",
@@ -1820,20 +1386,6 @@
       "pt": "O museu funciona na base de aviação naval que a cidade abriga.",
       "en": "The museum sits inside the naval aviation base the town hosts.",
       "es": "El museo funciona en la base de aviación naval que alberga la ciudad."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/aldeia-aviacao-naval.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/aldeia-aviacao-naval.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/aldeia-aviacao-naval.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/aldeia-aviacao-naval",
@@ -1879,20 +1431,6 @@
       "en": "The city records that Saquarema is the only city in the world hosting all three tour divisions: QS, CT and Challenger Series.",
       "es": "El municipio registra que Saquarema es la única ciudad del mundo que recibe las tres divisiones: QS, CT y Challenger Series."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-itauna.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-itauna.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/saquarema-itauna.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/saquarema-itauna",
       "h": "/img/poi/saquarema-itauna",
@@ -1936,20 +1474,6 @@
       "pt": "A prefeitura registra o Círio de Nazareth de Saquarema como o mais antigo do Brasil.",
       "en": "The city records Saquarema’s Círio de Nazareth as the oldest in Brazil.",
       "es": "El municipio registra el Círio de Nazareth de Saquarema como el más antiguo de Brasil."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-nazareth.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-nazareth.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/saquarema-nazareth.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/saquarema-nazareth",
@@ -1995,20 +1519,6 @@
       "en": "Saquarema has two other lagoons, Jacarepiá and Vermelha.",
       "es": "Saquarema tiene otras dos lagunas, la de Jacarepiá y la Vermelha."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-lagoa.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-lagoa.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/saquarema-lagoa.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/saquarema-lagoa",
       "h": "/img/poi/saquarema-lagoa",
@@ -2052,20 +1562,6 @@
       "pt": "É a praia do centro histórico, ao lado de Prainha, Barrinha e Itaúna.",
       "en": "It is the historic centre’s beach, next to Prainha, Barrinha and Itaúna.",
       "es": "Es la playa del centro histórico, junto a Prainha, Barrinha e Itaúna."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-vila.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-vila.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/saquarema-vila.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/saquarema-vila",
@@ -2111,20 +1607,6 @@
       "en": "A biological reserve is a strict-protection category and visitation is legally restricted. Access rules must be confirmed with the managing body before any visit.",
       "es": "Una reserva biológica es de protección integral y la visita tiene restricción legal. Las reglas deben confirmarse con el órgano gestor antes de la visita."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-poco-das-antas.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-poco-das-antas.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-poco-das-antas.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/poi/silva-jardim-poco-das-antas",
       "h": "/img/poi/silva-jardim-poco-das-antas",
@@ -2168,20 +1650,6 @@
       "pt": "Os dois rios atravessam o distrito dentro da APA São João / Mico-Leão-Dourado.",
       "en": "The two rivers cross the district inside the São João / Golden Lion Tamarin protected area.",
       "es": "Los dos ríos atraviesan el distrito dentro del APA São João / Mico-Leão-Dourado."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-aldeia-velha.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-aldeia-velha.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-aldeia-velha.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/silva-jardim-aldeia-velha",
@@ -2227,20 +1695,6 @@
       "en": "It is in Silva Jardim, the municipality with the most private natural heritage reserves in the state.",
       "es": "Está en Silva Jardim, el municipio con más reservas privadas de patrimonio natural del estado."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-sete-quedas.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-sete-quedas.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-sete-quedas.mp3",
-        "dur": 45
-      }
-    },
     "foto": {
       "v": "/img/pendente",
       "h": "/img/pendente",
@@ -2284,20 +1738,6 @@
       "pt": "São 151 hectares de Mata Atlântica, geridos pela Associação Mico-Leão-Dourado e reconhecidos como reserva particular em 2024. O viaduto, no km 218, liga a Reserva Biológica de Poço das Antas à mata do outro lado da rodovia.",
       "en": "It covers 151 hectares of Atlantic Forest, managed by the Golden Lion Tamarin Association and recognised as a private reserve in 2024. The overpass, at km 218, links the Poço das Antas Biological Reserve to the forest across the highway.",
       "es": "Son 151 hectáreas de Mata Atlántica, gestionadas por la Asociación Mico-Leão-Dourado y reconocidas como reserva privada en 2024. El viaducto, en el km 218, une la Reserva Biológica de Poço das Antas con el bosque al otro lado de la carretera."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-parque-do-mico.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-parque-do-mico.mp3",
-        "dur": 45
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-parque-do-mico.mp3",
-        "dur": 45
-      }
     },
     "foto": {
       "v": "/img/poi/silva-jardim-parque-do-mico",

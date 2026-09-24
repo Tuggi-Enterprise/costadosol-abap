@@ -262,10 +262,15 @@ sem trocar a mão de posição. No desktop a mesma lista vira uma linha no topo.
 por decisão do operador: a home mostra só os eventos em destaque, e `/[lang]/agenda` traz o
 calendário inteiro.*
 
-**CS-HOME-001 · Hero** — vídeo institucional full-bleed, "Conderlagos", uma linha, botão de play (45 s)
-ocupando ≥30% da largura da tela. Sem menu hambúrguer na primeira dobra, sem carrossel.
+**CS-HOME-001 · Hero** — vídeo institucional full-bleed, "Conderlagos", uma linha. Sem menu
+hambúrguer na primeira dobra, sem carrossel.
 
-**CS-HOME-002 · Palavra da presidência** — card discreto, 20 s, na voz do presidente do
+> **Revisão de 24/09/2026, decidida pelo operador:** sai o botão "Ouvir a região". A faixa da
+> região nunca foi gravada, e o botão tocava o áudio de Cabo Frio sob o nome da região. Gravar
+> a faixa em três idiomas não se paga para um botão só: a home fica com texto, e o som da
+> primeira dobra é o do vídeo, ligado pelo botão no canto dele.
+
+**CS-HOME-002 · Palavra da presidência** *[Revogada em 24/09/2026: o áudio saiu do projeto, ver CS-DESIGN-002.]* — card discreto, 20 s, na voz do presidente do
 consórcio.
 
 **CS-HOME-003 · Mapa da região**, logo abaixo do hero. Dez marcadores **idênticos** (mesmo raio,
@@ -329,7 +334,7 @@ compartilhar
 **CS-MUN-003** — `og:image` própria por município, com o nome do município renderizado. É o que o
 gabinete municipal vai postar.
 
-**CS-MUN-004** — Do scan ao primeiro áudio de um ponto: no máximo **2 toques** e **menos de 5 s**
+**CS-MUN-004** *[Revista em 24/09/2026: sem áudio, a medida passa a ser do scan à página do ponto aberta.]* — Do scan ao primeiro áudio de um ponto: no máximo **2 toques** e **menos de 5 s**
 quando a entrada for por mesa.
 
 **CS-MUN-005 · Canais de rede social do município.** *Pedido do operador em 14/08/2026, para
@@ -384,15 +389,15 @@ os pontos ao longo do caminho, em sequência, cada um com ► ouvir
 os municípios desta rota → links para as páginas de município
 ```
 
-**CS-ROTA-002 · Ouvir a rota** — 80 a 100 segundos. Um marcador percorre o traçado; ao cruzar
+**CS-ROTA-002 · Ouvir a rota** *[Revogada em 24/09/2026: o áudio saiu do projeto, ver CS-DESIGN-002.]* — 80 a 100 segundos. Um marcador percorre o traçado; ao cruzar
 cada ponto, um card sobe e o áudio começa sozinho. Barra de progresso no topo, botão "pular"
 sempre visível.
 
-**CS-ROTA-003** — Navegador móvel bloqueia áudio sem gesto do usuário. O botão "ouvir a rota" é o
+**CS-ROTA-003** *[Revogada em 24/09/2026: o áudio saiu do projeto, ver CS-DESIGN-002.]* — Navegador móvel bloqueia áudio sem gesto do usuário. O botão "ouvir a rota" é o
 gesto; depois dele o encadeamento é livre. **Validar em Safari iOS físico**, o mais restritivo —
 não em emulador.
 
-**CS-ROTA-004** — Emite `rota_open`, `rota_ouvir_start`, `rota_ouvir_complete`.
+**CS-ROTA-004** *[Revogada em 24/09/2026: o áudio saiu do projeto, ver CS-DESIGN-002.]* — Emite `rota_open`, `rota_ouvir_start`, `rota_ouvir_complete`.
 
 **CS-ROTA-005** — O texto de encerramento cita a contagem real de pontos daquela rota; não é
 constante. Ver [P-13](01-pendencias.md).
@@ -544,10 +549,7 @@ expira ao fechar a aba), `ts` (ISO) e `lang`.
 | `home_fato_view` | `fato_id` |
 | `municipio_open` | `municipio`, `entry_municipio`, `cruzamento` (bool), `origem` (`home` \| `outras_cidades` \| `menu`), `posicao_no_sorteio` |
 | `poi_open` | `poi_id`, `municipio` |
-| `audio_play` | `poi_id`, `municipio`, `origem` (`home` \| `cidade` \| `ponto` \| `rota`) |
-| `audio_progress` | `poi_id`, `pct` (25 \| 50 \| 75 \| 100) |
 | `rota_open` | `rota_id`, `origem` (`mapa` \| `cards` \| `cidade`) |
-| `rota_ouvir_start` / `rota_ouvir_complete` | `rota_id`, `pct_percorrido` |
 | `mapa_interacao` | `alvo` (`cidade` \| `rota`), `id` |
 | `cta_click` | `municipio` |
 | `form_open` / `form_submit` | `origem_municipio` |
@@ -634,6 +636,14 @@ simulados). Reproduzir a estrutura e os cortes; **não reaproveitar os números*
 
 **CS-DESIGN-001** — Mobile-first, testado primeiro em **375 px**. Desktop é adaptação, não o
 inverso.
+
+> **Revisão de 24/09/2026, decidida pelo operador: o áudio saiu do projeto.** Nenhuma faixa
+> foi gravada, e gravar cada cidade e cada ponto em três idiomas não se paga para o uso que
+> teria na feira. O site é lido: foto é a isca e texto é o conteúdo. Saíram o componente de
+> áudio, os botões "Ouvir", a coluna `audio` do banco (migration `20260924120000_remove_audio`)
+> e os eventos `audio_play`, `audio_progress`, `rota_ouvir_start` e `rota_ouvir_complete`. As
+> regras marcadas como revogadas ficam no texto como histórico. O único som do site é o do
+> vídeo da capa, que começa mudo.
 
 **CS-DESIGN-002** — Áudio é o produto; foto é a isca; texto é a acessibilidade. **Se em qualquer
 tela o texto ocupar mais espaço que o botão de play, a tela está errada.**
@@ -725,10 +735,10 @@ em quatro telas. Exclusão da varredura carrega o motivo escrito e aparece na sa
 **CS-PERF-003** — Imagens: AVIF com fallback WebP, `srcset` responsivo, `loading="lazy"` fora da
 primeira dobra, dimensões declaradas para não causar layout shift.
 
-**CS-PERF-004** — Áudio: MP3 mono 48–64 kbps, carregado sob demanda, **um por vez**. Nunca
+**CS-PERF-004** *[Revogada em 24/09/2026: o áudio saiu do projeto, ver CS-DESIGN-002.]* — Áudio: MP3 mono 48–64 kbps, carregado sob demanda, **um por vez**. Nunca
 pré-carregar os 40.
 
-**CS-PERF-005** — Service worker cacheia o shell da aplicação e os áudios **já ouvidos**. **Não**
+**CS-PERF-005** *[Revogada em 24/09/2026: o áudio saiu do projeto, ver CS-DESIGN-002.]* — Service worker cacheia o shell da aplicação e os áudios **já ouvidos**. **Não**
 pré-cacheia tudo na entrada: isso quebraria o orçamento de 500 KB, que é o número que decide se o
 QR funciona no pavilhão lotado.
 

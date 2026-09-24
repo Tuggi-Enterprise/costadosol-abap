@@ -4,7 +4,7 @@
  * CS-MUN-002 — os quatro pontos ficam abertos na própria página do município. Três níveis
  * de navegação são demais para quem tem 60 segundos no balcão.
  *
- * Ordem dos elementos, na ordem do briefing: FOTO, nome, chamada, ► ouvir, "ler mais".
+ * Ordem dos elementos, na ordem do briefing: FOTO, nome, chamada, "ler mais".
  * A foto vem primeiro porque é a isca; com o texto antes, o olho lia dois parágrafos para
  * só então descobrir o que estava vendo. O texto completo começa fechado porque em nenhuma
  * tela ele pode ocupar mais espaço que o play (CS-DESIGN-002).
@@ -12,7 +12,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Foto } from './Foto.tsx'
-import { Audio } from './Audio.tsx'
 import { track } from '../lib/track.ts'
 
 /**
@@ -29,7 +28,6 @@ export type PontoDoCard = {
   /** CS-CONT-008: o idioma REALMENTE servido em `texto`, que pode não ser o escolhido. */
   idiomaDoTexto: string
   foto: { src: string; alt: string; credito: string }
-  audio: { url: string; dur: number }
 }
 
 export function CardDePonto({
@@ -41,7 +39,7 @@ export function CardDePonto({
   ponto: PontoDoCard
   lang: string
   numero: number
-  rotulos: { ouvir: string; lerMais: string; lerMenos: string }
+  rotulos: { lerMais: string; lerMenos: string }
 }) {
   const [aberto, setAberto] = useState(false)
 
@@ -76,15 +74,7 @@ export function CardDePonto({
         {ponto.teaser}
       </p>
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-        <Audio
-          url={ponto.audio.url}
-          duracao={ponto.audio.dur}
-          rotulo={rotulos.ouvir}
-          poiId={ponto.id}
-          municipio={ponto.municipio}
-          origem="cidade"
-        />
+      <div className="mt-3">
         <button
           type="button"
           onClick={() => {

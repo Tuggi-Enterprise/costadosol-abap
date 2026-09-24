@@ -32,19 +32,18 @@ export function Hero({
   linha,
   idiomaDaLinha,
   video,
-  children,
 }: {
   /** Obrigatório sem `video`. Ausente, a capa cai no marcador de foto pendente (P-05). */
   src?: string
   /** Descreve a mídia que está na capa, seja ela a foto ou o filme. */
   alt: string
-  credito: string
+  /** Obrigatório sem `video`, como `src` (A-16). O filme da capa é do próprio Conderlagos. */
+  credito?: string
   titulo: string
   linha?: string
   idiomaDaLinha?: string
   /** Quando existe, a capa é o filme e `src` deixa de ser lido. */
   video?: { src: string; poster: string; rotulos: { ativarSom: string; desativarSom: string } }
-  children?: ReactNode
 }) {
   const texto = (
     <div
@@ -60,7 +59,6 @@ export function Hero({
           {linha}
         </p>
       )}
-      {children && <div className="mt-4">{children}</div>}
     </div>
   )
 
@@ -75,7 +73,7 @@ export function Hero({
           <Foto
             src={src ?? FOTO_PENDENTE}
             alt={alt}
-            credito={credito}
+            credito={credito ?? ''}
             proporcao="hero"
             prioridade
             arredondada={false}
@@ -106,8 +104,11 @@ export function Hero({
 
           Foto que não existe não tem autor a creditar, e a linha ia à tela mesmo assim:
           três municípios publicavam o marcador interno de P-05, com o número do card,
-          embaixo de um retângulo azul. Crédito só onde existe foto. */}
-      {(video || src !== FOTO_PENDENTE) && (
+          embaixo de um retângulo azul. Crédito só onde existe foto.
+
+          O vídeo da capa também não leva crédito: é do próprio Conderlagos, e o nome já
+          está em destaque logo acima (pedido do operador em 24/09/2026). */}
+      {!video && src !== FOTO_PENDENTE && (
         <p title={credito} className="truncate px-4 pt-1.5 text-[0.7rem] text-tinta-suave">
           {credito}
         </p>

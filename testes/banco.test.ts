@@ -114,8 +114,8 @@ test('CS-OURO-004: o banco recusa um quinto ponto na mesma ordem do municipio', 
   await assert.rejects(
     () =>
       db.query(
-        `insert into costadosol.ponto (id, municipio, tipo, categoria, nome, teaser, texto, audio, foto, lat, lon, ordem)
-         select 'saquarema-5', municipio, tipo, categoria, nome, teaser, texto, audio, foto, lat, lon, ordem
+        `insert into costadosol.ponto (id, municipio, tipo, categoria, nome, teaser, texto, foto, lat, lon, ordem)
+         select 'saquarema-5', municipio, tipo, categoria, nome, teaser, texto, foto, lat, lon, ordem
          from costadosol.ponto where id = 'saquarema-1'`,
       ),
     /ordem_unica_no_municipio/,

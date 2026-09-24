@@ -199,13 +199,6 @@ test('CS-CONT-007: falta de um dos tres idiomas de conteudo falha', async () => 
   assert.equal(pontoSchema.safeParse(ponto).success, false)
 })
 
-test('CS-CONT-007: falta de audio em um dos tres idiomas falha', async () => {
-  const conteudo = await conteudoValido()
-  const municipio = structuredClone(conteudo.municipios[0]!)
-  delete municipio.audio['en']
-  assert.equal(municipioSchema.safeParse(municipio).success, false)
-})
-
 /**
  * Desde 13/08/2026 o site tem tres idiomas, e nao oito: nao existe mais "idioma fora do
  * trio" legal. CS-CONT-009 nascia para o meio-idioma opcional, e agora e a forma FRACA da

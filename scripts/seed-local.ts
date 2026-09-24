@@ -23,26 +23,26 @@ export async function semear(db: PGlite, conteudo: Conteudo, dadosDeExemplo: boo
 
   for (const m of conteudo.municipios) {
     await db.query(
-      `insert into costadosol.municipio (slug, nome, linha, hero_src, hero_alt, hero_credito, audio, secretaria, redes)
-       values ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+      `insert into costadosol.municipio (slug, nome, linha, hero_src, hero_alt, hero_credito, secretaria, redes)
+       values ($1,$2,$3,$4,$5,$6,$7,$8)
        on conflict (slug) do update set
          nome = excluded.nome, linha = excluded.linha, hero_src = excluded.hero_src,
          hero_alt = excluded.hero_alt, hero_credito = excluded.hero_credito,
-         audio = excluded.audio, secretaria = excluded.secretaria, redes = excluded.redes`,
-      [m.slug, m.nome, m.linha, m.hero.src, m.hero.alt, m.hero.credito, m.audio, m.secretaria, JSON.stringify(m.redes)],
+         secretaria = excluded.secretaria, redes = excluded.redes`,
+      [m.slug, m.nome, m.linha, m.hero.src, m.hero.alt, m.hero.credito, m.secretaria, JSON.stringify(m.redes)],
     )
   }
 
   for (const p of conteudo.pontos) {
     await db.query(
-      `insert into costadosol.ponto (id, municipio, tipo, categoria, nome, teaser, texto, audio, foto, lat, lon, ordem)
-       values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+      `insert into costadosol.ponto (id, municipio, tipo, categoria, nome, teaser, texto, foto, lat, lon, ordem)
+       values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
        on conflict (id) do update set
          municipio = excluded.municipio, tipo = excluded.tipo, categoria = excluded.categoria,
          nome = excluded.nome, teaser = excluded.teaser, texto = excluded.texto,
-         audio = excluded.audio, foto = excluded.foto, lat = excluded.lat, lon = excluded.lon,
+         foto = excluded.foto, lat = excluded.lat, lon = excluded.lon,
          ordem = excluded.ordem`,
-      [p.id, p.municipio, p.tipo, p.categoria, p.nome, p.teaser, p.texto, p.audio, p.foto, p.coords[0], p.coords[1], p.ordem],
+      [p.id, p.municipio, p.tipo, p.categoria, p.nome, p.teaser, p.texto, p.foto, p.coords[0], p.coords[1], p.ordem],
     )
     // fonte_verificacao nao tem chave natural: troca o conjunto do ponto, com WHERE.
     await db.query('delete from costadosol.fonte_verificacao where ponto_id = $1', [p.id])

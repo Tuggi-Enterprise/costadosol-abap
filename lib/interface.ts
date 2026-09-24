@@ -26,8 +26,6 @@
  * tres idiomas escreve.
  */
 export type Rotulos = {
-  ouvirCidade: string
-  ouvir: string
   lerMais: string
   /** Botão de som do vídeo da capa: o rótulo é a ação, não o estado. */
   ativarSom: string
@@ -47,7 +45,6 @@ export type Rotulos = {
   chamadaDaCapa: string
   /** Descreve o filme da capa para quem nao o ve. Nao e legenda: nao vai a tela. */
   videoDaCapa: string
-  ouvirRegiao: string
   navCidades: string
   navRotas: string
   navLugares: string
@@ -89,8 +86,6 @@ export type Rotulos = {
 
 const DICIONARIO: Record<string, Rotulos> = {
   pt: {
-    ouvirCidade: 'Ouvir a cidade',
-    ouvir: 'Ouvir',
     lerMais: 'Ler mais',
     ativarSom: 'Ativar som',
     desativarSom: 'Desativar som',
@@ -106,7 +101,6 @@ const DICIONARIO: Record<string, Rotulos> = {
     cidades: 'Cidades',
     chamadaDaCapa: 'Entre a lagoa e o mar aberto, no litoral do Rio de Janeiro.',
     videoDaCapa: 'Imagens aéreas das praias, das lagoas e das cidades do Conderlagos.',
-    ouvirRegiao: 'Ouvir a região',
     navCidades: 'Cidades',
     navRotas: 'Rotas',
     navLugares: 'Lugares',
@@ -139,8 +133,6 @@ const DICIONARIO: Record<string, Rotulos> = {
     fotosDaCidade: 'Mais de {cidade}',
   },
   en: {
-    ouvirCidade: 'Listen to the city',
-    ouvir: 'Listen',
     lerMais: 'Read more',
     ativarSom: 'Turn sound on',
     desativarSom: 'Turn sound off',
@@ -156,7 +148,6 @@ const DICIONARIO: Record<string, Rotulos> = {
     cidades: 'Cities',
     chamadaDaCapa: 'Between the lagoon and the open sea, on the Rio de Janeiro coast.',
     videoDaCapa: 'Aerial footage of the beaches, lagoons and towns of Conderlagos.',
-    ouvirRegiao: 'Listen to the region',
     navCidades: 'Cities',
     navRotas: 'Routes',
     navLugares: 'Places',
@@ -189,8 +180,6 @@ const DICIONARIO: Record<string, Rotulos> = {
     fotosDaCidade: 'More of {cidade}',
   },
   es: {
-    ouvirCidade: 'Escuchar la ciudad',
-    ouvir: 'Escuchar',
     lerMais: 'Leer más',
     ativarSom: 'Activar sonido',
     desativarSom: 'Desactivar sonido',
@@ -206,7 +195,6 @@ const DICIONARIO: Record<string, Rotulos> = {
     cidades: 'Ciudades',
     chamadaDaCapa: 'Entre la laguna y el mar abierto, en el litoral de Río de Janeiro.',
     videoDaCapa: 'Imágenes aéreas de las playas, las lagunas y las ciudades de Conderlagos.',
-    ouvirRegiao: 'Escuchar la región',
     navCidades: 'Ciudades',
     navRotas: 'Rutas',
     navLugares: 'Lugares',

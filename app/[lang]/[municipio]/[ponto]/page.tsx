@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Audio } from '../../../../componentes/Audio.tsx'
 import { Compartilhar } from '../../../../componentes/Compartilhar.tsx'
 import { Foto, FOTO_PENDENTE } from '../../../../componentes/Foto.tsx'
 import { Hero } from '../../../../componentes/Hero.tsx'
@@ -70,7 +69,6 @@ export default async function PaginaDoPonto({
   const { m, ponto } = achado
 
   const r = rotulos(lang)
-  const faixa = servir(ponto.audio, lang)
   const nome = texto(ponto.nome, lang)
   const vizinhos = pontosDo(slug).filter((p) => p.id !== ponto.id)
 
@@ -85,18 +83,7 @@ export default async function PaginaDoPonto({
         titulo={nome}
         linha={texto(ponto.teaser, lang)}
         idiomaDaLinha={servir(ponto.teaser, lang).idiomaServido}
-      >
-        {/* CS-DESIGN-002: o play é o maior elemento, também aqui. */}
-        <Audio
-          url={faixa.valor.url}
-          duracao={faixa.valor.dur}
-          rotulo={r.ouvir}
-          poiId={ponto.id}
-          municipio={slug}
-          origem="ponto"
-          largo
-        />
-      </Hero>
+      />
 
       <div className="px-4 pt-4">
         <Link

@@ -3,12 +3,11 @@ import { Agenda, paraExibir } from '../../componentes/Agenda.tsx'
 import { Fatos } from '../../componentes/Fatos.tsx'
 import { GradeDeMunicipios } from '../../componentes/GradeDeMunicipios.tsx'
 import { Hero } from '../../componentes/Hero.tsx'
-import { Audio } from '../../componentes/Audio.tsx'
 import { LugaresDaHome, type LugarDeCidade } from '../../componentes/LugaresDaHome.tsx'
 import { classesDeAcao } from '../../componentes/acao.ts'
 import { conteudo, eventosFuturos, municipios, pontosDo } from '../../lib/conteudo.ts'
 import { rotulos } from '../../lib/interface.ts'
-import { IDIOMAS_INTERFACE, servir, texto } from '../../lib/idioma.ts'
+import { IDIOMAS_INTERFACE, texto } from '../../lib/idioma.ts'
 
 export function generateStaticParams() {
   return IDIOMAS_INTERFACE.map((lang) => ({ lang }))
@@ -23,21 +22,12 @@ const VIDEO_DA_CAPA = {
   poster: '/video/conderlagos-poster.webp',
 } as const
 
-/** CS-OURO-006 vale para vídeo igual: material do consórcio, cedido pelo consórcio. */
-const CREDITO_DA_CAPA = 'Conderlagos'
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const r = rotulos(lang)
   const lista = municipios()
   const fatos = conteudo().fatos
-  // A capa da home deixou de ser foto de um município: desde 14/08/2026 é o filme
-  // institucional do consórcio (VIDEO_DA_CAPA). A faixa de áudio da região continua saindo
-  // da mesma cidade de antes, porque é a gravação que existe (P-03); é dado de áudio, não
-  // escolha de destaque, e some quando a faixa da região for gravada.
-  const capa = lista.find((m) => m.slug === 'cabo-frio') ?? lista[0]!
-  const faixa = servir(capa.audio, lang)
-
   // CS-HOME-006: o recorte vai pronto para o cliente, que só sorteia (CS-SORT-003).
   const grupos: LugarDeCidade[] = lista.map((m) => ({
     slug: m.slug,
@@ -55,21 +45,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Hero
         video={{ ...VIDEO_DA_CAPA, rotulos: { ativarSom: r.ativarSom, desativarSom: r.desativarSom } }}
         alt={r.videoDaCapa}
-        credito={CREDITO_DA_CAPA}
         titulo="Conderlagos"
         linha={r.chamadaDaCapa}
-      >
-        {/* CS-HOME-001: o play da capa é o maior elemento da primeira dobra. */}
-        <Audio
-          url={faixa.valor.url}
-          duracao={faixa.valor.dur}
-          rotulo={r.ouvirRegiao}
-          poiId="regiao"
-          municipio="conderlagos"
-          origem="home"
-          largo
-        />
-      </Hero>
+      />
 
       {/* CS-HOME-005: número grande, uma frase, e o nome da fonte. Fato, nunca adjetivo. */}
       <Fatos

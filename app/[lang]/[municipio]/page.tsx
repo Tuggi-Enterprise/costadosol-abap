@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { Audio } from '../../../componentes/Audio.tsx'
 import { Descricao } from '../../../componentes/Descricao.tsx'
 import { CardDePonto } from '../../../componentes/CardDePonto.tsx'
 import { Compartilhar } from '../../../componentes/Compartilhar.tsx'
@@ -65,7 +64,6 @@ export default async function PaginaDoMunicipio({
 
   const r = rotulos(lang)
   const pontos = pontosDo(slug)
-  const faixa = servir(m.audio, lang)
   const apresentacao = apresentacaoDo(slug)
 
   return (
@@ -81,19 +79,7 @@ export default async function PaginaDoMunicipio({
         titulo={m.nome}
         linha={texto(m.linha, lang)}
         idiomaDaLinha={servir(m.linha, lang).idiomaServido}
-      >
-        {/* CS-DESIGN-002: o play é o maior elemento da dobra, e na porta de entrada do
-            projeto ele precisa estar visível sem rolar. */}
-        <Audio
-          url={faixa.valor.url}
-          duracao={faixa.valor.dur}
-          rotulo={r.ouvirCidade}
-          poiId={`mun-${m.slug}`}
-          municipio={m.slug}
-          origem="cidade"
-          largo
-        />
-      </Hero>
+      />
 
       {apresentacao && (
         <Descricao
@@ -108,7 +94,6 @@ export default async function PaginaDoMunicipio({
         {pontos.map((ponto, indice) => {
           // O recorte é montado aqui: o card é componente de cliente, e o `Ponto` inteiro
           // levava `fonte_verificacao` — afirmação apurada, data e revisor — ao navegador.
-          const faixaDoPonto = servir(ponto.audio, lang)
           return (
             <CardDePonto
               key={ponto.id}
@@ -124,11 +109,10 @@ export default async function PaginaDoMunicipio({
                   alt: texto(ponto.foto.alt, lang),
                   credito: ponto.foto.credito,
                 },
-                audio: { url: faixaDoPonto.valor.url, dur: faixaDoPonto.valor.dur },
               }}
               lang={lang}
               numero={indice + 1}
-              rotulos={{ ouvir: r.ouvir, lerMais: r.lerMais, lerMenos: r.lerMenos }}
+              rotulos={{ lerMais: r.lerMais, lerMenos: r.lerMenos }}
             />
           )
         })}

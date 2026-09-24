@@ -925,9 +925,6 @@ function foto(destino: string): { src: string; credito: string; alt: Texto3 | un
 }
 
 const idiomas = ['pt', 'en', 'es'] as const
-const audioPendente = (arquivo: string) =>
-  Object.fromEntries(idiomas.map((i) => [i, { url: `/audio/${i}/${arquivo}.mp3`, dur: 45 }]))
-
 const municipios = DADOS.map((m) => {
   const oficial = MUNICIPIOS.find((x) => x.slug === m.slug)
   if (!oficial) throw new Error(`slug fora da lista oficial: ${m.slug}`)
@@ -957,7 +954,6 @@ const municipios = DADOS.map((m) => {
       },
       credito: capa.credito,
     },
-    audio: audioPendente(`mun-${m.slug}`),
     secretaria: { nome: 'Secretaria Municipal de Turismo', url: m.secretaria, selo: `/img/selo/${m.slug}.svg` },
     pontos: m.pontos.map((p) => p.id),
   }
@@ -975,7 +971,6 @@ const pontos = DADOS.flatMap((m) =>
       coords: p.coords,
       teaser: p.teaser,
       texto: p.texto,
-      audio: { ...audioPendente(p.id), pt: { url: `/audio/pt/${p.id}.mp3`, dur: 50 } },
       foto: {
         v: imagem.src,
         h: imagem.src,

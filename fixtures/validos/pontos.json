@@ -23,20 +23,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Araruama.",
       "es": "[es] Marcador de texto completo do lugar 1 de Araruama."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/araruama-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/araruama-1-v",
       "h": "/img/poi/araruama-1-h",
@@ -80,20 +66,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Araruama.",
       "en": "[en] Marcador de texto completo do lugar 2 de Araruama.",
       "es": "[es] Marcador de texto completo do lugar 2 de Araruama."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/araruama-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/araruama-2-v",
@@ -139,20 +111,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Araruama.",
       "es": "[es] Marcador de texto completo do lugar 3 de Araruama."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/araruama-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/araruama-3-v",
       "h": "/img/poi/araruama-3-h",
@@ -196,20 +154,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Araruama.",
       "en": "[en] Marcador de texto completo do lugar 4 de Araruama.",
       "es": "[es] Marcador de texto completo do lugar 4 de Araruama."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/araruama-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/araruama-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/araruama-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/araruama-4-v",
@@ -255,20 +199,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Armação dos Búzios.",
       "es": "[es] Marcador de texto completo do lugar 1 de Armação dos Búzios."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/armacao-dos-buzios-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/armacao-dos-buzios-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/armacao-dos-buzios-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/armacao-dos-buzios-1-v",
       "h": "/img/poi/armacao-dos-buzios-1-h",
@@ -312,20 +242,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Armação dos Búzios.",
       "en": "[en] Marcador de texto completo do lugar 2 de Armação dos Búzios.",
       "es": "[es] Marcador de texto completo do lugar 2 de Armação dos Búzios."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/armacao-dos-buzios-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/armacao-dos-buzios-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/armacao-dos-buzios-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/armacao-dos-buzios-2-v",
@@ -371,20 +287,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Armação dos Búzios.",
       "es": "[es] Marcador de texto completo do lugar 3 de Armação dos Búzios."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/armacao-dos-buzios-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/armacao-dos-buzios-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/armacao-dos-buzios-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/armacao-dos-buzios-3-v",
       "h": "/img/poi/armacao-dos-buzios-3-h",
@@ -428,20 +330,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Armação dos Búzios.",
       "en": "[en] Marcador de texto completo do lugar 4 de Armação dos Búzios.",
       "es": "[es] Marcador de texto completo do lugar 4 de Armação dos Búzios."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/armacao-dos-buzios-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/armacao-dos-buzios-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/armacao-dos-buzios-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/armacao-dos-buzios-4-v",
@@ -487,20 +375,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Arraial do Cabo.",
       "es": "[es] Marcador de texto completo do lugar 1 de Arraial do Cabo."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-do-cabo-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-do-cabo-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/arraial-do-cabo-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/arraial-do-cabo-1-v",
       "h": "/img/poi/arraial-do-cabo-1-h",
@@ -544,20 +418,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Arraial do Cabo.",
       "en": "[en] Marcador de texto completo do lugar 2 de Arraial do Cabo.",
       "es": "[es] Marcador de texto completo do lugar 2 de Arraial do Cabo."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-do-cabo-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-do-cabo-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/arraial-do-cabo-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/arraial-do-cabo-2-v",
@@ -603,20 +463,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Arraial do Cabo.",
       "es": "[es] Marcador de texto completo do lugar 3 de Arraial do Cabo."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-do-cabo-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-do-cabo-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/arraial-do-cabo-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/arraial-do-cabo-3-v",
       "h": "/img/poi/arraial-do-cabo-3-h",
@@ -660,20 +506,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Arraial do Cabo.",
       "en": "[en] Marcador de texto completo do lugar 4 de Arraial do Cabo.",
       "es": "[es] Marcador de texto completo do lugar 4 de Arraial do Cabo."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/arraial-do-cabo-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/arraial-do-cabo-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/arraial-do-cabo-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/arraial-do-cabo-4-v",
@@ -719,20 +551,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Cabo Frio.",
       "es": "[es] Marcador de texto completo do lugar 1 de Cabo Frio."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/cabo-frio-1-v",
       "h": "/img/poi/cabo-frio-1-h",
@@ -776,20 +594,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Cabo Frio.",
       "en": "[en] Marcador de texto completo do lugar 2 de Cabo Frio.",
       "es": "[es] Marcador de texto completo do lugar 2 de Cabo Frio."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/cabo-frio-2-v",
@@ -835,20 +639,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Cabo Frio.",
       "es": "[es] Marcador de texto completo do lugar 3 de Cabo Frio."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/cabo-frio-3-v",
       "h": "/img/poi/cabo-frio-3-h",
@@ -892,20 +682,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Cabo Frio.",
       "en": "[en] Marcador de texto completo do lugar 4 de Cabo Frio.",
       "es": "[es] Marcador de texto completo do lugar 4 de Cabo Frio."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/cabo-frio-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/cabo-frio-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/cabo-frio-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/cabo-frio-4-v",
@@ -951,20 +727,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Casimiro de Abreu.",
       "es": "[es] Marcador de texto completo do lugar 1 de Casimiro de Abreu."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-de-abreu-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-de-abreu-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/casimiro-de-abreu-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/casimiro-de-abreu-1-v",
       "h": "/img/poi/casimiro-de-abreu-1-h",
@@ -1008,20 +770,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Casimiro de Abreu.",
       "en": "[en] Marcador de texto completo do lugar 2 de Casimiro de Abreu.",
       "es": "[es] Marcador de texto completo do lugar 2 de Casimiro de Abreu."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-de-abreu-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-de-abreu-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/casimiro-de-abreu-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/casimiro-de-abreu-2-v",
@@ -1067,20 +815,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Casimiro de Abreu.",
       "es": "[es] Marcador de texto completo do lugar 3 de Casimiro de Abreu."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-de-abreu-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-de-abreu-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/casimiro-de-abreu-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/casimiro-de-abreu-3-v",
       "h": "/img/poi/casimiro-de-abreu-3-h",
@@ -1124,20 +858,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Casimiro de Abreu.",
       "en": "[en] Marcador de texto completo do lugar 4 de Casimiro de Abreu.",
       "es": "[es] Marcador de texto completo do lugar 4 de Casimiro de Abreu."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/casimiro-de-abreu-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/casimiro-de-abreu-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/casimiro-de-abreu-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/casimiro-de-abreu-4-v",
@@ -1183,20 +903,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Iguaba Grande.",
       "es": "[es] Marcador de texto completo do lugar 1 de Iguaba Grande."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-grande-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-grande-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/iguaba-grande-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/iguaba-grande-1-v",
       "h": "/img/poi/iguaba-grande-1-h",
@@ -1240,20 +946,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Iguaba Grande.",
       "en": "[en] Marcador de texto completo do lugar 2 de Iguaba Grande.",
       "es": "[es] Marcador de texto completo do lugar 2 de Iguaba Grande."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-grande-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-grande-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/iguaba-grande-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/iguaba-grande-2-v",
@@ -1299,20 +991,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Iguaba Grande.",
       "es": "[es] Marcador de texto completo do lugar 3 de Iguaba Grande."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-grande-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-grande-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/iguaba-grande-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/iguaba-grande-3-v",
       "h": "/img/poi/iguaba-grande-3-h",
@@ -1356,20 +1034,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Iguaba Grande.",
       "en": "[en] Marcador de texto completo do lugar 4 de Iguaba Grande.",
       "es": "[es] Marcador de texto completo do lugar 4 de Iguaba Grande."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/iguaba-grande-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/iguaba-grande-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/iguaba-grande-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/iguaba-grande-4-v",
@@ -1415,20 +1079,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Rio das Ostras.",
       "es": "[es] Marcador de texto completo do lugar 1 de Rio das Ostras."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/rio-das-ostras-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/rio-das-ostras-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/rio-das-ostras-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/rio-das-ostras-1-v",
       "h": "/img/poi/rio-das-ostras-1-h",
@@ -1472,20 +1122,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Rio das Ostras.",
       "en": "[en] Marcador de texto completo do lugar 2 de Rio das Ostras.",
       "es": "[es] Marcador de texto completo do lugar 2 de Rio das Ostras."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/rio-das-ostras-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/rio-das-ostras-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/rio-das-ostras-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/rio-das-ostras-2-v",
@@ -1531,20 +1167,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Rio das Ostras.",
       "es": "[es] Marcador de texto completo do lugar 3 de Rio das Ostras."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/rio-das-ostras-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/rio-das-ostras-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/rio-das-ostras-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/rio-das-ostras-3-v",
       "h": "/img/poi/rio-das-ostras-3-h",
@@ -1588,20 +1210,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Rio das Ostras.",
       "en": "[en] Marcador de texto completo do lugar 4 de Rio das Ostras.",
       "es": "[es] Marcador de texto completo do lugar 4 de Rio das Ostras."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/rio-das-ostras-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/rio-das-ostras-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/rio-das-ostras-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/rio-das-ostras-4-v",
@@ -1647,20 +1255,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de São Pedro da Aldeia.",
       "es": "[es] Marcador de texto completo do lugar 1 de São Pedro da Aldeia."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/sao-pedro-da-aldeia-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/sao-pedro-da-aldeia-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/sao-pedro-da-aldeia-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/sao-pedro-da-aldeia-1-v",
       "h": "/img/poi/sao-pedro-da-aldeia-1-h",
@@ -1704,20 +1298,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de São Pedro da Aldeia.",
       "en": "[en] Marcador de texto completo do lugar 2 de São Pedro da Aldeia.",
       "es": "[es] Marcador de texto completo do lugar 2 de São Pedro da Aldeia."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/sao-pedro-da-aldeia-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/sao-pedro-da-aldeia-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/sao-pedro-da-aldeia-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/sao-pedro-da-aldeia-2-v",
@@ -1763,20 +1343,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de São Pedro da Aldeia.",
       "es": "[es] Marcador de texto completo do lugar 3 de São Pedro da Aldeia."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/sao-pedro-da-aldeia-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/sao-pedro-da-aldeia-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/sao-pedro-da-aldeia-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/sao-pedro-da-aldeia-3-v",
       "h": "/img/poi/sao-pedro-da-aldeia-3-h",
@@ -1820,20 +1386,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de São Pedro da Aldeia.",
       "en": "[en] Marcador de texto completo do lugar 4 de São Pedro da Aldeia.",
       "es": "[es] Marcador de texto completo do lugar 4 de São Pedro da Aldeia."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/sao-pedro-da-aldeia-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/sao-pedro-da-aldeia-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/sao-pedro-da-aldeia-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/sao-pedro-da-aldeia-4-v",
@@ -1879,20 +1431,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Saquarema.",
       "es": "[es] Marcador de texto completo do lugar 1 de Saquarema."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/saquarema-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/saquarema-1-v",
       "h": "/img/poi/saquarema-1-h",
@@ -1936,20 +1474,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Saquarema.",
       "en": "[en] Marcador de texto completo do lugar 2 de Saquarema.",
       "es": "[es] Marcador de texto completo do lugar 2 de Saquarema."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/saquarema-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/saquarema-2-v",
@@ -1995,20 +1519,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Saquarema.",
       "es": "[es] Marcador de texto completo do lugar 3 de Saquarema."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/saquarema-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/saquarema-3-v",
       "h": "/img/poi/saquarema-3-h",
@@ -2052,20 +1562,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Saquarema.",
       "en": "[en] Marcador de texto completo do lugar 4 de Saquarema.",
       "es": "[es] Marcador de texto completo do lugar 4 de Saquarema."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/saquarema-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/saquarema-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/saquarema-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/saquarema-4-v",
@@ -2111,20 +1607,6 @@
       "en": "[en] Marcador de texto completo do lugar 1 de Silva Jardim.",
       "es": "[es] Marcador de texto completo do lugar 1 de Silva Jardim."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-1.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-1.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-1.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/silva-jardim-1-v",
       "h": "/img/poi/silva-jardim-1-h",
@@ -2168,20 +1650,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 2 de Silva Jardim.",
       "en": "[en] Marcador de texto completo do lugar 2 de Silva Jardim.",
       "es": "[es] Marcador de texto completo do lugar 2 de Silva Jardim."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-2.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-2.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-2.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/silva-jardim-2-v",
@@ -2227,20 +1695,6 @@
       "en": "[en] Marcador de texto completo do lugar 3 de Silva Jardim.",
       "es": "[es] Marcador de texto completo do lugar 3 de Silva Jardim."
     },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-3.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-3.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-3.mp3",
-        "dur": 50
-      }
-    },
     "foto": {
       "v": "/img/poi/silva-jardim-3-v",
       "h": "/img/poi/silva-jardim-3-h",
@@ -2284,20 +1738,6 @@
       "pt": "[pt] Marcador de texto completo do lugar 4 de Silva Jardim.",
       "en": "[en] Marcador de texto completo do lugar 4 de Silva Jardim.",
       "es": "[es] Marcador de texto completo do lugar 4 de Silva Jardim."
-    },
-    "audio": {
-      "pt": {
-        "url": "/audio/pt/silva-jardim-4.mp3",
-        "dur": 50
-      },
-      "en": {
-        "url": "/audio/en/silva-jardim-4.mp3",
-        "dur": 50
-      },
-      "es": {
-        "url": "/audio/es/silva-jardim-4.mp3",
-        "dur": 50
-      }
     },
     "foto": {
       "v": "/img/poi/silva-jardim-4-v",

@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react'
 import { metadataDoSite } from '../lib/site.ts'
+import { GA_ARRANQUE, GA_ID } from '../lib/ga.ts'
+import { Rastreamento } from '../componentes/Rastreamento.tsx'
 import './tema.css'
 
 // A descrição contava municípios ("os nove municípios do Conderlagos") — a expressão que
@@ -29,8 +31,18 @@ export default function RaizLayout({ children }: { children: ReactNode }) {
     <html lang="pt" data-texto="padrao" data-movimento="sistema">
       <head>
         <script dangerouslySetInnerHTML={{ __html: ARRANQUE_DE_PREFERENCIAS }} />
+        {/* GA só no build de produção: `next dev` não suja o relatório da feira. */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+            <script dangerouslySetInnerHTML={{ __html: GA_ARRANQUE }} />
+          </>
+        )}
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Rastreamento />
+      </body>
     </html>
   )
 }

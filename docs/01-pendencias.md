@@ -62,7 +62,13 @@ a feira, é troca de uma linha em `scripts/compor-conteudo.ts`.
 
 ## Bloco B — ambiguidades do briefing
 
-### P-10 · Qual analytics, e ele suporta propriedades de evento?
+### P-10 · Qual analytics, e ele suporta propriedades de evento? — FECHADA em 24/09/2026
+
+**Fechada pelo operador: Google Analytics 4 (`G-P091G7P4JL`), com cookie, sem banner.** Ver a
+revisão de CS-OURO-010. O adaptador está em `lib/track.ts` e o ID em `lib/ga.ts`. O painel `/painel`
+deixa de ser a fonte do relatório: o operador extrai do próprio GA.
+
+*Texto original, mantido como histórico:*
 
 O briefing diz "Umami ou Plausible auto-hospedado". A taxonomia de CS-EVT-003 depende de eventos
 com **várias propriedades** (`municipio_open` tem cinco) e o painel depende de conseguir cruzar

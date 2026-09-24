@@ -8,6 +8,13 @@
  * fechar, entra a terceira implementacao e nenhum componente muda.
  */
 import { entryMunicipio, qrId, sessionId } from './sessao.ts'
+import { NOME_NO_GA } from './ga.ts'
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
 
 export type Evento =
   | 'session_start'
@@ -27,6 +34,8 @@ export type Evento =
   | 'interesse_declarado'
   | 'rota_download'
   | 'share_click'
+  | 'scroll_depth'
+  | 'ui_click'
 
 export type Props = Record<string, string | number | boolean | null>
 export type Registro = { evento: Evento; props: Props }
@@ -43,6 +52,12 @@ function idiomaDaUrl(): string {
   return window.location.pathname.split('/').filter(Boolean)[0] ?? 'pt'
 }
 
+/** Percentual da página já visto, contando a janela: página que cabe na tela é 100. */
+export function profundidade(rolado: number, janela: number, total: number): number {
+  if (total <= janela) return 100
+  return Math.min(100, Math.round(((rolado + janela) / total) * 100))
+}
+
 export function track(evento: Evento, props: Props = {}): void {
   if (typeof window === 'undefined') return
 
@@ -57,6 +72,9 @@ export function track(evento: Evento, props: Props = {}): void {
     },
   }
   buffer.push(completo)
+  // O carregador só existe no build de produção (app/layout.tsx); fora dele `gtag` não
+  // está definido e o evento fica no buffer e no console.
+  window.gtag?.('event', NOME_NO_GA[evento] ?? evento, completo.props)
 
   if (process.env.NODE_ENV !== 'production') {
     console.debug('[evento]', completo.evento, completo.props)

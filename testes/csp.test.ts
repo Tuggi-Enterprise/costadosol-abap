@@ -32,6 +32,15 @@ test('A-17/CS-OURO-010: a CSP de producao nao permite eval', async () => {
   assert.match(valor, /script-src 'self' 'unsafe-inline'/)
 })
 
+test('P-10/CS-OURO-010: o unico terceiro liberado e o Google Analytics', async () => {
+  const valor = await csp('production')
+  const hosts = valor.match(/https:\/\/[^\s;]+/g) ?? []
+  assert.ok(hosts.length > 0, 'sem os hosts do GA o navegador bloqueia o analytics')
+  for (const host of hosts) {
+    assert.match(host, /(googletagmanager|google-analytics|\*\.google)\.com$/, `terceiro nao autorizado: ${host}`)
+  }
+})
+
 test('A-17: a CSP de producao mantem o site preso ao proprio dominio', async () => {
   const valor = await csp('production')
   for (const diretiva of [

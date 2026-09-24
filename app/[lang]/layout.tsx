@@ -58,6 +58,7 @@ export default async function LayoutDeIdioma({
           <Marca />
         </div>
         <p className="mt-4">{rotulos(lang).assinatura}</p>
+        <p className="mt-2">{rotulos(lang).avisoDeMedicao}</p>
       </footer>
     </>
   )

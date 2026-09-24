@@ -120,10 +120,18 @@ oficial, depois **perguntar ao humano**. Nunca decidir sozinho e seguir. Ação 
 **CS-OURO-009 · Nenhuma chave secreta no cliente.** O site é estático e não conversa com o banco
 em tempo de execução.
 
-**CS-OURO-010 · Sem cookies e sem identificação individual no site público.** Nenhum pixel de
-terceiro, nenhum Google Analytics, nenhum Meta Pixel, nenhum banner de consentimento — porque
-não haverá cookie. O formulário de leads (§8) é a única coleta de dado pessoal, é explícita e
-consentida.
+**CS-OURO-010 · Um terceiro só: o Google Analytics.** Nenhum pixel de publicidade, nenhum Meta
+Pixel, nenhum outro script de terceiro. O formulário de leads (§8) continua sendo a única coleta
+de dado pessoal declarado, explícita e consentida.
+
+> **Revisão de 24/09/2026, decidida pelo operador, que fecha [P-10](01-pendencias.md).** A regra
+> original proibia cookie e Google Analytics. O operador escolheu GA4 **com cookie e sem banner
+> de consentimento** para medir tudo na feira — página, clique, rolagem, origem — e extrair o
+> relatório do próprio GA. Consentimento via banner descartado: no estande a maioria fecha sem
+> ler e o dado some. Consequências: Google Signals e personalização de anúncio desligados
+> (`lib/ga.ts`); aviso de uso de cookie no rodapé, nos três idiomas; CSP libera só os hosts do
+> GA. **Risco assumido pelo operador:** coleta por cookie de analytics sem consentimento, sob
+> a LGPD.
 
 ---
 
@@ -546,6 +554,11 @@ expira ao fechar a aba), `ts` (ISO) e `lang`.
 | `interesse_declarado` | `municipio` — um evento por município marcado |
 | `rota_download` | `rota_id` |
 | `share_click` | `tipo`, `municipio` \| `poi_id` |
+| `scroll_depth` | `pct` (25 \| 50 \| 75 \| 100), `pagina` — uma vez por marco em cada página |
+| `ui_click` | `elemento`, `texto`, `destino`, `pagina` — todo link e botão, a rede que pega o que os eventos acima não cobrem |
+
+No GA4, `session_start` é nome reservado: o nosso sai como `site_session_start` (`NOME_NO_GA`
+em `lib/ga.ts`). Página vista e tempo de engajamento o GA coleta sozinho.
 
 **CS-EVT-004** — Todo `municipio_open` carrega `entry_municipio` e o booleano `cruzamento`
 (`municipio !== entry_municipio`). Sem exceção, em qualquer origem.
@@ -743,7 +756,7 @@ Emulador não vale para nenhum destes itens.
 | A-14 | `grep` no `out/`: nenhuma ocorrência de "Búzios", "Região dos Lagos", "os 10 municípios" — **inclusive em rótulo de mapa** | CS-OURO-003 |
 | A-15 | Todo `teaser` ≤ 180 caracteres no HTML gerado | CS-CONT-002 |
 | A-16 | Nenhuma foto sem crédito visível | CS-OURO-006 |
-| A-17 | Nenhuma requisição a domínio de terceiro além do CDN próprio e do analytics auto-hospedado | CS-OURO-010, CS-ARQ-004 |
+| A-17 | Nenhuma requisição a domínio de terceiro além do CDN próprio e do Google Analytics (hosts de `lib/ga.ts`) | CS-OURO-010, CS-ARQ-004 |
 | A-18 | Do scan ao primeiro áudio de ponto: ≤ 2 toques, < 5 s | CS-MUN-004 |
 | A-19 | Taxa de conclusão do formulário ≥ 60% com 5 pessoas reais | CS-LEAD-007 |
 | A-20 | O seletor do rodapé oferece `pt`, `en` e `es`, e cada um serve interface **e** conteúdo no próprio idioma | CS-CONT-007, CS-NAV-006 |

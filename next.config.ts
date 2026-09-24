@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next'
 import { MUNICIPIOS } from './scripts/content-schema.ts'
+import { GA_HOSTS } from './lib/ga.ts'
 
 /**
  * Hospedagem: Vercel (decisao do operador em 12/08/2026, ver docs/02-arquitetura.md §1).
@@ -27,8 +28,9 @@ const nextConfig: NextConfig = {
     }))
   },
 
-  // CS-OURO-010 vira bloqueio, nao intencao: o navegador recusa script de terceiro.
-  // `connect-src` ganha o host do analytics quando P-10 fechar.
+  // A CSP prende o site ao proprio dominio, com uma excecao: o Google Analytics (P-10,
+  // decisao do operador em 24/09/2026 que revisou CS-OURO-010). Os hosts moram em
+  // lib/ga.ts; qualquer outro terceiro continua recusado pelo navegador.
   //
   // `unsafe-eval` SO em desenvolvimento: o React em modo de desenvolvimento usa `eval()`
   // para reconstruir pilha de chamada, e sem a permissao o `npm run dev` enche o console
@@ -38,7 +40,7 @@ const nextConfig: NextConfig = {
   async headers() {
     const script =
       process.env.NODE_ENV === 'production'
-        ? "script-src 'self' 'unsafe-inline'"
+        ? `script-src 'self' 'unsafe-inline' ${GA_HOSTS.script.join(' ')}`
         : "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
 
     return [
@@ -51,9 +53,9 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               script,
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data:",
+              `img-src 'self' data: ${GA_HOSTS.img.join(' ')}`,
               "media-src 'self'",
-              "connect-src 'self'",
+              `connect-src 'self' ${GA_HOSTS.connect.join(' ')}`,
               "font-src 'self'",
               "frame-ancestors 'none'",
               "base-uri 'self'",

@@ -62,6 +62,8 @@ export type Rotulos = {
   maisEm: string
   /** CS-OURO-002: a assinatura da marca, e a unica linha da Tuggi no site. */
   assinatura: string
+  /** Aviso do rodapé: o site usa cookie do Google Analytics (P-10, 24/09/2026). */
+  avisoDeMedicao: string
   /** CS-DESIGN-006 — os controles de leitura do rodape. */
   leituraTamanho: string
   leituraMovimento: string
@@ -116,6 +118,7 @@ const DICIONARIO: Record<string, Rotulos> = {
     linkCopiado: 'Link copiado',
     maisEm: 'Mais em',
     assinatura: 'Conteúdo e tecnologia: Tuggi',
+    avisoDeMedicao: 'Usamos cookies do Google Analytics para entender como o site é usado. Nenhum dado é usado para publicidade.',
     leituraTamanho: 'Tamanho do texto',
     leituraMovimento: 'Movimento',
     leituraMovimentoSistema: 'Como está',
@@ -163,6 +166,7 @@ const DICIONARIO: Record<string, Rotulos> = {
     linkCopiado: 'Link copied',
     maisEm: 'More in',
     assinatura: 'Content and technology: Tuggi',
+    avisoDeMedicao: 'We use Google Analytics cookies to understand how the site is used. No data is used for advertising.',
     leituraTamanho: 'Text size',
     leituraMovimento: 'Motion',
     leituraMovimentoSistema: 'As is',
@@ -210,6 +214,7 @@ const DICIONARIO: Record<string, Rotulos> = {
     linkCopiado: 'Enlace copiado',
     maisEm: 'Más en',
     assinatura: 'Contenido y tecnología: Tuggi',
+    avisoDeMedicao: 'Usamos cookies de Google Analytics para entender cómo se usa el sitio. Ningún dato se usa para publicidad.',
     leituraTamanho: 'Tamaño del texto',
     leituraMovimento: 'Movimiento',
     leituraMovimentoSistema: 'Como está',

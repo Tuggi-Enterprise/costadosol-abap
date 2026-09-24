@@ -21,9 +21,9 @@ export function Descricao({
 
   return (
     <div className="px-4 pt-6">
-      <div lang={lang} className="space-y-4 text-[1rem] leading-relaxed md:columns-2 md:gap-8 md:space-y-0 md:[&>p+p]:mt-4">
+      <div lang={lang} className="space-y-4 text-[1rem] leading-relaxed">
         {visiveis.map((p) => (
-          <p key={p} className="break-inside-avoid">{p}</p>
+          <p key={p}>{p}</p>
         ))}
       </div>
       {paragrafos.length > 1 && (

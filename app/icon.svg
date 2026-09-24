@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Favicon do Conderlagos: as bolinhas do logo (mata, campo, sol, mar) sobre o azul das
+       letras. Cores medidas em public/img/marca/conderlagos.webp em 24/09/2026. -->
+  <rect width="64" height="64" rx="14" fill="#295367"/>
+  <circle cx="21" cy="21" r="11" fill="#10884b"/>
+  <circle cx="43" cy="21" r="11" fill="#b6cb65"/>
+  <circle cx="21" cy="43" r="11" fill="#f4b860"/>
+  <circle cx="43" cy="43" r="11" fill="#6bc8c7"/>
+</svg>

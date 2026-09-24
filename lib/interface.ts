@@ -29,6 +29,9 @@ export type Rotulos = {
   ouvirCidade: string
   ouvir: string
   lerMais: string
+  /** Botão de som do vídeo da capa: o rótulo é a ação, não o estado. */
+  ativarSom: string
+  desativarSom: string
   lerMenos: string
   outrasCidades: string
   ordemSorteada: string
@@ -89,6 +92,8 @@ const DICIONARIO: Record<string, Rotulos> = {
     ouvirCidade: 'Ouvir a cidade',
     ouvir: 'Ouvir',
     lerMais: 'Ler mais',
+    ativarSom: 'Ativar som',
+    desativarSom: 'Desativar som',
     lerMenos: 'Ler menos',
     outrasCidades: 'O Conderlagos tem mais nove cidades.',
     ordemSorteada: 'A ordem muda a cada visita.',
@@ -137,6 +142,8 @@ const DICIONARIO: Record<string, Rotulos> = {
     ouvirCidade: 'Listen to the city',
     ouvir: 'Listen',
     lerMais: 'Read more',
+    ativarSom: 'Turn sound on',
+    desativarSom: 'Turn sound off',
     lerMenos: 'Read less',
     outrasCidades: 'Conderlagos has nine more cities.',
     ordemSorteada: 'The order changes on every visit.',
@@ -185,6 +192,8 @@ const DICIONARIO: Record<string, Rotulos> = {
     ouvirCidade: 'Escuchar la ciudad',
     ouvir: 'Escuchar',
     lerMais: 'Leer más',
+    ativarSom: 'Activar sonido',
+    desativarSom: 'Desactivar sonido',
     lerMenos: 'Leer menos',
     outrasCidades: 'Conderlagos tiene nueve ciudades más.',
     ordemSorteada: 'El orden cambia en cada visita.',

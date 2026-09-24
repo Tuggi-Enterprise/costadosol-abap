@@ -43,7 +43,7 @@ export function Hero({
   linha?: string
   idiomaDaLinha?: string
   /** Quando existe, a capa é o filme e `src` deixa de ser lido. */
-  video?: { src: string; poster: string }
+  video?: { src: string; poster: string; rotulos: { ativarSom: string; desativarSom: string } }
   children?: ReactNode
 }) {
   const texto = (
@@ -69,7 +69,7 @@ export function Hero({
       <div className="relative">
         {video ? (
           <div className="aspect-video w-full overflow-hidden bg-oceano-fundo">
-            <VideoDeCapa src={video.src} poster={video.poster} alt={alt} />
+            <VideoDeCapa src={video.src} poster={video.poster} alt={alt} rotulos={video.rotulos} />
           </div>
         ) : (
           <Foto

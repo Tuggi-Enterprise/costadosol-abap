@@ -23,6 +23,14 @@ import { classesDeAcao } from './acao.ts'
 
 let tocandoAgora: HTMLAudioElement | null = null
 
+/** Avisa o vídeo da capa para emudecer: dois sons ao mesmo tempo não se ouvem. */
+export const EVENTO_AUDIO_TOCOU = 'audio:tocou'
+
+/** O vídeo da capa chama isto ao ganhar som, pelo mesmo motivo no sentido contrário. */
+export function pausarAudioAtual(): void {
+  tocandoAgora?.pause()
+}
+
 const relogio = (segundos: number) =>
   `${Math.floor(segundos / 60)}:${String(Math.floor(segundos % 60)).padStart(2, '0')}`
 
@@ -69,6 +77,7 @@ export function Audio({
     }
     if (tocandoAgora && tocandoAgora !== audio) tocandoAgora.pause()
     tocandoAgora = audio
+    window.dispatchEvent(new Event(EVENTO_AUDIO_TOCOU))
 
     // O clique É o gesto que o Safari iOS exige (CS-ROTA-003).
     setCarregando(true)

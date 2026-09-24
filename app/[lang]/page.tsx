@@ -53,7 +53,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   return (
     <main>
       <Hero
-        video={VIDEO_DA_CAPA}
+        video={{ ...VIDEO_DA_CAPA, rotulos: { ativarSom: r.ativarSom, desativarSom: r.desativarSom } }}
         alt={r.videoDaCapa}
         credito={CREDITO_DA_CAPA}
         titulo="Conderlagos"

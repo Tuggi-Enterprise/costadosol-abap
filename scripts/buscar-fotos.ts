@@ -59,7 +59,15 @@ type Busca = {
  */
 type Fixa = {
   destino: string
+  /** Titulo exato no Commons ("File:..."), ou a pagina da foto no Flickr. */
   arquivo: string
+  /**
+   * So Flickr: a URL do arquivo original. O oEmbed publico, que confere licenca e autor sem
+   * chave de API, entrega no maximo 1024 px, e o original tem outro segredo na URL.
+   */
+  original?: string
+  /** Fracao da altura descartada embaixo, para arquivo que ja vem com faixa ou borda. */
+  descartarBase?: number
   /** Nome como vai no credito, quando o do Commons e o nome inteiro da conta do Flickr. */
   autor?: string
   alt?: { pt: string; en: string; es: string }
@@ -87,7 +95,34 @@ function licencaAceita(licenca: string): boolean {
   return LICENCAS_ACEITAS.some((aceita) => l.includes(aceita))
 }
 
+/**
+ * Flickr entra quando o Commons nao tem o lugar: a Casa da Flor so existe la. Licenca e autor
+ * sao conferidos no oEmbed na hora do download, como no Commons.
+ */
+async function buscarFixaFlickr(fixa: Fixa): Promise<FotoEncontrada | null> {
+  const url = new URL('https://www.flickr.com/services/oembed/')
+  url.search = new URLSearchParams({ format: 'json', url: fixa.arquivo }).toString()
+  const dados = (await (await pedirComRitmo(url)).json()) as {
+    license?: string; author_name?: string; url: string; width: number; height: number
+  }
+  const licenca = dados.license ?? ''
+  if (!licencaAceita(licenca)) throw new Error(`licenca fora da lista: ${licenca}`)
+  if (!dados.author_name) throw new Error('sem autor identificado')
+  return {
+    destino: fixa.destino,
+    titulo: fixa.arquivo,
+    autor: dados.author_name,
+    licenca,
+    paginaDaFoto: fixa.arquivo,
+    urlOriginal: fixa.original ?? dados.url,
+    urlCheia: dados.url,
+    largura: dados.width,
+    altura: dados.height,
+  }
+}
+
 async function buscarFixa(fixa: Fixa): Promise<FotoEncontrada | null> {
+  if (fixa.arquivo.startsWith('https://www.flickr.com/')) return buscarFixaFlickr(fixa)
   const url = new URL(API)
   url.search = new URLSearchParams({
     action: 'query',
@@ -220,7 +255,7 @@ async function baixarComRitmo(url: string, tentativas = 4): Promise<Buffer> {
   throw new Error(`download falhou apos ${tentativas} tentativas: ${url}`)
 }
 
-async function baixarEConverter(foto: FotoEncontrada): Promise<void> {
+async function baixarEConverter(foto: FotoEncontrada, descartarBase = 0): Promise<void> {
   // O Commons responde 503 para miniatura que ainda nao foi gerada, e insistir nao a gera.
   // O arquivo inteiro e maior, mas existe.
   const original = await baixarComRitmo(foto.urlOriginal).catch((erro: Error) => {
@@ -233,7 +268,21 @@ async function baixarEConverter(foto: FotoEncontrada): Promise<void> {
 
   // CS-PERF-003: AVIF com fallback WebP. Largura de 1600 cobre o hero em tela retina
   // sem estourar o orcamento; o card usa a mesma imagem reduzida pelo navegador.
-  const base = sharp(original).rotate().resize({ width: 1600, withoutEnlargement: true })
+  // Foto em retrato vira 4:3 pelo centro: card e hero de desktop sao paisagem, e o
+  // object-cover cortaria o mesmo pedaco depois de o visitante baixar a foto inteira.
+  const inteira = await sharp(original).rotate().toBuffer({ resolveWithObject: true })
+  const girada = descartarBase
+    ? await sharp(inteira.data)
+        .extract({ left: 0, top: 0, width: inteira.info.width,
+          height: Math.round(inteira.info.height * (1 - descartarBase)) })
+        .toBuffer({ resolveWithObject: true })
+    : inteira
+  const retrato = girada.info.height > girada.info.width
+  const base = sharp(girada.data).resize(
+    retrato
+      ? { width: 1600, height: 1200, fit: 'cover', withoutEnlargement: true }
+      : { width: 1600, withoutEnlargement: true },
+  )
   await base.clone().webp({ quality: 72 }).toFile(`${caminho}.webp`)
   await base.clone().avif({ quality: 55 }).toFile(`${caminho}.avif`)
 }
@@ -249,7 +298,7 @@ export async function executar(buscas: (Busca | Fixa)[]): Promise<FotoEncontrada
         console.warn(`  sem foto com licenca aceita: ${busca.destino}`)
         continue
       }
-      await baixarEConverter(foto)
+      await baixarEConverter(foto, 'descartarBase' in busca ? busca.descartarBase : undefined)
       jaUsadas.add(foto.titulo)
       encontradas.push(foto)
       console.log(`  ${busca.destino} <- ${foto.titulo} [${foto.licenca}]`)

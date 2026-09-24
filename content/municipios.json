@@ -278,9 +278,9 @@
       }
     ],
     "linha": {
-      "pt": "Cinco trilhas, uma serra e a pedra onde se salgava o peixe antes de existir geladeira.",
-      "en": "Five trails, a mountain range, and the rock where fish was salted before there were fridges.",
-      "es": "Cinco senderos, una sierra y la piedra donde se salaba el pescado antes de que hubiera neveras."
+      "pt": "Cinco píeres na lagoa, uma trilha pela margem e uma capela de 1761 erguida com conchas e óleo de baleia.",
+      "en": "Five piers on the lagoon, a shoreline trail, and a 1761 chapel built with shells and whale oil.",
+      "es": "Cinco muelles en la laguna, un sendero por la orilla y una capilla de 1761 levantada con conchas y aceite de ballena."
     },
     "hero": {
       "src": "/img/mun/iguaba-grande",
@@ -312,9 +312,9 @@
     },
     "pontos": [
       "iguaba-lagoa",
-      "iguaba-pedra-da-salga",
-      "iguaba-sapeatiba",
-      "iguaba-santa-rita"
+      "iguaba-capela",
+      "iguaba-pieres",
+      "iguaba-ponta-da-farinha"
     ]
   },
   {
@@ -526,7 +526,7 @@
       "silva-jardim-poco-das-antas",
       "silva-jardim-aldeia-velha",
       "silva-jardim-sete-quedas",
-      "silva-jardim-lapa"
+      "silva-jardim-parque-do-mico"
     ]
   }
 ]

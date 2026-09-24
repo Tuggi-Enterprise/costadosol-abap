@@ -7,8 +7,10 @@
  * por Aldeia Velha de Silva Jardim e um banner "sem foto" do Wiki Loves Monuments na Casa da
  * Flor. Licenca e autor continuam conferidos na hora do download (buscar-fotos).
  *
- * Ponto que nao esta aqui nao tem foto aceitavel no Commons e mostra o espaco vazio: Pedra
- * da Salga, Serra de Sapeatiba, Ilha de Santa Rita, Casa da Flor, Sete Quedas e Igreja da Lapa.
+ * Ponto que nao esta aqui nao tem foto aceitavel no Commons nem no Flickr (busca por texto e
+ * por coordenada, 24/09/2026) e mostra o espaco vazio: Sete Quedas. A Casa da Flor so
+ * existe no Flickr. Pedra da Salga, Ilha de Santa Rita, Serra de Sapeatiba e Igreja da Lapa
+ * sairam da lista de pontos pelo mesmo motivo, trocadas por lugares com foto.
  *
  * `autor` e o nome como vai no credito: importacao do Flickr traz o nome da conta inteira.
  * `alt` descreve o que a foto mostra; o conteudo le daqui (compor-conteudo).
@@ -104,6 +106,9 @@ const FIXAS: Fixa[] = [
     alt: {"pt": "Serras cobertas de Mata Atlântica atrás de gramado e palmeiras em Silva Jardim", "en": "Atlantic Forest-covered mountains behind a lawn and palm trees in Silva Jardim", "es": "Sierras cubiertas de Mata Atlántica detrás de un prado y palmeras en Silva Jardim"} },
   { destino: "img/poi/aldeia-aviacao-naval", arquivo: "File:SH-16 Seahawk N-3035, do 1º Esquadrão de Helicópteros Antissubmarino (HS-1) (52747349324).png", autor: "Marinha do Brasil",
     alt: {"pt": "Helicópteros SH-16 Seahawk sobrevoando a Base Aérea Naval, com torre de controle", "en": "SH-16 Seahawk helicopters flying over the Naval Air Base, with control tower", "es": "Helicópteros SH-16 Seahawk sobrevolando la Base Aérea Naval, con torre de control"} },
+  { destino: "img/poi/aldeia-casa-da-flor", arquivo: "https://www.flickr.com/photos/rafael-aop/50306627996/",
+    original: "https://live.staticflickr.com/65535/50306627996_29af571543_o.jpg",
+    alt: {"pt": "Casa caiada da Casa da Flor com pináculos de cacos e pedras no jardim", "en": "Whitewashed Casa da Flor with pinnacles of shards and stones in the garden", "es": "Casa encalada de la Casa da Flor con pináculos de fragmentos y piedras en el jardín"} },
   { destino: "img/poi/aldeia-igreja-matriz", arquivo: "File:SPedroAldeia-JesuitChurch.jpg", autor: "Fulviusbsas",
     alt: {"pt": "Igreja Matriz de São Pedro, antiga igreja jesuíta", "en": "Mother Church of São Pedro, a former Jesuit church", "es": "Iglesia Matriz de São Pedro, antigua iglesia jesuita"} },
   { destino: "img/poi/aldeia-sudoeste", arquivo: "File:Praia.sudoeste1025.jpg", autor: "Msadp06",
@@ -148,6 +153,12 @@ const FIXAS: Fixa[] = [
     alt: {"pt": "Capela de São João Batista junto à praia, em Barra de São João", "en": "São João Batista Chapel by the beach in Barra de São João", "es": "Capilla de São João Batista junto a la playa, en Barra de São João"} },
   { destino: "img/poi/casimiro-rio-macae", arquivo: "File:Rio Macaé - Cascata - panoramio (7).jpg", autor: "TMbux",
     alt: {"pt": "Corredeira do Rio Macaé entre pedras e mata", "en": "Rapids of the Macaé River among rocks and forest", "es": "Rápidos del río Macaé entre rocas y bosque"} },
+  { destino: "img/poi/iguaba-capela", arquivo: "File:Capela N. Senhora da Conceição em Iguaba Grande - Rj. (8700512282).jpg", autor: "Marinelson Almeida",
+    alt: {"pt": "Fachada branca com detalhes azul-turquesa da Capela de Nossa Senhora da Conceição, entre palmeiras", "en": "White façade with turquoise trim of the Chapel of Nossa Senhora da Conceição, among palm trees", "es": "Fachada blanca con detalles turquesa de la Capilla de Nossa Senhora da Conceição, entre palmeras"} },
+  { destino: "img/poi/iguaba-ponta-da-farinha", arquivo: "File:Ubas, Iguaba Grande - RJ, Brazil - panoramio (5).jpg",
+    alt: {"pt": "Areia clara da Praia dos Ubás na margem da lagoa, com morro coberto de mata ao fundo", "en": "Pale sand of Praia dos Ubás on the lagoon shore, with a wooded hill behind", "es": "Arena clara de la Praia dos Ubás a orillas de la laguna, con un cerro cubierto de bosque al fondo"} },
+  { destino: "img/poi/iguaba-pieres", arquivo: "File:1029888-I.jpg", descartarBase: 0.14,
+    alt: {"pt": "Píer de madeira entrando na lagoa em Iguaba Grande, com banhistas e um barco sob céu nublado", "en": "Wooden pier reaching into the lagoon at Iguaba Grande, with swimmers and a boat under a cloudy sky", "es": "Muelle de madera que entra en la laguna en Iguaba Grande, con bañistas y un barco bajo un cielo nublado"} },
   { destino: "img/poi/iguaba-lagoa", arquivo: "File:PRAIA DA FARINHA IGUABA GRANDE RIO DE JANEIRO BRAZIL.jpg", autor: "DELANO CAMPELLO",
     alt: {"pt": "Praia da Farinha, na margem da lagoa em Iguaba Grande", "en": "Praia da Farinha, on the lagoon shore in Iguaba Grande", "es": "Praia da Farinha, a orillas de la laguna en Iguaba Grande"} },
   { destino: "img/poi/ostras-costazul", arquivo: "File:Costa Azul Rio das Ostras.jpg", autor: "Mateus Berteges",
@@ -168,6 +179,8 @@ const FIXAS: Fixa[] = [
     alt: {"pt": "Rochedos da Praia da Vila ao pôr do sol, com ondas e nuvens alaranjadas", "en": "Praia da Vila rocks at sunset, with waves and orange-lit clouds", "es": "Rocas de la Praia da Vila al atardecer, con olas y nubes anaranjadas"} },
   { destino: "img/poi/silva-jardim-aldeia-velha", arquivo: "File:RPPN Aldeia Velha2.jpg", autor: "Rafael Deminicis",
     alt: {"pt": "Rio de água clara correndo entre pedras arredondadas em Aldeia Velha", "en": "Clear river flowing between rounded boulders in Aldeia Velha", "es": "Río de agua clara corriendo entre piedras redondeadas en Aldeia Velha"} },
+  { destino: "img/poi/silva-jardim-parque-do-mico", arquivo: "File:RPPN Parque do Mico-LUIZ ANTONIO ARRUDA(008).jpg", autor: "Luiz Antonio Arruda",
+    alt: {"pt": "Dois micos-leões-dourados lado a lado num galho, na mata da RPPN Parque do Mico", "en": "Two golden lion tamarins side by side on a branch in the forest of the Parque do Mico Reserve", "es": "Dos monos león dorado uno al lado del otro en una rama, en el bosque de la Reserva Parque do Mico"} },
   { destino: "img/poi/silva-jardim-poco-das-antas", arquivo: "File:Mico-leão-dourado-REBIO de Poço das Antas-Julio Morais Fine Art(004).jpg", autor: "Julio Morais Fine Art",
     alt: {"pt": "Mico-leão-dourado num galho na mata da Reserva Biológica de Poço das Antas", "en": "Golden lion tamarin on a branch in the Poço das Antas Biological Reserve", "es": "Tití león dorado en una rama en la Reserva Biológica de Poço das Antas"} },
 ]

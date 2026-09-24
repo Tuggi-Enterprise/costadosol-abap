@@ -491,6 +491,18 @@
       "es": "Helicópteros SH-16 Seahawk sobrevolando la Base Aérea Naval, con torre de control"
     }
   },
+  "img/poi/aldeia-casa-da-flor": {
+    "credito": "rafael-aop · CC BY 2.0",
+    "autor": "rafael-aop",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://www.flickr.com/photos/rafael-aop/50306627996/",
+    "arquivo": "https://www.flickr.com/photos/rafael-aop/50306627996/",
+    "alt": {
+      "pt": "Casa caiada da Casa da Flor com pináculos de cacos e pedras no jardim",
+      "en": "Whitewashed Casa da Flor with pinnacles of shards and stones in the garden",
+      "es": "Casa encalada de la Casa da Flor con pináculos de fragmentos y piedras en el jardín"
+    }
+  },
   "img/poi/aldeia-igreja-matriz": {
     "credito": "Fulviusbsas · Public domain",
     "autor": "Fulviusbsas",
@@ -755,6 +767,18 @@
       "es": "Rápidos del río Macaé entre rocas y bosque"
     }
   },
+  "img/poi/iguaba-capela": {
+    "credito": "Marinelson Almeida · CC BY 2.0",
+    "autor": "Marinelson Almeida",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Capela_N._Senhora_da_Concei%C3%A7%C3%A3o_em_Iguaba_Grande_-_Rj._(8700512282).jpg",
+    "arquivo": "File:Capela N. Senhora da Conceição em Iguaba Grande - Rj. (8700512282).jpg",
+    "alt": {
+      "pt": "Fachada branca com detalhes azul-turquesa da Capela de Nossa Senhora da Conceição, entre palmeiras",
+      "en": "White façade with turquoise trim of the Chapel of Nossa Senhora da Conceição, among palm trees",
+      "es": "Fachada blanca con detalles turquesa de la Capilla de Nossa Senhora da Conceição, entre palmeras"
+    }
+  },
   "img/poi/iguaba-lagoa": {
     "credito": "DELANO CAMPELLO · CC BY-SA 3.0",
     "autor": "DELANO CAMPELLO",
@@ -765,6 +789,30 @@
       "pt": "Praia da Farinha, na margem da lagoa em Iguaba Grande",
       "en": "Praia da Farinha, on the lagoon shore in Iguaba Grande",
       "es": "Praia da Farinha, a orillas de la laguna en Iguaba Grande"
+    }
+  },
+  "img/poi/iguaba-pieres": {
+    "credito": "Lyavelino · CC BY 3.0",
+    "autor": "Lyavelino",
+    "licenca": "CC BY 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:1029888-I.jpg",
+    "arquivo": "File:1029888-I.jpg",
+    "alt": {
+      "pt": "Píer de madeira entrando na lagoa em Iguaba Grande, com banhistas e um barco sob céu nublado",
+      "en": "Wooden pier reaching into the lagoon at Iguaba Grande, with swimmers and a boat under a cloudy sky",
+      "es": "Muelle de madera que entra en la laguna en Iguaba Grande, con bañistas y un barco bajo un cielo nublado"
+    }
+  },
+  "img/poi/iguaba-ponta-da-farinha": {
+    "credito": "Newton paz peres · CC BY-SA 3.0",
+    "autor": "Newton paz peres",
+    "licenca": "CC BY-SA 3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ubas,_Iguaba_Grande_-_RJ,_Brazil_-_panoramio_(5).jpg",
+    "arquivo": "File:Ubas, Iguaba Grande - RJ, Brazil - panoramio (5).jpg",
+    "alt": {
+      "pt": "Areia clara da Praia dos Ubás na margem da lagoa, com morro coberto de mata ao fundo",
+      "en": "Pale sand of Praia dos Ubás on the lagoon shore, with a wooded hill behind",
+      "es": "Arena clara de la Praia dos Ubás a orillas de la laguna, con un cerro cubierto de bosque al fondo"
     }
   },
   "img/poi/ostras-costazul": {
@@ -873,6 +921,18 @@
       "pt": "Rio de água clara correndo entre pedras arredondadas em Aldeia Velha",
       "en": "Clear river flowing between rounded boulders in Aldeia Velha",
       "es": "Río de agua clara corriendo entre piedras redondeadas en Aldeia Velha"
+    }
+  },
+  "img/poi/silva-jardim-parque-do-mico": {
+    "credito": "Luiz Antonio Arruda · CC BY-SA 4.0",
+    "autor": "Luiz Antonio Arruda",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:RPPN_Parque_do_Mico-LUIZ_ANTONIO_ARRUDA(008).jpg",
+    "arquivo": "File:RPPN Parque do Mico-LUIZ ANTONIO ARRUDA(008).jpg",
+    "alt": {
+      "pt": "Dois micos-leões-dourados lado a lado num galho, na mata da RPPN Parque do Mico",
+      "en": "Two golden lion tamarins side by side on a branch in the forest of the Parque do Mico Reserve",
+      "es": "Dos monos león dorado uno al lado del otro en una rama, en el bosque de la Reserva Parque do Mico"
     }
   },
   "img/poi/silva-jardim-poco-das-antas": {
